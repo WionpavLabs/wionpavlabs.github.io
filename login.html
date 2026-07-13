@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yönetici Girişi</title>
+
+<style>
+body{
+    margin:0;
+    background:#0f172a;
+    color:white;
+    font-family:Arial;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.box{
+    background:#1f2937;
+    padding:30px;
+    border-radius:12px;
+    width:320px;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:none;
+    border-radius:8px;
+    box-sizing:border-box;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#38bdf8;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>🔐 Yönetici Girişi</h2>
+
+<input id="email" type="email" placeholder="E-posta">
+
+<input id="password" type="password" placeholder="Şifre">
+
+<button onclick="login()">Giriş Yap</button>
+
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBXuNbsz3W26q1EueNLWhSIUKS4SIViw4k",
+  authDomain: "yorum-sistemimm.firebaseapp.com",
+  databaseURL: "https://yorum-sistemimm-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "yorum-sistemimm",
+  storageBucket: "yorum-sistemimm.appspot.com",
+  messagingSenderId: "1048692198462",
+  appId: "1:1048692198462:web:59fcfb7f0a29723d68156f"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+window.login = async function () {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  try {
+    await signInWithEmailAndPassword(auth, email, password);
+    location.href = "admin.html";
+  } catch (e) {
+    alert("E-posta veya şifre yanlış.");
+    console.log(e);
+  }
+};
+</script>
+
+</body>
+</html>
