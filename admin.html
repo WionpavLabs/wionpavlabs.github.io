@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Admin Panel</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:#0f172a;
+    color:white;
+    padding:20px;
+}
+
+.card{
+    background:#1f2937;
+    padding:15px;
+    margin:10px 0;
+    border-radius:10px;
+}
+
+h2{color:#38bdf8;}
+</style>
+</head>
+
+<body>
+
+<h2>📊 OY ANALİZ PANELİ</h2>
+
+<div id="articles"></div>
+
+<div class="card" id="ranking">Sıralama: Yükleniyor...</div>
+<div class="card" id="best">En İyi Makale: Yükleniyor...</div>
+    
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
+const firebaseConfig = {
+    apiKey: "XXX",
+    authDomain: "XXX",
+    projectId: "XXX",
+    storageBucket: "XXX",
+    messagingSenderId: "XXX",
+    appId: "XXX"
+};
+
+initializeApp(firebaseConfig);
+
+// 🔥 Realtime Database
+const RATING_URL = "https://yorum-sistemimm-default-rtdb.europe-west1.firebasedatabase.app/ratings.json";
+
+async function loadData(){
+
+    const res = await fetch(RATING_URL);
+    const data = await res.json();
+
+    let articleMap = {};
+
+    for(let articleId in data){
+
+        const users = data[articleId];
+
+        for(let userId in users){
+
+            const vote = users[userId];
+
+            const stars = vote.rating || 0;
+
+            if(!articleMap[articleId]){
+                articleMap[articleId] = {total:0, count:0};
+            }
+
+            articleMap[articleId].total += stars;
+            articleMap[articleId].count++;
+        }
+    }
+
+    // 🔥 array'e çevir
+    let sortedArticles = [];
+
+    for(let id in articleMap){
+        sortedArticles.push({
+            id,
+            total: articleMap[id].total,
+            count: articleMap[id].count
+        });
+    }
+
+    // 🔥 sırala (total'a göre)
+    sortedArticles.sort((a,b) => b.total - a.total);
+    const rankingText = sortedArticles
+    .map(a => `${a.id}(${a.total}⭐)`)
+    .join(" > ");
+    // 🔥 ekrana bas
+    const container = document.getElementById("articles");
+    container.innerHTML = "";
+
+    sortedArticles.forEach((a, index) => {
+
+        const avg = a.count === 0 ? 0 : (a.total / a.count);
+
+        const div = document.createElement("div");
+        div.className = "card";
+
+        div.innerHTML = `
+            <b>#${index+1} ${a.id}</b><br>
+            📥 Toplam Oy: ${a.count}<br>
+            ⭐ Toplam Yıldız: ${a.total}<br>
+            📊 Ortalama: ${avg.toFixed(2)}
+        `;
+
+        container.appendChild(div);
+    });
+
+    // 🏆 en iyi makale (total'a göre)
+    if(sortedArticles.length > 0){
+        const best = sortedArticles[0];
+
+     
+        document.getElementById("best").innerText =
+            `🏆 En İyi Makale:\n\n${best.id} (${best.total} ⭐)`
+        document.getElementById("ranking").innerText =
+    "📊 Sıralama: " + rankingText;
+    } else {
+        document.getElementById("best").innerText =
+            "🏆 En İyi Makale: Yok";
+    }
+}
+
+loadData();
+
+</script>
+
+</body>
+</html>
