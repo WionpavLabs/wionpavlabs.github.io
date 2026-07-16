@@ -183,13 +183,35 @@ color:#91a6bf;
 }
 
 .founder-photo{
+
     width:160px;
     height:160px;
+
     border-radius:50%;
+
     object-fit:cover;
+
     object-position:50% 18%;
-    border:4px solid #38bdf8;
-    box-shadow:0 0 25px rgba(56,189,248,0.3);
+
+    border:3px solid rgba(56,189,248,.8);
+
+    box-shadow:
+    0 0 20px rgba(56,189,248,.35),
+    0 0 50px rgba(56,189,248,.15);
+
+    transition:.4s ease;
+
+}
+
+
+.founder-photo:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:
+    0 0 30px rgba(56,189,248,.55),
+    0 0 70px rgba(56,189,248,.25);
+
 }
 
 .founder-info h3{
