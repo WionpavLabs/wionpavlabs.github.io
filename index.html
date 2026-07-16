@@ -565,14 +565,38 @@ box-shadow:0 0 35px #38bdf8;
 
 .scroll-arrow{
     display:inline-block;
+
     margin-top:35px;
+
     font-size:55px;
+
     color:#38bdf8;
+
     text-decoration:none;
-    animation:float 1.8s infinite;
-    text-shadow:0 0 15px #38bdf8;
+
+    animation:
+    float 1.8s infinite,
+    pulseGlow 2s infinite;
+
+    text-shadow:
+    0 0 15px #38bdf8,
+    0 0 35px rgba(56,189,248,.5);
+
     transition:.3s;
+
     cursor:pointer;
+}
+
+@keyframes pulseGlow{
+
+    0%,100%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:.65;
+    }
+
 }
 
 .scroll-arrow:hover{
