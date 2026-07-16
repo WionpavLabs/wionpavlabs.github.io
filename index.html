@@ -898,72 +898,69 @@ html, body{
 }
 
 
-.dna-svg{
+/* DNA */
+
+.dna-shape{
 
     position:absolute;
+    width:70px;
+    height:260px;
 
-    width:180px;
-    height:500px;
+    opacity:.08;
 
-    opacity:.12;
+    border-left:3px solid #38bdf8;
+    border-right:3px solid white;
 
-    filter:
-    drop-shadow(0 0 25px #38bdf8);
+    border-radius:50%;
 
-    animation:dnaMove 18s infinite linear;
+    animation:dnaUp 15s linear infinite;
 
 }
 
 
 .dna-left{
-
-    left:20px;
-    bottom:-500px;
-
+    left:30px;
+    bottom:-300px;
 }
 
 
 .dna-right{
-
-    right:20px;
-    top:-500px;
-
-    animation-delay:8s;
-
+    right:30px;
+    top:300px;
+    animation-delay:7s;
 }
 
 
+@keyframes dnaUp{
 
-@keyframes dnaMove{
-
-0%{
+from{
 transform:translateY(0) rotate(0deg);
 }
 
-100%{
-transform:translateY(-140vh) rotate(360deg);
+to{
+transform:translateY(-120vh) rotate(360deg);
 }
 
 }
 
 
 
+/* deney tüpü */
 
-
-.tube-svg{
+.lab-tube{
 
 position:absolute;
 
-width:100px;
+width:45px;
+height:160px;
 
-height:220px;
+border:3px solid #38bdf8;
 
-opacity:.15;
+border-radius:0 0 25px 25px;
 
-filter:
-drop-shadow(0 0 25px #38bdf8);
+opacity:.12;
 
-animation:tubeMove 14s infinite linear;
+animation:tubeUp 14s linear infinite;
 
 }
 
@@ -971,8 +968,7 @@ animation:tubeMove 14s infinite linear;
 .tube-left{
 
 left:120px;
-
-bottom:-250px;
+bottom:-200px;
 
 }
 
@@ -980,8 +976,7 @@ bottom:-250px;
 .tube-right{
 
 right:120px;
-
-bottom:-250px;
+bottom:-200px;
 
 animation-delay:6s;
 
@@ -989,23 +984,17 @@ animation-delay:6s;
 
 
 
-@keyframes tubeMove{
+@keyframes tubeUp{
 
-0%{
-
+from{
 transform:translateY(0) rotate(-10deg);
-
 }
 
-
-100%{
-
-transform:translateY(-130vh) rotate(10deg);
-
+to{
+transform:translateY(-120vh) rotate(10deg);
 }
 
 }
-
 
 
 
@@ -1013,33 +1002,8 @@ header,
 nav,
 main,
 footer{
-
 position:relative;
 z-index:5;
-
-}
-
-
-
-@media(max-width:768px){
-
-.dna-svg{
-
-width:100px;
-opacity:.06;
-
-}
-
-.tube-svg{
-
-width:60px;
-opacity:.06;
-
-}
-
-}
-.science-bg svg{
-    background:transparent;
 }
 </style>
 
@@ -1133,10 +1097,20 @@ fill="#38bdf8"
 opacity=".4"/>
 
 </svg>
+<div class="science-bg">
 
+<div class="dna-shape dna-left">
+    <span></span>
+</div>
 
+<div class="dna-shape dna-right">
+    <span></span>
+</div>
 
+<div class="lab-tube tube-left"></div>
+<div class="lab-tube tube-right"></div>
 
+</div>
 
 <div id="maintenance">
     <h1>🔧 Site Bakımda</h1>
