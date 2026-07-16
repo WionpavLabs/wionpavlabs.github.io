@@ -673,6 +673,18 @@ section::before{
     -webkit-mask-composite: xor;
             mask-composite: exclude;
 }
+    .hero-text{
+    opacity:0;
+    transform:translateY(40px);
+    animation:fadeUp 1.2s ease forwards;
+}
+
+@keyframes fadeUp{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
 </style>
 
 </head>
