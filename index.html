@@ -889,32 +889,28 @@ section.reveal.show{
 html, body{
     overflow-x:hidden;
 }
-    /* Bilimsel hareketli arka plan */
-
 .science-bg{
     position:fixed;
     inset:0;
-    pointer-events:none;
     overflow:hidden;
-    z-index:0;
+    pointer-events:none;
+    z-index:1;
 }
 
 
-/* DNA */
-
-.dna{
+.dna-svg{
 
     position:absolute;
 
-    font-size:130px;
+    width:180px;
+    height:500px;
 
-    opacity:.08;
+    opacity:.12;
 
     filter:
     drop-shadow(0 0 25px #38bdf8);
 
-    animation:
-    dnaFloat 12s infinite ease-in-out;
+    animation:dnaMove 18s infinite linear;
 
 }
 
@@ -922,7 +918,7 @@ html, body{
 .dna-left{
 
     left:20px;
-    top:25%;
+    bottom:-500px;
 
 }
 
@@ -930,150 +926,119 @@ html, body{
 .dna-right{
 
     right:20px;
-    top:55%;
+    top:-500px;
 
-    animation-delay:4s;
+    animation-delay:8s;
 
 }
 
 
 
-@keyframes dnaFloat{
+@keyframes dnaMove{
 
 0%{
-
-    transform:
-    translateY(100vh)
-    rotate(0deg);
-
-}
-
-50%{
-
-    transform:
-    translateY(40vh)
-    rotate(180deg);
-
+transform:translateY(0) rotate(0deg);
 }
 
 100%{
-
-    transform:
-    translateY(-30vh)
-    rotate(360deg);
-
+transform:translateY(-140vh) rotate(360deg);
 }
 
 }
 
 
-/* Deney tüpleri */
 
 
-.tube{
 
-    position:absolute;
+.tube-svg{
 
-    font-size:100px;
+position:absolute;
 
-    opacity:.10;
+width:100px;
 
-    filter:
-    drop-shadow(0 0 30px #38bdf8);
+height:220px;
 
-    animation:
-    tubeRise 15s infinite linear;
+opacity:.15;
+
+filter:
+drop-shadow(0 0 25px #38bdf8);
+
+animation:tubeMove 14s infinite linear;
 
 }
 
 
 .tube-left{
 
-    left:80px;
+left:120px;
 
-    bottom:-150px;
+bottom:-250px;
 
 }
 
 
 .tube-right{
 
-    right:100px;
+right:120px;
 
-    bottom:-150px;
+bottom:-250px;
 
-    animation-delay:7s;
+animation-delay:6s;
 
 }
 
 
 
-@keyframes tubeRise{
-
+@keyframes tubeMove{
 
 0%{
 
-transform:
-translateY(0)
-rotate(-10deg);
-
-}
-
-
-50%{
-
-transform:
-translateY(-50vh)
-rotate(10deg);
+transform:translateY(0) rotate(-10deg);
 
 }
 
 
 100%{
 
-transform:
-translateY(-120vh)
-rotate(-10deg);
+transform:translateY(-130vh) rotate(10deg);
 
 }
 
 }
 
 
-/* İçerik bunun üstünde kalsın */
+
 
 header,
 nav,
 main,
 footer{
 
-    position:relative;
-
-    z-index:5;
+position:relative;
+z-index:5;
 
 }
 
 
-/* Mobilde biraz azalt */
 
 @media(max-width:768px){
 
-.dna{
+.dna-svg{
 
-font-size:80px;
-opacity:.05;
+width:100px;
+opacity:.06;
 
 }
 
+.tube-svg{
 
-.tube{
-
-font-size:60px;
+width:60px;
 opacity:.06;
 
 }
 
 }
+
 </style>
 
 </head>
@@ -1081,11 +1046,65 @@ opacity:.06;
 <body>
 
 <div class="science-bg">
-    <div class="dna dna-left">🧬</div>
-    <div class="dna dna-right">🧬</div>
 
-    <div class="tube tube-left">🧪</div>
-    <div class="tube tube-right">🧪</div>
+<svg class="dna-svg dna-left" viewBox="0 0 100 300">
+    <path d="M30 10 C90 60,10 120,70 170 C110 220,30 270,70 290"
+    fill="none"
+    stroke="#38bdf8"
+    stroke-width="3"/>
+
+    <path d="M70 10 C10 60,90 120,30 170 C-10 220,70 270,30 290"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="3"/>
+
+    <g stroke="#38bdf8" stroke-width="2">
+        <line x1="35" y1="40" x2="65" y2="40"/>
+        <line x1="25" y1="90" x2="75" y2="90"/>
+        <line x1="35" y1="140" x2="65" y2="140"/>
+        <line x1="25" y1="190" x2="75" y2="190"/>
+        <line x1="35" y1="240" x2="65" y2="240"/>
+    </g>
+</svg>
+
+
+
+<svg class="tube-svg tube-left" viewBox="0 0 100 200">
+
+<rect x="35" y="20" width="30" height="120"
+rx="15"
+fill="none"
+stroke="#38bdf8"
+stroke-width="4"/>
+
+<rect x="42" y="5" width="16" height="25"
+fill="#ffffff"/>
+
+<path d="M38 100 Q50 90 62 100 V130 Q50 145 38 130"
+fill="#38bdf8"
+opacity=".4"/>
+
+</svg>
+
+
+
+<svg class="tube-svg tube-right" viewBox="0 0 100 200">
+
+<rect x="35" y="20" width="30" height="120"
+rx="15"
+fill="none"
+stroke="#38bdf8"
+stroke-width="4"/>
+
+<rect x="42" y="5" width="16" height="25"
+fill="#ffffff"/>
+
+<path d="M38 100 Q50 90 62 100 V130 Q50 145 38 130"
+fill="#38bdf8"
+opacity=".4"/>
+
+</svg>
+
 </div>
 
 
