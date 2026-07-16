@@ -234,7 +234,8 @@ nav{
 
     display:flex;
     justify-content:center;
-    gap:20px;
+    align-items:center;
+    gap:25px;
 
     position:sticky;
     top:15px;
@@ -242,16 +243,23 @@ nav{
     width:fit-content;
     margin:auto;
 
-    padding:18px 35px;
+    padding:16px 38px;
 
-    border-radius:18px;
+    border-radius:22px;
 
-    background:rgba(17,24,39,.45);
-    backdrop-filter:blur(18px);
+    background:rgba(17,24,39,.35);
+
+    backdrop-filter:
+    blur(25px)
+    saturate(160%);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.35);
 
     z-index:999;
 }
-
     nav a {
         color: #e2e8f0;
         text-decoration: none;
