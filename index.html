@@ -1122,12 +1122,23 @@ html, body{
     width:100%;
 }
 
+html, body {
+    overflow: hidden !important;
+    height: 100%;
+}
+
+body.maintenance-active {
+    overflow: hidden !important;
+    position: fixed;
+    width: 100%;
+}
+
 #maintenance {
-    position:fixed;
-    inset:0;
-    width:100%;
-    height:100dvh;
-    overflow:hidden;
+    position: fixed !important;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden !important;
 }
 </style>
 
