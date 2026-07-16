@@ -28,6 +28,31 @@ body{
     background-attachment:fixed;
 }
 
+/* 🔥 YENİ: MENU TOGGLE */
+
+.menu-toggle{
+    display:none;
+    position:fixed;
+    top:15px;
+    left:15px;
+
+    z-index:1000;
+
+    padding:10px 14px;
+
+    background:rgba(17,24,39,.7);
+    backdrop-filter:blur(15px);
+
+    border-radius:10px;
+
+    color:#38bdf8;
+    font-size:26px;
+
+    cursor:pointer;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.4);
+}
+
 /* NAV (AYNEN) */
 
 nav{
@@ -107,26 +132,17 @@ main{
     padding:0 20px;
 }
 
-/* SECTION (PREMIUM KART AYNEN) */
+/* SECTION */
 
 section{
-
     margin-bottom:40px;
     padding:30px;
-
     background:rgba(17,24,39,.72);
-
     backdrop-filter:blur(20px);
-
     border:1px solid rgba(255,255,255,.06);
-
     border-radius:22px;
-
-    box-shadow:
-        0 20px 60px rgba(0,0,0,.35);
-
+    box-shadow:0 20px 60px rgba(0,0,0,.35);
     transition:.35s;
-
     position:relative;
     overflow:hidden;
 }
@@ -147,65 +163,42 @@ section::before{
 }
 
 section:hover{
-
     transform:translateY(-6px);
-
     border-color:rgba(56,189,248,.18);
-
-    box-shadow:
-        0 25px 70px rgba(56,189,248,.12);
-
+    box-shadow:0 25px 70px rgba(56,189,248,.12);
 }
 
-/* FOUNDER CARD (AYNEN) */
+/* FOUNDER CARD */
 
 .founder-card{
     display:flex;
     align-items:center;
     gap:30px;
     margin-bottom:25px;
-
     padding:25px;
-
     border-radius:20px;
-
     background:rgba(255,255,255,.03);
-
     border:1px solid rgba(56,189,248,.12);
-
-    box-shadow:
-    0 15px 40px rgba(0,0,0,.25);
-
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
     transition:.35s ease;
 }
 
 .founder-card:hover{
-
     transform:translateY(-5px);
-
     border-color:rgba(56,189,248,.35);
-
-    box-shadow:
-    0 25px 60px rgba(56,189,248,.15);
+    box-shadow:0 25px 60px rgba(56,189,248,.15);
 }
 
 .founder-photo{
-
     width:160px;
     height:160px;
-
     border-radius:50%;
-
     object-fit:cover;
-
     object-position:50% 18%;
-
     border:3px solid rgba(56,189,248,.8);
-
     box-shadow:
     0 0 20px rgba(56,189,248,.35),
     0 0 50px rgba(56,189,248,.15);
-
 }
 
 .founder-info h3{
@@ -223,9 +216,39 @@ h2{
     color:#38bdf8;
 }
 
-/* MOBİL */
+/* 🔥 YENİ: MOBİL MENÜ */
 
 @media(max-width:768px){
+
+    nav{
+        display:none;
+        flex-direction:column;
+
+        position:fixed;
+        top:0;
+        left:0;
+
+        width:100%;
+        height:100vh;
+
+        background:rgba(17,24,39,.95);
+        backdrop-filter:blur(25px);
+
+        justify-content:center;
+        align-items:center;
+
+        gap:25px;
+
+        z-index:999;
+    }
+
+    nav.active{
+        display:flex;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
 
     .founder-card{
         flex-direction:column;
@@ -235,15 +258,10 @@ h2{
 }
 
 footer{
-
     margin-top:60px;
-
     padding:30px;
-
     text-align:center;
-
     color:#94a3b8;
-
 }
 
 </style>
@@ -252,7 +270,10 @@ footer{
 
 <body>
 
-<nav>
+<!-- 🔥 YENİ BUTON -->
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav id="navMenu">
     <a href="index.html">Ana Sayfa</a>
     <a href="kurucu.html">Kurucu</a>
     <a href="index.html#misyon-vizyon">Vizyon & Misyon</a>
@@ -312,6 +333,13 @@ His interests include literature reviews, scientific writing, and evidence-based
 <footer>
 © 2026 Wionpav Labs | Founded by Ali Bocakkıtay
 </footer>
+
+<!-- 🔥 YENİ JS -->
+<script>
+function toggleMenu(){
+    document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
