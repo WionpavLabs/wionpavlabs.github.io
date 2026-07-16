@@ -21,7 +21,7 @@ background:
 radial-gradient(circle at top,#14365f 0%,#0b2342 30%,#071322 60%,#040812 100%);
 }
 
-/* MENU BUTTON */
+/* MENU */
 .menu-toggle{
 position:fixed;
 top:15px;
@@ -32,7 +32,6 @@ cursor:pointer;
 z-index:1000;
 }
 
-/* NAV */
 nav{
 position:fixed;
 top:0;
@@ -61,11 +60,6 @@ nav a{
 color:#e2e8f0;
 text-decoration:none;
 font-size:18px;
-transition:.3s;
-}
-
-nav a:hover{
-color:#38bdf8;
 }
 
 /* CONTAINER */
@@ -78,52 +72,41 @@ padding:100px 20px 60px;
 /* TITLE */
 .title{
 text-align:center;
-margin-bottom:50px;
+margin-bottom:40px;
 }
 
-.title h1{
-font-size:42px;
-letter-spacing:5px;
-}
-
-.title p{
-color:#94a3b8;
-}
-
-/* PAPER ITEM (PREMIUM UPGRADE) */
-.paper-item{
+/* 🔥 MASTER PREMIUM BOX */
+.master-box{
 
 position:relative;
-overflow:hidden;
+
+padding:40px;
+
+border-radius:26px;
 
 background:
 linear-gradient(
 145deg,
 rgba(255,255,255,.08),
-rgba(31,41,55,.75)
+rgba(17,24,39,.85)
 );
 
 border:1px solid rgba(56,189,248,.18);
 
-border-radius:22px;
-
-padding:30px;
-
-margin:30px 0;
-
-transition:.4s ease;
+backdrop-filter:blur(25px);
 
 box-shadow:
-0 20px 60px rgba(0,0,0,.35);
+0 30px 80px rgba(0,0,0,.45);
+
+transition:.4s;
 
 }
 
-/* glow border */
-.paper-item::before{
+.master-box::before{
 content:"";
 position:absolute;
 inset:0;
-border-radius:22px;
+border-radius:26px;
 padding:1px;
 
 background:linear-gradient(120deg,transparent,#38bdf8,transparent);
@@ -136,42 +119,51 @@ linear-gradient(#000 0 0);
 mask-composite:exclude;
 }
 
-.paper-item:hover{
-
-transform:translateY(-10px) scale(1.01);
-
-border-color:#38bdf8;
-
+.master-box:hover{
+transform:translateY(-8px);
 box-shadow:
-0 30px 80px rgba(56,189,248,.25);
+0 40px 100px rgba(56,189,248,.18);
+}
 
+/* PAPER */
+.paper-item{
+
+margin:25px 0;
+
+padding:25px;
+
+border-radius:20px;
+
+background:
+linear-gradient(
+145deg,
+rgba(255,255,255,.05),
+rgba(31,41,55,.7)
+);
+
+border:1px solid rgba(56,189,248,.18);
+
+transition:.35s;
+
+}
+
+.paper-item:hover{
+transform:translateY(-8px);
+box-shadow:
+0 25px 60px rgba(56,189,248,.2);
 }
 
 .paper-item a{
-
 color:white;
-
 text-decoration:none;
-
-font-size:20px;
-
+font-size:19px;
 font-weight:600;
-
-line-height:1.6;
-
 }
 
-.paper-item a:hover{
-color:#67d3ff;
-}
-
-/* DOWNLOAD BUTTON */
+/* 🔥 DOWNLOAD (FIXED) */
 .download-btn{
 
-display:inline-flex;
-align-items:center;
-justify-content:center;
-gap:8px;
+display:inline-block;
 
 margin-top:18px;
 
@@ -184,23 +176,25 @@ color:#071322 !important;
 
 border-radius:14px;
 
-text-decoration:none;
-
 font-weight:700;
 
-box-shadow:
-0 10px 25px rgba(56,189,248,.25);
+text-decoration:none;
 
 transition:.35s ease;
+
+box-shadow:
+0 12px 30px rgba(56,189,248,.3);
 
 }
 
 .download-btn:hover{
 
-transform:translateY(-5px) scale(1.03);
+transform:
+translateY(-6px)
+scale(1.07);
 
 box-shadow:
-0 18px 40px rgba(56,189,248,.45);
+0 25px 60px rgba(56,189,248,.5);
 
 }
 
@@ -213,8 +207,6 @@ font-size:28px;
 .rating span{
 cursor:pointer;
 color:#888;
-transition:.2s;
-margin-right:4px;
 }
 
 .rating span:hover{
@@ -260,8 +252,11 @@ margin-top:60px;
 
 <div class="title">
 <h1>Yayınlar</h1>
-<p>Wionpav Labs Scientific Publications</p>
 </div>
+
+<!-- 🔥 MASTER BOX BAŞLANGIÇ -->
+
+<div class="master-box">
 
 <div class="paper-item">
 
@@ -302,6 +297,9 @@ margin-top:60px;
 </a>
 
 </div>
+
+</div>
+<!-- 🔥 MASTER BOX BİTİŞ -->
 
 </div>
 
