@@ -889,11 +889,205 @@ section.reveal.show{
 html, body{
     overflow-x:hidden;
 }
+    /* Bilimsel hareketli arka plan */
+
+.science-bg{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:0;
+}
+
+
+/* DNA */
+
+.dna{
+
+    position:absolute;
+
+    font-size:130px;
+
+    opacity:.08;
+
+    filter:
+    drop-shadow(0 0 25px #38bdf8);
+
+    animation:
+    dnaFloat 12s infinite ease-in-out;
+
+}
+
+
+.dna-left{
+
+    left:20px;
+    top:25%;
+
+}
+
+
+.dna-right{
+
+    right:20px;
+    top:55%;
+
+    animation-delay:4s;
+
+}
+
+
+
+@keyframes dnaFloat{
+
+0%{
+
+    transform:
+    translateY(100vh)
+    rotate(0deg);
+
+}
+
+50%{
+
+    transform:
+    translateY(40vh)
+    rotate(180deg);
+
+}
+
+100%{
+
+    transform:
+    translateY(-30vh)
+    rotate(360deg);
+
+}
+
+}
+
+
+/* Deney tüpleri */
+
+
+.tube{
+
+    position:absolute;
+
+    font-size:100px;
+
+    opacity:.10;
+
+    filter:
+    drop-shadow(0 0 30px #38bdf8);
+
+    animation:
+    tubeRise 15s infinite linear;
+
+}
+
+
+.tube-left{
+
+    left:80px;
+
+    bottom:-150px;
+
+}
+
+
+.tube-right{
+
+    right:100px;
+
+    bottom:-150px;
+
+    animation-delay:7s;
+
+}
+
+
+
+@keyframes tubeRise{
+
+
+0%{
+
+transform:
+translateY(0)
+rotate(-10deg);
+
+}
+
+
+50%{
+
+transform:
+translateY(-50vh)
+rotate(10deg);
+
+}
+
+
+100%{
+
+transform:
+translateY(-120vh)
+rotate(-10deg);
+
+}
+
+}
+
+
+/* İçerik bunun üstünde kalsın */
+
+header,
+nav,
+main,
+footer{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+
+/* Mobilde biraz azalt */
+
+@media(max-width:768px){
+
+.dna{
+
+font-size:80px;
+opacity:.05;
+
+}
+
+
+.tube{
+
+font-size:60px;
+opacity:.06;
+
+}
+
+}
 </style>
 
 </head>
 
 <body>
+
+<div class="science-bg">
+    <div class="dna dna-left">🧬</div>
+    <div class="dna dna-right">🧬</div>
+
+    <div class="tube tube-left">🧪</div>
+    <div class="tube tube-right">🧪</div>
+</div>
+
 
 <div id="maintenance">
     <h1>🔧 Site Bakımda</h1>
