@@ -909,12 +909,13 @@ html, body{
 /* DNA çizgisi */
 
 .dna-line {
-    position: absolute;
-    right: 8%;
-    top: 15%;
-    width: 120px;
-    height: 520px;
-    opacity: 0.08;
+
+    position:absolute;
+
+    width:120px;
+    height:520px;
+
+    opacity:0.08;
 
     background:
     repeating-linear-gradient(
@@ -924,28 +925,34 @@ html, body{
         transparent 22px 40px
     );
 
-    border-left: 2px solid #38bdf8;
-    border-right: 2px solid #38bdf8;
+    border-left:2px solid #38bdf8;
+    border-right:2px solid #38bdf8;
 
-    border-radius: 50%;
+    border-radius:50%;
 
-    animation: dnaMove 18s ease-in-out infinite;
+    animation:dnaMove 18s ease-in-out infinite;
+
 }
 
 
-@keyframes dnaMove {
+/* Sağ DNA */
 
-    0% {
-        transform: translateY(0) rotate(0deg);
-    }
+.dna-right{
 
-    50% {
-        transform: translateY(-25px) rotate(5deg);
-    }
+    right:12%;
+    top:15%;
 
-    100% {
-        transform: translateY(0) rotate(0deg);
-    }
+}
+
+
+/* Sol DNA */
+
+.dna-left{
+
+    left:12%;
+    top:15%;
+
+    animation-delay:2s;
 
 }
 
@@ -1033,12 +1040,31 @@ html, body{
 @media(max-width:768px){
 
     .dna-line{
-        right:15px;
-        top:20%;
-        opacity:0.06;
-        width:85px;
-        height:380px;
+
+        width:75px;
+        height:330px;
+
+        opacity:0.05;
+
+        top:25%;
+
     }
+
+
+    .dna-right{
+
+        right:-15px;
+
+    }
+
+
+    .dna-left{
+
+        left:-15px;
+
+    }
+
+}
 
 
     .particle{
@@ -1072,7 +1098,8 @@ html, body{
 
 <body>
 <div class="science-background">
-    <div class="dna-line"></div>
+    <div class="dna-line dna-right"></div>
+    <div class="dna-line dna-left"></div>
 
     <div class="particle p1"></div>
     <div class="particle p2"></div>
