@@ -892,12 +892,173 @@ section.reveal.show{
 html, body{
     overflow-x:hidden;
 }
+    /* ===============================
+   Premium Scientific Background
+   Wionpia Labs
+================================ */
+
+.science-background {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+/* DNA çizgisi */
+
+.dna-line {
+    position: absolute;
+    right: 8%;
+    top: 15%;
+    width: 120px;
+    height: 520px;
+    opacity: 0.08;
+
+    background:
+    repeating-linear-gradient(
+        45deg,
+        transparent 0 18px,
+        #38bdf8 19px 21px,
+        transparent 22px 40px
+    );
+
+    border-left: 2px solid #38bdf8;
+    border-right: 2px solid #38bdf8;
+
+    border-radius: 50%;
+
+    animation: dnaMove 18s ease-in-out infinite;
+}
+
+
+@keyframes dnaMove {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-25px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+}
+
+
+/* Molekül parçacıkları */
+
+.particle {
+
+    position:absolute;
+    width:8px;
+    height:8px;
+
+    background:#38bdf8;
+
+    border-radius:50%;
+
+    opacity:0.25;
+
+    box-shadow:
+    0 0 15px #38bdf8;
+
+    animation: floatParticle 12s infinite ease-in-out;
+}
+
+
+.p1 {
+    top:20%;
+    left:15%;
+}
+
+
+.p2 {
+    top:65%;
+    left:25%;
+    animation-delay:3s;
+}
+
+
+.p3 {
+    top:35%;
+    right:25%;
+    animation-delay:5s;
+}
+
+
+.p4 {
+    bottom:20%;
+    right:15%;
+    animation-delay:2s;
+}
+
+
+.p5 {
+    top:75%;
+    left:70%;
+    animation-delay:7s;
+}
+
+
+
+@keyframes floatParticle {
+
+    0% {
+        transform:translateY(0);
+        opacity:0.15;
+    }
+
+
+    50% {
+        transform:translateY(-40px);
+        opacity:0.35;
+    }
+
+
+    100% {
+        transform:translateY(0);
+        opacity:0.15;
+    }
+
+}
+
+
+/* Mobilde daha sade */
+
+@media(max-width:768px){
+
+    .dna-line{
+        right:-30px;
+        opacity:0.04;
+        width:90px;
+        height:400px;
+    }
+
+
+    .particle{
+        display:none;
+    }
+
+}
 </style>
 
 </head>
 
 <body>
+<div class="science-background">
+    <div class="dna-line"></div>
 
+    <div class="particle p1"></div>
+    <div class="particle p2"></div>
+    <div class="particle p3"></div>
+    <div class="particle p4"></div>
+    <div class="particle p5"></div>
+</div>
 <div id="maintenance">
     <h1>🔧 Site Bakımda</h1>
     <p>Şu anda güncelleme yapıyoruz. Lütfen sonra tekrar gel.</p>
