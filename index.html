@@ -892,7 +892,160 @@ section.reveal.show{
 html, body{
     overflow-x:hidden;
 }
+/* Premium bilimsel SVG arka plan */
 
+.science-bg{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:0;
+
+}
+
+
+
+/* DNA */
+
+.dna-bg{
+
+    position:absolute;
+
+    width:170px;
+
+    height:auto;
+
+    left:25px;
+
+    bottom:-450px;
+
+    opacity:.07;
+
+    filter:drop-shadow(0 0 25px #38bdf8);
+
+    animation:dnaRise 24s linear infinite;
+
+}
+
+
+
+@keyframes dnaRise{
+
+    from{
+
+        transform:
+        translateY(0)
+        rotate(0deg);
+
+    }
+
+
+    to{
+
+        transform:
+        translateY(-140vh)
+        rotate(360deg);
+
+    }
+
+}
+
+
+
+/* Deney tüpü */
+
+.tube-bg{
+
+    position:absolute;
+
+    width:110px;
+
+    height:auto;
+
+    right:80px;
+
+    bottom:-250px;
+
+    opacity:.08;
+
+    filter:drop-shadow(0 0 30px #38bdf8);
+
+    animation:tubeRise 20s linear infinite;
+
+}
+
+
+
+@keyframes tubeRise{
+
+    from{
+
+        transform:
+        translateY(0)
+        rotate(-10deg);
+
+    }
+
+
+    to{
+
+        transform:
+        translateY(-130vh)
+        rotate(10deg);
+
+    }
+
+}
+
+
+
+/* İçerik önde */
+
+header,
+nav,
+main,
+footer,
+#maintenance{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+
+
+/* Mobil ayar */
+
+@media(max-width:768px){
+
+    .dna-bg{
+
+        width:100px;
+
+        left:-10px;
+
+        opacity:.05;
+
+    }
+
+
+    .tube-bg{
+
+        width:70px;
+
+        right:-10px;
+
+        opacity:.05;
+
+    }
+
+}
 </style>
 
 </head>
