@@ -21,7 +21,7 @@ background:
 radial-gradient(circle at top,#14365f 0%,#0b2342 30%,#071322 60%,#040812 100%);
 }
 
-/* NAV */
+/* MENU BUTTON */
 .menu-toggle{
 position:fixed;
 top:15px;
@@ -29,9 +29,10 @@ left:15px;
 font-size:28px;
 color:#38bdf8;
 cursor:pointer;
-z-index:999;
+z-index:1000;
 }
 
+/* NAV FULL */
 nav{
 position:fixed;
 top:0;
@@ -46,10 +47,10 @@ display:flex;
 flex-direction:column;
 align-items:center;
 justify-content:center;
-gap:25px;
+gap:22px;
 
 transition:.4s;
-z-index:998;
+z-index:999;
 }
 
 nav.active{
@@ -71,40 +72,40 @@ color:#38bdf8;
 .container{
 max-width:900px;
 margin:auto;
-padding:100px 20px 50px;
+padding:100px 20px 60px;
 }
 
-/* PREMIUM BOX */
-.premium-box{
+/* PREMIUM MASTER BOX */
+.super-box{
+
 position:relative;
 
-padding:35px;
+padding:45px;
 
-border-radius:24px;
+border-radius:26px;
 
 background:
 linear-gradient(145deg,
 rgba(255,255,255,.08),
-rgba(17,24,39,.75)
+rgba(17,24,39,.8)
 );
 
-border:1px solid rgba(56,189,248,.15);
+border:1px solid rgba(56,189,248,.18);
 
-backdrop-filter:blur(20px);
+backdrop-filter:blur(22px);
 
 box-shadow:
-0 20px 60px rgba(0,0,0,.4);
+0 25px 70px rgba(0,0,0,.45);
 
 transition:.4s;
-margin-bottom:35px;
 }
 
-/* Glow border */
-.premium-box::before{
+/* glow border */
+.super-box::before{
 content:"";
 position:absolute;
 inset:0;
-border-radius:24px;
+border-radius:26px;
 padding:1px;
 
 background:linear-gradient(120deg,transparent,#38bdf8,transparent);
@@ -117,44 +118,62 @@ linear-gradient(#000 0 0);
 mask-composite:exclude;
 }
 
-.premium-box:hover{
-transform:translateY(-8px) scale(1.01);
+.super-box:hover{
+transform:translateY(-10px) scale(1.01);
 
 box-shadow:
-0 30px 80px rgba(56,189,248,.18);
+0 35px 90px rgba(56,189,248,.2);
 }
 
-/* TITLES */
+/* INNER SECTIONS */
+.inner-block{
+margin-bottom:30px;
+}
+
 h2{
 color:#38bdf8;
 margin-bottom:15px;
 }
 
-/* TEXT */
 p{
 line-height:1.7;
 color:#cbd5f5;
 }
 
-/* DIVIDER */
 hr{
 border:1px solid #2d3748;
 margin:25px 0;
 }
 
-/* HEADER */
+/* TITLE */
 .title{
 text-align:center;
 margin-bottom:50px;
 }
 
 .title h1{
-font-size:40px;
-letter-spacing:4px;
+font-size:42px;
+letter-spacing:5px;
 }
 
 .title p{
 color:#94a3b8;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:35px;
+color:#94a3b8;
+border-top:1px solid rgba(56,189,248,.15);
+margin-top:60px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.super-box{
+padding:30px;
+}
 }
 
 </style>
@@ -169,6 +188,10 @@ color:#94a3b8;
 <a href="index.html">Ana Sayfa</a>
 <a href="kurucu.html">Kurucu</a>
 <a href="vizyon.html">Vizyon & Misyon</a>
+<a href="index.html#projeler">Projeler</a>
+<a href="index.html#Yayınlar">Yayınlar</a>
+<a href="index.html#iletisim">İletişim</a>
+<a href="login.html">🔐 Yönetici Girişi</a>
 </nav>
 
 <div class="container">
@@ -178,9 +201,9 @@ color:#94a3b8;
 <p>Wionpav Labs Scientific Foundation</p>
 </div>
 
-<!-- VİZYON -->
+<div class="super-box">
 
-<div class="premium-box">
+<div class="inner-block">
 
 <h2>Vizyon | Vision</h2>
 
@@ -200,9 +223,7 @@ sciences community.
 
 </div>
 
-<!-- MİSYON -->
-
-<div class="premium-box">
+<div class="inner-block">
 
 <h2>Misyon | Mission</h2>
 
@@ -223,6 +244,12 @@ medicine, health sciences, and research.
 </div>
 
 </div>
+
+</div>
+
+<footer>
+© 2026 Wionpav Labs | Founded by Ali Bocakkıtay
+</footer>
 
 <script>
 function toggleMenu(){
