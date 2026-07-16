@@ -5,31 +5,55 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Yayınlar | Wionpav Labs</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
 
+/* BODY AYNI */
 body{
 margin:0;
 font-family:'Inter',sans-serif;
 color:#e2e8f0;
 
 background:
-radial-gradient(circle at top,#14365f 0%,#0b2342 30%,#071322 60%,#040812 100%);
+radial-gradient(circle at top,#14365f 0%,#0b2342 28%,#071322 55%,#040812 100%);
 }
 
-/* MENU */
+/* DNA BACKGROUND */
+.science-background {
+position: fixed;
+inset: 0;
+overflow: hidden;
+pointer-events: none;
+z-index: 0;
+}
+
+.dna-line{
+position:absolute;
+width:120px;
+height:520px;
+opacity:0.08;
+background:repeating-linear-gradient(45deg,transparent 0 18px,#38bdf8 19px 21px,transparent 22px 40px);
+border-left:2px solid #38bdf8;
+border-right:2px solid #38bdf8;
+border-radius:50%;
+animation:dnaMove 18s ease-in-out infinite;
+}
+
+.dna-right{ right:12%; top:15%; }
+.dna-left{ left:12%; top:15%; }
+
+/* NAV (3 LÜ SOL ÜST) */
 .menu-toggle{
 position:fixed;
 top:15px;
 left:15px;
-font-size:28px;
+font-size:26px;
 color:#38bdf8;
 cursor:pointer;
-z-index:1000;
+z-index:999;
 }
 
 nav{
@@ -38,23 +62,18 @@ top:0;
 left:-100%;
 width:260px;
 height:100vh;
-
 background:rgba(17,24,39,.95);
 backdrop-filter:blur(25px);
-
 display:flex;
 flex-direction:column;
 align-items:center;
 justify-content:center;
-gap:22px;
-
+gap:25px;
 transition:.4s;
-z-index:999;
+z-index:998;
 }
 
-nav.active{
-left:0;
-}
+nav.active{ left:0; }
 
 nav a{
 color:#e2e8f0;
@@ -62,172 +81,92 @@ text-decoration:none;
 font-size:18px;
 }
 
+nav a:hover{ color:#38bdf8; }
+
 /* CONTAINER */
 .container{
 max-width:900px;
 margin:auto;
 padding:100px 20px 60px;
-}
-
-/* TITLE */
-.title{
-text-align:center;
-margin-bottom:40px;
-}
-
-/* 🔥 MASTER PREMIUM BOX */
-.master-box{
-
 position:relative;
-
-padding:40px;
-
-border-radius:26px;
-
-background:
-linear-gradient(
-145deg,
-rgba(255,255,255,.08),
-rgba(17,24,39,.85)
-);
-
-border:1px solid rgba(56,189,248,.18);
-
-backdrop-filter:blur(25px);
-
-box-shadow:
-0 30px 80px rgba(0,0,0,.45);
-
-transition:.4s;
-
+z-index:2;
 }
 
-.master-box::before{
-content:"";
-position:absolute;
-inset:0;
-border-radius:26px;
-padding:1px;
-
-background:linear-gradient(120deg,transparent,#38bdf8,transparent);
-
--webkit-mask:
-linear-gradient(#000 0 0) content-box,
-linear-gradient(#000 0 0);
-
--webkit-mask-composite:xor;
-mask-composite:exclude;
+/* DIŞ PREMIUM KUTU */
+.outer-box{
+padding:30px;
+border-radius:22px;
+background:rgba(17,24,39,.72);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.06);
+box-shadow:0 20px 60px rgba(0,0,0,.35);
 }
 
-.master-box:hover{
-transform:translateY(-8px);
-box-shadow:
-0 40px 100px rgba(56,189,248,.18);
-}
-
-/* PAPER */
+/* SENİN ORİJİNAL YAYIN STİLİN */
 .paper-item{
-
-margin:25px 0;
-
-padding:25px;
-
-border-radius:20px;
-
-background:
-linear-gradient(
-145deg,
-rgba(255,255,255,.05),
-rgba(31,41,55,.7)
-);
-
+position:relative;
+overflow:hidden;
+background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(31,41,55,.65));
 border:1px solid rgba(56,189,248,.18);
-
-transition:.35s;
-
+border-radius:20px;
+padding:28px;
+margin:25px 0;
+transition:.4s ease;
+box-shadow:0 15px 40px rgba(0,0,0,.28);
 }
 
 .paper-item:hover{
 transform:translateY(-8px);
-box-shadow:
-0 25px 60px rgba(56,189,248,.2);
+border-color:#38bdf8;
+box-shadow:0 25px 60px rgba(56,189,248,.22);
 }
 
 .paper-item a{
 color:white;
 text-decoration:none;
-font-size:19px;
+font-size:20px;
 font-weight:600;
+line-height:1.5;
 }
 
-/* 🔥 DOWNLOAD (FIXED) */
+.paper-item a:hover{ color:#67d3ff; }
+
+/* DOWNLOAD BUTON AYNEN */
 .download-btn{
-
-display:inline-block;
-
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:8px;
 margin-top:18px;
-
 padding:12px 22px;
-
-background:
-linear-gradient(135deg,#38bdf8,#67d3ff);
-
+background:linear-gradient(135deg,#38bdf8,#67d3ff);
 color:#071322 !important;
-
 border-radius:14px;
-
-font-weight:700;
-
 text-decoration:none;
-
+font-weight:700;
+box-shadow:0 10px 25px rgba(56,189,248,.25);
 transition:.35s ease;
-
-box-shadow:
-0 12px 30px rgba(56,189,248,.3);
-
 }
 
 .download-btn:hover{
-
-transform:
-translateY(-6px)
-scale(1.07);
-
-box-shadow:
-0 25px 60px rgba(56,189,248,.5);
-
+transform:translateY(-5px) scale(1.03);
+box-shadow:0 18px 40px rgba(56,189,248,.45);
 }
 
 /* RATING */
-.rating{
-margin-top:10px;
-font-size:28px;
-}
-
 .rating span{
 cursor:pointer;
 color:#888;
+font-size:24px;
 }
 
-.rating span:hover{
-color:gold;
-}
+.rating span:hover{ color:gold; }
+.rating span.selected{ color:gold; }
 
-.rating span.selected{
-color:gold;
-}
-
-.rating.locked span{
-cursor:default;
-}
-
-/* FOOTER */
 footer{
 text-align:center;
-padding:35px;
+margin-top:50px;
 color:#94a3b8;
-border-top:1px solid rgba(56,189,248,.15);
-margin-top:60px;
 }
 
 </style>
@@ -236,27 +175,29 @@ margin-top:60px;
 
 <body>
 
+<div class="science-background">
+<div class="dna-line dna-right"></div>
+<div class="dna-line dna-left"></div>
+</div>
+
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
 <nav id="navMenu">
 <a href="index.html">Ana Sayfa</a>
 <a href="kurucu.html">Kurucu</a>
 <a href="vizyon.html">Vizyon & Misyon</a>
-<a href="index.html#projeler">Projeler</a>
 <a href="yayinlar.html">Yayınlar</a>
+<a href="index.html#projeler">Projeler</a>
 <a href="index.html#iletisim">İletişim</a>
-<a href="login.html">🔐 Yönetici Girişi</a>
 </nav>
 
 <div class="container">
 
-<div class="title">
-<h1>Yayınlar</h1>
-</div>
+<div class="outer-box">
 
-<!-- 🔥 MASTER BOX BAŞLANGIÇ -->
+<h2>Yayınlar</h2>
 
-<div class="master-box">
+<!-- 1. YAYIN (BİREBİR) -->
 
 <div class="paper-item">
 
@@ -277,6 +218,8 @@ margin-top:60px;
 </a>
 
 </div>
+
+<!-- 2. YAYIN (BİREBİR) -->
 
 <div class="paper-item">
 
@@ -299,13 +242,12 @@ margin-top:60px;
 </div>
 
 </div>
-<!-- 🔥 MASTER BOX BİTİŞ -->
-
-</div>
 
 <footer>
-© 2026 Wionpav Labs | Founded by Ali Bocakkıtay
+© 2026 Wionpav Labs Founded by Ali Bocakkıtay
 </footer>
+
+</div>
 
 <script>
 
@@ -313,10 +255,10 @@ function toggleMenu(){
 document.getElementById("navMenu").classList.toggle("active");
 }
 
+/* RATING SİSTEMİN AYNEN */
 const RATING_URL = "https://yorum-sistemimm-default-rtdb.europe-west1.firebasedatabase.app/ratings";
 
 let userId = localStorage.getItem("ratingUserId");
-
 if (!userId) {
 userId = crypto.randomUUID();
 localStorage.setItem("ratingUserId", userId);
@@ -334,16 +276,10 @@ alert("Bu makaleye daha önce oy verdiniz.");
 return;
 }
 
-await fetch(url, {
-method: "PUT",
-headers: {
-"Content-Type": "application/json"
-},
-body: JSON.stringify({
-article: article,
-rating: stars,
-time: Date.now()
-})
+await fetch(url,{
+method:"PUT",
+headers:{ "Content-Type":"application/json" },
+body: JSON.stringify({ article, rating: stars, time: Date.now() })
 });
 
 const box = document.querySelector(`[data-article="${article}"]`);
@@ -360,36 +296,6 @@ box.classList.add("locked");
 
 alert("⭐ Teşekkür ederiz! Oyunuz kaydedildi.");
 }
-
-async function loadRatings(){
-
-document.querySelectorAll(".rating").forEach(async box=>{
-
-const article = box.dataset.article;
-
-const res = await fetch(`${RATING_URL}/${article}/${userId}.json`);
-const vote = await res.json();
-
-if(!vote) return;
-
-const stars = box.querySelectorAll("span");
-
-stars.forEach((star,index)=>{
-
-if(index < vote.rating){
-star.textContent="★";
-star.classList.add("selected");
-}
-
-});
-
-box.classList.add("locked");
-
-});
-
-}
-
-loadRatings();
 
 </script>
 
