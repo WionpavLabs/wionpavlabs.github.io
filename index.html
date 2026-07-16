@@ -1115,30 +1115,26 @@ html, body{
     flex-direction:column;
     text-align:center;
 }
-        body.maintenance-active {
+       body.maintenance-active {
     overflow:hidden !important;
     height:100vh;
-    position:fixed;
     width:100%;
 }
 
-html, body {
-    overflow: hidden !important;
-    height: 100%;
-}
-
-body.maintenance-active {
-    overflow: hidden !important;
-    position: fixed;
-    width: 100%;
-}
-
 #maintenance {
-    position: fixed !important;
-    inset: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden !important;
+    position:fixed;
+    inset:0;
+    width:100vw;
+    height:100vh;
+    display:none;
+    background:#0f172a;
+    color:white;
+    z-index:999999;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    overflow:hidden;
 }
 </style>
 
@@ -1409,12 +1405,14 @@ async function checkMaintenance() {
         const res = await fetch("maintenance.json?cache=" + Date.now());
         const data = await res.json();
 
-        if (data.maintenance) {
+       if (data.maintenance) {
     document.getElementById("maintenance").style.display = "flex";
     document.body.classList.add("maintenance-active");
+    document.documentElement.style.overflow = "hidden";
 } else {
     document.getElementById("maintenance").style.display = "none";
     document.body.classList.remove("maintenance-active");
+    document.documentElement.style.overflow = "";
 }
     } catch (e) {}
 }
