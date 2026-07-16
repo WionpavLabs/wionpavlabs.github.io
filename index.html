@@ -892,119 +892,95 @@ section.reveal.show{
 html, body{
     overflow-x:hidden;
 }
-/* Premium bilimsel SVG arka plan */
+/* PREMIUM SCIENCE BACKGROUND */
 
 .science-bg{
-
     position:fixed;
-
     inset:0;
-
     pointer-events:none;
-
     overflow:hidden;
-
     z-index:0;
-
 }
-
 
 
 /* DNA */
 
-.dna-bg{
+.dna-symbol{
 
     position:absolute;
 
-    width:90px;
+    left:30px;
+    bottom:120px;
 
-    height:300px;
+    font-size:90px;
 
-    left:15px;
+    opacity:0.06;
 
-    bottom:80px;
+    filter:drop-shadow(0 0 18px #38bdf8);
 
-    opacity:.04;
-
-    filter:drop-shadow(0 0 15px #38bdf8);
-
-    animation:dnaRise 35s linear infinite;
+    animation:dnaMove 25s ease-in-out infinite;
 
 }
 
 
+/* Tüp */
 
-@keyframes dnaRise{
-
-    from{
-
-        transform:
-        translateY(0)
-        rotate(0deg);
-
-    }
-
-
-    to{
-
-        transform:
-        translateY(-140vh)
-        rotate(360deg);
-
-    }
-
-}
-
-
-
-/* Deney tüpü */
-
-.tube-bg{
+.tube-symbol{
 
     position:absolute;
 
-    width:55px;
+    right:40px;
+    bottom:100px;
 
-    height:160px;
+    font-size:70px;
 
-    right:25px;
-    
-    bottom:-250px;
+    opacity:0.05;
 
-    opacity:.08;
+    filter:drop-shadow(0 0 18px #38bdf8);
 
-    filter:drop-shadow(0 0 30px #38bdf8);
-
-    animation:tubeRise 20s linear infinite;
+    animation:tubeMove 20s ease-in-out infinite;
 
 }
 
 
 
-@keyframes tubeRise{
+@keyframes dnaMove{
 
-    from{
-
-        transform:
-        translateY(0)
-        rotate(-10deg);
-
+    0%{
+        transform:translateY(0) rotate(0deg);
     }
 
+    50%{
+        transform:translateY(-80px) rotate(15deg);
+    }
 
-    to{
-
-        transform:
-        translateY(-130vh)
-        rotate(10deg);
-
+    100%{
+        transform:translateY(0) rotate(0deg);
     }
 
 }
 
 
 
-/* İçerik önde */
+@keyframes tubeMove{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-60px) rotate(8deg);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+
+
+/* İçerik üstte */
 
 header,
 nav,
@@ -1013,35 +989,30 @@ footer,
 #maintenance{
 
     position:relative;
-
     z-index:5;
 
 }
 
 
 
-/* Mobil ayar */
+/* Mobil */
 
 @media(max-width:768px){
 
-    .dna-bg{
+    .dna-symbol{
 
-        width:100px;
-
-        left:-10px;
-
-        opacity:.05;
+        font-size:55px;
+        left:5px;
+        bottom:100px;
 
     }
 
 
-    .tube-bg{
+    .tube-symbol{
 
-        width:70px;
-
-        right:-10px;
-
-        opacity:.05;
+        font-size:45px;
+        right:5px;
+        bottom:90px;
 
     }
 
@@ -1053,48 +1024,13 @@ footer,
 <body>
    <div class="science-bg">
 
-   <svg class="dna-bg dna-left" viewBox="0 0 120 400" preserveAspectRatio="xMidYMid meet">
+    <div class="dna-symbol">
+        🧬
+    </div>
 
-        <path d="M40 0 C120 80,0 160,80 240 C140 300,20 350,80 400"
-        fill="none"
-        stroke="#38bdf8"
-        stroke-width="3"/>
-
-        <path d="M80 0 C0 80,120 160,40 240 C-20 300,100 350,40 400"
-        fill="none"
-        stroke="#ffffff"
-        stroke-width="3"/>
-
-
-        <g stroke="#38bdf8" stroke-width="2">
-
-            <line x1="45" y1="60" x2="75" y2="60"/>
-            <line x1="35" y1="120" x2="85" y2="120"/>
-            <line x1="45" y1="180" x2="75" y2="180"/>
-            <line x1="35" y1="240" x2="85" y2="240"/>
-            <line x1="45" y1="300" x2="75" y2="300"/>
-
-        </g>
-
-    </svg>
-
-
-
-    <svg class="tube-bg tube-left" viewBox="0 0 100 220">
-
-        <path d="M30 10 L70 10 L70 160
-        C70 200,30 200,30 160 Z"
-        fill="none"
-        stroke="#38bdf8"
-        stroke-width="4"/>
-
-
-        <path d="M35 110 L65 110 L65 160
-        C65 180,35 180,35 160 Z"
-        fill="#38bdf8"
-        opacity=".4"/>
-
-    </svg>
+    <div class="tube-symbol">
+        🧪
+    </div>
 
 </div>
   
