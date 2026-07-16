@@ -793,6 +793,20 @@ footer{
     backdrop-filter:blur(15px);
 
 }
+    section{
+    opacity:0;
+    transform:translateY(30px);
+    animation:sectionShow .8s ease forwards;
+}
+
+@keyframes sectionShow{
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
 </style>
 
 </head>
