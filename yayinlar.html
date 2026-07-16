@@ -159,7 +159,10 @@ cursor:pointer;
 color:#888;
 font-size:24px;
 }
-
+.rating.locked span{
+cursor:default;
+pointer-events:none;
+}
 .rating span:hover{ color:gold; }
 .rating span.selected{ color:gold; }
 
@@ -269,47 +272,92 @@ function toggleMenu(){
 document.getElementById("navMenu").classList.toggle("active");
 }
 
-/* RATING SİSTEMİN AYNEN */
 const RATING_URL = "https://yorum-sistemimm-default-rtdb.europe-west1.firebasedatabase.app/ratings";
 
 let userId = localStorage.getItem("ratingUserId");
+
 if (!userId) {
 userId = crypto.randomUUID();
 localStorage.setItem("ratingUserId", userId);
 }
 
-async function rate(article, stars) {
+
+async function rate(article, stars){
 
 const url = `${RATING_URL}/${article}/${userId}.json`;
 
 const response = await fetch(url);
 const existingVote = await response.json();
 
-if (existingVote) {
+if(existingVote){
 alert("Bu makaleye daha önce oy verdiniz.");
 return;
 }
 
 await fetch(url,{
 method:"PUT",
-headers:{ "Content-Type":"application/json" },
-body: JSON.stringify({ article, rating: stars, time: Date.now() })
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify({
+article:article,
+rating:stars,
+time:Date.now()
+})
 });
 
-const box = document.querySelector(`[data-article="${article}"]`);
-const starsEl = box.querySelectorAll("span");
+updateStars(article,stars);
+
+alert("⭐ Teşekkür ederiz! Oyunuz kaydedildi.");
+
+}
+
+
+function updateStars(article,stars){
+
+const box=document.querySelector(`[data-article="${article}"]`);
+
+const starsEl=box.querySelectorAll("span");
 
 starsEl.forEach((star,index)=>{
+
 if(index < stars){
-star.classList.add("selected");
+
 star.textContent="★";
+star.classList.add("selected");
+
 }
+
 });
 
 box.classList.add("locked");
 
-alert("⭐ Teşekkür ederiz! Oyunuz kaydedildi.");
 }
+
+
+
+async function loadRatings(){
+
+document.querySelectorAll(".rating").forEach(async box=>{
+
+const article=box.dataset.article;
+
+const res=await fetch(`${RATING_URL}/${article}/${userId}.json`);
+
+const vote=await res.json();
+
+if(vote){
+
+updateStars(article,vote.rating);
+
+}
+
+});
+
+}
+
+
+loadRatings();
 
 </script>
 
