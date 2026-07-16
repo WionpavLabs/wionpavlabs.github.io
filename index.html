@@ -653,60 +653,6 @@ box-shadow:0 0 35px #38bdf8;
     transform:translateY(-2px);
 
 }
-.hero-buttons {
-  margin-top: 20px;
-}
-
-.btn-primary, .btn-secondary {
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 8px;
-  text-decoration: none;
-}
-
-.btn-primary {
-  background: #38bdf8;
-  color: black;
-}
-
-.btn-secondary {
-  border: 1px solid #38bdf8;
-  color: #38bdf8;
-}
-    .publications-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:25px;
-  margin-top:30px;
-}
-
-.paper-item{
-  background:#071322;
-  padding:20px;
-  border-radius:15px;
-  transition:0.3s;
-  border:1px solid transparent;
-}
-
-.paper-item:hover{
-  transform:translateY(-5px);
-  border:1px solid #38bdf8;
-  box-shadow:0 0 15px rgba(56,189,248,0.3);
-}
-    .download-btn{
-  display:inline-block;
-  margin-top:10px;
-  color:#38bdf8;
-}
-    .hero-overlay{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.25);
-    z-index:1;
-}
 </style>
 
 </head>
@@ -734,15 +680,9 @@ box-shadow:0 0 35px #38bdf8;
     Medical Research Platform
 </p>
 
-<div class="hero-buttons">
-  <a href="#Yayınlar" class="btn-primary">Yayınlar</a>
-  <a href="#projeler" class="btn-secondary">Projeler</a>
-</div>
-        
-        
         <div class="hero-line"></div>
 
-        <a href="kurucu.html" class="scroll-arrow">⌄</a>
+        <a href="#kurucu" class="scroll-arrow">⌄</a>
 
     </div>
 
@@ -753,7 +693,7 @@ box-shadow:0 0 35px #38bdf8;
 <nav id="navMenu">
    
     <a href="#anasayfa">Ana Sayfa</a>
-    <a href="kurucu.html">Kurucu</a>
+    <a href="#kurucu">Kurucu</a>
 <a href="#misyon-vizyon">Vizyon & Misyon</a>
     <a href="#projeler">Projeler</a>
     <a href="#Yayınlar">Yayınlar</a>
@@ -764,6 +704,7 @@ box-shadow:0 0 35px #38bdf8;
 </nav>
 <main>
 
+<section id="kurucu">
 
 <div class="founder-card">
 
@@ -810,7 +751,9 @@ box-shadow:0 0 35px #38bdf8;
     His interests include literature reviews, scientific writing, and evidence-based
     medicine.
 </p>
+
 </section>
+
 <section id="misyon-vizyon">
 
     <h2>Vizyon | Vision</h2>
@@ -861,9 +804,7 @@ Yeni içerikler için takipte kalın.
 </section>
 
 <section id="Yayınlar">
-  <h2>Yayınlar</h2>
-
-  <div class="publications-grid">
+<h2>Yayınlar</h2>
 <div class="paper-item">
 
 <a href="yazilar/The Relationship Between Short Video-Based Social Media Use, Dopamine Signaling, and Depressive Symptoms.pdf" target="_blank">
@@ -903,7 +844,6 @@ Yeni içerikler için takipte kalın.
 </a>
 
 </div>
-      </div>
 </section>
 <section>
     <h2>Yorumlar</h2>
