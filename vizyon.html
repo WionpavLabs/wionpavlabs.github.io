@@ -1,1 +1,234 @@
+<!DOCTYPE html>
 
+<html lang="tr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vizyon & Misyon | Wionpav Labs</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Inter',sans-serif;
+color:#e2e8f0;
+
+background:
+radial-gradient(circle at top,#14365f 0%,#0b2342 30%,#071322 60%,#040812 100%);
+}
+
+/* NAV */
+.menu-toggle{
+position:fixed;
+top:15px;
+left:15px;
+font-size:28px;
+color:#38bdf8;
+cursor:pointer;
+z-index:999;
+}
+
+nav{
+position:fixed;
+top:0;
+left:-100%;
+width:260px;
+height:100vh;
+
+background:rgba(17,24,39,.95);
+backdrop-filter:blur(25px);
+
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+gap:25px;
+
+transition:.4s;
+z-index:998;
+}
+
+nav.active{
+left:0;
+}
+
+nav a{
+color:#e2e8f0;
+text-decoration:none;
+font-size:18px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+/* CONTAINER */
+.container{
+max-width:900px;
+margin:auto;
+padding:100px 20px 50px;
+}
+
+/* PREMIUM BOX */
+.premium-box{
+position:relative;
+
+padding:35px;
+
+border-radius:24px;
+
+background:
+linear-gradient(145deg,
+rgba(255,255,255,.08),
+rgba(17,24,39,.75)
+);
+
+border:1px solid rgba(56,189,248,.15);
+
+backdrop-filter:blur(20px);
+
+box-shadow:
+0 20px 60px rgba(0,0,0,.4);
+
+transition:.4s;
+margin-bottom:35px;
+}
+
+/* Glow border */
+.premium-box::before{
+content:"";
+position:absolute;
+inset:0;
+border-radius:24px;
+padding:1px;
+
+background:linear-gradient(120deg,transparent,#38bdf8,transparent);
+
+-webkit-mask:
+linear-gradient(#000 0 0) content-box,
+linear-gradient(#000 0 0);
+
+-webkit-mask-composite:xor;
+mask-composite:exclude;
+}
+
+.premium-box:hover{
+transform:translateY(-8px) scale(1.01);
+
+box-shadow:
+0 30px 80px rgba(56,189,248,.18);
+}
+
+/* TITLES */
+h2{
+color:#38bdf8;
+margin-bottom:15px;
+}
+
+/* TEXT */
+p{
+line-height:1.7;
+color:#cbd5f5;
+}
+
+/* DIVIDER */
+hr{
+border:1px solid #2d3748;
+margin:25px 0;
+}
+
+/* HEADER */
+.title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.title h1{
+font-size:40px;
+letter-spacing:4px;
+}
+
+.title p{
+color:#94a3b8;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav id="navMenu">
+<a href="index.html">Ana Sayfa</a>
+<a href="kurucu.html">Kurucu</a>
+<a href="vizyon.html">Vizyon & Misyon</a>
+</nav>
+
+<div class="container">
+
+<div class="title">
+<h1>Vizyon & Misyon</h1>
+<p>Wionpav Labs Scientific Foundation</p>
+</div>
+
+<!-- VİZYON -->
+
+<div class="premium-box">
+
+<h2>Vizyon | Vision</h2>
+
+<p>
+Bilimsel içerik üretimi, literatür değerlendirmeleri 
+ve araştırma çalışmaları alanlarında güvenilir bir platform haline gelerek 
+sağlık bilimleri topluluğuna değer katmak.
+</p>
+
+<hr>
+
+<p>
+To become a trusted platform in scientific content creation, literature
+evaluation, and research activities while contributing to the health
+sciences community.
+</p>
+
+</div>
+
+<!-- MİSYON -->
+
+<div class="premium-box">
+
+<h2>Misyon | Mission</h2>
+
+<p>
+Tıp, sağlık bilimleri ve araştırma alanlarında 
+güvenilir, güncel ve bilimsel temelli içerikler üreterek bilgi paylaşımını 
+desteklemek ve bilimsel düşüncenin yaygınlaşmasına katkı sağlamak.
+</p>
+
+<hr>
+
+<p>
+To support knowledge sharing and contribute to the advancement of scientific
+thinking by producing reliable, up-to-date, and evidence-based content in
+medicine, health sciences, and research.
+</p>
+
+</div>
+
+</div>
+
+<script>
+function toggleMenu(){
+document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
