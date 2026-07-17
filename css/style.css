@@ -2112,9 +2112,7 @@ main{
     flex:1;
 }
 
-/* VİZYON MİSYON DÜZELTME */
-
-.outer-box{
+.vision-box{
     width:100%;
     max-width:900px;
     box-sizing:border-box;
@@ -2122,9 +2120,9 @@ main{
 }
 
 
-.outer-box p,
-.outer-box h2,
-.outer-box h3{
+.vision-box p,
+.vision-box h2,
+.vision-box h3{
     overflow-wrap:break-word;
     word-wrap:break-word;
 }
@@ -2132,16 +2130,16 @@ main{
 
 @media(max-width:768px){
 
-    .outer-box{
+    .vision-box{
         padding:20px;
         border-radius:18px;
     }
 
-    .outer-box h2{
+    .vision-box h2{
         font-size:24px;
     }
 
-    .outer-box p{
+    .vision-box p{
         font-size:15px;
         line-height:1.6;
     }
