@@ -529,3 +529,717 @@ nav a.active{
 
 
 }
+/* =====================================
+   WIONPAV LABS - MAIN STYLE
+   Bölüm 2
+===================================== */
+
+
+/* ANA ALAN */
+
+
+main{
+
+
+    max-width:900px;
+
+
+    margin:-20px auto 40px;
+
+
+    padding:0 20px;
+
+
+    position:relative;
+
+
+    z-index:20;
+
+
+}
+
+
+
+/* GLASS SECTION */
+
+
+section{
+
+
+    margin-bottom:40px;
+
+
+    padding:30px;
+
+
+
+    background:
+    rgba(17,24,39,.72);
+
+
+
+    backdrop-filter:
+    blur(20px);
+
+
+
+    border:
+    1px solid rgba(255,255,255,.06);
+
+
+
+    border-radius:22px;
+
+
+
+    box-shadow:
+
+
+    0 20px 60px rgba(0,0,0,.35);
+
+
+
+    transition:.35s;
+
+
+    position:relative;
+
+    overflow:hidden;
+
+
+}
+
+
+
+section:hover{
+
+
+    transform:translateY(-6px);
+
+
+
+    border-color:
+    rgba(56,189,248,.18);
+
+
+
+    box-shadow:
+
+
+    0 25px 70px rgba(56,189,248,.12);
+
+
+}
+
+
+
+section::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    border-radius:22px;
+
+
+    padding:1px;
+
+
+
+    background:
+    linear-gradient(
+        120deg,
+        transparent,
+        #38bdf8,
+        transparent
+    );
+
+
+    -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+
+
+    -webkit-mask-composite:xor;
+
+
+    mask-composite:exclude;
+
+
+}
+
+
+
+h2{
+
+
+    color:#38bdf8;
+
+}
+
+
+
+
+/* FOUNDER */
+
+
+.founder-card{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:30px;
+
+
+    margin-bottom:25px;
+
+
+    padding:25px;
+
+
+    border-radius:20px;
+
+
+
+    background:
+    rgba(255,255,255,.03);
+
+
+
+    border:
+    1px solid rgba(56,189,248,.12);
+
+
+
+    box-shadow:
+
+
+    0 15px 40px rgba(0,0,0,.25);
+
+
+
+    transition:.35s ease;
+
+
+}
+
+
+
+.founder-card:hover{
+
+
+    transform:translateY(-5px);
+
+
+
+    border-color:
+    rgba(56,189,248,.35);
+
+
+
+    box-shadow:
+
+
+    0 25px 60px rgba(56,189,248,.15);
+
+
+}
+
+
+
+.founder-photo{
+
+
+    width:160px;
+
+
+    height:160px;
+
+
+    border-radius:50%;
+
+
+    object-fit:cover;
+
+
+    object-position:50% 18%;
+
+
+
+    border:
+    3px solid rgba(56,189,248,.8);
+
+
+
+    box-shadow:
+
+
+    0 0 20px rgba(56,189,248,.35),
+
+
+    0 0 50px rgba(56,189,248,.15);
+
+
+
+    transition:.4s ease;
+
+
+}
+
+
+
+.founder-photo:hover{
+
+
+    transform:scale(1.08);
+
+
+}
+
+
+
+
+
+.founder-info h3{
+
+
+    margin:0;
+
+
+    font-size:24px;
+
+
+    color:#38bdf8;
+
+
+}
+
+
+
+
+/* PDF KARTLARI */
+
+
+.paper-item{
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    background:
+
+
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.08),
+        rgba(31,41,55,.65)
+    );
+
+
+    border:
+    1px solid rgba(56,189,248,.18);
+
+
+
+    border-radius:20px;
+
+
+    padding:28px;
+
+
+    margin:25px 0;
+
+
+
+    transition:.4s ease;
+
+
+
+    box-shadow:
+
+
+    0 15px 40px rgba(0,0,0,.28);
+
+
+}
+
+
+
+.paper-item:hover{
+
+
+    transform:translateY(-8px);
+
+
+
+    border-color:#38bdf8;
+
+
+
+    box-shadow:
+
+
+    0 25px 60px rgba(56,189,248,.22);
+
+
+}
+
+
+
+
+.paper-item a{
+
+
+    color:white;
+
+
+    text-decoration:none;
+
+
+    font-size:20px;
+
+
+    font-weight:600;
+
+
+}
+
+
+
+.paper-item a:hover{
+
+
+    color:#67d3ff;
+
+
+}
+
+
+
+
+.download-btn{
+
+
+    display:inline-flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    gap:8px;
+
+
+
+    margin-top:18px;
+
+
+
+    padding:12px 22px;
+
+
+
+    background:
+
+
+    linear-gradient(
+        135deg,
+        #38bdf8,
+        #67d3ff
+    );
+
+
+
+    color:#071322 !important;
+
+
+    border-radius:14px;
+
+
+
+    font-weight:700;
+
+
+
+    box-shadow:
+
+
+    0 10px 25px rgba(56,189,248,.25);
+
+
+
+    transition:.35s ease;
+
+
+}
+
+
+
+.download-btn:hover{
+
+
+    transform:
+    translateY(-5px)
+    scale(1.03);
+
+
+
+}
+
+
+
+/* YORUM SISTEMI */
+
+
+.comment-box{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:10px;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+.comment-box input,
+.comment-box textarea{
+
+
+    padding:10px;
+
+
+    border-radius:8px;
+
+
+    border:none;
+
+
+    outline:none;
+
+
+}
+
+
+
+.comment-box button{
+
+
+    padding:10px;
+
+
+    border:none;
+
+
+    border-radius:8px;
+
+
+
+    background:#38bdf8;
+
+
+    color:#0f172a;
+
+
+
+    font-weight:bold;
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+.comment{
+
+
+    background:#1f2937;
+
+
+    padding:10px;
+
+
+    border-radius:8px;
+
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+.comment b{
+
+
+    color:#38bdf8;
+
+
+}
+
+
+
+
+/* FOOTER */
+
+
+footer{
+
+
+    margin-top:80px;
+
+
+    padding:40px 20px;
+
+
+    text-align:center;
+
+
+    color:#94a3b8;
+
+
+
+    border-top:
+    1px solid rgba(56,189,248,.15);
+
+
+
+    background:
+    rgba(17,24,39,.35);
+
+
+
+    backdrop-filter:
+    blur(15px);
+
+
+}
+
+
+
+/* MAINTENANCE */
+
+
+#maintenance{
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    width:100vw;
+
+
+    height:100vh;
+
+
+    display:none;
+
+
+    background:#0f172a;
+
+
+    color:white;
+
+
+    z-index:999999;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    flex-direction:column;
+
+
+    text-align:center;
+
+
+    overflow:hidden;
+
+
+}
+
+
+body.maintenance-active{
+
+
+    overflow:hidden !important;
+
+
+    height:100vh;
+
+
+    width:100%;
+
+
+}
+
+
+
+/* SECTION ANIMATION */
+
+
+section.reveal{
+
+
+    opacity:0;
+
+
+    transform:translateY(40px);
+
+
+    transition:
+
+
+    opacity .8s ease,
+
+
+    transform .8s ease;
+
+
+}
+
+
+
+section.reveal.show{
+
+
+    opacity:1;
+
+
+    transform:translateY(0);
+
+
+}
