@@ -2094,3 +2094,10 @@ section{
     }
 
 }
+@media(max-width:768px){
+
+    main{
+        padding-top:100px;
+    }
+
+}
