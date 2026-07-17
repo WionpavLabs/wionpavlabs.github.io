@@ -1767,7 +1767,12 @@ section.reveal.show{
 
 
 }
-
+.menu-toggle{
+    position:fixed;
+    top:15px;
+    left:15px;
+    z-index:9999;
+}
 
 
 
