@@ -2111,3 +2111,39 @@ body{
 main{
     flex:1;
 }
+
+/* VİZYON MİSYON DÜZELTME */
+
+.outer-box{
+    width:100%;
+    max-width:900px;
+    box-sizing:border-box;
+    overflow:hidden;
+}
+
+
+.outer-box p,
+.outer-box h2,
+.outer-box h3{
+    overflow-wrap:break-word;
+    word-wrap:break-word;
+}
+
+
+@media(max-width:768px){
+
+    .outer-box{
+        padding:20px;
+        border-radius:18px;
+    }
+
+    .outer-box h2{
+        font-size:24px;
+    }
+
+    .outer-box p{
+        font-size:15px;
+        line-height:1.6;
+    }
+
+}
