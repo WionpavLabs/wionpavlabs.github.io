@@ -2066,8 +2066,22 @@ section{
 
 .hamburger-icon{
     display:flex;
+    flex-direction:column;
     align-items:center;
     justify-content:center;
-transform:translateY(5px);
+    gap:5px;
 }
 
+
+.hamburger-icon i{
+
+    width:20px;
+    height:2px;
+
+    background:#38bdf8;
+
+    border-radius:5px;
+
+    box-shadow:0 0 8px #38bdf8;
+
+}
