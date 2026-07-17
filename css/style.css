@@ -1243,3 +1243,786 @@ section.reveal.show{
 
 
 }
+/* =====================================
+   WIONPAV LABS - MAIN STYLE
+   Bölüm 3
+===================================== */
+
+
+/* SCROLL OKU */
+
+
+.scroll-arrow{
+
+
+    display:inline-block;
+
+
+    margin-top:35px;
+
+
+    font-size:55px;
+
+
+    color:#38bdf8;
+
+
+
+    text-decoration:none;
+
+
+
+    animation:
+    float 1.8s infinite,
+    pulseGlow 2s infinite;
+
+
+
+    text-shadow:
+
+
+    0 0 15px #38bdf8,
+
+
+    0 0 35px rgba(56,189,248,.5);
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+.scroll-arrow:hover{
+
+
+    color:white;
+
+
+    transform:scale(1.15);
+
+
+}
+
+
+
+@keyframes pulseGlow{
+
+
+    0%,100%{
+
+        opacity:1;
+
+    }
+
+
+    50%{
+
+        opacity:.65;
+
+    }
+
+}
+
+
+
+
+@keyframes float{
+
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(10px);
+
+    }
+
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+/* HERO ANIMASYON */
+
+
+.hero-text{
+
+
+    opacity:0;
+
+
+    transform:translateY(40px);
+
+
+    animation:
+    fadeUp 1.2s ease forwards;
+
+
+}
+
+
+
+
+@keyframes fadeUp{
+
+
+    to{
+
+
+        opacity:1;
+
+
+        transform:translateY(0);
+
+
+    }
+
+
+}
+
+
+
+
+/* RATING */
+
+
+.rating{
+
+
+    margin-top:10px;
+
+
+    font-size:28px;
+
+
+}
+
+
+
+
+.rating span{
+
+
+    cursor:pointer;
+
+
+    color:#888;
+
+
+    transition:.2s;
+
+
+    margin-right:4px;
+
+
+}
+
+
+
+.rating span:hover{
+
+
+    color:gold;
+
+
+}
+
+
+
+
+.rating span.selected{
+
+
+    color:gold;
+
+
+}
+
+
+
+.rating.locked span{
+
+
+    cursor:default;
+
+
+}
+
+
+
+
+
+/* BILIMSEL ARKA PLAN */
+
+
+.science-background{
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    overflow:hidden;
+
+
+    pointer-events:none;
+
+
+    z-index:0;
+
+
+}
+
+
+
+
+/* DNA */
+
+
+.dna-line{
+
+
+    position:absolute;
+
+
+    width:120px;
+
+
+    height:520px;
+
+
+    opacity:.08;
+
+
+
+    background:
+
+
+    repeating-linear-gradient(
+
+
+        45deg,
+
+
+        transparent 0 18px,
+
+
+        #38bdf8 19px 21px,
+
+
+        transparent 22px 40px
+
+
+    );
+
+
+
+    border-left:2px solid #38bdf8;
+
+
+    border-right:2px solid #38bdf8;
+
+
+
+    border-radius:50%;
+
+
+
+    animation:
+    dnaMove 18s ease-in-out infinite;
+
+
+}
+
+
+
+.dna-right{
+
+
+    right:12%;
+
+
+    top:15%;
+
+
+}
+
+
+
+.dna-left{
+
+
+    left:12%;
+
+
+    top:15%;
+
+
+    animation-delay:2s;
+
+
+}
+
+
+
+
+@keyframes dnaMove{
+
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-40px);
+
+    }
+
+}
+
+
+
+
+
+/* PARÇACIKLAR */
+
+
+.particle{
+
+
+    position:absolute;
+
+
+    width:8px;
+
+
+    height:8px;
+
+
+    background:#38bdf8;
+
+
+    border-radius:50%;
+
+
+
+    opacity:.25;
+
+
+
+    box-shadow:
+
+
+    0 0 15px #38bdf8;
+
+
+
+    animation:
+    floatParticle 12s infinite ease-in-out;
+
+
+}
+
+
+
+.p1{
+
+    top:20%;
+
+    left:15%;
+
+}
+
+
+.p2{
+
+    top:65%;
+
+    left:25%;
+
+    animation-delay:3s;
+
+}
+
+
+
+.p3{
+
+    top:35%;
+
+    right:25%;
+
+    animation-delay:5s;
+
+}
+
+
+
+
+.p4{
+
+    bottom:20%;
+
+    right:15%;
+
+    animation-delay:2s;
+
+}
+
+
+
+
+.p5{
+
+    top:75%;
+
+    left:70%;
+
+    animation-delay:7s;
+
+}
+
+
+
+
+@keyframes floatParticle{
+
+
+    0%{
+
+
+        transform:translateY(0);
+
+
+        opacity:.15;
+
+
+    }
+
+
+    50%{
+
+
+        transform:translateY(-40px);
+
+
+        opacity:.35;
+
+
+    }
+
+
+    100%{
+
+
+        transform:translateY(0);
+
+
+        opacity:.15;
+
+
+    }
+
+
+}
+
+
+
+
+
+
+/* MOBIL MENU */
+
+
+.menu-toggle{
+
+
+    display:none;
+
+
+    text-align:left;
+
+
+    padding:15px;
+
+
+    background:#1f2937;
+
+
+    color:#38bdf8;
+
+
+    font-size:26px;
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+/* MOBIL TASARIM */
+
+
+@media(max-width:768px){
+
+
+
+.hero{
+
+
+    min-height:100vh;
+
+
+    padding:0 15px;
+
+
+}
+
+
+
+.wionpav-logo{
+
+
+    width:100vw;
+
+
+    max-width:490px;
+
+
+}
+
+
+
+
+.hero-text{
+
+
+    width:100%;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    text-align:center;
+
+
+    transform:translateY(-10px);
+
+
+}
+
+
+
+.hero-subtitle{
+
+
+    font-size:13px;
+
+
+}
+
+
+
+.hero-line{
+
+
+    width:220px;
+
+
+}
+
+
+
+
+.scroll-arrow{
+
+
+    font-size:42px;
+
+
+}
+
+
+
+
+nav{
+
+
+    display:none;
+
+
+    flex-direction:column;
+
+
+    align-items:center;
+
+
+    gap:18px;
+
+
+
+    width:100%;
+
+
+    max-width:100vw;
+
+
+
+    padding:25px 15px;
+
+
+
+    border-radius:0;
+
+
+
+    margin:0;
+
+
+}
+
+
+
+nav.active{
+
+
+    display:flex;
+
+
+}
+
+
+
+.menu-toggle{
+
+
+    display:block;
+
+
+}
+
+
+
+.admin-link{
+
+
+    width:220px;
+
+
+    text-align:center;
+
+
+    margin-left:0;
+
+
+    margin-top:15px;
+
+
+}
+
+
+
+.founder-card{
+
+
+    flex-direction:column;
+
+
+    text-align:center;
+
+
+}
+
+
+
+section{
+
+
+    padding:22px;
+
+
+    border-radius:18px;
+
+
+}
+
+
+
+.dna-line{
+
+
+    width:75px;
+
+
+    height:330px;
+
+
+    opacity:.05;
+
+
+    top:25%;
+
+
+}
+
+
+
+.dna-right{
+
+    right:-15px;
+
+}
+
+
+
+.dna-left{
+
+    left:-15px;
+
+}
+
+
+
+.particle{
+
+
+    display:none;
+
+}
+
+
+
+}
