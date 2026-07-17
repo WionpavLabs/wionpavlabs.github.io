@@ -1,1 +1,531 @@
+/* =====================================
+   WIONPAV LABS - MAIN STYLE
+   Bölüm 1
+===================================== */
 
+
+/* GENEL */
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+html, body{
+    margin:0;
+    padding:0;
+    width:100%;
+    overflow-x:hidden;
+}
+
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    color:#e2e8f0;
+
+    line-height:1.6;
+
+
+    background:
+    radial-gradient(
+        circle at top,
+        #14365f 0%,
+        #0b2342 28%,
+        #071322 55%,
+        #040812 100%
+    );
+
+    background-attachment:fixed;
+
+}
+
+
+/* ARKA PLAN GLOW */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    top:-250px;
+    left:-250px;
+
+    width:700px;
+    height:700px;
+
+    border-radius:50%;
+
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(56,189,248,.18) 0%,
+        rgba(56,189,248,.08) 35%,
+        transparent 70%
+    );
+
+
+    filter:blur(70px);
+
+    z-index:-1;
+
+    pointer-events:none;
+
+}
+
+
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+
+    bottom:-300px;
+    right:-250px;
+
+
+    width:750px;
+    height:750px;
+
+
+    border-radius:50%;
+
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(37,99,235,.16) 0%,
+        rgba(37,99,235,.07) 35%,
+        transparent 70%
+    );
+
+
+    filter:blur(80px);
+
+    z-index:-1;
+
+    pointer-events:none;
+
+}
+
+
+
+/* HERO */
+
+header{
+
+    padding:60px 20px;
+
+    text-align:center;
+
+    background:#111827;
+
+}
+
+
+
+.hero{
+
+
+    position:relative;
+
+
+    min-height:82vh;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    overflow:hidden;
+
+
+
+    background:
+
+
+    radial-gradient(
+        circle at top,
+        #163a67 0%,
+        #0b2342 35%,
+        #071322 70%,
+        #050b16 100%
+    );
+
+
+}
+
+
+
+.hero::after{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    left:0;
+
+    bottom:0;
+
+
+    width:100%;
+
+
+    height:180px;
+
+
+    background:
+    linear-gradient(
+        to bottom,
+        transparent,
+        #111827 90%
+    );
+
+
+    pointer-events:none;
+
+}
+
+
+
+.hero-text{
+
+
+    text-align:center;
+
+
+    z-index:10;
+
+
+    transform:translateY(-50px);
+
+
+}
+
+
+
+.hero-subtitle{
+
+
+    font-size:22px;
+
+    color:#9db2c8;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+}
+
+
+
+
+.hero-line{
+
+
+    width:380px;
+
+    height:3px;
+
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        #38bdf8,
+        white,
+        #38bdf8,
+        transparent
+    );
+
+
+    box-shadow:0 0 35px #38bdf8;
+
+
+}
+
+
+
+
+/* LOGO */
+
+
+.logo-box{
+
+    display:inline-block;
+
+}
+
+
+
+.wionpav-logo{
+
+
+    width:720px;
+
+
+    max-width:92%;
+
+
+    display:block;
+
+
+
+    filter:
+
+
+    drop-shadow(
+        0 0 25px rgba(56,189,248,.35)
+    )
+
+
+    drop-shadow(
+        0 0 60px rgba(56,189,248,.15)
+    );
+
+
+    transition:1s ease;
+
+
+}
+
+
+
+.wionpav-logo:hover{
+
+
+    transform:scale(1.04);
+
+
+    filter:
+
+
+    drop-shadow(
+        0 0 35px rgba(56,189,248,.6)
+    )
+
+
+    drop-shadow(
+        0 0 90px rgba(56,189,248,.25)
+    );
+
+
+}
+
+
+
+
+/* NAVBAR */
+
+
+nav{
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    gap:25px;
+
+
+
+    position:sticky;
+
+
+    top:15px;
+
+
+
+    width:fit-content;
+
+
+    margin:auto;
+
+
+
+    padding:16px 38px;
+
+
+
+    border-radius:22px;
+
+
+
+    background:
+    rgba(17,24,39,.35);
+
+
+
+    backdrop-filter:
+    blur(25px)
+    saturate(160%);
+
+
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.35);
+
+
+
+    z-index:999;
+
+
+}
+
+
+
+nav a{
+
+
+    color:#e2e8f0;
+
+
+    text-decoration:none;
+
+
+    position:relative;
+
+
+    transition:.3s ease;
+
+
+}
+
+
+
+nav a::after{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    left:50%;
+
+
+    bottom:-8px;
+
+
+
+    width:0;
+
+
+    height:2px;
+
+
+
+    background:#38bdf8;
+
+
+    transform:translateX(-50%);
+
+
+
+    box-shadow:0 0 10px #38bdf8;
+
+
+    transition:.35s ease;
+
+
+}
+
+
+
+nav a:hover::after{
+
+
+    width:100%;
+
+
+}
+
+
+nav a:hover{
+
+
+    color:#38bdf8;
+
+
+    transform:translateY(-2px);
+
+
+}
+
+
+
+nav a.active{
+
+
+    color:#38bdf8;
+
+
+    font-weight:bold;
+
+
+    border-bottom:2px solid #38bdf8;
+
+
+    padding-bottom:2px;
+
+}
+
+
+
+.admin-link{
+
+
+    background:#38bdf8;
+
+
+    color:#071322 !important;
+
+
+    padding:10px 18px;
+
+
+    border-radius:10px;
+
+
+    font-weight:bold;
+
+
+    margin-left:25px;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.admin-link:hover{
+
+
+    background:#67d3ff;
+
+
+}
