@@ -603,7 +603,7 @@ section{
 
 
     position:relative;
-
+z-index:1;
     overflow:hidden;
 
 
@@ -640,7 +640,7 @@ section::before{
 
 
     position:absolute;
-
+z-index:-1;
 
     inset:0;
 
