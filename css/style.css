@@ -2056,3 +2056,41 @@ section{
     }
 
 }
+
+
+@media(max-width:768px){
+
+    main{
+        padding:70px 15px 0;
+    }
+
+
+    section{
+
+        padding:18px;
+
+        border-radius:18px;
+
+    }
+
+
+    .paper-item{
+
+        padding:18px;
+
+        margin:18px 0;
+
+        border-radius:16px;
+
+    }
+
+
+    .paper-item a{
+
+        font-size:16px;
+
+        line-height:1.5;
+
+    }
+
+}
