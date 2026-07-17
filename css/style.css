@@ -2058,14 +2058,7 @@ section{
 
 
 }
-html, body{
-    min-height:100%;
-}
 
-body{
-    display:flex;
-    flex-direction:column;
-}
 html, body{
     height:100%;
 }
