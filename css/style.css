@@ -1756,6 +1756,9 @@ section.reveal.show{
 
     align-items:center;
     justify-content:center;
+   text-align:center;
+line-height:1;
+padding:0;
 
     border-radius:14px;
 
@@ -2075,4 +2078,10 @@ main{
 
 footer{
     margin-top:auto;
+}
+
+.hamburger-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
