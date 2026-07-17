@@ -21,3 +21,6 @@ loadComponent(
     "background-container",
     "components/background.html"
 );
+function toggleMenu(){
+    document.getElementById("navMenu").classList.toggle("active");
+}
