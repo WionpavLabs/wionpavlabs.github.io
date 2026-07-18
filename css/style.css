@@ -2112,7 +2112,9 @@ main{
     flex:1;
 }
 
-
+.super-box{
+    /* premium kutu kodları */
+}
 .vision-box{
     width:100%;
     max-width:900px;
