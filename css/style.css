@@ -2209,3 +2209,16 @@ main{
 .vision-box{
     margin-top:110px;
 }
+/* VİZYON PREMIUM HOVER */
+.vision-box:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#38bdf8;
+
+    box-shadow:
+    0 0 25px rgba(56,189,248,.35),
+    0 0 60px rgba(56,189,248,.25),
+    0 25px 80px rgba(56,189,248,.20);
+
+}
