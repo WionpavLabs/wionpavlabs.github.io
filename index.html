@@ -1508,9 +1508,29 @@ const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll("nav a");
 
 function toggleMenu(){
-    document.getElementById("navMenu").classList.toggle("active");
+
+    document.getElementById("navMenu").classList.add("active");
+
+    document.getElementById("menuOverlay").classList.add("active");
+
 }
 
+function closeMenu(){
+
+    document.getElementById("navMenu").classList.remove("active");
+
+    document.getElementById("menuOverlay").classList.remove("active");
+
+}
+    document.querySelectorAll("#navMenu a").forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        closeMenu();
+
+    });
+
+});
 function setActiveMenu() {
     let current = "";
 
