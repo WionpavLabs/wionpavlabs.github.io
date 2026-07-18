@@ -2112,6 +2112,7 @@ main{
     flex:1;
 }
 
+
 .vision-box{
     width:100%;
     max-width:900px;
@@ -2121,8 +2122,7 @@ main{
 
 
 .vision-box p,
-.vision-box h2,
-.vision-box h3{
+.vision-box h2{
     overflow-wrap:break-word;
     word-wrap:break-word;
 }
