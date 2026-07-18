@@ -26,11 +26,10 @@ function toggleMenu(){
 }
 // AKTİF MENÜ TAKİBİ
 
-const sections = document.querySelectorAll("section[id]");
-const menuLinks = document.querySelectorAll("#navMenu a");
-
-
 window.addEventListener("scroll",()=>{
+
+    const sections = document.querySelectorAll("section[id]");
+    const menuLinks = document.querySelectorAll("#navMenu a");
 
     let current = "";
 
@@ -38,7 +37,7 @@ window.addEventListener("scroll",()=>{
 
         const sectionTop = section.offsetTop - 150;
 
-        if(scrollY >= sectionTop){
+        if(window.scrollY >= sectionTop){
 
             current = section.getAttribute("id");
 
