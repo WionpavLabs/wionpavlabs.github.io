@@ -2173,6 +2173,8 @@ main{
     max-width:900px;
     box-sizing:border-box;
     overflow:hidden;
+ margin:40px auto;
+
 }
 
 
@@ -2188,7 +2190,11 @@ main{
     .vision-box{
         padding:20px;
         border-radius:18px;
+        margin:60px 15px 40px;
+        width:calc(100% - 30px);
     }
+
+}
 
     .vision-box h2{
         font-size:24px;
