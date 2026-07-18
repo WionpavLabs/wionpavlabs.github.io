@@ -2385,10 +2385,4 @@ main{
     0 0 10px rgba(56,189,248,.7);
 
 }
-#navMenu a.active-menu{
-    color:#38bdf8;
-    font-weight:700;
-    padding-left:10px;
-    border-left:3px solid #38bdf8;
-    text-shadow:0 0 10px rgba(56,189,248,.7);
-}
+
