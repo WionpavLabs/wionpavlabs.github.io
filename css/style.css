@@ -2113,8 +2113,61 @@ main{
 }
 
 .super-box{
-    /* premium kutu kodları */
+    position:relative;
+    padding:45px;
+    border-radius:26px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.08),
+        rgba(17,24,39,.8)
+    );
+
+    border:1px solid rgba(56,189,248,.18);
+
+    backdrop-filter:blur(22px);
+
+    box-shadow:
+    0 25px 70px rgba(0,0,0,.45);
+
+    transition:.4s ease;
 }
+
+
+.super-box::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    border-radius:26px;
+    padding:1px;
+
+    background:
+    linear-gradient(
+        120deg,
+        transparent,
+        #38bdf8,
+        transparent
+    );
+
+    -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+
+    -webkit-mask-composite:xor;
+    mask-composite:exclude;
+}
+
+
+.super-box:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 35px 90px rgba(56,189,248,.20);
+}
+
 .vision-box{
     width:100%;
     max-width:900px;
