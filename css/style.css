@@ -2228,7 +2228,7 @@ main{
     display:flex;
     flex-direction:column;
 
-    padding:30px 25px;
+    padding:25px 22px;
 
     box-sizing:border-box;
 
@@ -2246,13 +2246,27 @@ main{
 #navMenu a{
 
     color:white;
+
     text-decoration:none;
 
-    font-size:18px;
+    font-size:16px;
 
-    padding:16px 0;
+    padding:10px 0;
+
+    width:100%;
 
     border-bottom:1px solid rgba(255,255,255,.08);
+
+    transition:.3s ease;
+}
+
+
+#navMenu a:hover{
+
+    color:#38bdf8;
+
+    padding-left:8px;
+
 }
 
 #navMenu .admin-link{
@@ -2353,5 +2367,21 @@ main{
 
     }
 
+
+}
+/* AKTİF MENÜ ÖĞESİ */
+
+#navMenu a.active-menu{
+
+    color:#38bdf8;
+
+    font-weight:700;
+
+    padding-left:10px;
+
+    border-left:3px solid #38bdf8;
+
+    text-shadow:
+    0 0 10px rgba(56,189,248,.7);
 
 }
