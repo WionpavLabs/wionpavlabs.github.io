@@ -28,7 +28,7 @@ function toggleMenu(){
 
 window.addEventListener("scroll",()=>{
 
-    const sections = document.querySelectorAll("section[id]");
+    const sections = document.querySelectorAll("section[id], header[id], footer[id]");
     const menuLinks = document.querySelectorAll("#navMenu a");
 
     let current = "";
