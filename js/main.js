@@ -60,4 +60,3 @@ function updateActiveMenu() {
 window.addEventListener("scroll", updateActiveMenu);
 window.addEventListener("load", updateActiveMenu);
 
-});
