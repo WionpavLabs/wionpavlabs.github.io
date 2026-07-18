@@ -2207,6 +2207,99 @@ main{
 
 }
 .vision-box{
+
+/* =========================
+   OFF CANVAS MENU
+========================= */
+
+.menu-toggle{
+    position:fixed;
+    top:18px;
+    left:18px;
+    width:50px;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    z-index:3001;
+
+    background:rgba(17,24,39,.75);
+    backdrop-filter:blur(15px);
+
+    border-radius:12px;
+
+    border:1px solid rgba(56,189,248,.15);
+}
+
+.hamburger-icon{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+
+.hamburger-icon i{
+    width:24px;
+    height:2px;
+    background:#38bdf8;
+    display:block;
+    transition:.3s;
+}
+
+/* MENU */
+
+#navMenu{
+
+    position:fixed;
+
+    top:0;
+    left:-300px;
+
+    width:280px;
+    height:100vh;
+
+    background:#071322;
+
+    display:flex;
+    flex-direction:column;
+
+    padding:30px 25px;
+
+    box-sizing:border-box;
+
+    transition:.35s ease;
+
+    z-index:3002;
+
+    overflow-y:auto;
+}
+
+#navMenu.active{
+    left:0;
+}
+
+#navMenu a{
+
+    color:white;
+    text-decoration:none;
+
+    font-size:18px;
+
+    padding:16px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+#navMenu .admin-link{
+
+    margin-top:auto;
+
+    width:100%;
+
+    text-align:center;
+
+    border-radius:12px;
+}
     margin-top:110px;
 }
 /* VİZYON PREMIUM HOVER */
