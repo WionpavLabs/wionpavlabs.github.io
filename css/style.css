@@ -1844,51 +1844,7 @@ section.reveal.show{
 
 
 
-nav{
 
-
-    display:none;
-
-
-    flex-direction:column;
-
-
-    align-items:center;
-
-
-    gap:18px;
-
-
-
-    width:100%;
-
-
-    max-width:100vw;
-
-
-
-    padding:25px 15px;
-
-
-
-    border-radius:0;
-
-
-
-    margin:0;
-
-
-}
-
-
-
-nav.active{
-
-
-    display:flex;
-
-
-}
 
 
 
@@ -2206,7 +2162,7 @@ main{
     }
 
 }
-.vision-box{
+
 
 /* =========================
    OFF CANVAS MENU
