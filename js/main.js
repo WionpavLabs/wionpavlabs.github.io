@@ -26,37 +26,35 @@ function toggleMenu(){
 }
 // AKTİF MENÜ TAKİBİ
 
-window.addEventListener("scroll",()=>{
+function updateActiveMenu() {
 
     const sections = document.querySelectorAll("section[id], header[id], footer[id]");
     const menuLinks = document.querySelectorAll("#navMenu a");
 
     let current = "";
 
-    sections.forEach(section=>{
+    sections.forEach(section => {
 
-        const sectionTop = section.offsetTop - 300;
+        const top = section.offsetTop - 200;
+        const bottom = top + section.offsetHeight;
 
-        if(window.scrollY >= sectionTop){
-
-            current = section.getAttribute("id");
-
+        if (window.scrollY >= top && window.scrollY < bottom) {
+            current = section.id;
         }
 
     });
 
-
-    menuLinks.forEach(link=>{
-
+    menuLinks.forEach(link => {
         link.classList.remove("active-menu");
 
-
-        if(link.getAttribute("href") === "#" + current){
-
+        if (link.getAttribute("href") === "#" + current) {
             link.classList.add("active-menu");
-
         }
-
     });
+
+}
+
+window.addEventListener("scroll", updateActiveMenu);
+window.addEventListener("load", updateActiveMenu);
 
 });
