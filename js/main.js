@@ -35,7 +35,7 @@ window.addEventListener("scroll",()=>{
 
     sections.forEach(section=>{
 
-        const sectionTop = section.offsetTop - 150;
+        const sectionTop = section.offsetTop - 300;
 
         if(window.scrollY >= sectionTop){
 
