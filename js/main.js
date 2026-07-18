@@ -24,3 +24,40 @@ loadComponent(
 function toggleMenu(){
     document.getElementById("navMenu").classList.toggle("active");
 }
+// AKTİF MENÜ TAKİBİ
+
+const sections = document.querySelectorAll("section[id]");
+const menuLinks = document.querySelectorAll("#navMenu a");
+
+
+window.addEventListener("scroll",()=>{
+
+    let current = "";
+
+    sections.forEach(section=>{
+
+        const sectionTop = section.offsetTop - 150;
+
+        if(scrollY >= sectionTop){
+
+            current = section.getAttribute("id");
+
+        }
+
+    });
+
+
+    menuLinks.forEach(link=>{
+
+        link.classList.remove("active-menu");
+
+
+        if(link.getAttribute("href") === "#" + current){
+
+            link.classList.add("active-menu");
+
+        }
+
+    });
+
+});
