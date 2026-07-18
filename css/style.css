@@ -350,7 +350,41 @@ nav{
 
     top:15px;
 
+@media(max-width:768px){
 
+nav{
+    position:fixed !important;
+    top:0 !important;
+    left:-300px !important;
+
+    width:280px !important;
+    height:100vh !important;
+
+    margin:0 !important;
+
+    padding:30px 25px !important;
+
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:flex-start !important;
+    align-items:flex-start !important;
+
+    border-radius:0 !important;
+
+    background:#071322 !important;
+
+    transition:.35s ease !important;
+
+}
+
+
+nav.active{
+
+    left:0 !important;
+
+}
+
+}
 
     width:fit-content;
 
