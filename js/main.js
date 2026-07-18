@@ -58,6 +58,13 @@ function updateActiveMenu() {
 
 }
 
-window.addEventListener("scroll", updateActiveMenu);
-window.addEventListener("load", updateActiveMenu);
+// Aktif menü takibi sadece ana sayfada çalışsın
+if (
+    window.location.pathname.endsWith("index.html") ||
+    window.location.pathname === "/" ||
+    window.location.pathname.endsWith("/")
+) {
+    window.addEventListener("scroll", updateActiveMenu);
+    window.addEventListener("load", updateActiveMenu);
+}
 
