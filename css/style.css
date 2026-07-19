@@ -136,7 +136,7 @@ header{
 
 
     min-height:82vh;
-
+padding-top:70px;
 
     display:flex;
 
@@ -2380,4 +2380,91 @@ main{
     0 0 10px rgba(56,189,248,.7);
 
 }
+/* =========================
+   TOP BAR
+========================= */
 
+.topbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:70px;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 18px;
+
+    box-sizing:border-box;
+
+    background:rgba(7,19,34,.92);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(56,189,248,.12);
+
+    z-index:4000;
+}
+
+.topbar-brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-left:65px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    font-size:22px;
+
+    font-weight:700;
+}
+
+.topbar-brand img{
+
+    width:40px;
+    height:40px;
+
+    object-fit:contain;
+}
+@media(max-width:768px){
+
+    .topbar{
+
+        height:60px;
+
+        padding:0 15px;
+
+    }
+
+    .topbar-brand{
+
+        margin-left:55px;
+
+        font-size:18px;
+
+    }
+
+    .topbar-brand img{
+
+        width:34px;
+        height:34px;
+
+    }
+
+    .hero{
+
+        padding-top:60px;
+
+    }
+
+}
