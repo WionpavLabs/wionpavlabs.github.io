@@ -2673,3 +2673,15 @@ height:auto;
     gap:14px;
 
 }
+
+.wion-slider{
+    outline:3px solid red !important;
+}
+
+.wion-slide{
+    outline:3px solid yellow !important;
+}
+
+.wion-slide img{
+    outline:3px solid lime !important;
+}
