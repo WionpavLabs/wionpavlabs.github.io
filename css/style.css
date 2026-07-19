@@ -2630,20 +2630,3 @@ main{
     }
 
 }
-    border-radius:25px;
-
-    padding:25px;
-
-    box-shadow:
-    0 0 40px rgba(56,189,248,.15);
-
-}
-@media(max-width:600px){
-
-    .slides{
-
-        height:400px;
-
-    }
-
-}
