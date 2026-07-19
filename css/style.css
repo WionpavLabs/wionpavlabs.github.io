@@ -2550,13 +2550,12 @@ main{
 }
 
 .wion-slide img{
-
     width:100%;
+    aspect-ratio:16/9;
+    object-fit:contain;   /* cover değil */
+    cursor:pointer;
 
-   aspect-ratio:16/9;
 height:auto;
-
-    object-fit:cover;
 
     border-radius:22px;
 
@@ -2704,4 +2703,42 @@ height:auto;
     display:block;
     width:100%;
     height:auto;
+}
+
+.image-viewer{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.92);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:99999;
+}
+
+.image-viewer.active{
+    opacity:1;
+    visibility:visible;
+}
+
+.image-viewer img{
+    max-width:95%;
+    max-height:95%;
+    object-fit:contain;
+}
+
+.viewer-close{
+    position:absolute;
+    top:20px;
+    right:25px;
+
+    font-size:42px;
+    color:white;
+    cursor:pointer;
 }
