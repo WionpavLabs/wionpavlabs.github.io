@@ -2666,12 +2666,34 @@ main{
 @media(max-width:768px){
 
     .wion-slider{
-        height:520px;
+    width:100%;
+    height:420px;
+    overflow:hidden;
+    border-radius:24px;
+}
+
+.wion-track{
+    display:flex;
+    height:100%;
+}
+
+.wion-slide{
+    min-width:100%;
+    height:100%;
+}
+
+.wion-slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+    cursor:pointer;
+}
+   @media(max-width:768px){
+
+    .wion-slider{
+        height:260px;
     }
 
-}
-   .image-viewer img{
-    max-width:98%;
-    max-height:98%;
-    object-fit:contain;
 }
