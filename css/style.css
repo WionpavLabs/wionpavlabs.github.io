@@ -131,12 +131,11 @@ header{
 
 .hero{
 
-
     position:relative;
 
+    min-height:auto;
 
-    min-height:180vh;
-padding-top:80px;
+    padding:90px 20px 25px;
 
     display:flex;
 
@@ -144,14 +143,9 @@ padding-top:80px;
 
     align-items:center;
 
-
     overflow:hidden;
 
-
-
     background:
-
-
     radial-gradient(
         circle at top,
         #163a67 0%,
@@ -159,7 +153,6 @@ padding-top:80px;
         #071322 70%,
         #050b16 100%
     );
-
 
 }
 
@@ -1765,14 +1758,15 @@ section.reveal.show{
 
 
 
+@media(max-width:768px){
+
 .hero{
 
+    min-height:auto;
 
-    min-height:70vh;
+    padding:75px 15px 15px;
 
-
-    padding:70px;
-
+}
 
 }
 
