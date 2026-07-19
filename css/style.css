@@ -1744,7 +1744,7 @@ section.reveal.show{
 
 .menu-toggle{
     position:fixed;
-    top:15px;
+    top:75px;
     left:15px;
     z-index:9999;
 }
@@ -2297,7 +2297,7 @@ main{
     visibility:visible;
 }
 .mobile-menu{
-    padding-top:90px;
+    padding-top:20px;
 }
 
 .menu-close{
