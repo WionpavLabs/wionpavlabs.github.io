@@ -2468,3 +2468,112 @@ main{
     }
 
 }
+/* =========================
+   WORKS SLIDER
+========================= */
+
+.works-section{
+
+    max-width:1200px;
+
+    margin:45px auto;
+
+    padding:0 20px;
+
+}
+
+.works-section h2{
+
+    margin-bottom:18px;
+
+    color:#38bdf8;
+
+}
+
+.works-slider{
+
+    display:flex;
+
+    gap:18px;
+
+    overflow-x:auto;
+
+    scroll-snap-type:x mandatory;
+
+    padding-bottom:12px;
+
+    scrollbar-width:none;
+
+}
+
+.works-slider::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+.work-card{
+
+    min-width:270px;
+
+    flex:0 0 auto;
+
+    scroll-snap-align:start;
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:28px;
+
+    border-radius:22px;
+
+    background:rgba(17,24,39,.75);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(56,189,248,.15);
+
+    transition:.35s;
+
+}
+
+.work-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#38bdf8;
+
+    box-shadow:
+        0 0 25px rgba(56,189,248,.25),
+        0 25px 60px rgba(56,189,248,.20);
+
+}
+
+.work-icon{
+
+    font-size:42px;
+
+    display:block;
+
+    margin-bottom:15px;
+
+}
+
+.work-card h3{
+
+    margin:0 0 10px;
+
+    color:#38bdf8;
+
+}
+
+.work-card p{
+
+    margin:0;
+
+    color:#cbd5e1;
+
+    line-height:1.6;
+
+}
