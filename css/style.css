@@ -2298,17 +2298,29 @@ main{
 }
 
 .menu-close{
-    align-self:flex-end;
+    position:absolute;
+    top:18px;
+    right:18px;
+
     width:40px;
     height:40px;
+
     border:none;
     border-radius:50%;
+
     background:#38bdf8;
     color:#071322;
+
     font-size:22px;
     font-weight:bold;
+
     cursor:pointer;
-    margin-bottom:25px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    box-shadow:0 0 15px rgba(56,189,248,.35);
 }
 .mobile-header{
     display:none;
