@@ -2325,6 +2325,9 @@ main{
     cursor:pointer;
     margin-bottom:25px;
 }
+.mobile-header{
+    display:none;
+}
 
 @media(max-width:768px){
 
