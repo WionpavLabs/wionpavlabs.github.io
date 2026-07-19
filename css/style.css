@@ -2304,29 +2304,17 @@ main{
     top:25px;
 }
 .menu-close{
-    position:absolute;
-    top:60px;
-    right:30px;
-
+    align-self:flex-end;
     width:40px;
     height:40px;
-
     border:none;
     border-radius:50%;
-
     background:#38bdf8;
     color:#071322;
-
     font-size:22px;
     font-weight:bold;
-
     cursor:pointer;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    box-shadow:0 0 15px rgba(56,189,248,.35);
+    margin-bottom:25px;
 }
 .mobile-header{
     display:none;
