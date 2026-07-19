@@ -41,24 +41,18 @@ document.addEventListener("DOMContentLoaded", ()=>{
     let currentSlide = 0;
 
 
-    function showSlide(index){
+   function showSlide(index){
 
-       
-        dots.forEach(dot=>{
-            dot.classList.remove("active");
-        });
+    slider.style.transform = `translateX(-${index * 100}%)`;
 
+    dots.forEach(dot=>{
+        dot.classList.remove("active");
+    });
 
-        
-        dots[index].classList.add("active");
+    dots[index].classList.add("active");
 
-        currentSlide = index;
-
-    }
-const slider = document.querySelector(".slides");
-
-slider.style.transform =
-`translateX(-${index*100}%)`;
+    currentSlide=index;
+}
 
     dots.forEach((dot,index)=>{
 
