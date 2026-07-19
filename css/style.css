@@ -2685,3 +2685,23 @@ height:auto;
 .wion-slide img{
     outline:3px solid lime !important;
 }
+
+.wion-slider{
+    overflow:hidden;
+}
+
+.wion-track{
+    display:flex;
+    align-items:flex-start;
+}
+
+.wion-slide{
+    min-width:100%;
+    display:flex;
+}
+
+.wion-slide img{
+    display:block;
+    width:100%;
+    height:auto;
+}
