@@ -221,6 +221,37 @@ if (
     window.location.pathname === "/" ||
     window.location.pathname.endsWith("/")
 ) {
+
+const viewer = document.getElementById("imageViewer");
+const viewerImg = document.getElementById("viewerImg");
+
+document.querySelectorAll(".wion-slide img").forEach(img=>{
+
+    img.addEventListener("click",()=>{
+
+        viewerImg.src = img.src;
+
+        viewer.classList.add("active");
+
+    });
+
+});
+
+document.querySelector(".viewer-close").onclick = ()=>{
+
+    viewer.classList.remove("active");
+
+};
+
+viewer.onclick = (e)=>{
+
+    if(e.target===viewer){
+
+        viewer.classList.remove("active");
+
+    }
+
+};
     window.addEventListener("scroll", updateActiveMenu);
     window.addEventListener("load", updateActiveMenu);
 }
