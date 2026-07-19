@@ -2550,19 +2550,11 @@ main{
 }
 
 .wion-slide img{
+    display:block;
     width:100%;
-    aspect-ratio:16/9;
-    object-fit:contain;   /* cover değil */
-    cursor:pointer;
-
-height:auto;
-
+    height:auto;
+    object-fit:contain;
     border-radius:22px;
-
-    user-select:none;
-
-    -webkit-user-drag:none;
-
 }
 
 .wion-dots{
@@ -2741,4 +2733,13 @@ height:auto;
     font-size:42px;
     color:white;
     cursor:pointer;
+}
+.wion-slider{
+    height:auto;
+}
+
+.wion-slide{
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
