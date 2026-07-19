@@ -43,22 +43,22 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     function showSlide(index){
 
-        slides.forEach(slide=>{
-            slide.classList.remove("active");
-        });
-
+       
         dots.forEach(dot=>{
             dot.classList.remove("active");
         });
 
 
-        slides[index].classList.add("active");
+        
         dots[index].classList.add("active");
 
         currentSlide = index;
 
     }
+const slider = document.querySelector(".slides");
 
+slider.style.transform =
+`translateX(-${index*100}%)`;
 
     dots.forEach((dot,index)=>{
 
