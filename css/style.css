@@ -2440,7 +2440,7 @@ main{
 
     .topbar{
 
-        height:60px;
+        height:56px;
 
         padding:0 15px;
 
@@ -2450,14 +2450,14 @@ main{
 
         margin-left:55px;
 
-        font-size:18px;
+        font-size:20px;
 
     }
 
     .topbar-brand img{
 
-        width:34px;
-        height:34px;
+        width:30px;
+        height:30px;
 
     }
 
