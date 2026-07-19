@@ -2626,9 +2626,13 @@ height:auto;
 
     }
 
-    .wion-slide img{
+   .wion-slide img{
 
-        height:260px;
+    width:100%;
+    aspect-ratio:16/9;
+    height:auto;
+    object-fit:contain;
+
 
         border-radius:18px;
 
