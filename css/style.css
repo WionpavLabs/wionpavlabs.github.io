@@ -2188,35 +2188,6 @@ main{
 
     z-index:3001;
 }
-.menu-btn{
-    width:50px;
-    height:50px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    cursor:pointer;
-
-    border:none;
-    border-radius:12px;
-
-    background:rgba(17,24,39,.75);
-    backdrop-filter:blur(15px);
-
-    border:1px solid rgba(56,189,248,.15);
-}
-
-.mobile-logo{
-    height:38px;
-    width:auto;
-}
-
-.mobile-title{
-    color:#fff;
-    font-size:20px;
-    font-weight:700;
-}
 
 .hamburger-icon{
     display:flex;
