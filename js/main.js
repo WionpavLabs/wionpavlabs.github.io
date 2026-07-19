@@ -28,58 +28,159 @@ function closeMenu() {
     document.getElementById("navMenu").classList.remove("active");
 }
 
-// ÇALIŞMALAR SLIDER
+/* ==========================
+   WION SLIDER
+========================== */
 
-document.addEventListener("DOMContentLoaded", ()=>{
+document.addEventListener("DOMContentLoaded", () => {
 
-    const slides = document.querySelectorAll(".slide");
-    const dots = document.querySelectorAll(".dot");
+    const track = document.querySelector(".wion-track");
+    const slides = document.querySelectorAll(".wion-slide");
+    const dots = document.querySelectorAll(".wion-dot");
 
-    if(slides.length === 0 || dots.length === 0) return;
+    if (!track || slides.length === 0) return;
 
+    let current = 0;
+    let startX = 0;
+    let endX = 0;
+    let autoSlide;
 
-    let currentSlide = 0;
+    function showSlide(index){
 
+        if(index < 0){
+            index = slides.length - 1;
+        }
 
-   function showSlide(index){
+        if(index >= slides.length){
+            index = 0;
+        }
 
-    slider.style.transform = `translateX(-${index * 100}%)`;
+        current = index;
 
-    dots.forEach(dot=>{
-        dot.classList.remove("active");
-    });
+        track.style.transform =
+            `translateX(-${current * 100}%)`;
 
-    dots[index].classList.add("active");
+        dots.forEach(dot=>{
+            dot.classList.remove("active");
+        });
 
-    currentSlide=index;
-}
+        dots[current].classList.add("active");
+
+    }
+
+    function nextSlide(){
+
+        showSlide(current + 1);
+
+    }
+
+    function prevSlide(){
+
+        showSlide(current - 1);
+
+    }
+
+    function startAuto(){
+
+        autoSlide = setInterval(nextSlide,5000);
+
+    }
+
+    function stopAuto(){
+
+        clearInterval(autoSlide);
+
+    }
 
     dots.forEach((dot,index)=>{
 
         dot.addEventListener("click",()=>{
 
+            stopAuto();
+
             showSlide(index);
+
+            startAuto();
 
         });
 
     });
 
+    /* TELEFON SWIPE */
 
-    setInterval(()=>{
+    track.addEventListener("touchstart",(e)=>{
 
-        currentSlide++;
+        startX = e.touches[0].clientX;
 
-        if(currentSlide >= slides.length){
+        stopAuto();
 
-            currentSlide = 0;
+    });
+
+    track.addEventListener("touchmove",(e)=>{
+
+        endX = e.touches[0].clientX;
+
+    });
+
+    track.addEventListener("touchend",()=>{
+
+        if(startX - endX > 60){
+
+            nextSlide();
 
         }
 
-        showSlide(currentSlide);
+        if(endX - startX > 60){
 
+            prevSlide();
 
-    },5000);
+        }
 
+        startAuto();
+
+    });
+
+    /* MOUSE DRAG */
+
+    let mouseDown = false;
+
+    track.addEventListener("mousedown",(e)=>{
+
+        mouseDown = true;
+
+        startX = e.clientX;
+
+        stopAuto();
+
+    });
+
+    window.addEventListener("mouseup",(e)=>{
+
+        if(!mouseDown) return;
+
+        mouseDown = false;
+
+        endX = e.clientX;
+
+        if(startX - endX > 60){
+
+            nextSlide();
+
+        }
+
+        if(endX - startX > 60){
+
+            prevSlide();
+
+        }
+
+        startAuto();
+
+    });
+
+    showSlide(0);
+
+    startAuto();
 
 });
 
