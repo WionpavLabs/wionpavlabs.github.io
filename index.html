@@ -1694,6 +1694,54 @@ revealSections.forEach(section=>{
 
 });
 </script>
+<script>
 
+let currentSlide = 0;
+
+const slides = document.querySelectorAll(".slide");
+
+
+function showSlide(index){
+
+    slides.forEach(slide => {
+        slide.classList.remove("active");
+    });
+
+    slides[index].classList.add("active");
+
+}
+
+
+// SONRAKİ FOTOĞRAF
+
+document.querySelector(".next").addEventListener("click", function(){
+
+    currentSlide++;
+
+    if(currentSlide >= slides.length){
+        currentSlide = 0;
+    }
+
+    showSlide(currentSlide);
+
+});
+
+
+// ÖNCEKİ FOTOĞRAF
+
+document.querySelector(".prev").addEventListener("click", function(){
+
+    currentSlide--;
+
+    if(currentSlide < 0){
+        currentSlide = slides.length - 1;
+    }
+
+    showSlide(currentSlide);
+
+});
+
+
+</script>
 </body>
 </html>
