@@ -111,6 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
     track.addEventListener("touchstart",(e)=>{
 
         startX = e.touches[0].clientX;
+         endX = startX;
 
         stopAuto();
 
@@ -149,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
         mouseDown = true;
 
         startX = e.clientX;
-
+ endX = startX;
         stopAuto();
 
     });
