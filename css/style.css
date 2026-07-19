@@ -2296,7 +2296,13 @@ main{
     opacity:1;
     visibility:visible;
 }
+.mobile-menu{
+    padding-top:90px;
+}
 
+.menu-close{
+    top:25px;
+}
 .menu-close{
     position:absolute;
     top:60px;
