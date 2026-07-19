@@ -2529,7 +2529,7 @@ main{
 
     display:block;
 
-    object-fit:contain;
+    object-fit:cover;
 
     object-position:center;
 
@@ -2632,7 +2632,7 @@ main{
 
     overflow:hidden;
 
-    border-radius:25px;
+    border-radius:20px;
 
     padding:0;
 
@@ -2646,5 +2646,14 @@ main{
 
     box-shadow:
     0 0 40px rgba(56,189,248,.15);
+
+}
+@media(max-width:600px){
+
+    .slides{
+
+        height:400px;
+
+    }
 
 }
