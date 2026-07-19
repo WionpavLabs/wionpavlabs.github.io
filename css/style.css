@@ -2536,30 +2536,40 @@ main{
     border-radius:25px;
 
 }
+@media(max-width:600px){
+
+    .slide img{
+
+        height:350px;
+
+    }
+
+}
 
 
 .dots{
 
     display:flex;
+
     justify-content:center;
 
-    gap:10px;
+    align-items:center;
 
-    margin-top:18px;
+    gap:8px;
+
+    margin-top:12px;
 
 }
 
 
 .dot{
 
-    width:10px;
-    height:10px;
+    width:8px;
+    height:8px;
 
     border-radius:50%;
 
     background:#64748b;
-
-    cursor:pointer;
 
     transition:.3s;
 
@@ -2568,14 +2578,17 @@ main{
 
 .dot.active{
 
-    width:28px;
+    width:24px;
 
-    border-radius:10px;
+    height:8px;
+
+    border-radius:20px;
 
     background:#38bdf8;
 
-}
+    box-shadow:0 0 12px #38bdf8;
 
+}
 
 .dot:hover{
 
