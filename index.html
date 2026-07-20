@@ -1698,12 +1698,40 @@ revealSections.forEach(section=>{
     <img id="viewerImg" src="">
 </div>
 
-<div class="image-viewer" id="imageViewer">
+<script>
+/* ===========================
+   PREMIUM IMAGE VIEWER
+=========================== */
 
-    <span class="viewer-close">&times;</span>
+const viewer = document.getElementById("imageViewer");
+const viewerImg = document.getElementById("viewerImg");
+const closeBtn = document.querySelector(".viewer-close");
 
-    <img id="viewerImage" src="" alt="">
+document.querySelectorAll(".wion-slide img").forEach(img=>{
 
-</div>
+    img.addEventListener("click",()=>{
+
+        viewer.classList.add("active");
+        viewerImg.src = img.src;
+
+    });
+
+});
+
+closeBtn.onclick = ()=>{
+
+    viewer.classList.remove("active");
+
+}
+
+viewer.onclick = (e)=>{
+
+    if(e.target===viewer){
+
+        viewer.classList.remove("active");
+
+    }
+
+}
 </body>
 </html>
