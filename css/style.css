@@ -2703,3 +2703,56 @@ main{
     margin:15px auto 40px;
     letter-spacing:.5px;
 }
+
+
+
+.topbar{
+    background:rgba(10,18,35,.72);
+    backdrop-filter:blur(22px);
+    -webkit-backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:22px;
+
+    margin:12px;
+    padding:14px 20px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.35),
+    inset 0 1px rgba(255,255,255,.06);
+}
+
+.topbar-brand{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    text-decoration:none;
+}
+
+.topbar-brand img{
+    width:48px;
+    height:48px;
+    filter:
+    drop-shadow(0 0 18px rgba(56,189,248,.35));
+}
+
+.topbar-brand span{
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:-.6px;
+    color:#fff;
+}
+
+.topbar::after{
+    content:"MEDICAL RESEARCH PLATFORM";
+    display:block;
+
+    margin-top:10px;
+
+    font-size:10px;
+    letter-spacing:5px;
+
+    color:#9fb4c9;
+
+    text-align:center;
+}
