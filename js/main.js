@@ -240,11 +240,18 @@ document.querySelectorAll(".wion-slide img").forEach(img=>{
 
 });
 
-document.querySelector(".viewer-close").onclick = ()=>{
+const closeBtn = document.querySelector(".viewer-close");
 
-    viewer.classList.remove("active");
+if(closeBtn){
 
-};
+    closeBtn.addEventListener("click",()=>{
+
+        viewer.classList.remove("active");
+        viewerImg.src = "";
+
+    });
+
+}
 
 viewer.onclick = (e)=>{
 
