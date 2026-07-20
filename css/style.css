@@ -2685,7 +2685,7 @@ main{
 }
 
 .works-title{
-    font-size:30px;
+    font-size:28px;
     font-weight:800;
     letter-spacing:2px;
     color:#38bdf8;
@@ -2698,7 +2698,7 @@ main{
 .works-section > p{
     text-align:center;
     color:#94a3b8;
-    font-size:16px;
+    font-size:14px;
     max-width:650px;
     margin:15px auto 40px;
     letter-spacing:.5px;
