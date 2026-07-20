@@ -2706,53 +2706,109 @@ main{
 
 
 
+
+/* ===== PREMIUM TOPBAR ===== */
+
 .topbar{
-    background:rgba(10,18,35,.72);
+
+    position:fixed;
+    top:12px;
+    left:12px;
+    right:12px;
+
+    border-radius:22px;
+
+    background:rgba(9,18,34,.72);
+
     backdrop-filter:blur(22px);
     -webkit-backdrop-filter:blur(22px);
 
     border:1px solid rgba(255,255,255,.08);
-    border-radius:22px;
-
-    margin:12px;
-    padding:14px 20px;
 
     box-shadow:
     0 15px 40px rgba(0,0,0,.35),
     inset 0 1px rgba(255,255,255,.06);
+
+    overflow:hidden;
 }
 
-.topbar-brand{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    text-decoration:none;
+.topbar::before{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(56,189,248,.08),
+    transparent);
+
+    pointer-events:none;
+
 }
 
 .topbar-brand img{
-    width:48px;
-    height:48px;
+
+    width:52px;
+    height:52px;
+
     filter:
     drop-shadow(0 0 18px rgba(56,189,248,.35));
+
 }
 
 .topbar-brand span{
-    font-size:30px;
-    font-weight:700;
-    letter-spacing:-.6px;
-    color:#fff;
+
+    font-size:32px;
+
+    font-weight:800;
+
+    letter-spacing:-1px;
+
+    color:white;
+
+    white-space:nowrap;
+
+    text-shadow:
+    0 0 18px rgba(56,189,248,.18);
+
 }
 
-.topbar::after{
-    content:"MEDICAL RESEARCH PLATFORM";
-    display:block;
+.hero-subtitle{
 
     margin-top:10px;
 
-    font-size:10px;
-    letter-spacing:5px;
+    font-size:11px;
 
-    color:#9fb4c9;
+    letter-spacing:6px;
+
+    color:#9fb5ca;
 
     text-align:center;
+
 }
+
+
+.topbar::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:40px;
+    right:40px;
+    bottom:0;
+
+    height:1px;
+
+    background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(56,189,248,.6),
+    transparent);
+
+}
+
+
