@@ -3609,28 +3609,30 @@ rgba(18,30,60,.95)
 
 }
 
-.top-header{
+/* ===== HEADER FIX ===== */
 
-    position:fixed;
+.top-header,
+.topbar{
 
-    top:14px;
-    left:0;
-    right:0;
+    background:transparent !important;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    backdrop-filter:none !important;
 
-    background:transparent;
+    -webkit-backdrop-filter:none !important;
 
-    backdrop-filter:none;
+    border:none !important;
 
-    border:none;
+    box-shadow:none !important;
 
-    box-shadow:none;
+}
 
-    z-index:100000;
+.top-header::before,
+.top-header::after,
+.topbar::before,
+.topbar::after{
 
-    pointer-events:none;
+    display:none !important;
+
+    content:none !important;
 
 }
