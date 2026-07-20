@@ -2878,3 +2878,16 @@ body{
     -webkit-tap-highlight-color:transparent;
 }
 
+.hero-content{
+
+    transition:.45s ease;
+
+}
+
+.hero.hide-hero .hero-content{
+
+    opacity:0;
+
+    transform:translateY(-60px);
+
+}
