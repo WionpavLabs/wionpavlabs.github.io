@@ -263,21 +263,7 @@ viewer.onclick = (e)=>{
     window.addEventListener("scroll", updateActiveMenu);
     window.addEventListener("load", updateActiveMenu);
 }
-document.addEventListener("click", (e)=>{
 
-    if(e.target.classList.contains("viewer-close")){
-
-        console.log("ÇARPIYA BASILDI");
-
-        const viewer = document.getElementById("imageViewer");
-
-        viewer.classList.remove("active");
-
-        console.log(viewer.className);
-
-    }
-
-});
 window.addEventListener("click", function(e){
 
     if(e.target.matches(".viewer-close")){
