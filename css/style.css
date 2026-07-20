@@ -3608,3 +3608,29 @@ rgba(18,30,60,.95)
     margin-left:42px;
 
 }
+
+.top-header{
+
+    position:fixed;
+
+    top:14px;
+    left:0;
+    right:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:transparent;
+
+    backdrop-filter:none;
+
+    border:none;
+
+    box-shadow:none;
+
+    z-index:100000;
+
+    pointer-events:none;
+
+}
