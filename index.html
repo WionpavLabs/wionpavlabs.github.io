@@ -1707,9 +1707,15 @@ const viewer = document.getElementById("imageViewer");
 const viewerImg = document.getElementById("viewerImg");
 const closeBtn = document.querySelector(".viewer-close");
 
-document.querySelectorAll(".wion-slide img").forEach(img=>{
+let currentImage = 0;
+
+const sliderImages = Array.from(document.querySelectorAll(".wion-slide img"));
+
+document.querySelectorAll(".wion-slide img").forEach((img,index)=>{
 
     img.addEventListener("click",()=>{
+
+        currentImage = index;
 
         viewer.classList.add("active");
         viewerImg.src = img.src;
@@ -1718,21 +1724,49 @@ document.querySelectorAll(".wion-slide img").forEach(img=>{
 
 });
 
-closeBtn.onclick = ()=>{
+let startX = 0;
 
-    viewer.classList.remove("active");
+viewer.addEventListener("touchstart",(e)=>{
 
-}
+    startX = e.touches[0].clientX;
 
-viewer.onclick = (e)=>{
+});
 
-    if(e.target===viewer){
 
-        viewer.classList.remove("active");
+viewer.addEventListener("touchend",(e)=>{
+
+    let endX = e.changedTouches[0].clientX;
+
+    let diff = startX - endX;
+
+
+    if(Math.abs(diff) < 50) return;
+
+
+    if(diff > 0){
+
+        // sola kaydır = sonraki
+        currentImage++;
+
+        if(currentImage >= sliderImages.length){
+            currentImage = 0;
+        }
+
+    }else{
+
+        // sağa kaydır = önceki
+        currentImage--;
+
+        if(currentImage < 0){
+            currentImage = sliderImages.length - 1;
+        }
 
     }
 
-}
+
+    viewerImg.src = sliderImages[currentImage].src;
+
+});
     </script>
 </body>
 </html>
