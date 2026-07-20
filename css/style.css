@@ -3474,3 +3474,129 @@ letter-spacing:2px;
 }
 
 }
+
+.menu-btn{
+
+    position:fixed;
+
+    top:18px;
+    left:16px;
+
+    width:46px;
+    height:46px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    gap:5px;
+
+    z-index:100001;
+
+    pointer-events:auto;
+
+}
+
+.top-header{
+
+    position:fixed;
+
+    top:14px;
+    left:0;
+    right:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:transparent;
+
+    z-index:100000;
+
+    pointer-events:none;
+
+}
+
+/* Ripple */
+
+.ripple{
+
+position:absolute;
+
+left:50%;
+top:50%;
+
+width:10px;
+height:10px;
+
+border-radius:50%;
+
+background:rgba(56,189,248,.45);
+
+transform:translate(-50%,-50%) scale(0);
+
+pointer-events:none;
+
+opacity:0;
+
+}
+
+.brand-card:active .ripple{
+
+animation:ripple .55s ease-out;
+
+}
+
+@keyframes ripple{
+
+0%{
+
+opacity:.9;
+
+transform:translate(-50%,-50%) scale(0);
+
+}
+
+100%{
+
+opacity:0;
+
+transform:translate(-50%,-50%) scale(22);
+
+}
+
+}
+
+.brand-card:active{
+
+transform:scale(.97);
+
+transition:.12s;
+
+box-shadow:
+
+0 0 25px rgba(56,189,248,.8),
+
+0 0 70px rgba(56,189,248,.45),
+
+0 0 120px rgba(56,189,248,.22);
+
+}
+
+.brand-card:active{
+
+border-color:#7fd8ff;
+
+background:
+
+linear-gradient(
+
+135deg,
+
+rgba(255,255,255,.18),
+
+rgba(18,30,60,.95)
+
+);
+
+}
