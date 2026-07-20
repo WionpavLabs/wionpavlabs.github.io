@@ -2672,3 +2672,14 @@ main{
     }
 
 }
+.viewer-close{
+    position:absolute;
+    top:20px;
+    right:25px;
+    z-index:999999;
+    cursor:pointer;
+    background:none;
+    border:none;
+    color:white;
+    font-size:40px;
+}
