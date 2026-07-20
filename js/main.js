@@ -222,36 +222,32 @@ if (
     window.location.pathname.endsWith("/")
 ) {
 
-const viewer = document.getElementById("imageViewer");
-const viewerImg = document.getElementById("viewerImg");
+document.addEventListener("click", (e)=>{
 
-let currentImage = 0;
+    const img = e.target.closest(".wion-slide img");
 
-const sliderImages = Array.from(document.querySelectorAll(".wion-slide img"));
-document.querySelectorAll(".wion-slide img").forEach(img=>{
+    if(img){
 
-    img.addEventListener("click",()=>{
+        const viewer = document.getElementById("imageViewer");
+        const viewerImg = document.getElementById("viewerImg");
 
         viewerImg.src = img.src;
-
         viewer.classList.add("active");
 
-    });
+    }
 
-});
 
-const closeBtn = document.querySelector(".viewer-close");
+    if(e.target.closest(".viewer-close")){
 
-if(closeBtn){
-
-    closeBtn.addEventListener("click",()=>{
+        const viewer = document.getElementById("imageViewer");
+        const viewerImg = document.getElementById("viewerImg");
 
         viewer.classList.remove("active");
         viewerImg.src = "";
 
-    });
+    }
 
-}
+});
 
 viewer.onclick = (e)=>{
 
