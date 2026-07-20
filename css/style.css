@@ -3665,3 +3665,7 @@ header.hero{
         margin-top:120px;
     }
 
+   .brand-card {
+    margin-top: 40px;
+    overflow: visible;
+}
