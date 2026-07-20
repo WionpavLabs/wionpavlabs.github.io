@@ -225,6 +225,9 @@ if (
 const viewer = document.getElementById("imageViewer");
 const viewerImg = document.getElementById("viewerImg");
 
+let currentImage = 0;
+
+const sliderImages = Array.from(document.querySelectorAll(".wion-slide img"));
 document.querySelectorAll(".wion-slide img").forEach(img=>{
 
     img.addEventListener("click",()=>{
