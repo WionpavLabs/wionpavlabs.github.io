@@ -249,15 +249,21 @@ document.addEventListener("click", (e)=>{
 
 });
 
-viewer.onclick = (e)=>{
+const viewer = document.getElementById("imageViewer");
 
-    if(e.target===viewer){
+if(viewer){
 
-        viewer.classList.remove("active");
+    viewer.onclick = (e)=>{
 
-    }
+        if(e.target === viewer){
 
-};
+            viewer.classList.remove("active");
+
+        }
+
+    };
+
+}
 
 
     window.addEventListener("scroll", updateActiveMenu);
@@ -273,6 +279,24 @@ window.addEventListener("click", function(e){
         if(viewer){
             viewer.classList.remove("active");
         }
+
+    }
+
+});
+
+const hero = document.querySelector(".hero");
+
+window.addEventListener("scroll", () => {
+
+    if (!hero) return;
+
+    if (window.scrollY > 80) {
+
+        hero.classList.add("hide-hero");
+
+    } else {
+
+        hero.classList.remove("hide-hero");
 
     }
 
