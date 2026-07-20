@@ -2571,13 +2571,20 @@ main{
 .image-viewer{
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.92);
+
     display:flex;
     justify-content:center;
     align-items:center;
+
+    background:rgba(3,8,18,.95);
+
+    backdrop-filter:blur(12px);
+
     opacity:0;
     visibility:hidden;
-    transition:.3s;
+
+    transition:.35s ease;
+
     z-index:99999;
 }
 
@@ -2587,18 +2594,65 @@ main{
 }
 
 .image-viewer img{
-    max-width:95%;
-    max-height:95%;
+
+    max-width:92%;
+    max-height:92%;
+
     object-fit:contain;
+
+    border-radius:22px;
+
+    border:1px solid rgba(56,189,248,.25);
+
+    box-shadow:
+        0 0 35px rgba(56,189,248,.35),
+        0 25px 90px rgba(0,0,0,.65);
+
+    transform:scale(.88);
+
+    transition:.35s ease;
+}
+
+.image-viewer.active img{
+    transform:scale(1);
 }
 
 .viewer-close{
+
     position:absolute;
+
     top:20px;
     right:25px;
-    font-size:42px;
+
+    width:48px;
+    height:48px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
     color:white;
+
+    font-size:32px;
+
     cursor:pointer;
+
+    transition:.25s;
+}
+
+.viewer-close:hover{
+
+    background:#38bdf8;
+
+    color:#071322;
+
+    transform:rotate(90deg);
 }
 
 /* Mobil */
