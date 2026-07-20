@@ -3638,17 +3638,11 @@ rgba(18,30,60,.95)
 }
 
 
-/* ===== FORCE REMOVE DARK OVERLAY ===== */
+/* ===== BRAND CARD OVERRIDE ===== */
 
-.hero-overlay,
-.hero::before,
-.hero::after,
-.top-header,
-.top-header::before,
-.top-header::after {
-    background: transparent !important;
-    background-image: none !important;
-    box-shadow: none !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
+.brand-card{
+    background: rgba(255,255,255,.05) !important;
+    backdrop-filter: blur(28px) !important;
+    -webkit-backdrop-filter: blur(28px) !important;
+    border: 1px solid rgba(255,255,255,.12) !important;
 }
