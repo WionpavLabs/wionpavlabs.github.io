@@ -284,20 +284,24 @@ window.addEventListener("click", function(e){
 
 });
 
-const hero = document.querySelector(".hero");
+const header=document.getElementById("topHeader");
+const brand=document.querySelector(".brand-card");
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll",()=>{
 
-    if (!hero) return;
+if(window.scrollY>70){
 
-    if (window.scrollY > 80) {
+brand.style.opacity="0";
+brand.style.transform="translateY(-30px)";
+brand.style.pointerEvents="none";
 
-        hero.classList.add("hide-hero");
+}else{
 
-    } else {
+brand.style.opacity="1";
+brand.style.transform="translateY(0)";
+brand.style.pointerEvents="auto";
 
-        hero.classList.remove("hide-hero");
-
-    }
+}
 
 });
+
