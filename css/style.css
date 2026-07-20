@@ -2905,3 +2905,119 @@ main{
 
     height:70px;
 }
+
+
+
+/* ==========================
+   FINAL PREMIUM MOBILE HEADER
+========================== */
+
+.menu-toggle{
+
+    position:fixed !important;
+
+    top:18px !important;
+    left:18px !important;
+
+    width:42px;
+    height:42px;
+
+    display:flex !important;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:999999 !important;
+
+    background:transparent !important;
+
+    padding:0 !important;
+
+}
+
+
+.hamburger-icon{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+}
+
+
+.hamburger-icon i{
+
+    width:24px;
+    height:2px;
+
+    background:#38bdf8;
+
+    border-radius:5px;
+
+    box-shadow:
+    0 0 10px rgba(56,189,248,.8);
+
+}
+
+
+/* LOGO VE YAZI SABİT ORTA */
+
+.topbar{
+
+    position:fixed !important;
+
+    top:12px;
+
+    left:12px;
+
+    right:12px;
+
+    height:60px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:4000;
+
+}
+
+
+
+.topbar-brand{
+
+    margin:0 !important;
+
+    gap:12px;
+
+}
+
+
+
+.topbar-brand span{
+
+    font-size:24px !important;
+
+    color:#dbe7f5 !important;
+
+    font-weight:700;
+
+    letter-spacing:-.5px;
+
+    text-shadow:
+    0 0 10px rgba(56,189,248,.15);
+
+}
+
+
+.topbar-brand img{
+
+    width:42px !important;
+
+    height:42px !important;
+
+}
