@@ -278,3 +278,16 @@ document.addEventListener("click", (e)=>{
     }
 
 });
+window.addEventListener("click", function(e){
+
+    if(e.target.matches(".viewer-close")){
+
+        const viewer = document.getElementById("imageViewer");
+
+        if(viewer){
+            viewer.classList.remove("active");
+        }
+
+    }
+
+});
