@@ -3645,3 +3645,24 @@ rgba(18,30,60,.95)
 header.hero{
     background: transparent !important;
 }
+
+
+.top-header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:9999;
+}
+
+.works-section{
+    margin-top:140px;
+}
+
+@media(max-width:768px){
+
+    .works-section{
+        margin-top:120px;
+    }
+
+}
