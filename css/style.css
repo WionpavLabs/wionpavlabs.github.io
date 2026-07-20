@@ -2875,4 +2875,17 @@ main{
 .topbar-brand{
     gap:20px;
 }
+/* Hamburger tamamen topbar'dan bağımsız */
+.menu-toggle{
 
+    position:fixed !important;
+
+    top:14px !important;
+    left:14px !important;
+
+    z-index:999999 !important;
+
+    margin:0 !important;
+
+    transform:none !important;
+}
