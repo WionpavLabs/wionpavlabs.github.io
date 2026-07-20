@@ -2471,43 +2471,54 @@ main{
     }
 
 }
+
+
 /* ===================================
-   WION SLIDER
+   WION PREMIUM SLIDER
 =================================== */
 
 .works-section{
-
     margin:50px auto;
-
     max-width:1300px;
-
     background:none;
-
     border:none;
-
     box-shadow:none;
-
     text-align:center;
-
 }
 
 .works-title{
-
     font-size:34px;
-
     margin-bottom:25px;
-
     color:#38bdf8;
-
     text-shadow:0 0 20px rgba(56,189,248,.35);
-
 }
 
 .wion-slider{
     width:100%;
-    height:420px;
+    aspect-ratio:16/9;
     overflow:hidden;
     border-radius:24px;
+
+    background:rgba(17,24,39,.55);
+    border:1px solid rgba(56,189,248,.18);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.35);
+
+    transition:.35s ease;
+}
+
+.wion-slider:hover{
+    transform:translateY(-5px);
+
+    border-color:#38bdf8;
+
+    box-shadow:
+        0 0 25px rgba(56,189,248,.30),
+        0 0 60px rgba(56,189,248,.20),
+        0 25px 80px rgba(56,189,248,.18);
 }
 
 .wion-track{
@@ -2524,116 +2535,52 @@ main{
 .wion-slide img{
     width:100%;
     height:100%;
-    object-fit:cover;
-    object-position:top;
     display:block;
+
+    object-fit:cover;
+    object-position:center;
+
     cursor:pointer;
 }
 
 .wion-dots{
-
     margin-top:18px;
-
     display:flex;
-
     justify-content:center;
-
     gap:12px;
-
 }
 
 .wion-dot{
-
     width:10px;
-
     height:10px;
-
     border-radius:50%;
-
     background:#64748b;
-
     cursor:pointer;
-
     transition:.35s;
-
 }
 
 .wion-dot.active{
-
     width:34px;
-
-    border-radius:25px;
-
+    border-radius:20px;
     background:#38bdf8;
-
     box-shadow:0 0 15px #38bdf8;
-
 }
 
-@media(max-width:768px){
+/* Görsel görüntüleyici */
 
-    .works-section{
-
-        margin:30px 15px;
-
-    }
-
-    .works-title{
-
-        font-size:24px;
-
-    }
-
-    .wion-slide{
-
-        padding:8px;
-
-    }
-
-  .wion-slide img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:top;
-    border-radius:22px;
-    cursor:pointer;
+.image-viewer{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.92);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    visibility:hidden;
+    transition:.3s;
+    z-index:99999;
 }
 
-.hero h1{
-    font-size:72px;
-    font-weight:800;
-    letter-spacing:3px;
-    margin:0;
-
-    color:white;
-
-    text-shadow:
-        0 0 15px rgba(56,189,248,.4),
-        0 0 40px rgba(56,189,248,.2);
-}
-
-@media(max-width:768px){
-
-    .hero h1{
-        font-size:42px;
-    }
-
-}
-.hero-subtitle{
-    font-size:24px;
-}
-.hero-subtitle{
-    font-size:15px;
-}
-.works-section{
-    margin-top:40px;
-}
-.topbar-brand{
-
-    gap:14px;
-
-}
-   
 .image-viewer.active{
     opacity:1;
     visibility:visible;
@@ -2649,51 +2596,25 @@ main{
     position:absolute;
     top:20px;
     right:25px;
-
     font-size:42px;
     color:white;
     cursor:pointer;
 }
-.wion-slider{
-    height:auto;
-}
 
-.wion-slide{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
+/* Mobil */
+
 @media(max-width:768px){
 
-    .wion-slider{
-    width:100%;
-    height:420px;
-    overflow:hidden;
-    border-radius:24px;
-}
+    .works-section{
+        margin:35px 15px;
+    }
 
-.wion-track{
-    display:flex;
-    height:100%;
-}
-
-.wion-slide{
-    min-width:100%;
-    height:100%;
-}
-
-.wion-slide img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:center;
-    display:block;
-    cursor:pointer;
-}
-   @media(max-width:768px){
+    .works-title{
+        font-size:24px;
+    }
 
     .wion-slider{
-        height:260px;
+        border-radius:18px;
     }
 
 }
