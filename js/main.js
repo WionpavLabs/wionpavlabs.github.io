@@ -284,24 +284,26 @@ window.addEventListener("click", function(e){
 
 });
 
-const header=document.getElementById("topHeader");
-const brand=document.querySelector(".brand-card");
+const brand = document.querySelector(".brand-card");
 
-window.addEventListener("scroll",()=>{
+if (brand) {
 
-if(window.scrollY>70){
+    window.addEventListener("scroll", () => {
 
-brand.style.opacity="0";
-brand.style.transform="translateY(-30px)";
-brand.style.pointerEvents="none";
+        if (window.scrollY > 70) {
 
-}else{
+            brand.style.opacity = "0";
+            brand.style.transform = "translateY(-30px)";
+            brand.style.pointerEvents = "none";
 
-brand.style.opacity="1";
-brand.style.transform="translateY(0)";
-brand.style.pointerEvents="auto";
+        } else {
+
+            brand.style.opacity = "1";
+            brand.style.transform = "translateY(0)";
+            brand.style.pointerEvents = "auto";
+
+        }
+
+    });
 
 }
-
-});
-
