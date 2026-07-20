@@ -253,46 +253,7 @@ viewer.onclick = (e)=>{
 
 };
 
-const viewer = document.getElementById("imageViewer");
-const viewerImg = document.getElementById("viewerImage");
-const closeBtn = document.querySelector(".viewer-close");
 
-document.querySelectorAll(".wion-slide img").forEach(img => {
-
-    img.addEventListener("click", () => {
-
-        viewer.classList.add("active");
-        viewerImg.src = img.src;
-
-    });
-
-});
-
-closeBtn.addEventListener("click", () => {
-
-    viewer.classList.remove("active");
-
-});
-
-viewer.addEventListener("click", e => {
-
-    if(e.target === viewer){
-
-        viewer.classList.remove("active");
-
-    }
-
-});
-
-document.addEventListener("keydown", e => {
-
-    if(e.key === "Escape"){
-
-        viewer.classList.remove("active");
-
-    }
-
-});
     window.addEventListener("scroll", updateActiveMenu);
     window.addEventListener("load", updateActiveMenu);
 }
