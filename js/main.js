@@ -297,21 +297,35 @@ document.addEventListener("click", function(e){
     }
 
 });
+window.addEventListener("pagehide", function () {
+    const menu = document.querySelector(".menu");
+
+    if (menu) {
+        sessionStorage.setItem(
+            "menuState",
+            menu.classList.contains("active") ? "open" : "closed"
+        );
+    }
+});
+
 
 window.addEventListener("pageshow", function () {
-    closeMenu();
 
-    setTimeout(() => {
-        const menu = document.querySelector(".menu");
+    const menu = document.querySelector(".menu");
+    const state = sessionStorage.getItem("menuState");
 
-        if (menu) {
-            menu.classList.add("no-animation");
+    if (!menu || !state) return;
 
-            setTimeout(() => {
-                menu.classList.remove("no-animation");
-            }, 100);
-        }
+    menu.style.transition = "none";
 
-    }, 50);
+    if (state === "open") {
+        menu.classList.add("active");
+    } else {
+        menu.classList.remove("active");
+    }
+
+    requestAnimationFrame(() => {
+        menu.style.transition = "";
+    });
 
 });
