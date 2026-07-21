@@ -27,12 +27,12 @@ function toggleMenu(){
 
     menu.classList.toggle("active");
 
-    const state = menu.classList.contains("active")
-        ? "open"
-        : "closed";
-
-    sessionStorage.setItem("menuState", state);
+    localStorage.setItem(
+        "menuOpen",
+        menu.classList.contains("active")
+    );
 }
+
 
 function closeMenu(){
 
@@ -40,9 +40,9 @@ function closeMenu(){
 
     menu.classList.remove("active");
 
-    sessionStorage.setItem(
-        "menuState",
-        "closed"
+    localStorage.setItem(
+        "menuOpen",
+        false
     );
 }
 /* ==========================
