@@ -185,42 +185,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-// AKTİF MENÜ TAKİBİ
+// YENİ AKTİF MENÜ SİSTEMİ (PAGE BASED)
 
-function updateActiveMenu() {
+function setActiveMenu() {
 
-    const sections = document.querySelectorAll("section[id], header[id], footer[id]");
-    const menuLinks = document.querySelectorAll("#navMenu a");
+    const links = document.querySelectorAll("#navMenu a");
+    const currentPage = window.location.pathname.split("/").pop();
 
-    let current = "";
+    links.forEach(link => {
 
-    sections.forEach(section => {
+        const href = link.getAttribute("href");
 
-        const top = section.offsetTop - 200;
-        const bottom = top + section.offsetHeight;
-
-        if (window.scrollY >= top && window.scrollY < bottom) {
-            current = section.id;
-        }
-
-    });
-
-    menuLinks.forEach(link => {
         link.classList.remove("active-menu");
 
-        if (link.getAttribute("href") === "#" + current) {
+        if (
+            href === currentPage ||
+            (currentPage === "" && href === "index.html")
+        ) {
             link.classList.add("active-menu");
         }
-    });
 
+    });
 }
 
-// Aktif menü takibi sadece ana sayfada çalışsın
-if (
-    window.location.pathname.endsWith("index.html") ||
-    window.location.pathname === "/" ||
-    window.location.pathname.endsWith("/")
-) {
+// sadece sayfa yüklendiğinde çalışır
+window.addEventListener("load", setActiveMenu);
+
+if (href === "#anasayfa" && currentPage === "index.html") {
+    link.classList.add("active-menu");
+}
 
 document.addEventListener("click", (e)=>{
 
