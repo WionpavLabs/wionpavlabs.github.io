@@ -1765,6 +1765,10 @@ viewer.addEventListener("touchend",(e)=>{
    
 </script>
 <script>
+if (document.referrer.includes(location.origin)) {
+    history.pushState(null, null, location.href);
+}
+
 window.onpopstate = function () {
     window.location.href = "index.html";
 };
