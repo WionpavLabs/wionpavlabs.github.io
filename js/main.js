@@ -284,26 +284,4 @@ window.addEventListener("click", function(e){
 
 });
 
-const brand = document.querySelector(".brand-card");
 
-if (brand) {
-
-    window.addEventListener("scroll", () => {
-
-        if (window.scrollY > 70) {
-
-            brand.style.opacity = "0";
-            brand.style.transform = "translateY(-30px)";
-            brand.style.pointerEvents = "none";
-
-        } else {
-
-            brand.style.opacity = "1";
-            brand.style.transform = "translateY(0)";
-            brand.style.pointerEvents = "auto";
-
-        }
-
-    });
-
-}
