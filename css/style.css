@@ -3560,9 +3560,6 @@ header.hero{
     transform: translateX(-50%) scale(1.02) !important;
 }
 
-.brand-card:active{
-    transform: translateX(-50%) scale(.97) !important;
-}
 }
 
 
