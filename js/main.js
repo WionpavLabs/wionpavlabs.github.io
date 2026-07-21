@@ -285,9 +285,7 @@ window.addEventListener("click", function(e){
 });
 
 
-<script>
 function goPage(e, url) {
     e.preventDefault();
     window.location.replace(url);
 }
-</script>
