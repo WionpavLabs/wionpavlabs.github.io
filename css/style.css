@@ -3686,6 +3686,3 @@ header.hero{
 
     transform: none !important; /* EN KRİTİK SATIR */
 }
-   header {
-    position: static !important;
-}
