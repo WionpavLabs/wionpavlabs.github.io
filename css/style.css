@@ -2837,8 +2837,6 @@ left:120%;
 
 .brand-card:hover{
 
-transform:translateY(-4px);
-
 border-color:#38bdf8;
 
 box-shadow:
@@ -3245,10 +3243,6 @@ pointer-events:none;
 }
 
 .brand-card:hover{
-
-transform:
-
-translateY(-3px)
 
 scale(1.02);
 
@@ -3685,4 +3679,17 @@ header.hero{
     z-index: 99999 !important;
 
     transform: none !important; /* EN KRİTİK SATIR */
+}
+
+
+   .brand-card {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* sadece bu kalsın */
+
+    width: 90%;
+    max-width: 500px;
+
+    z-index: 999999;
 }
