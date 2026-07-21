@@ -287,54 +287,41 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-   
+ let menu = document.querySelector(".menu");
+
+function menuAc() {
+    menu.classList.add("active");
+
+    history.replaceState(
+        { menu: "open" },
+        ""
+    );
+}
+
+function menuKapat() {
+    menu.classList.remove("active");
+
+    history.replaceState(
+        { menu: "closed" },
+        ""
+    );
+}
+
+
+window.addEventListener("pageshow", function () {
+
+    if (history.state && history.state.menu === "open") {
+        menu.classList.add("active");
+    }
+
+    if (history.state && history.state.menu === "closed") {
+        menu.classList.remove("active");
+    }
+
+});  
 
 
        
 
 
 
-window.addEventListener("pageshow", function(){
-
-    const menu = document.getElementById("navMenu");
-
-    if(!menu) return;
-
-    const state = sessionStorage.getItem("menuState");
-
-    if(state === "open"){
-        menu.classList.add("active");
-    }
-
-    if(state === "closed"){
-        menu.classList.remove("active");
-    }
-
-});
-
-window.addEventListener("DOMContentLoaded", () => {
-    setActiveMenu();
-});
-
-
-document.addEventListener("click", function(e){
-
-    const link = e.target.closest("#navMenu a");
-
-    if(!link) return;
-
-    const href = link.getAttribute("href");
-
-    if(!href.startsWith("http")){
-
-        e.preventDefault();
-
-        if(href.startsWith("#")){
-            window.location.hash = href;
-            return;
-        }
-
-        window.location.assign(href);
-    }
-
-});
