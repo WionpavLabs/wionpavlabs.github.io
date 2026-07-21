@@ -293,7 +293,7 @@ document.addEventListener("click", function(e){
         }
 
         // 🔥 BURASI KRİTİK
-       window.location.href = href;
+      window.location.replace(href);
     }
 
 });
