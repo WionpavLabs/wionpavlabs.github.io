@@ -390,5 +390,12 @@ loadRatings();
 </script>
 
 <script src="js/main.js"></script>
+
+<script>
+if (!sessionStorage.getItem("historyFixed")) {
+    history.replaceState(null, "", "index.html");
+    sessionStorage.setItem("historyFixed", "true");
+}
+</script>
 </body>
 </html>
