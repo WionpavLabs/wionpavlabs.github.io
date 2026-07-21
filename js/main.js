@@ -37,7 +37,7 @@ else{
     menu.classList.remove("active");
 
 }
-            menu.classList.remove("active");
+
         }
 
     }
