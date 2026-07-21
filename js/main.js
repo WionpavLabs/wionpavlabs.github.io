@@ -13,21 +13,23 @@ async function loadComponent(id, file){
     element.innerHTML = html;
 if(id === "menu-container"){
 
-    setTimeout(() => {
+    const menu = document.getElementById("navMenu");
 
-        const menu = document.getElementById("navMenu");
-        if(!menu) return;
+    if(menu){
 
-        const savedMenu = localStorage.getItem("menuOpen");
+        const state = sessionStorage.getItem("menuState");
 
-        menu.classList.toggle("active", savedMenu === "true");
+        if(state === "open"){
+            menu.classList.add("active");
+        }
+        else{
+            menu.classList.remove("active");
+        }
 
-    }, 0);
+    }
 
 }
-}
-
-
+    }
 // Arka planı yükle
 
 loadComponent(
@@ -40,10 +42,11 @@ function toggleMenu(){
 
     menu.classList.toggle("active");
 
-    localStorage.setItem(
-        "menuOpen",
-        menu.classList.contains("active") ? "true" : "false"
+    sessionStorage.setItem(
+        "menuState",
+        menu.classList.contains("active") ? "open" : "closed"
     );
+
 }
 
 
@@ -51,12 +54,12 @@ function closeMenu(){
 
     const menu = document.getElementById("navMenu");
 
-    menu.classList.remove("active");
+    if(menu){
+        menu.classList.remove("active");
+    }
 
-    localStorage.setItem(
-        "menuOpen",
-        "false"
-    );
+    sessionStorage.setItem("menuState","closed");
+
 }
 /* ==========================
    WION SLIDER
@@ -252,6 +255,18 @@ window.addEventListener("hashchange", setActiveMenu);
 
 document.addEventListener("click", (e)=>{
 
+    const link = e.target.closest("#navMenu a");
+
+    if(link){
+
+        const menu = document.getElementById("navMenu");
+
+        if(menu){
+            menu.classList.remove("active");
+        }
+    }
+
+
     const img = e.target.closest(".wion-slide img");
 
     if(img){
@@ -276,7 +291,6 @@ document.addEventListener("click", (e)=>{
     }
 
 });
-
 document.addEventListener("DOMContentLoaded", () => {
 
     const viewer = document.getElementById("imageViewer");
@@ -290,20 +304,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
-
-window.addEventListener("pageshow", () => {
-
-    const menu = document.getElementById("navMenu");
-    if(!menu) return;
-
-    const savedMenu = localStorage.getItem("menuOpen");
-
-    menu.classList.toggle("active", savedMenu === "true");
-
-});
-
-
-       
-
-
-
