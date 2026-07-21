@@ -284,8 +284,10 @@ window.addEventListener("click", function(e){
 
 });
 
+window.addEventListener("popstate", function () {
 
-function goPage(e, url) {
-    e.preventDefault();
-    window.location.replace(url);
-}
+    if (sessionStorage.getItem("fromSite")) {
+        window.location.href = "index.html";
+    }
+
+});
