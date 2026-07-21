@@ -22,12 +22,29 @@ loadComponent(
     "components/background.html"
 );
 function toggleMenu(){
-    document.getElementById("navMenu").classList.toggle("active");
-}
-function closeMenu() {
-    document.getElementById("navMenu").classList.remove("active");
+
+    const menu = document.getElementById("navMenu");
+
+    menu.classList.toggle("active");
+
+    sessionStorage.setItem(
+        "menuState",
+        menu.classList.contains("active") ? "open" : "closed"
+    );
 }
 
+
+function closeMenu(){
+
+    const menu = document.getElementById("navMenu");
+
+    menu.classList.remove("active");
+
+    sessionStorage.setItem(
+        "menuState",
+        "closed"
+    );
+}
 /* ==========================
    WION SLIDER
 ========================== */
@@ -218,7 +235,6 @@ function setActiveMenu(){
 }
 window.addEventListener("hashchange", setActiveMenu);
 // sadece sayfa yüklendiğinde çalışır
-window.addEventListener("load", setActiveMenu);
 
 
 document.addEventListener("click", (e)=>{
@@ -270,21 +286,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-window.addEventListener("pageshow", function () {
+window.addEventListener("pageshow", function(){
+
+    const menu = document.getElementById("navMenu");
+
+    if(!menu) return;
+
+    const state = sessionStorage.getItem("menuState");
+
+    if(state === "open"){
+        menu.classList.add("active");
+    }
+
+    if(state === "closed"){
+        menu.classList.remove("active");
+    }
+
 });
+
 
 window.addEventListener("DOMContentLoaded", () => {
     setActiveMenu();
 });
 
+
 document.addEventListener("click", function(e){
 
     const link = e.target.closest("#navMenu a");
+
     if(!link) return;
 
     const href = link.getAttribute("href");
 
     if(!href.startsWith("http")){
+
         e.preventDefault();
 
         if(href.startsWith("#")){
@@ -292,40 +327,7 @@ document.addEventListener("click", function(e){
             return;
         }
 
-        // 🔥 BURASI KRİTİK
-      window.location.assign(href);
+        window.location.assign(href);
     }
-
-});
-window.addEventListener("pagehide", function () {
-    const menu = document.querySelector(".menu");
-
-    if (menu) {
-        sessionStorage.setItem(
-            "menuState",
-            menu.classList.contains("active") ? "open" : "closed"
-        );
-    }
-});
-
-
-window.addEventListener("pageshow", function () {
-
-    const menu = document.querySelector(".menu");
-    const state = sessionStorage.getItem("menuState");
-
-    if (!menu || !state) return;
-
-    menu.style.transition = "none";
-
-    if (state === "open") {
-        menu.classList.add("active");
-    } else {
-        menu.classList.remove("active");
-    }
-
-    requestAnimationFrame(() => {
-        menu.style.transition = "";
-    });
 
 });
