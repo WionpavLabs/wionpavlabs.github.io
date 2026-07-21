@@ -294,7 +294,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-window.addEventListener("pageshow", function(event){
+window.addEventListener("pageshow", function(){
 
     const menu = document.getElementById("navMenu");
 
@@ -302,19 +302,15 @@ window.addEventListener("pageshow", function(event){
 
     const state = sessionStorage.getItem("menuState");
 
-    // geri tuşu ile gelindiyse
-    if(event.persisted){
+    if(state === "open"){
+        menu.classList.add("active");
+    }
 
+    if(state === "closed"){
         menu.classList.remove("active");
-
-        if(state === "open"){
-            menu.classList.add("active");
-        }
-
     }
 
 });
-
 
 window.addEventListener("DOMContentLoaded", () => {
     setActiveMenu();
