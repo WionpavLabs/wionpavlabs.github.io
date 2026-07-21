@@ -292,3 +292,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+window.addEventListener("pageshow", function () {
+    history.replaceState(null, null, location.href);
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+    setActiveMenu();
+});
