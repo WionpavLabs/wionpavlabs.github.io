@@ -1,53 +1,230 @@
-<!--
 <!DOCTYPE html>
-
 <html lang="tr">
+
 <head>
 <link rel="stylesheet" href="css/style.css">
-
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Insights | Wionpav Labs</title>
+
+<title>Insights | Wionpia Labs</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/png" href="logo.png">
+
 <!--
 <style>
 
-/* BODY AYNI */
+html{
+scroll-behavior:smooth;
+}
+
+
 body{
+
 margin:0;
+
 font-family:'Inter',sans-serif;
+
 color:#e2e8f0;
+
+line-height:1.6;
+
 
 background:
 radial-gradient(circle at top,#14365f 0%,#0b2342 28%,#071322 55%,#040812 100%);
+
+background-attachment:fixed;
+
 }
 
-/* DNA BACKGROUND */
-.science-background {
-position: fixed;
-inset: 0;
-overflow: hidden;
-pointer-events: none;
-z-index: 0;
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:-250px;
+
+left:-250px;
+
+width:700px;
+
+height:700px;
+
+border-radius:50%;
+
+
+background:radial-gradient(circle,
+
+rgba(56,189,248,.18),
+
+transparent 70%);
+
+
+filter:blur(70px);
+
+z-index:-1;
+
 }
+
+
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+bottom:-300px;
+
+right:-250px;
+
+width:750px;
+
+height:750px;
+
+border-radius:50%;
+
+
+background:radial-gradient(circle,
+
+rgba(37,99,235,.16),
+
+transparent 70%);
+
+
+filter:blur(80px);
+
+z-index:-1;
+
+}
+
+
+
+/* SCIENCE BACKGROUND */
+
+.science-background{
+
+position:fixed;
+
+inset:0;
+
+overflow:hidden;
+
+pointer-events:none;
+
+z-index:0;
+
+}
+
+
 
 .dna-line{
+
 position:absolute;
+
 width:120px;
+
 height:520px;
-opacity:0.08;
-background:repeating-linear-gradient(45deg,transparent 0 18px,#38bdf8 19px 21px,transparent 22px 40px);
+
+opacity:.08;
+
+
+background:
+
+repeating-linear-gradient(
+
+45deg,
+
+transparent 0 18px,
+
+#38bdf8 19px 21px,
+
+transparent 22px 40px
+
+);
+
+
 border-left:2px solid #38bdf8;
+
 border-right:2px solid #38bdf8;
+
 border-radius:50%;
-animation:dnaMove 18s ease-in-out infinite;
+
+
 }
 
-.dna-right{ right:12%; top:15%; }
-.dna-left{ left:12%; top:15%; }
 
-/* NAV (3 LÜ SOL ÜST) */
+.dna-right{
+
+right:12%;
+
+top:15%;
+
+}
+
+
+.dna-left{
+
+left:12%;
+
+top:15%;
+
+}
+
+
+
+.particle{
+
+position:absolute;
+
+width:8px;
+
+height:8px;
+
+background:#38bdf8;
+
+border-radius:50%;
+
+box-shadow:0 0 15px #38bdf8;
+
+}
+
+
+.p1{
+top:20%;
+left:15%;
+}
+
+.p2{
+top:65%;
+left:25%;
+}
+
+.p3{
+top:35%;
+right:25%;
+}
+
+.p4{
+bottom:20%;
+right:15%;
+}
+
+.p5{
+top:75%;
+left:70%;
+}
+
+
+
+
+/* MENU */
+
+
 .menu-toggle{
 position:fixed;
 top:15px;
@@ -58,160 +235,301 @@ cursor:pointer;
 z-index:999;
 }
 
+
+
 nav{
-position:fixed;
-top:0;
-left:-100%;
-width:260px;
-height:100vh;
-background:rgba(17,24,39,.95);
-backdrop-filter:blur(25px);
+
 display:flex;
-flex-direction:column;
-align-items:center;
+
 justify-content:center;
+
+align-items:center;
+
 gap:25px;
-transition:.4s;
-z-index:998;
+
+
+position:sticky;
+
+top:15px;
+
+width:fit-content;
+
+margin:auto;
+
+
+padding:16px 38px;
+
+border-radius:22px;
+
+
+background:rgba(17,24,39,.35);
+
+backdrop-filter:blur(25px);
+
+
+border:1px solid rgba(255,255,255,.08);
+
+
+box-shadow:
+
+0 15px 40px rgba(0,0,0,.35);
+
+
+z-index:999;
+
 }
 
-nav.active{ left:0; }
+
 
 nav a{
+
 color:#e2e8f0;
+
 text-decoration:none;
-font-size:18px;
+
+transition:.3s;
+
 }
 
-nav a:hover{ color:#38bdf8; }
 
-/* CONTAINER */
-.container{
+
+nav a:hover,
+
+nav a.active{
+
+color:#38bdf8;
+
+}
+
+
+
+
+/* MAIN */
+
+
+main{
+
 max-width:900px;
-margin:auto;
-padding:100px 20px 60px;
+
+margin:40px auto;
+
+padding:0 20px;
+
 position:relative;
+
 z-index:2;
+
 }
 
-/* DIŞ PREMIUM KUTU */
-.outer-box{
+
+
+/* INDEX SECTION TASARIMI */
+
+
+section{
+
+margin-bottom:40px;
+
 padding:30px;
-border-radius:22px;
+
+
 background:rgba(17,24,39,.72);
+
+
 backdrop-filter:blur(20px);
+
+
 border:1px solid rgba(255,255,255,.06);
-box-shadow:0 20px 60px rgba(0,0,0,.35);
-}
 
-/* SENİN ORİJİNAL YAYIN STİLİN */
-.paper-item{
+
+border-radius:22px;
+
+
+box-shadow:
+
+0 20px 60px rgba(0,0,0,.35);
+
+
+transition:.35s;
+
+
 position:relative;
+
 overflow:hidden;
-background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(31,41,55,.65));
-border:1px solid rgba(56,189,248,.18);
-border-radius:20px;
-padding:28px;
-margin:25px 0;
-transition:.4s ease;
-box-shadow:0 15px 40px rgba(0,0,0,.28);
+
 }
 
-.paper-item:hover{
-transform:translateY(-8px);
-border-color:#38bdf8;
-box-shadow:0 25px 60px rgba(56,189,248,.22);
+
+
+section:hover{
+
+transform:translateY(-6px);
+
+
+border-color:rgba(56,189,248,.18);
+
+
+box-shadow:
+
+0 25px 70px rgba(56,189,248,.12);
+
 }
 
-.paper-item a{
-color:white;
-text-decoration:none;
-font-size:20px;
-font-weight:600;
-line-height:1.5;
+
+
+
+section::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+border-radius:22px;
+
+padding:1px;
+
+
+background:
+
+linear-gradient(
+
+120deg,
+
+transparent,
+
+#38bdf8,
+
+transparent
+
+);
+
+
+-webkit-mask:
+
+linear-gradient(#000 0 0) content-box,
+
+linear-gradient(#000 0 0);
+
+
+-webkit-mask-composite:xor;
+
 }
 
-.paper-item a:hover{ color:#67d3ff; }
 
-/* DOWNLOAD BUTON AYNEN */
-.download-btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-gap:8px;
-margin-top:18px;
-padding:12px 22px;
-background:linear-gradient(135deg,#38bdf8,#67d3ff);
-color:#071322 !important;
-border-radius:14px;
-text-decoration:none;
-font-weight:700;
-box-shadow:0 10px 25px rgba(56,189,248,.25);
-transition:.35s ease;
+
+h2{
+
+color:#38bdf8;
+
 }
 
-.download-btn:hover{
-transform:translateY(-5px) scale(1.03);
-box-shadow:0 18px 40px rgba(56,189,248,.45);
-}
 
-/* RATING */
-.rating{
-    margin-top:10px;
-    font-size:28px;
-}
 
-.rating span{
-    cursor:pointer;
-    color:#888;
-    transition:.2s;
-    margin-right:4px;
-}
-
-.rating.locked span{
-cursor:default;
-pointer-events:none;
-}
-.rating span:hover{ color:gold; }
-.rating span.selected{ color:gold; }
 
 footer{
+
+margin-top:80px;
+
+padding:40px 20px;
+
 text-align:center;
-margin-top:50px;
+
 color:#94a3b8;
-}
-.download-btn{
-  display:inline-block;
-  transition:0.25s;
+
+
+border-top:
+
+1px solid rgba(56,189,248,.15);
+
+
+background:
+
+rgba(17,24,39,.35);
+
+
+backdrop-filter:blur(15px);
+
 }
 
-.download-btn:hover{
-  transform:scale(1.12);
+
+
+@media(max-width:768px){
+
+
+nav{
+
+display:none;
+
+flex-direction:column;
+
+width:100%;
+
+border-radius:0;
+
 }
 
-.download-btn:active{
-  transform:scale(1.18);
+
+
+nav.active{
+
+display:flex;
+
 }
+
+
+
+.menu-toggle{
+
+display:block;
+
+}
+
+
+section{
+
+padding:22px;
+
+}
+
+
+.dna-line{
+
+width:75px;
+
+height:330px;
+
+opacity:.05;
+
+}
+
+}
+
+
 </style>
--->
+  -->
+
 
 </head>
 
+
 <body>
 <div class="science-background">
-    <div class="dna-line dna-right"></div>
-    <div class="dna-line dna-left"></div>
 
-    <div class="particle p1"></div>
-    <div class="particle p2"></div>
-    <div class="particle p3"></div>
-    <div class="particle p4"></div>
-    <div class="particle p5"></div>
-</div>
-<div class="science-background">
 <div class="dna-line dna-right"></div>
+
 <div class="dna-line dna-left"></div>
+
+<div class="particle p1"></div>
+<div class="particle p2"></div>
+<div class="particle p3"></div>
+<div class="particle p4"></div>
+<div class="particle p5"></div>
+
 </div>
+
+
 
 <!-- 🔥 PREMIUM MENU BUTONU -->
 <div class="menu-toggle" onclick="toggleMenu()">
@@ -226,7 +544,7 @@ color:#94a3b8;
 
 
 <nav id="navMenu">
-    <button class="menu-close" onclick="closeMenu()">✕</button>
+  <button class="menu-close" onclick="closeMenu()">✕</button>
    <a href="index.html">Ana Sayfa</a>
 <a href="hakkımızda.html">Hakkımızda</a>
 <a href="kurucu.html">Kurucu</a>
@@ -236,54 +554,56 @@ color:#94a3b8;
 <a href="#iletisim">İletişim</a>
     <a href="login.html" class="admin-link">🔐 Yönetici Girişi</a>
 </nav>
-    <div id="menuOverlay" class="menu-overlay" onclick="closeMenu()"></div>
+
+
+
 
 <main>
 
-<section>
+
+
+<section id="Insights">
+
 
 <h2>
 Insights
 </h2>
 
-<!-- 1. Insights (BİREBİR) -->
 
-<div class="paper-item">
+<p>
+Çalışmalarımız yakında yayımlanacaktır.
+Takipte kalın.
+</p>
 
-<a href="insights/The Relationship Between Short Video-Based Social Media Use, Dopamine Signaling, and Depressive Symptoms.pdf" target="_blank">
-📄 1. The Relationship Between Short Video-Based Social Media Use, Dopamine Signaling, and Depressive Symptoms Read PDF
-</a>
 
-<a class="download-btn" href="insights/The Relationship Between Short Video-Based Social Media Use, Dopamine Signaling, and Depressive Symptoms.pdf" download>
-⬇️ 1. The Relationship Between Short Video-Based Social Media Use, Dopamine Signaling, and Depressive Symptoms Download PDF
-</a>
-
-</div>
-
-<!-- 2. Insights (BİREBİR) -->
-
-<div class="paper-item">
-
-<a href="insights/Generative Artificial Intelligence Chatbots in Mental Health Current Evidence, Clinical Applications, Risks, and Future Perspectives.pdf" target="_blank">
-📄 2. Generative Artificial Intelligence Chatbots in Mental Health Current Evidence, Clinical Applications, Risks, and Future Perspectives Read PDF
-</a>
-
-<a class="download-btn" href="insights/Generative Artificial Intelligence Chatbots in Mental Health Current Evidence, Clinical Applications, Risks, and Future Perspectives.pdf" download>
-⬇️ 2. Generative Artificial Intelligence Chatbots in Mental Health Current Evidence, Clinical Applications, Risks, and Future Perspectives Download PDF
-</a>
-
-</div>
 
 </section>
 
+
+
 </main>
 
+
+
 <footer>
-© 2026 Wionpav Labs Founded by Ali Bocakkıtay
+
+© 2026 Wionpav Labs | Medical Research Platform
+
 </footer>
+  <script>
+function toggleMenu(){
+
+    document.getElementById("navMenu").classList.toggle("active");
+
+}
+</script>
+
+
+
 
 <script src="js/main.js"></script>
 
+
 </body>
+
 </html>
--->
