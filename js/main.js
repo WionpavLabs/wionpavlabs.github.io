@@ -268,35 +268,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
        
 
-document.addEventListener("DOMContentLoaded", () => {
 
-    document.querySelectorAll("#navMenu a").forEach(link => {
-
-        link.addEventListener("click", function(e){
-
-            const href = this.getAttribute("href");
-
-            if(!href.startsWith("http")){
-                e.preventDefault();
-
-                if(href.startsWith("#")){
-                    window.location.hash = href;
-                    return;
-                }
-
-                window.location.replace(href);
-            }
-
-        });
-
-    });
-
-});
 
 window.addEventListener("pageshow", function () {
-    history.replaceState(null, null, location.href);
 });
 
 window.addEventListener("DOMContentLoaded", () => {
     setActiveMenu();
+});
+
+document.addEventListener("click", function(e){
+
+    const link = e.target.closest("#navMenu a");
+    if(!link) return;
+
+    const href = link.getAttribute("href");
+
+    if(!href.startsWith("http")){
+        e.preventDefault();
+
+        if(href.startsWith("#")){
+            window.location.hash = href;
+            return;
+        }
+
+        // 🔥 BURASI KRİTİK
+        window.location.replace(href);
+    }
+
 });
