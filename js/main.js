@@ -300,4 +300,18 @@ document.addEventListener("click", function(e){
 
 window.addEventListener("pageshow", function () {
     closeMenu();
+ const menu = document.querySelector(".menu");
+
+    if (menu) {
+        menu.classList.add("no-animation");
+    }
+
 });
+setTimeout(() => {
+    const menu = document.querySelector(".menu");
+
+    if (menu) {
+        menu.classList.remove("no-animation");
+    }
+
+}, 100);
