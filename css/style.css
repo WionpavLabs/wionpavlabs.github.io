@@ -3399,7 +3399,11 @@ justify-content:center;
 
 }
 
-
+.brand-card {
+    max-width: 520px;
+    padding: 10px 15px;
+    margin: 5px auto;
+}
 
 
 
