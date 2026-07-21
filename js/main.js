@@ -199,17 +199,19 @@ function setActiveMenu(){
 
         link.classList.remove("active-menu");
 
-        // SAYFA BAZLI
-        if(
-            href === currentPage ||
-            (currentPage === "" && href === "index.html")
-        ){
-            link.classList.add("active-menu");
-        }
-
-        // ANCHOR BAZLI (#iletisim vs)
-        if(href === hash){
-            link.classList.add("active-menu");
+        // 🔥 Eğer hash varsa SADECE hash bazlı çalış
+        if(hash){
+            if(href === hash){
+                link.classList.add("active-menu");
+            }
+        } else {
+            // hash yoksa page bazlı
+            if(
+                href === currentPage ||
+                (currentPage === "" && href === "index.html")
+            ){
+                link.classList.add("active-menu");
+            }
         }
 
     });
@@ -266,28 +268,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
        
 
-sessionStorage.removeItem("historyFixed");
+document.addEventListener("DOMContentLoaded", () => {
 
-document.querySelectorAll("#navMenu a").forEach(link=>{
+    document.querySelectorAll("#navMenu a").forEach(link => {
 
-    link.addEventListener("click", function(e){
+        link.addEventListener("click", function(e){
 
-        const href = this.getAttribute("href");
+            const href = this.getAttribute("href");
 
-        if(!href.startsWith("http")){
-
-            // ANA SAYFAYA DÖNÜŞTE history temizle
-            if(href === "index.html"){
+            if(!href.startsWith("http")){
                 e.preventDefault();
-                window.location.replace("index.html");
-                return;
+
+                if(href.startsWith("#")){
+                    window.location.hash = href;
+                    return;
+                }
+
+                window.location.replace(href);
             }
 
-            // normal sayfalar
-            e.preventDefault();
-            window.location.href = href;
-
-        }
+        });
 
     });
 
