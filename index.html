@@ -1765,24 +1765,19 @@ viewer.addEventListener("touchend",(e)=>{
    
 </script>
 <script>
-let firstLoad = true;
-
-window.addEventListener("pageshow", function () {
-
-    if (firstLoad) {
-        firstLoad = false;
-        history.replaceState({ page: "home" }, null, location.href);
-    }
-
-});
+// Sayfa ilk açıldığında işaret koy
+history.replaceState({ page: "home" }, null, location.href);
 
 window.addEventListener("popstate", function (e) {
 
-    // Eğer iç sayfadan geldiyse → anasayfaya yönlendir
-    if (document.referrer.includes(location.origin)) {
+    // Eğer state varsa → iç sayfadan gelmiş demektir
+    if (e.state && e.state.page === "home") {
+        // sadece 1 kez çalışsın
+        history.replaceState(null, null, location.href);
         window.location.href = "index.html";
     }
 
+    // state yoksa → çıkışa izin ver
 });
 </script>
 </body>
