@@ -211,9 +211,6 @@ function setActiveMenu() {
 // sadece sayfa yüklendiğinde çalışır
 window.addEventListener("load", setActiveMenu);
 
-if (href === "#anasayfa" && currentPage === "index.html") {
-    link.classList.add("active-menu");
-}
 
 document.addEventListener("click", (e)=>{
 
@@ -259,10 +256,7 @@ if(viewer){
 }
 
 
-    window.addEventListener("scroll", updateActiveMenu);
-    window.addEventListener("load", updateActiveMenu);
-}
-
+   
 window.addEventListener("click", function(e){
 
     if(e.target.matches(".viewer-close")){
