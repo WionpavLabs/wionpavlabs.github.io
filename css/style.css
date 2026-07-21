@@ -3401,20 +3401,5 @@ justify-content:center;
 
 
 
-.menu-btn{
-    border:none !important;
-    outline:none !important;
-    background:transparent !important;
-    box-shadow:none !important;
-    padding:0 !important;
-}
-
-
-.menu-btn:focus,
-.menu-btn:active{
-    outline:none !important;
-    border:none !important;
-    box-shadow:none !important;
-}
 
 
