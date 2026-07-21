@@ -3418,11 +3418,3 @@ justify-content:center;
 }
 
 
-.brand-card{
-    position: fixed !important;
-    top: 14px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    z-index: 99999;
-}
-
