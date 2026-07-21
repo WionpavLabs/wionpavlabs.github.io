@@ -27,12 +27,12 @@ function toggleMenu(){
 
     menu.classList.toggle("active");
 
-    sessionStorage.setItem(
-        "menuState",
-        menu.classList.contains("active") ? "open" : "closed"
-    );
-}
+    const state = menu.classList.contains("active")
+        ? "open"
+        : "closed";
 
+    sessionStorage.setItem("menuState", state);
+}
 
 function closeMenu(){
 
@@ -286,7 +286,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-window.addEventListener("pageshow", function(){
+window.addEventListener("pageshow", function(event){
 
     const menu = document.getElementById("navMenu");
 
@@ -294,12 +294,15 @@ window.addEventListener("pageshow", function(){
 
     const state = sessionStorage.getItem("menuState");
 
-    if(state === "open"){
-        menu.classList.add("active");
-    }
+    // geri tuşu ile gelindiyse
+    if(event.persisted){
 
-    if(state === "closed"){
         menu.classList.remove("active");
+
+        if(state === "open"){
+            menu.classList.add("active");
+        }
+
     }
 
 });
