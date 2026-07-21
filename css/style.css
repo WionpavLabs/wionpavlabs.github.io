@@ -2768,41 +2768,6 @@ transition:.3s;
 
 }
 
-.brand-card{
-
-margin-left:18px;
-
-display:flex;
-
-align-items:center;
-
-padding:10px 18px;
-
-border-radius:18px;
-
-background:
-
-linear-gradient(
-145deg,
-rgba(255,255,255,.08),
-rgba(17,24,39,.88)
-);
-
-border:1px solid rgba(56,189,248,.18);
-
-backdrop-filter:blur(22px);
-
-transition:.35s;
-
-cursor:pointer;
-
-position:relative;
-
-overflow:hidden;
-
-animation:floatCard 6s ease-in-out infinite;
-
-}
 
 .brand-card::before{
 
@@ -2940,13 +2905,6 @@ padding:10px;
 
 }
 
-.brand-card{
-
-padding:8px 12px;
-
-margin-left:12px;
-
-}
 
 .brand-logo{
 
@@ -3015,11 +2973,6 @@ margin-right:12px;
 
 }
 
-.brand-card{
-
-margin:0;
-
-}
 
 .brand-logo{
 
@@ -3119,54 +3072,7 @@ box-shadow:
 
 }
 
-.brand-card{
 
-pointer-events:auto;
-
-position:relative;
-
-display:flex;
-align-items:center;
-
-padding:12px 22px;
-
-border-radius:22px;
-
-overflow:hidden;
-
-background:
-
-linear-gradient(
-135deg,
-rgba(255,255,255,.10),
-rgba(10,18,35,.88)
-);
-
-backdrop-filter:blur(28px);
-
-border:1px solid rgba(72,190,255,.22);
-
-box-shadow:
-
-0 10px 35px rgba(0,0,0,.45),
-
-0 0 45px rgba(56,189,248,.12),
-
-inset 0 1px 0 rgba(255,255,255,.08);
-
-transition:
-
-transform .35s,
-
-box-shadow .35s,
-
-border-color .35s;
-
-animation:
-
-floatCard 6s ease-in-out infinite;
-
-}
 
 .brand-card::before{
 
@@ -3437,13 +3343,6 @@ width:20px;
 
 }
 
-.brand-card{
-
-padding:10px 16px;
-
-border-radius:18px;
-
-}
 
 .brand-logo{
 
@@ -3596,13 +3495,7 @@ rgba(18,30,60,.95)
 
 }
 
-.brand-card{
 
-    padding-left:26px;
-
-    margin-left:42px;
-
-}
 
 /* ===== HEADER FIX ===== */
 
@@ -3630,13 +3523,6 @@ rgba(18,30,60,.95)
 
     content:none !important;
 
-}
-.brand-card {
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 9999;
 }
 
 .hero{
@@ -3666,35 +3552,9 @@ header.hero{
         margin-top:180px;
     }
 
-  .brand-card {
-    position: fixed !important;
-    top: 15px !important;
-    left: 0 !important;
-    right: 0 !important;
-    margin: 0 auto !important;
-
-    width: 90%;
-    max-width: 500px;
-
-    z-index: 99999 !important;
-
-    transform: none !important; /* EN KRİTİK SATIR */
-}
-
 
 /* BRAND CARD FIX */
 
-.brand-card{
-    position: fixed !important;
-    top: 15px !important;
-    left: 50% !important;
-
-    transform: translateX(-50%) !important;
-
-    animation: none !important;
-
-    z-index: 999999 !important;
-}
 
 .brand-card:hover{
     transform: translateX(-50%) scale(1.02) !important;
@@ -3702,4 +3562,59 @@ header.hero{
 
 .brand-card:active{
     transform: translateX(-50%) scale(.97) !important;
+}
+
+
+
+/* diğer tüm tasarım kodların burada */
+
+
+/* ===============================
+   FINAL BRAND CARD POSITION FIX
+================================ */
+
+.brand-card{
+    position:fixed !important;
+    top:10px !important;
+    left:50% !important;
+
+    margin-left:0 !important;
+
+    z-index:999999 !important;
+
+    transform:translateX(-50%) !important;
+
+    animation:floatCard 6s ease-in-out infinite !important;
+}
+
+
+@keyframes floatCard{
+
+0%,100%{
+    transform:translateX(-50%) translateY(0);
+}
+
+50%{
+    transform:translateX(-50%) translateY(-2px);
+}
+
+
+}
+
+
+.brand-card:hover{
+
+transform:
+translateX(-50%)
+scale(1.02) !important;
+
+}
+
+
+.brand-card:active{
+
+transform:
+translateX(-50%)
+scale(.97) !important;
+
 }
