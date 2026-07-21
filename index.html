@@ -1762,7 +1762,11 @@ viewer.addEventListener("touchend",(e)=>{
     viewerImg.src = sliderImages[currentImage].src;
 
 });
-    </script>
+   
+if (window.location.pathname.includes("index.html") || window.location.pathname === "/") {
+    history.replaceState(null, null, window.location.href);
+}
+</script>
 
 </body>
 </html>
