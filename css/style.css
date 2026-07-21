@@ -3693,3 +3693,18 @@ header.hero{
 
     z-index: 999999;
 }
+
+
+
+
+.brand-card{
+    position: fixed;
+    top: env(safe-area-inset-top, 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999999;
+
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-transform: translate3d(-50%,0,0);
+}
