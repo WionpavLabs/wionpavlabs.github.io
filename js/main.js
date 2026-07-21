@@ -13,20 +13,16 @@ async function loadComponent(id, file){
     element.innerHTML = html;
 if(id === "menu-container"){
 
-    const menu = document.getElementById("navMenu");
+    setTimeout(() => {
 
-   if(menu){
+        const menu = document.getElementById("navMenu");
+        if(!menu) return;
 
-    const savedMenu = localStorage.getItem("menuOpen");
+        const savedMenu = localStorage.getItem("menuOpen");
 
-    if(savedMenu === "true"){
-        menu.classList.add("active");
-    }
-    else{
-        menu.classList.remove("active");
-    }
+        menu.classList.toggle("active", savedMenu === "true");
 
-}
+    }, 0);
 
 }
 }
@@ -295,7 +291,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+window.addEventListener("pageshow", () => {
 
+    const menu = document.getElementById("navMenu");
+    if(!menu) return;
+
+    const savedMenu = localStorage.getItem("menuOpen");
+
+    menu.classList.toggle("active", savedMenu === "true");
+
+});
 
 
        
