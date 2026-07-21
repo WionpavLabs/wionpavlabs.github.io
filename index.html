@@ -1765,17 +1765,21 @@ viewer.addEventListener("touchend",(e)=>{
    
 </script>
 <script>
-let cameFromInside = document.referrer.includes(location.origin);
+let firstLoad = true;
 
-if (cameFromInside) {
-    history.replaceState({ fromInternal: true }, null, location.href);
-}
+window.addEventListener("pageshow", function () {
+
+    if (firstLoad) {
+        firstLoad = false;
+        history.replaceState({ page: "home" }, null, location.href);
+    }
+
+});
 
 window.addEventListener("popstate", function (e) {
 
-    // sadece 1 kere müdahale et
-    if (e.state && e.state.fromInternal) {
-        history.replaceState(null, null, location.href); // loop'u kes
+    // Eğer iç sayfadan geldiyse → anasayfaya yönlendir
+    if (document.referrer.includes(location.origin)) {
         window.location.href = "index.html";
     }
 
