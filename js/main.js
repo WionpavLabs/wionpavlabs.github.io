@@ -187,27 +187,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // YENİ AKTİF MENÜ SİSTEMİ (PAGE BASED)
 
-function setActiveMenu() {
+function setActiveMenu(){
 
     const links = document.querySelectorAll("#navMenu a");
     const currentPage = window.location.pathname.split("/").pop();
+    const hash = window.location.hash;
 
-    links.forEach(link => {
+    links.forEach(link=>{
 
         const href = link.getAttribute("href");
 
         link.classList.remove("active-menu");
 
-        if (
+        // SAYFA BAZLI
+        if(
             href === currentPage ||
             (currentPage === "" && href === "index.html")
-        ) {
+        ){
+            link.classList.add("active-menu");
+        }
+
+        // ANCHOR BAZLI (#iletisim vs)
+        if(href === hash){
             link.classList.add("active-menu");
         }
 
     });
 }
-
+window.addEventListener("hashchange", setActiveMenu);
 // sadece sayfa yüklendiğinde çalışır
 window.addEventListener("load", setActiveMenu);
 
@@ -239,36 +246,49 @@ document.addEventListener("click", (e)=>{
 
 });
 
-const viewer = document.getElementById("imageViewer");
+document.addEventListener("DOMContentLoaded", () => {
 
-if(viewer){
+    const viewer = document.getElementById("imageViewer");
 
-    viewer.onclick = (e)=>{
-
-        if(e.target === viewer){
-
-            viewer.classList.remove("active");
-
-        }
-
-    };
-
-}
-
-
-   
-window.addEventListener("click", function(e){
-
-    if(e.target.matches(".viewer-close")){
-
-        const viewer = document.getElementById("imageViewer");
-
-        if(viewer){
-            viewer.classList.remove("active");
-        }
-
+    if(viewer){
+        viewer.onclick = (e)=>{
+            if(e.target === viewer){
+                viewer.classList.remove("active");
+            }
+        };
     }
 
 });
 
+
+   
+
+
+       
+
 sessionStorage.removeItem("historyFixed");
+
+document.querySelectorAll("#navMenu a").forEach(link=>{
+
+    link.addEventListener("click", function(e){
+
+        const href = this.getAttribute("href");
+
+        if(!href.startsWith("http")){
+
+            // ANA SAYFAYA DÖNÜŞTE history temizle
+            if(href === "index.html"){
+                e.preventDefault();
+                window.location.replace("index.html");
+                return;
+            }
+
+            // normal sayfalar
+            e.preventDefault();
+            window.location.href = href;
+
+        }
+
+    });
+
+});
