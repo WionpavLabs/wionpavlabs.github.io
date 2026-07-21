@@ -3581,7 +3581,13 @@ justify-content:center;
     transform: scaleX(1.05);
 }
 
-.no-animation {
-    transition: none !important;
-    animation: none !important;
+#navMenu{
+    transform:translateX(-100%);
+    transition:transform .35s ease;
+    will-change:transform;
+}
+
+#navMenu.active{
+    transform:translateX(0);
+}
 }
