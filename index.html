@@ -1767,6 +1767,10 @@ if (window.location.pathname.includes("index.html") || window.location.pathname 
     history.replaceState(null, null, window.location.href);
 }
 </script>
-
+<script>
+window.onpopstate = function () {
+    window.location.href = "index.html";
+};
+</script>
 </body>
 </html>
