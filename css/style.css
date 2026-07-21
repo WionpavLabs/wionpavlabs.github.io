@@ -3580,3 +3580,8 @@ justify-content:center;
         0 0 35px rgba(56,189,248,.9);
     transform: scaleX(1.05);
 }
+
+.no-animation {
+    transition: none !important;
+    animation: none !important;
+}
