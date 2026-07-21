@@ -3615,3 +3615,11 @@ translateX(-50%)
 scale(.97) !important;
 
 }
+
+.brand-card{
+    position:fixed !important;
+    top:10px !important;
+    left:50% !important;
+    transform:translateX(-50%) !important;
+    animation:none !important;
+}
