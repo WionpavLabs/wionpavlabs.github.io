@@ -3673,6 +3673,14 @@ header.hero{
     }
 
    .brand-card {
-    margin-top: 40px;
-    overflow: visible;
+    position: fixed !important;
+    top: 15px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 99999 !important;
+    width: 90%;
+    max-width: 500px;
+}
+   header {
+    position: static !important;
 }
