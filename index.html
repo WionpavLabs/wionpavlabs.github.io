@@ -1764,18 +1764,6 @@ viewer.addEventListener("touchend",(e)=>{
 });
    
 </script>
-<script>
-window.addEventListener("pageshow", function (event) {
 
-    // Eğer sayfa cache'ten (geri tuşuyla) geldiyse
-    if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
-
-        // 💣 TÜM geçmişi çöpe at
-        window.location.reload();
-
-    }
-
-});
-</script>
 </body>
 </html>
