@@ -3533,3 +3533,14 @@ justify-content:center;
     
     transform: scale(0.99);
 }
+
+   .menu-btn {
+    width: 42px !important;
+    height: 42px !important;
+    gap: 4px !important;
+}
+
+.menu-btn span {
+    width: 14px !important;
+    height: 2px !important;
+}
