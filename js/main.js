@@ -284,10 +284,4 @@ window.addEventListener("click", function(e){
 
 });
 
-window.addEventListener("popstate", function () {
-
-    if (sessionStorage.getItem("fromSite")) {
-        window.location.href = "index.html";
-    }
-
-});
+sessionStorage.removeItem("historyFixed");
