@@ -19,10 +19,24 @@ if(id === "menu-container"){
 
         const state = sessionStorage.getItem("menuState");
 
-        if(state === "open"){
-            menu.classList.add("active");
-        }
-        else{
+       const navigating = sessionStorage.getItem("navigating");
+
+if(navigating === "true"){
+
+    menu.classList.remove("active");
+    sessionStorage.removeItem("navigating");
+
+}
+else if(state === "open"){
+
+    menu.classList.add("active");
+
+}
+else{
+
+    menu.classList.remove("active");
+
+}
             menu.classList.remove("active");
         }
 
@@ -257,15 +271,17 @@ document.addEventListener("click", (e)=>{
 
     const link = e.target.closest("#navMenu a");
 
-    if(link){
+  if(link){
 
-        const menu = document.getElementById("navMenu");
+    const menu = document.getElementById("navMenu");
 
-        if(menu){
-            menu.classList.remove("active");
-        }
+    if(menu){
+        menu.classList.remove("active");
     }
 
+    sessionStorage.setItem("navigating","true");
+
+}
 
     const img = e.target.closest(".wion-slide img");
 
