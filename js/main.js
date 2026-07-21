@@ -15,9 +15,18 @@ if(id === "menu-container"){
 
     const menu = document.getElementById("navMenu");
 
-    if(menu && localStorage.getItem("menuOpen") === "true"){
+   if(menu){
+
+    const savedMenu = localStorage.getItem("menuOpen");
+
+    if(savedMenu === "true"){
         menu.classList.add("active");
     }
+    else{
+        menu.classList.remove("active");
+    }
+
+}
 
 }
 }
@@ -37,7 +46,7 @@ function toggleMenu(){
 
     localStorage.setItem(
         "menuOpen",
-        menu.classList.contains("active")
+        menu.classList.contains("active") ? "true" : "false"
     );
 }
 
@@ -50,7 +59,7 @@ function closeMenu(){
 
     localStorage.setItem(
         "menuOpen",
-        false
+        "false"
     );
 }
 /* ==========================
@@ -287,38 +296,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
- let menu = document.querySelector(".menu");
-
-function menuAc() {
-    menu.classList.add("active");
-
-    history.replaceState(
-        { menu: "open" },
-        ""
-    );
-}
-
-function menuKapat() {
-    menu.classList.remove("active");
-
-    history.replaceState(
-        { menu: "closed" },
-        ""
-    );
-}
-
-
-window.addEventListener("pageshow", function () {
-
-    if (history.state && history.state.menu === "open") {
-        menu.classList.add("active");
-    }
-
-    if (history.state && history.state.menu === "closed") {
-        menu.classList.remove("active");
-    }
-
-});  
 
 
        
