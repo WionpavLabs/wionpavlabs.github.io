@@ -3516,19 +3516,20 @@ justify-content:center;
 #highlights:hover,
 .updates-box:hover {
     box-shadow:
-        0 0 25px rgba(56,189,248,0.7),
-        0 0 60px rgba(56,189,248,0.5),
-        inset 0 0 20px rgba(56,189,248,0.25);
-}
-
+    0 0 50px rgba(56,189,248,1),
+    0 0 100px rgba(56,189,248,1),
+    0 0 150px rgba(56,189,248,0.9),
+    inset 0 0 30px rgba(56,189,248,0.5);
 /* tıklama anı (asıl güçlü efekt) */
 .logo-container:active,
 #highlights:active,
 .updates-box:active {
     box-shadow:
-        0 0 35px rgba(56,189,248,1),
-        0 0 80px rgba(56,189,248,0.9),
-        inset 0 0 30px rgba(56,189,248,0.4);
+    0 0 70px rgba(56,189,248,1),
+    0 0 140px rgba(56,189,248,1),
+    0 0 200px rgba(56,189,248,1),
+    0 0 260px rgba(56,189,248,0.95),
+    inset 0 0 45px rgba(56,189,248,0.6);
     
     transform: scale(0.99);
 }
