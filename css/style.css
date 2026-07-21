@@ -3457,7 +3457,7 @@ justify-content:center;
     left: 14px;       /* biraz daha sola */
 
     width: 24px;
-    height: 22px;
+    height: 18px;
 
     z-index: 9999;    /* kaybolmayı tamamen engeller */
 
@@ -3499,3 +3499,36 @@ justify-content:center;
     height: 50px;
 }
 
+/* =========================
+   TÜM KUTULARA PREMIUM GLOW (CLICK + HOVER)
+   ========================= */
+
+/* ortak kutu davranışı */
+.logo-container,
+#highlights,
+.updates-box {
+    transition: all 0.25s ease;
+    position: relative;
+}
+
+/* hover (üstüne gelince) */
+.logo-container:hover,
+#highlights:hover,
+.updates-box:hover {
+    box-shadow:
+        0 0 25px rgba(56,189,248,0.7),
+        0 0 60px rgba(56,189,248,0.5),
+        inset 0 0 20px rgba(56,189,248,0.25);
+}
+
+/* tıklama anı (asıl güçlü efekt) */
+.logo-container:active,
+#highlights:active,
+.updates-box:active {
+    box-shadow:
+        0 0 35px rgba(56,189,248,1),
+        0 0 80px rgba(56,189,248,0.9),
+        inset 0 0 30px rgba(56,189,248,0.4);
+    
+    transform: scale(0.99);
+}
