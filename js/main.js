@@ -11,7 +11,15 @@ async function loadComponent(id, file){
     const html = await response.text();
 
     element.innerHTML = html;
+if(id === "menu-container"){
 
+    const menu = document.getElementById("navMenu");
+
+    if(menu && localStorage.getItem("menuOpen") === "true"){
+        menu.classList.add("active");
+    }
+
+}
 }
 
 
