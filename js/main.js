@@ -297,3 +297,7 @@ document.addEventListener("click", function(e){
     }
 
 });
+
+window.addEventListener("pageshow", function () {
+    closeMenu();
+});
