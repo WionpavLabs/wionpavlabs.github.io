@@ -304,3 +304,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+window.addEventListener("pageshow", () => {
+
+    const menu = document.getElementById("navMenu");
+
+    if(!menu) return;
+
+    const state = sessionStorage.getItem("menuState");
+
+    if(state === "open"){
+        menu.classList.add("active");
+    }
+    else{
+        menu.classList.remove("active");
+    }
+
+});
