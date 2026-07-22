@@ -3724,21 +3724,29 @@ justify-content:center;
 
 #navMenu{
 
-    width:245px !important;
+    width:225px !important;
     height:100vh !important;
 
     padding:28px 24px !important;
 
-background:rgba(255,255,255,.12) !important;
+background:
+linear-gradient(
+180deg,
+rgba(8,20,40,.78),
+rgba(10,28,55,.74),
+rgba(7,18,35,.82)
+) !important;
 
-  backdrop-filter:blur(30px) saturate(180%) !important;
--webkit-backdrop-filter:blur(30px) saturate(180%) !important;
+  backdrop-filter:blur(26px) saturate(180%);
+-webkit-backdrop-filter:blur(26px) saturate(180%);
+border-radius:0 36px 36px 0;
+ border-right:1px solid rgba(56,189,248,.22);
+   
 
-  border-right:1px solid rgba(255,255,255,.20) !important;
-
-   box-shadow:
-    18px 0 45px rgba(0,0,0,.20),
-    inset -1px 0 rgba(255,255,255,.20);
+  box-shadow:
+18px 0 45px rgba(0,0,0,.45),
+0 0 40px rgba(56,189,248,.08),
+inset -1px 0 rgba(255,255,255,.05);
 
     transition:.45s cubic-bezier(.22,.61,.36,1) !important;
 }
