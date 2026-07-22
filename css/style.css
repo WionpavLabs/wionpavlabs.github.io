@@ -3689,7 +3689,7 @@ justify-content:center;
     );
 
     transform:translateX(-100%);
-    animation:softWave 0.5s linear infinite;
+    animation:softWave 3s linear infinite;
 
     pointer-events:none;
  mix-blend-mode: overlay;
