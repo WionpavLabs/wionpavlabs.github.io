@@ -3732,7 +3732,8 @@ justify-content:center;
     -webkit-user-drag: none;
 }
 
-.no-interaction-global .highlight-box img {
+/* 🔥 SADECE HIGHLIGHTS İÇİN SERBEST */
+.no-interaction-global .works-section img {
     pointer-events: auto !important;
     user-drag: auto !important;
     -webkit-user-drag: auto !important;
