@@ -3693,3 +3693,9 @@ justify-content:center;
 
     pointer-events:none;
 }
+
+@keyframes softWave{
+    to{
+        transform:translateX(100%);
+    }
+}
