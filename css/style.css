@@ -3684,7 +3684,7 @@ justify-content:center;
     background:linear-gradient(
         120deg,
         transparent 30%,
-     rgba(255,255,255,0.08),
+    rgba(56,189,248,0.3),
         transparent 70%
     );
 
@@ -3692,6 +3692,7 @@ justify-content:center;
     animation:softWave 6s linear infinite;
 
     pointer-events:none;
+ mix-blend-mode: overlay;
 }
 
 @keyframes softWave{
