@@ -3688,3 +3688,10 @@ justify-content:center;
     rotate(-45deg);
 
 }
+@media (max-width:768px){
+
+    .brand-card{
+        transform:translateX(22px) !important;
+    }
+
+}
