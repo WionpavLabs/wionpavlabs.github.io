@@ -3732,9 +3732,9 @@ justify-content:center;
     -webkit-user-drag: none;
 }
 
-/* Highlight kutusunda görseller serbest */
-.highlight-box img {
-    pointer-events: auto; /* tekrar aktif */
-    user-drag: auto;
-    -webkit-user-drag: auto;
+.no-interaction-global .highlight-box img {
+    pointer-events: auto !important;
+    user-drag: auto !important;
+    -webkit-user-drag: auto !important;
+    touch-action: auto !important;
 }
