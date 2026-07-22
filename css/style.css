@@ -3715,78 +3715,44 @@ justify-content:center;
 
 /* BUTON */
 .menu-toggle{
-    width: 34px;
+    width: 36px;
     height: 26px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-    background: rgba(255,255,255,0.05);
+
+    background: rgba(255,255,255,0.04);
     border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 10px;
-    padding: 6px;
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
+    border-radius: 12px;
+    padding: 7px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    transition: all 0.25s ease;
 }
 
 .menu-toggle:hover{
     background: rgba(255,255,255,0.08);
 }
 
-/* ÇİZGİLER */
+/* çizgiler */
 .menu-toggle span{
     height: 2px;
     width: 100%;
-    background: white;
+    background: rgba(255,255,255,0.9);
     border-radius: 2px;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
 }
 
-/* X ANİMASYON */
+/* X animasyonu */
 .menu-toggle.active span:nth-child(1){
-    transform: translateY(6px) rotate(45deg);
+    transform: translateY(7px) rotate(45deg);
 }
 .menu-toggle.active span:nth-child(2){
     opacity: 0;
 }
 .menu-toggle.active span:nth-child(3){
-    transform: translateY(-6px) rotate(-45deg);
-}
-
-/* MENÜ PANEL */
-.nav-menu{
-    position: fixed;
-    top: 70px;
-    left: 20px;
-    background: rgba(10,20,40,0.7);
-    backdrop-filter: blur(20px);
-    border-radius: 14px;
-    padding: 14px 18px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    opacity: 0;
-    transform: translateY(-10px);
-    pointer-events: none;
-    transition: all 0.3s ease;
-}
-
-/* AÇIK HAL */
-.nav-menu.active{
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-}
-
-/* LINKLER */
-.nav-menu a{
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    opacity: 0.8;
-    transition: 0.2s;
-}
-
-.nav-menu a:hover{
-    opacity: 1;
+    transform: translateY(-7px) rotate(-45deg);
 }
