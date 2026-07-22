@@ -299,7 +299,7 @@ footer{
 
 <div class="founder-card">
 
-<img src="images/profil.jpeg" class="founder-photo">
+<img src="images/profil.jpeg" class="founder-photo allow-interaction">
 
 <div class="founder-info">
 
@@ -367,13 +367,16 @@ document.addEventListener("dragstart", e => {
 
 // Uzun basma (mobil)
 document.addEventListener("touchstart", function(e){
-    if(e.target.tagName === "IMG"){
+    if(
+        e.target.tagName === "IMG" &&
+        !e.target.classList.contains("allow-interaction")
+    ){
         e.preventDefault();
     }
 }, { passive: false });
+
 </script>
 
-<img src="images/profil.jpeg" class="founder-photo allow-interaction">
 </body>
 </html>
 
