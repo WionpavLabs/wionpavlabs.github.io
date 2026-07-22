@@ -52,27 +52,26 @@ loadComponent(
 function toggleMenu(){
 
     const menu = document.getElementById("navMenu");
+    const toggle = document.getElementById("menuToggle");
 
     menu.classList.toggle("active");
+    toggle.classList.toggle("active");
 
     sessionStorage.setItem(
         "menuState",
         menu.classList.contains("active") ? "open" : "closed"
     );
-
 }
-
 
 function closeMenu(){
 
     const menu = document.getElementById("navMenu");
+    const toggle = document.getElementById("menuToggle");
 
-    if(menu){
-        menu.classList.remove("active");
-    }
+    if(menu) menu.classList.remove("active");
+    if(toggle) toggle.classList.remove("active");
 
     sessionStorage.setItem("menuState","closed");
-
 }
 /* ==========================
    WION SLIDER
@@ -319,3 +318,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
