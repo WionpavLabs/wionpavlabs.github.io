@@ -4129,3 +4129,15 @@ inset -1px 0 rgba(255,255,255,.05);
     height:40px !important;
 
 }
+
+/* Yönetici Girişi alta yapışmasın */
+#navMenu{
+    justify-content:flex-start !important;
+}
+
+#navMenu .admin-link{
+
+    margin-top:18px !important;
+    margin-bottom:20px !important;
+
+}
