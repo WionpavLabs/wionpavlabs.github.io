@@ -42,6 +42,7 @@ if(id === "menu-container"){
         }
     }
 }
+}
 // Arka planı yükle
 
 loadComponent(
