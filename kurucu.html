@@ -354,7 +354,24 @@ function toggleMenu(){
     -->
 <script src="js/main.js"></script>
 
+<script>
+// Sağ tık kapat
+document.addEventListener("contextmenu", e => e.preventDefault());
 
+// Görsel sürükleme engelle
+document.addEventListener("dragstart", e => {
+    if(e.target.tagName === "IMG"){
+        e.preventDefault();
+    }
+});
+
+// Uzun basma (mobil)
+document.addEventListener("touchstart", function(e){
+    if(e.target.tagName === "IMG"){
+        e.preventDefault();
+    }
+}, { passive: false });
+</script>
 </body>
 </html>
 
