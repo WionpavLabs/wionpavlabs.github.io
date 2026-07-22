@@ -3740,8 +3740,8 @@ justify-content:center;
     touch-action: auto !important;
 }
 
-/* Sadece profil.jpeg serbest */
-.no-interaction-global img[src*="profil.jpeg"] {
+/* 🔥 PROFİL FOTOYU GERİ AÇ */
+.no-interaction-global img[src="images/profil.jpeg"] {
     pointer-events: auto !important;
     touch-action: auto !important;
 }
