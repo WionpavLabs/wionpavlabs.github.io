@@ -3724,21 +3724,21 @@ justify-content:center;
 
 #navMenu{
 
-    width:300px !important;
+    width:245px !important;
     height:100vh !important;
 
     padding:28px 24px !important;
 
-background:rgba(7,19,34,.42) !important;
+background:rgba(255,255,255,.12) !important;
 
-   backdrop-filter:blur(45px) saturate(200%) !important;
--webkit-backdrop-filter:blur(45px) saturate(200%) !important;
+  backdrop-filter:blur(30px) saturate(180%) !important;
+-webkit-backdrop-filter:blur(30px) saturate(180%) !important;
 
-   border-right:1px solid rgba(255,255,255,.12) !important;
+  border-right:1px solid rgba(255,255,255,.20) !important;
 
-    box-shadow:
-        20px 0 60px rgba(0,0,0,.30),
-    inset -1px 0 rgba(255,255,255,.08);
+   box-shadow:
+    18px 0 45px rgba(0,0,0,.20),
+    inset -1px 0 rgba(255,255,255,.20);
 
     transition:.45s cubic-bezier(.22,.61,.36,1) !important;
 }
