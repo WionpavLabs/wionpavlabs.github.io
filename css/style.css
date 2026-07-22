@@ -3718,19 +3718,15 @@ justify-content:center;
     );
 }
 
-.no-interaction {
+.no-interaction-global * {
     -webkit-user-select: none;
-    -ms-user-select: none;
     user-select: none;
-
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: transparent;
-
-    touch-action: manipulation; /* zoom'u kısıtlar ama slider çalışır */
+    touch-action: manipulation;
 }
 
-/* Görseller büyütülmesin */
-.no-interaction img {
+.no-interaction-global img {
     pointer-events: none;
     user-drag: none;
     -webkit-user-drag: none;
