@@ -4075,3 +4075,57 @@ inset -1px 0 rgba(255,255,255,.05);
     color:#071322 !important;
 
 }
+
+/* ==========================================
+   WIONPAV PREMIUM MENU - COMPACT OVERRIDE
+   (EN ALTA YAPIŞTIR)
+========================================== */
+
+#navMenu{
+
+    width:220px !important;
+    height:100vh !important;
+
+    display:flex !important;
+    flex-direction:column !important;
+
+    padding:18px 16px !important;
+
+    border-radius:0 40px 40px 0 !important;
+
+    overflow:hidden !important;
+
+}
+
+#navMenu a{
+
+    height:42px !important;
+
+    margin:1px 0 !important;
+
+    padding:0 16px !important;
+
+    font-size:15px !important;
+
+    border-radius:14px !important;
+
+}
+
+#navMenu .admin-link{
+
+    margin-top:auto !important;
+
+    margin-bottom:18px !important;
+
+    height:42px !important;
+
+    border-radius:14px !important;
+
+}
+
+.menu-close{
+
+    width:40px !important;
+    height:40px !important;
+
+}
