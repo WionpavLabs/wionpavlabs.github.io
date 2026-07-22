@@ -2733,26 +2733,7 @@ transition:.45s;
 
 }
 
-.menu-btn{
 
-width:46px;
-height:46px;
-
-display:flex;
-flex-direction:column;
-justify-content:center;
-gap:6px;
-
-border:none;
-background:none;
-
-cursor:pointer;
-
-padding:0;
-
-margin:0;
-
-}
 
 .menu-btn span{
 
@@ -2885,32 +2866,7 @@ letter-spacing:2px;
 }
 
 }
-.menu-btn{
 
-width:42px;
-height:42px;
-
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-
-gap:5px;
-
-}
-
-.menu-btn span{
-
-width:22px;
-height:2px;
-
-border-radius:50px;
-
-background:#38bdf8;
-
-transition:.3s;
-
-}
 
 .top-header{
 
@@ -2924,11 +2880,7 @@ height:74px;
 
 }
 
-.menu-btn{
 
-margin-right:12px;
-
-}
 
 
 .brand-logo{
@@ -2978,33 +2930,7 @@ justify-content:center;
 
 /* MENU BUTTON */
 
-.menu-btn{
 
-    position:fixed;
-
-    top:18px;
-    left:18px;
-
-    width:46px;
-    height:46px;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    gap:5px;
-
-    border:none;
-    background:none;
-
-    cursor:pointer;
-
-    pointer-events:auto;
-
-    z-index:100000;
-
-}
 
 
 
@@ -3234,18 +3160,7 @@ justify-content:center;
     }
 
 
-    .menu-btn{
-
-        top:14px;
-
-        left:14px;
-
-        width:42px;
-
-        height:42px;
-
-    }
-
+   
 
 
     .brand-card{
@@ -3339,22 +3254,6 @@ justify-content:center;
    4) HAMBURGER (3 ÇİZGİ) AYAR
 ========================= */
 
-.menu-btn {
-    position: fixed;
-    top: 20px;        /* biraz daha aşağı */
-    left: 14px;       /* biraz daha sola */
-
-    width: 24px;
-    height: 18px;
-
-    z-index: 9999;    /* kaybolmayı tamamen engeller */
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    cursor: pointer;
-}
 
 /* çizgiler */
 .menu-btn span {
@@ -3422,30 +3321,12 @@ justify-content:center;
     transform: scale(0.99);
 }
 
-   .menu-btn {
-    width: 42px !important;
-    height: 42px !important;
-    gap: 4px !important;
-}
-
-.menu-btn span {
-    width: 14px !important;
-    height: 2px !important;
-}
+  
 
 /* =========================
    GLOBAL MENU BUTTON (TEK KAYNAK)
 ========================= */
 
-.menu-btn {
-    width: 42px;
-    height: 42px;
-    gap: 4px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    cursor: pointer;
-}
 
 .menu-btn span {
     display: block;
