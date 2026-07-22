@@ -3695,3 +3695,26 @@ justify-content:center;
     }
 
 }
+@media (max-width:768px){
+
+    .brand-card{
+        width:260px !important;
+        padding:8px 10px !important;
+    }
+
+    .brand-logo{
+        width:34px !important;
+        height:34px !important;
+        margin-right:8px !important;
+    }
+
+    .brand-text h1{
+        font-size:16px !important;
+    }
+
+    .brand-text p{
+        font-size:7px !important;
+        letter-spacing:1px !important;
+    }
+
+}
