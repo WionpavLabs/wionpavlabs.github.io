@@ -3731,3 +3731,10 @@ justify-content:center;
     user-drag: none;
     -webkit-user-drag: none;
 }
+
+/* Highlight kutusunda görseller serbest */
+.highlight-box img {
+    pointer-events: auto; /* tekrar aktif */
+    user-drag: auto;
+    -webkit-user-drag: auto;
+}
