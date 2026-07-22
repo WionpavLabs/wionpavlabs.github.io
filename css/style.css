@@ -2664,7 +2664,7 @@ main{
     }
 
     .works-title{
-        font-size:24px;
+        font-size:21px;
     }
 
     .wion-slider{
@@ -3232,7 +3232,7 @@ justify-content:center;
 ========================= */
 
 .works-section {
-    margin-top: 35px !important;  /* biraz aşağı */
+    margin-top: 30px !important;  /* biraz aşağı */
 }
 
 
@@ -3479,7 +3479,7 @@ justify-content:center;
 }
 
 /* 🔥 SADECE HIGHLIGHTS İÇİN SERBEST */
-.no-interaction-global .works-section img {
+.no-interaction-global  img {
     pointer-events: auto !important;
     user-drag: auto !important;
     -webkit-user-drag: auto !important;
