@@ -3700,3 +3700,7 @@ justify-content:center;
         transform:translateX(100%);
     }
 }
+
+.brand-card:hover::after{
+    animation: none;
+}
