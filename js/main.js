@@ -14,34 +14,33 @@ async function loadComponent(id, file){
 if(id === "menu-container"){
 
     const menu = document.getElementById("navMenu");
+    const toggle = document.getElementById("menuToggle");
 
     if(menu){
 
         const state = sessionStorage.getItem("menuState");
+        const navigating = sessionStorage.getItem("navigating");
 
-       const navigating = sessionStorage.getItem("navigating");
+        if(navigating === "true"){
 
-if(navigating === "true"){
-
-    menu.classList.remove("active");
-    sessionStorage.removeItem("navigating");
-
-}
-else if(state === "open"){
-
-    menu.classList.add("active");
-
-}
-else{
-
-    menu.classList.remove("active");
-
-}
+            menu.classList.remove("active");
+            toggle?.classList.remove("active");
+            sessionStorage.removeItem("navigating");
 
         }
+        else if(state === "open"){
 
+            menu.classList.add("active");
+            toggle?.classList.add("active");
+
+        }
+        else{
+
+            menu.classList.remove("active");
+            toggle?.classList.remove("active");
+
+        }
     }
-
 }
 // Arka planı yükle
 
@@ -318,4 +317,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
-
+document.addEventListener("DOMContentLoaded", setActiveMenu);
