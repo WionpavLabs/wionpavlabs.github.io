@@ -3731,14 +3731,14 @@ justify-content:center;
 
     background:rgba(5,12,24,.82) !important;
 
-    backdrop-filter:blur(35px) saturate(180%) !important;
-    -webkit-backdrop-filter:blur(35px) saturate(180%) !important;
+   backdrop-filter:blur(45px) saturate(200%) !important;
+-webkit-backdrop-filter:blur(45px) saturate(200%) !important;
 
-    border-right:1px solid rgba(255,255,255,.08) !important;
+   border-right:1px solid rgba(255,255,255,.12) !important;
 
     box-shadow:
-        25px 0 80px rgba(0,0,0,.55),
-        inset -1px 0 rgba(255,255,255,.05);
+        20px 0 60px rgba(0,0,0,.30),
+    inset -1px 0 rgba(255,255,255,.08);
 
     transition:.45s cubic-bezier(.22,.61,.36,1) !important;
 }
@@ -3785,7 +3785,7 @@ justify-content:center;
 
 #navMenu a:hover{
 
-    background:rgba(255,255,255,.05);
+    background:rgba(7,19,34,.42) !important;
 
     color:#6ed0ff !important;
 
