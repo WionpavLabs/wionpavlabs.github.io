@@ -3739,3 +3739,9 @@ justify-content:center;
     -webkit-user-drag: auto !important;
     touch-action: auto !important;
 }
+
+/* Sadece profil.jpeg serbest */
+.no-interaction-global img[src*="profil.jpeg"] {
+    pointer-events: auto !important;
+    touch-action: auto !important;
+}
