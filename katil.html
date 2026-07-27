@@ -1,1 +1,372 @@
+<!DOCTYPE html>
+<html lang="tr">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <title>Araştırma Ekibine Katıl | Wionpav Labs</title>
+
+    <meta name="description"
+        content="Wionpav Labs araştırma ekibine katılmak için başvuru formu.">
+
+</head>
+
+<body>
+
+    <div class="science-background">
+
+        <div class="dna-line dna-right"></div>
+        <div class="dna-line dna-left"></div>
+
+        <div class="particle p1"></div>
+        <div class="particle p2"></div>
+        <div class="particle p3"></div>
+        <div class="particle p4"></div>
+        <div class="particle p5"></div>
+
+    </div>
+
+
+    <!-- BRAND -->
+
+    <div class="brand-card">
+
+        <div class="halo"></div>
+        <div class="ripple"></div>
+
+        <img src="assets/logo.png" class="brand-logo" alt="Wionpav Labs">
+
+        <div class="brand-text">
+
+            <h1>Wionpav Labs</h1>
+
+            <p>Medical Research & Knowledge Platform</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- MENU -->
+
+    <button id="menuToggle" class="menu-toggle" onclick="toggleMenu()">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </button>
+
+
+    <nav id="navMenu">
+
+        <button class="menu-close" onclick="closeMenu()">✕</button>
+
+        <a href="index.html">Ana Sayfa</a>
+        <a href="hakkımızda.html">Hakkımızda</a>
+        <a href="kurucu.html">Kurucu</a>
+        <a href="insights.html">Insights</a>
+        <a href="projeler.html">Projeler</a>
+        <a href="yayinlar.html">Yayınlar</a>
+        <a href="katil.html" class="active">Araştırma Ekibine Katıl</a>
+        <a href="index.html#iletisim">İletişim</a>
+
+        <a href="login.html" class="admin-link">
+            🔐 Yönetici Girişi
+        </a>
+
+    </nav>
+
+
+    <div id="menuOverlay" class="menu-overlay" onclick="closeMenu()"></div>
+
+
+    <!-- FORM -->
+
+    <main>
+
+        <section class="join-section">
+
+            <h2>Araştırma Ekibine Katıl</h2>
+
+            <p>
+                Wionpav Labs, tıp ve sağlık bilimleri alanında
+                bilimsel araştırma ve bilgi üretimini desteklemektedir.
+                Araştırmalarımıza katkı sağlamak veya kendi çalışma
+                fikrinizle başvurmak için aşağıdaki formu doldurabilirsiniz.
+            </p>
+
+
+            <form id="researchForm">
+
+
+                <!-- AD SOYAD -->
+
+                <div class="form-group">
+
+                    <label for="fullName">
+                        Ad Soyad
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        placeholder="Ad Soyad"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- BÖLÜM / ALAN -->
+
+                <div class="form-group">
+
+                    <label for="field">
+                        Bölüm / Alan
+                    </label>
+
+                    <input
+                        type="text"
+                        id="field"
+                        name="field"
+                        placeholder="Örn. Tıp, Diş Hekimliği, Eczacılık..."
+                        required
+                    >
+
+                </div>
+
+
+                <!-- ARAŞTIRMA ALANLARI -->
+
+                <div class="form-group">
+
+                    <label>
+                        İlgi Duyduğunuz Araştırma Alanları
+                    </label>
+
+
+                    <div class="checkbox-grid">
+
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="researchArea" value="Nörobilim">
+                            <span>Nörobilim</span>
+                        </label>
+
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="researchArea" value="Uyku ve Uyku Sağlığı">
+                            <span>Uyku ve Uyku Sağlığı</span>
+                        </label>
+
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="researchArea" value="Klinik Araştırmalar">
+                            <span>Klinik Araştırmalar</span>
+                        </label>
+
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="researchArea" value="Biyomedikal Araştırmalar">
+                            <span>Biyomedikal Araştırmalar</span>
+                        </label>
+
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="researchArea" value="Yapay Zekâ ve Tıp">
+                            <span>Yapay Zekâ ve Tıp</span>
+                        </label>
+
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="researchArea" value="Epidemiyoloji ve Halk Sağlığı">
+                            <span>Epidemiyoloji ve Halk Sağlığı</span>
+                        </label>
+
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="researchArea" value="Sistematik Derleme / Literatür Araştırmaları">
+                            <span>Sistematik Derleme / Literatür Araştırmaları</span>
+                        </label>
+
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="researchArea" value="Diğer">
+                            <span>Diğer</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BAŞVURU TÜRÜ -->
+
+                <div class="form-group">
+
+                    <label>
+                        Nasıl Katılmak İstiyorsunuz?
+                    </label>
+
+
+                    <div class="radio-group">
+
+                        <label class="radio-item">
+
+                            <input
+                                type="radio"
+                                name="applicationType"
+                                value="Wionpav Labs araştırmalarına katkı sağlamak istiyorum"
+                                required
+                            >
+
+                            <span>
+                                Wionpav Labs araştırmalarına katkı sağlamak istiyorum
+                            </span>
+
+                        </label>
+
+
+                        <label class="radio-item">
+
+                            <input
+                                type="radio"
+                                name="applicationType"
+                                value="Kendi araştırma / çalışma fikrimle başvuruyorum"
+                            >
+
+                            <span>
+                                Kendi araştırma / çalışma fikrimle başvuruyorum
+                            </span>
+
+                        </label>
+
+
+                        <label class="radio-item">
+
+                            <input
+                                type="radio"
+                                name="applicationType"
+                                value="Her ikisiyle de ilgileniyorum"
+                            >
+
+                            <span>
+                                Her ikisiyle de ilgileniyorum
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ÇALIŞMA ÖNERİSİ -->
+
+                <div class="form-group">
+
+                    <label for="researchIdea">
+                        Çalışma / Araştırma Öneriniz
+                    </label>
+
+                    <textarea
+                        id="researchIdea"
+                        name="researchIdea"
+                        rows="7"
+                        placeholder="Gerçekleştirmek istediğiniz araştırma veya çalışma fikrinizi kısaca açıklayınız..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- İLETİŞİM -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        E-posta
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="ornek@email.com"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Telefon
+                        <span>(İsteğe bağlı)</span>
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="+90 5XX XXX XX XX"
+                    >
+
+                </div>
+
+
+                <!-- ONAY -->
+
+                <div class="consent-box">
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            id="contactConsent"
+                            required
+                        >
+
+                        <span>
+                            Başvurumun değerlendirilmesini ve uygun bulunması
+                            halinde benimle iletişime geçilmesini kabul ediyorum.
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- GÖNDER -->
+
+                <button
+                    type="submit"
+                    class="research-submit"
+                >
+                    Başvuruyu Gönder
+                </button>
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        © 2026 Wionpav Labs |
+        Medical Research & Knowledge Platform
+
+    </footer>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
