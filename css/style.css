@@ -4141,3 +4141,157 @@ inset -1px 0 rgba(255,255,255,.05);
     margin-bottom:20px !important;
 
 }
+
+
+
+/* =========================================================
+   DESKTOP ONLY
+   769px ve üzeri ekranlar
+   Mobil tasarıma DOKUNMAZ
+========================================================= */
+
+@media (min-width: 769px) {
+
+    /* =========================================
+       HAMBURGER MENÜYÜ DESKTOP'TA KALDIR
+    ========================================= */
+
+    #menuToggle,
+    .menu-toggle {
+        display: none !important;
+    }
+
+    #menuOverlay,
+    .menu-overlay {
+        display: none !important;
+    }
+
+    /* =========================================
+       DESKTOP YATAY NAVBAR
+    ========================================= */
+
+    #navMenu {
+        display: flex !important;
+
+        position: relative;
+        top: auto;
+
+        width: fit-content;
+        max-width: calc(100% - 40px);
+
+        margin: 25px auto 40px;
+
+        padding: 14px 24px;
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        gap: 24px;
+
+        border-radius: 18px;
+
+        box-sizing: border-box;
+    }
+
+    /* Menü kapatma X'i desktop'ta görünmesin */
+
+    #navMenu .menu-close {
+        display: none !important;
+    }
+
+    /* Menü linkleri */
+
+    #navMenu a {
+        white-space: nowrap;
+    }
+
+    #navMenu .admin-link {
+        margin-left: 5px;
+    }
+
+
+    /* =========================================
+       HIGHLIGHTS
+       Aşağıdaki section'larla aynı genişlik
+    ========================================= */
+
+    .works-section {
+
+        width: 900px;
+        max-width: calc(100% - 40px);
+
+        margin: 0 auto 40px;
+
+        padding: 30px;
+
+        box-sizing: border-box;
+
+    }
+
+
+    /* =========================================
+       HIGHLIGHTS FOTOĞRAF ALANI
+       Bilgisayarda aşırı büyümesini engelle
+    ========================================= */
+
+    .works-section .wion-slider {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        height: 300px;
+
+        overflow: hidden;
+
+        box-sizing: border-box;
+
+    }
+
+
+    .works-section .wion-track {
+
+        width: 100%;
+        height: 100%;
+
+    }
+
+
+    .works-section .wion-slide {
+
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;
+
+    }
+
+
+    .works-section .wion-slide img {
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+
+        display: block;
+
+    }
+
+
+    /* =========================================
+       HIGHLIGHTS BAŞLIK / METİN
+    ========================================= */
+
+    .works-section .works-title {
+
+        margin-top: 0;
+
+    }
+
+}
