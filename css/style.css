@@ -4441,7 +4441,7 @@ inset -1px 0 rgba(255,255,255,.05);
 
 .join-section {
     max-width: 820px;
-    margin: 25px auto 60px;
+    margin: 0px auto 60px;
 }
 
 .join-section h2 {
