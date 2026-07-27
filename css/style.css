@@ -4433,3 +4433,401 @@ inset -1px 0 rgba(255,255,255,.05);
     }
 
 }
+
+
+/* =========================================
+   WIONPAV LABS — RESEARCH APPLICATION FORM
+========================================= */
+
+.join-section {
+    max-width: 820px;
+    margin: 60px auto;
+}
+
+.join-section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.join-section > p {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    text-align: center;
+    color: #94a3b8;
+    line-height: 1.8;
+}
+
+
+/* FORM */
+
+#researchForm {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+
+/* FORM ALANI */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group > label {
+    color: #e2e8f0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* INPUT + TEXTAREA */
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 15px 17px;
+
+    background: rgba(7,19,34,.72);
+
+    color: #e2e8f0;
+
+    border: 1px solid rgba(56,189,248,.18);
+
+    border-radius: 13px;
+
+    outline: none;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+
+    transition: .3s ease;
+
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+    line-height: 1.7;
+}
+
+
+/* PLACEHOLDER */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #64748b;
+}
+
+
+/* FOCUS */
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 0 0 3px rgba(56,189,248,.08),
+        0 0 25px rgba(56,189,248,.10);
+
+    background: rgba(7,19,34,.9);
+
+}
+
+
+/* =========================================
+   ARAŞTIRMA ALANLARI
+========================================= */
+
+.checkbox-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+
+}
+
+
+.checkbox-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px;
+
+    background: rgba(255,255,255,.025);
+
+    border: 1px solid rgba(56,189,248,.12);
+
+    border-radius: 13px;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+
+}
+
+
+.checkbox-item:hover {
+
+    border-color: rgba(56,189,248,.4);
+
+    background: rgba(56,189,248,.05);
+
+    transform: translateY(-2px);
+
+}
+
+
+.checkbox-item input {
+
+    accent-color: #38bdf8;
+
+    width: 17px;
+    height: 17px;
+
+    flex-shrink: 0;
+
+}
+
+
+.checkbox-item span {
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================
+   BAŞVURU TÜRÜ
+========================================= */
+
+.radio-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+.radio-item {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 15px 17px;
+
+    background: rgba(255,255,255,.025);
+
+    border: 1px solid rgba(56,189,248,.12);
+
+    border-radius: 13px;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+
+}
+
+
+.radio-item:hover {
+
+    border-color: rgba(56,189,248,.4);
+
+    background: rgba(56,189,248,.05);
+
+}
+
+
+.radio-item input {
+
+    accent-color: #38bdf8;
+
+    width: 17px;
+    height: 17px;
+
+    margin-top: 2px;
+
+    flex-shrink: 0;
+
+}
+
+
+.radio-item span {
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================
+   ONAY KUTUSU
+========================================= */
+
+.consent-box {
+
+    padding: 17px;
+
+    background: rgba(56,189,248,.05);
+
+    border: 1px solid rgba(56,189,248,.15);
+
+    border-radius: 14px;
+
+}
+
+
+.consent-box label {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    cursor: pointer;
+
+}
+
+
+.consent-box input {
+
+    accent-color: #38bdf8;
+
+    width: 17px;
+    height: 17px;
+
+    margin-top: 2px;
+
+    flex-shrink: 0;
+
+}
+
+
+/* =========================================
+   GÖNDER BUTONU
+========================================= */
+
+.research-submit {
+
+    width: 100%;
+
+    padding: 16px 24px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #38bdf8,
+            #67d3ff
+        );
+
+    color: #071322;
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(56,189,248,.22);
+
+    transition: .35s ease;
+
+}
+
+
+.research-submit:hover {
+
+    transform:
+        translateY(-3px)
+        scale(1.01);
+
+    box-shadow:
+        0 18px 45px rgba(56,189,248,.4);
+
+}
+
+
+/* =========================================
+   MOBİL
+========================================= */
+
+@media(max-width:768px) {
+
+    .join-section {
+
+        margin: 30px auto;
+
+        padding: 22px;
+
+    }
+
+    .join-section h2 {
+
+        font-size: 26px;
+
+    }
+
+    .join-section > p {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+        margin-bottom: 30px;
+
+    }
+
+    .checkbox-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .checkbox-item,
+    .radio-item {
+
+        padding: 14px;
+
+    }
+
+}
