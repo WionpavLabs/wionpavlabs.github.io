@@ -348,6 +348,110 @@
 
     <script src="js/main.js"></script>
 
+    <script>
+
+const APPLICATIONS_URL =
+"https://yorum-sistemimm-default-rtdb.europe-west1.firebasedatabase.app/applications.json";
+
+const researchForm = document.getElementById("researchForm");
+
+researchForm.addEventListener("submit", async function(e) {
+
+    e.preventDefault();
+
+    const submitButton = document.querySelector(".research-submit");
+
+    // Seçilen araştırma alanlarını al
+    const researchAreas = Array.from(
+        document.querySelectorAll('input[name="researchArea"]:checked')
+    ).map(input => input.value);
+
+    if (researchAreas.length === 0) {
+        alert("Lütfen en az bir araştırma alanı seçiniz.");
+        return;
+    }
+
+    // Form verileri
+    const application = {
+
+        fullName: document.getElementById("fullName").value.trim(),
+
+        field: document.getElementById("field").value.trim(),
+
+        researchAreas: researchAreas,
+
+        applicationType:
+            document.querySelector('input[name="applicationType"]:checked').value,
+
+        researchIdea:
+            document.getElementById("researchIdea").value.trim(),
+
+        email:
+            document.getElementById("email").value.trim(),
+
+        phone:
+            document.getElementById("phone").value.trim(),
+
+        time: Date.now()
+
+    };
+
+
+    // Gönderiliyor durumu
+    submitButton.disabled = true;
+    submitButton.textContent = "Başvuru Gönderiliyor...";
+
+
+    try {
+
+        const response = await fetch(APPLICATIONS_URL, {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify(application)
+
+        });
+
+
+        if (!response.ok) {
+            throw new Error("Firebase bağlantısı başarısız.");
+        }
+
+
+        // Başarılı
+        alert(
+            "Başvurunuz başarıyla gönderildi.\n\n" +
+            "Wionpav Labs araştırma ekibi başvurunuzu değerlendirecektir."
+        );
+
+
+        researchForm.reset();
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        alert(
+            "Başvuru gönderilirken bir hata oluştu.\n" +
+            "Lütfen daha sonra tekrar deneyiniz."
+        );
+
+    } finally {
+
+        submitButton.disabled = false;
+        submitButton.textContent = "Başvuruyu Gönder";
+
+    }
+
+});
+
+</script>
+
 </body>
 
 </html>
