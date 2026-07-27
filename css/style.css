@@ -4832,7 +4832,7 @@ inset -1px 0 rgba(255,255,255,.05);
 
 }
 
-/* Katıl sayfasında üst marka kartını gizle */
-.brand-card {
+/* Sadece Araştırma Ekibine Katıl sayfasında */
+.join-page .brand-card {
     display: none !important;
 }
