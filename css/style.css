@@ -4840,12 +4840,14 @@ inset -1px 0 rgba(255,255,255,.05);
 
 body{
 
+body{
+
 background:
 
 radial-gradient(
-circle at top,
-rgba(56,189,248,.02),
-transparent 40%
+circle at 50% -20%,
+rgba(56,189,248,.025),
+transparent 45%
 ),
 
 linear-gradient(
