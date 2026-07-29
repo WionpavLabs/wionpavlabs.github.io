@@ -4839,24 +4839,12 @@ inset -1px 0 rgba(255,255,255,.05);
 
 
 body{
-
-body{
-
-background:
-
-radial-gradient(
-circle at 50% -20%,
-rgba(56,189,248,.025),
-transparent 45%
-),
-
-linear-gradient(
-180deg,
-#11161d 0%,
-#0d1319 18%,
-#0a0f15 45%,
-#070b10 72%,
-#040608 100%
-);
-
+    background:
+    linear-gradient(
+        180deg,
+        #0d1117 0%,
+        #0b1016 30%,
+        #090d13 60%,
+        #05070a 100%
+    );
 }
