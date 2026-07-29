@@ -4836,3 +4836,17 @@ inset -1px 0 rgba(255,255,255,.05);
 .join-page .brand-card {
     display: none !important;
 }
+
+
+body{
+
+    background:
+    radial-gradient(circle at top,
+        #1a4f8f 0%,
+        #12355d 18%,
+        #0b2342 38%,
+        #071322 68%,
+        #02050b 100%);
+
+}
+
