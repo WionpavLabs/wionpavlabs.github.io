@@ -4900,3 +4900,10 @@ body{
         0 0 22px rgba(56,189,248,.18);
 }
 
+.join-page {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
