@@ -4907,6 +4907,8 @@ body{
     user-select: none;
 }
 
-#navMenu .admin-link{
-    padding: 0 5px !important;
+@media (max-width: 768px) {
+    #navMenu .admin-link {
+        padding: 0 5px !important;
+    }
 }
