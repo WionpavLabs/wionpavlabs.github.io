@@ -323,13 +323,17 @@ document.addEventListener("DOMContentLoaded", setActiveMenu);
 const languages = {
     article1: {
         current: "EN",
+
         EN: {
             title: "📄 1. The Relationship Between Short Video-Based Social Media Use, Dopamine Signaling, and Depressive Symptoms Read PDF",
+            download: "⬇️ 1. The Relationship Between Short Video-Based Social Media Use, Dopamine Signaling, and Depressive Symptoms Download PDF",
             file: "yazilar/The Relationship Between Short Video-Based Social Media Use, Dopamine Signaling, and Depressive Symptoms.pdf",
             flag: "🇬🇧"
         },
+
         TR: {
-            title: "📄 1. Kısa Video Temelli Sosyal Medya Kullanımı, Dopamin Sinyallemesi ve Depresif Belirtiler PDF Oku",
+            title: "📄 1. Kısa Video Tabanlı Sosyal Medya Kullanımı, Dopamin Sinyallemesi ve Depresif Belirtiler Arasındaki İlişki PDF Oku",
+            download: "⬇️ 1. Kısa Video Tabanlı Sosyal Medya Kullanımı, Dopamin Sinyallemesi ve Depresif Belirtiler Arasındaki İlişki PDF İndir",
             file: "yazilar/Kısa Video Tabanlı Sosyal Medya Kullanımı, Dopamin Sinyallemesi ve Depresif Belirtiler Arasındaki İlişki.pdf",
             flag: "🇹🇷"
         }
@@ -344,9 +348,15 @@ function toggleLanguage(article){
 
     const lang = item[item.current];
 
+    // Başlık
     document.getElementById(article + "-title").innerHTML = lang.title;
     document.getElementById(article + "-title").href = lang.file;
-    document.getElementById(article + "-download").href = lang.file;
 
+    // İndirme butonu
+    const downloadBtn = document.getElementById(article + "-download");
+    downloadBtn.href = lang.file;
+    downloadBtn.innerHTML = lang.download;
+
+    // Dil butonu
     document.querySelector(".lang-switch").textContent = lang.flag;
 }
