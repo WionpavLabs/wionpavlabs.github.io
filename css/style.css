@@ -4912,3 +4912,45 @@ body{
         padding: 0 5px !important;
     }
 }
+.language-section{
+    margin-top:20px;
+}
+
+.language-section h4{
+    color:#67d3ff;
+    margin-bottom:18px;
+    font-size:18px;
+    font-weight:600;
+}
+
+.language-card{
+    margin-bottom:20px;
+    padding:18px;
+    border-radius:16px;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(56,189,248,.15);
+    transition:.3s;
+}
+
+.language-card:hover{
+    border-color:#38bdf8;
+    background:rgba(56,189,248,.06);
+}
+
+.language-card h5{
+    margin:0 0 12px;
+    color:#fff;
+    font-size:17px;
+}
+
+.language-card a{
+    display:block;
+    margin:10px 0;
+    color:#e2e8f0;
+    text-decoration:none;
+    transition:.25s;
+}
+
+.language-card a:hover{
+    color:#67d3ff;
+}
