@@ -319,3 +319,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 document.addEventListener("DOMContentLoaded", setActiveMenu);
+
+const languages = {
+    article1: {
+        current: "EN",
+        EN: {
+            title: "📄 1. The Relationship Between Short Video-Based Social Media Use, Dopamine Signaling, and Depressive Symptoms Read PDF",
+            file: "yazilar/social-media-dopamine-depression_EN.pdf",
+            flag: "🇬🇧"
+        },
+        TR: {
+            title: "📄 1. Kısa Video Temelli Sosyal Medya Kullanımı, Dopamin Sinyallemesi ve Depresif Belirtiler PDF Oku",
+            file: "yazilar/social-media-dopamine-depression_TR.pdf",
+            flag: "🇹🇷"
+        }
+    }
+};
+
+function toggleLanguage(article){
+
+    const item = languages[article];
+
+    item.current = item.current === "EN" ? "TR" : "EN";
+
+    const lang = item[item.current];
+
+    document.getElementById(article + "-title").innerHTML = lang.title;
+    document.getElementById(article + "-title").href = lang.file;
+    document.getElementById(article + "-download").href = lang.file;
+
+    document.querySelector(".lang-switch").textContent = lang.flag;
+}
