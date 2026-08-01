@@ -338,6 +338,25 @@ const languages = {
             flag: "🇹🇷"
         }
     }
+,
+    article2: {
+        current: "EN",
+
+        EN: {
+            title: "📄 2. Generative Artificial Intelligence Chatbots in Mental Health: Current Evidence, Clinical Applications, Risks, and Future Perspectives Read PDF",
+            download: "⬇️ 2. Generative Artificial Intelligence Chatbots in Mental Health: Current Evidence, Clinical Applications, Risks, and Future Perspectives Download PDF",
+            file: "yazilar/Generative Artificial Intelligence Chatbots in Mental Health Current Evidence, Clinical Applications, Risks, and Future Perspectives.pdf",
+            flag: "🇬🇧"
+        },
+
+        TR: {
+            title: "📄 2. Ruh Sağlığında Üretken Yapay Zekâ Sohbet Robotları: Güncel Kanıtlar, Klinik Uygulamalar, Riskler ve Gelecek Perspektifleri PDF Oku",
+            download: "⬇️ 2. Ruh Sağlığında Üretken Yapay Zekâ Sohbet Robotları: Güncel Kanıtlar, Klinik Uygulamalar, Riskler ve Gelecek Perspektifleri PDF İndir",
+            file: "yazilar/Ruh Sağlığında Üretken Yapay Zekâ Sohbet Robotları Güncel Kanıtlar, Klinik Uygulamalar, Riskler ve Gelecek Perspektifleri.pdf",
+            flag: "🇹🇷"
+        }
+    }
+
 };
 
 function toggleLanguage(article){
