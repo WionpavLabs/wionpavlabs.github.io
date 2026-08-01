@@ -377,5 +377,5 @@ function toggleLanguage(article){
     downloadBtn.innerHTML = lang.download;
 
     // Dil butonu
-   document.getElementById(article + "-lang").textContent = lang.flag;
-    ]
+document.getElementById(article + "-lang").textContent = lang.flag;
+}
