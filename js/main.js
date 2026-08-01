@@ -352,7 +352,7 @@ const languages = {
         TR: {
             title: "📄 2. Ruh Sağlığında Üretken Yapay Zekâ Sohbet Robotları: Güncel Kanıtlar, Klinik Uygulamalar, Riskler ve Gelecek Perspektifleri PDF Oku",
             download: "⬇️ 2. Ruh Sağlığında Üretken Yapay Zekâ Sohbet Robotları: Güncel Kanıtlar, Klinik Uygulamalar, Riskler ve Gelecek Perspektifleri PDF İndir",
-            file: "yazilar/Ruh Sağlığında Üretken Yapay Zekâ Sohbet Robotları Güncel Kanıtlar, Klinik Uygulamalar, Riskler ve Gelecek Perspektifleri.pdf",
+            file: "yazilarfile: "yazilar/Ruh Sağlığında Üretken Yapay Zekâ Sohbet Robotları: Güncel Kanıtlar, Klinik Uygulamalar, Riskler ve Gelecek Perspektifler.pdf",
             flag: "🇹🇷"
         }
     }
@@ -377,5 +377,4 @@ function toggleLanguage(article){
     downloadBtn.innerHTML = lang.download;
 
     // Dil butonu
-    document.querySelector(".lang-switch").textContent = lang.flag;
-}
+   document.getElementById(article + "-lang").textContent = lang.flag;
