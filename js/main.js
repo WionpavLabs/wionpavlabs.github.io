@@ -369,9 +369,9 @@ article3: {
         },
 
         TR: {
-            title: "📄 3. Sleepmaxxing: Viral Bir Uyku Optimizasyonu Akımının  Ardındaki Bilim PDF Oku",
-            download: "⬇️ 3. Sleepmaxxing: Viral Bir Uyku Optimizasyonu Akımının  Ardındaki Bilim PDF İndir",
-           file: "yazilar/Sleepmaxxing Viral Bir Uyku Optimizasyonu Akımının  Ardındaki Bilim.pdf",
+            title: "📄 3. Sleepmaxxing: Viral Bir Uyku Optimizasyonu Akımının Ardındaki Bilim PDF Oku",
+            download: "⬇️ 3. Sleepmaxxing: Viral Bir Uyku Optimizasyonu Akımının Ardındaki Bilim PDF İndir",
+           file: "yazilar/Sleepmaxxing Viral Bir Uyku Optimizasyonu Akımının Ardındaki Bilim.pdf",
             flag: "🇹🇷"
         }
     }
