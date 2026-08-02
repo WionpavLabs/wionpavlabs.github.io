@@ -357,6 +357,24 @@ const languages = {
         }
     }
 
+
+article3: {
+        current: "EN",
+
+        EN: {
+            title: "📄 3. Sleepmaxxing: The Science Behind a Viral Sleep Optimization Trend Read PDF",
+            download: "⬇️ 3. Sleepmaxxing: The Science Behind a Viral Sleep Optimization Trend Download PDF",
+            file: "yazilar/Sleepmaxxing The Science Behind a Viral Sleep Optimization Trend.pdf",
+            flag: "🇬🇧"
+        },
+
+        TR: {
+            title: "📄 3. Sleepmaxxing: Viral Bir Uyku Optimizasyonu Akımının  Ardındaki Bilim PDF Oku",
+            download: "⬇️ 3. Sleepmaxxing: Viral Bir Uyku Optimizasyonu Akımının  Ardındaki Bilim PDF İndir",
+           file: "yazilar/Sleepmaxxing Viral Bir Uyku Optimizasyonu Akımının  Ardındaki Bilim.pdf",
+            flag: "🇹🇷"
+        }
+    }
 };
 
 function toggleLanguage(article){
