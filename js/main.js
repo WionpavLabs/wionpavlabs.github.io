@@ -355,7 +355,7 @@ const languages = {
            file: "yazilar/Ruh Sağlığında Üretken Yapay Zekâ Sohbet Robotları: Güncel Kanıtlar, Klinik Uygulamalar, Riskler ve Gelecek Perspektifler.pdf",
             flag: "🇹🇷"
         }
-    }
+    }, 
 
 
 article3: {
