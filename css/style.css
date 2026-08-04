@@ -4938,6 +4938,259 @@ body{
     background:#38bdf8;
     transform:scale(1.08);
 }
+
+
+
+
+
+/* =========================================
+   WION PREMIUM THEME v2
+   STEP 1 - COLOR SYSTEM
+========================================= */
+
+:root{
+
+    --bg-1:#020617;
+    --bg-2:#071224;
+    --bg-3:#0B1B33;
+
+    --card:rgba(15,23,42,.72);
+
+    --text:#F8FAFC;
+    --text-soft:#CBD5E1;
+    --text-muted:#94A3B8;
+
+    --primary:#3B82F6;
+    --primary-light:#60A5FA;
+
+    --accent:#7C3AED;
+
+    --border:rgba(255,255,255,.08);
+
+}
+
+
+/* ===========================
+   BACKGROUND
+=========================== */
+
+body{
+
+    color:var(--text);
+
+    background:
+    radial-gradient(
+        circle at top,
+        var(--bg-3) 0%,
+        var(--bg-2) 45%,
+        var(--bg-1) 100%
+    );
+
+}
+
+
+/* Sol Glow */
+
+body::before{
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(59,130,246,.12),
+        rgba(124,58,237,.08),
+        transparent 72%
+    );
+
+    filter:blur(110px);
+
+}
+
+
+/* Sağ Glow */
+
+body::after{
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(124,58,237,.12),
+        rgba(59,130,246,.05),
+        transparent 72%
+    );
+
+    filter:blur(120px);
+
+}
+
+
+/* ===========================
+   TEXT
+=========================== */
+
+body{
+
+    color:var(--text);
+
+}
+
+p{
+
+    color:var(--text-soft);
+
+}
+
+.hero-subtitle{
+
+    color:var(--text-muted) !important;
+
+}
+
+footer{
+
+    color:var(--text-muted);
+
+}
+
+
+/* ===========================
+   SECTION
+=========================== */
+
+section{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+}
+
+
+/* Hover daha premium */
+
+section:hover{
+
+    border-color:
+    rgba(59,130,246,.22);
+
+    box-shadow:
+
+    0 18px 50px rgba(0,0,0,.35),
+
+    0 0 24px rgba(59,130,246,.10);
+
+}
+
+
+/* ===========================
+   HEADINGS
+=========================== */
+
+h1,
+h2,
+h3{
+
+    color:white;
+
+}
+
+h2{
+
+    color:var(--primary);
+
+}
+
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+nav{
+
+    background:rgba(10,15,30,.45);
+
+    border:1px solid rgba(255,255,255,.07);
+
+    backdrop-filter:blur(35px);
+
+}
+
+
+/* ===========================
+   LINKS
+=========================== */
+
+nav a:hover{
+
+    color:var(--primary);
+
+}
+
+nav a.active{
+
+    color:var(--primary);
+
+    border-bottom-color:var(--primary);
+
+}
+
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.download-btn,
+.admin-link{
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #3B82F6,
+        #60A5FA
+    );
+
+    color:white !important;
+
+    box-shadow:
+    0 10px 25px rgba(59,130,246,.18);
+
+}
+
+.download-btn:hover,
+.admin-link:hover{
+
+    box-shadow:
+    0 15px 35px rgba(59,130,246,.28);
+
+}
+
+
+/* ===========================
+   CARD BORDER
+=========================== */
+
+.paper-item{
+
+    border:1px solid rgba(59,130,246,.14);
+
+}
+
+.paper-item:hover{
+
+    border-color:rgba(59,130,246,.30);
+
+}
+
+
+/* ===========================
+   RATING
+=========================== */
+
+.rating span.selected{
+
+    color:#FFD54A;
+
+}
 .action-btn.download:hover{
     transform:translateY(-3px) scale(1.03);
     box-shadow:0 10px 25px rgba(56,189,248,.35);
