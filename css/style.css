@@ -5441,3 +5441,241 @@ header::after{
 }
 
 }
+
+
+/* =====================================================
+   WION PREMIUM THEME
+   STEP 3 - PREMIUM NAVBAR
+===================================================== */
+
+/* Navbar */
+
+nav{
+
+    position:fixed;
+
+    top:20px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:min(92%,1100px);
+
+    padding:16px 34px;
+
+    border-radius:22px;
+
+    background:rgba(8,15,30,.55);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(26px) saturate(170%);
+    -webkit-backdrop-filter:blur(26px) saturate(170%);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.35),
+        inset 0 1px 0 rgba(255,255,255,.05);
+
+    transition:
+        all .35s cubic-bezier(.22,.61,.36,1);
+
+    z-index:9999;
+
+}
+
+
+/* Hover */
+
+nav:hover{
+
+    border-color:rgba(59,130,246,.20);
+
+    box-shadow:
+        0 26px 70px rgba(0,0,0,.42),
+        0 0 28px rgba(59,130,246,.08);
+
+}
+
+
+/* Menü */
+
+nav ul{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+
+/* Link */
+
+nav a{
+
+    position:relative;
+
+    padding:11px 18px;
+
+    border-radius:14px;
+
+    color:#dbe8ff;
+
+    font-weight:600;
+
+    transition:
+        all .30s ease;
+
+}
+
+
+/* Hover */
+
+nav a:hover{
+
+    color:white;
+
+    background:rgba(255,255,255,.05);
+
+}
+
+
+/* Aktif Sayfa */
+
+nav a.active,
+nav a.active-menu{
+
+    color:white;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(59,130,246,.20),
+            rgba(124,58,237,.18)
+        );
+
+    border:1px solid rgba(59,130,246,.18);
+
+}
+
+
+/* Alt çizgi */
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:6px;
+
+    transform:
+        translateX(-50%)
+        scaleX(0);
+
+    width:55%;
+
+    height:2px;
+
+    border-radius:10px;
+
+    background:linear-gradient(
+        90deg,
+        #60A5FA,
+        #7C3AED
+    );
+
+    transition:.30s;
+
+}
+
+
+/* Hover çizgisi */
+
+nav a:hover::after{
+
+    transform:
+        translateX(-50%)
+        scaleX(1);
+
+}
+
+
+/* Aktif çizgi */
+
+nav a.active-menu::after,
+nav a.active::after{
+
+    transform:
+        translateX(-50%)
+        scaleX(1);
+
+}
+
+
+/* Menü Aç Butonu */
+
+.menu-toggle{
+
+    background:rgba(15,23,42,.75);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(16px);
+
+    border-radius:16px;
+
+    transition:.3s;
+
+}
+
+
+/* Hover */
+
+.menu-toggle:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:
+        0 0 20px rgba(59,130,246,.20);
+
+}
+
+
+/* Mobil */
+
+@media(max-width:768px){
+
+nav{
+
+    top:12px;
+
+    width:94%;
+
+    padding:14px 18px;
+
+    border-radius:18px;
+
+}
+
+nav ul{
+
+    gap:8px;
+
+}
+
+nav a{
+
+    padding:10px 14px;
+
+    font-size:.95rem;
+
+}
+
+}
