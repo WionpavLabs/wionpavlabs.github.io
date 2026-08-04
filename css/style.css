@@ -5104,3 +5104,52 @@ footer{
     color:#CDD9E5 !important;
 
 }
+
+
+
+
+/* ======================================
+   BRAND CARD - PREMIUM OVERRIDE
+====================================== */
+
+.brand-logo{
+    width:72px !important;
+    height:72px !important;
+    margin-right:18px !important;
+    object-fit:contain;
+}
+
+.brand-text h1{
+    color:#cfeeff !important;
+    font-size:22px !important;
+    font-weight:800;
+    letter-spacing:.5px;
+
+    text-shadow:
+        0 0 8px rgba(56,189,248,.35),
+        0 0 18px rgba(56,189,248,.18);
+}
+
+.brand-text p{
+    color:#7dd3fc !important;
+    font-size:10px !important;
+    letter-spacing:3px;
+}
+
+/* Mobil */
+@media (max-width:768px){
+
+    .brand-logo{
+        width:58px !important;
+        height:58px !important;
+    }
+
+    .brand-text h1{
+        font-size:19px !important;
+    }
+
+    .brand-text p{
+        font-size:9px !important;
+    }
+
+}
