@@ -5095,23 +5095,3 @@ footer{
 }
 
 
-.brand-text h1{
-    margin:0 !important;
-    font-size:30px !important;
-    font-weight:900 !important;
-    letter-spacing:.8px !important;
-
-    background:linear-gradient(
-        180deg,
-        #eef4f8 0%,
-        #c9d6e3 55%,
-        #8ea3b8 100%
-    ) !important;
-
-    color:transparent !important;
-    -webkit-background-clip:text !important;
-    background-clip:text !important;
-    -webkit-text-fill-color:transparent !important;
-
-    text-shadow:0 0 8px rgba(56,189,248,.08) !important;
-}
