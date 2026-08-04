@@ -3038,12 +3038,12 @@ justify-content:center;
 
 .brand-logo{
 
-    width:56px;
-    height:56px;
+    width:72px;
+    height:72px;
 
     object-fit:contain;
 
-    margin-right:14px;
+    margin-right:18px;
 
 
     filter:
@@ -3075,11 +3075,11 @@ justify-content:center;
 
     margin:0;
 
-    font-size:25px;
+    font-size:30px;
 
     font-weight:800;
 
-    color:white;
+    color:#d6f3ff;
 
 
     text-shadow:
