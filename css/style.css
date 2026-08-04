@@ -5195,3 +5195,249 @@ nav a.active{
     transform:translateY(-3px) scale(1.03);
     box-shadow:0 10px 25px rgba(56,189,248,.35);
 }
+
+
+
+
+/* =====================================================
+   WION PREMIUM THEME
+   STEP 2 - HERO REDESIGN
+===================================================== */
+
+
+/* HERO ALANI */
+
+header{
+
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:0 24px;
+
+}
+
+
+/* Hero içeriği */
+
+.hero{
+
+    max-width:1200px;
+
+    width:100%;
+
+    margin:auto;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    gap:30px;
+
+}
+
+
+/* LOGO */
+
+.wionpav-logo{
+
+    width:min(520px,90vw);
+
+    filter:
+
+        drop-shadow(0 0 25px rgba(59,130,246,.18))
+        drop-shadow(0 0 70px rgba(124,58,237,.10));
+
+    transition:
+        transform .6s ease,
+        filter .6s ease;
+
+}
+
+
+/* Hover */
+
+.wionpav-logo:hover{
+
+    transform:
+
+        translateY(-6px)
+        scale(1.02);
+
+    filter:
+
+        drop-shadow(0 0 35px rgba(59,130,246,.28))
+        drop-shadow(0 0 90px rgba(124,58,237,.18));
+
+}
+
+
+/* Başlık */
+
+.hero h1{
+
+    font-size:clamp(2.8rem,6vw,5rem);
+
+    line-height:1.05;
+
+    font-weight:800;
+
+    letter-spacing:-2px;
+
+    color:white;
+
+    text-shadow:
+
+        0 5px 25px rgba(0,0,0,.35);
+
+}
+
+
+/* Alt yazı */
+
+.hero p{
+
+    max-width:760px;
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+    color:#b8c6d8;
+
+}
+
+
+/* Hero içindeki butonlar */
+
+.hero .download-btn,
+.hero .admin-link{
+
+    border-radius:18px;
+
+    padding:15px 34px;
+
+    font-weight:700;
+
+    transition:all .35s ease;
+
+}
+
+
+/* Hover */
+
+.hero .download-btn:hover,
+.hero .admin-link:hover{
+
+    transform:
+        translateY(-4px);
+
+}
+
+
+/* Arkadaki ışık */
+
+header::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    border-radius:50%;
+
+    left:50%;
+    top:45%;
+
+    transform:
+        translate(-50%,-50%);
+
+    background:
+
+        radial-gradient(circle,
+
+            rgba(59,130,246,.16),
+
+            rgba(124,58,237,.10),
+
+            transparent 72%
+
+        );
+
+    filter:blur(80px);
+
+    z-index:-1;
+
+}
+
+
+/* Hafif fade */
+
+header::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            transparent,
+
+            rgba(2,6,23,.25),
+
+            rgba(2,6,23,.65)
+
+        );
+
+    pointer-events:none;
+
+}
+
+
+/* Mobil */
+
+@media(max-width:768px){
+
+.hero{
+
+    gap:22px;
+
+}
+
+.hero h1{
+
+    font-size:2.6rem;
+
+}
+
+.hero p{
+
+    font-size:1rem;
+
+    padding:0 10px;
+
+}
+
+.wionpav-logo{
+
+    width:88vw;
+
+}
+
+}
