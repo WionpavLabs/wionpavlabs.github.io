@@ -3072,27 +3072,23 @@ justify-content:center;
 
 
 .brand-text h1{
-
     margin:0;
-
     font-size:30px;
     font-weight:900;
     letter-spacing:.8px;
 
     background:linear-gradient(
         180deg,
-        #ffffff 0%,
-        #dff6ff 35%,
-        #9fdcff 100%
+        #eef4f8 0%,
+        #c9d6e3 55%,
+        #8ea3b8 100%
     );
 
     -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
     background-clip:text;
+    -webkit-text-fill-color:transparent;
 
-    text-shadow:
-        0 0 12px rgba(56,189,248,.18);
-
+    text-shadow:0 0 8px rgba(56,189,248,.08);
 }
 
 
