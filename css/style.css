@@ -3076,17 +3076,22 @@ justify-content:center;
     margin:0;
 
     font-size:30px;
+    font-weight:900;
+    letter-spacing:.8px;
 
-    font-weight:800;
+    background:linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #dff6ff 35%,
+        #9fdcff 100%
+    );
 
-    color:#d6f3ff;
-
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
 
     text-shadow:
-
-    0 0 12px rgba(255,255,255,.22),
-
-    0 0 22px rgba(56,189,248,.30);
+        0 0 12px rgba(56,189,248,.18);
 
 }
 
