@@ -5094,13 +5094,6 @@ footer{
 
 }
 
-
-
-
-
-
-
-.halo,
-.ripple{
+.brand-card::after{
     display:none !important;
 }
