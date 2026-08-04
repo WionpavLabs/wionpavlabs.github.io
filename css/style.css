@@ -3562,23 +3562,7 @@ justify-content:center;
 }
 
 .brand-card::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    border-radius:inherit;
-
-    background:linear-gradient(
-        120deg,
-        transparent 30%,
-    rgba(56,189,248,0.3),
-        transparent 70%
-    );
-
-    transform:translateX(-100%);
-    animation:softWave 3s linear infinite;
-
-    pointer-events:none;
- mix-blend-mode: overlay;
+    display:none;
 }
 
 @keyframes softWave{
