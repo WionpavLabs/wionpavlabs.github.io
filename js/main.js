@@ -387,14 +387,12 @@ article4: {
         },
 
         TR: {
-            title: "📄 4. Sleepmaxxing: Viral Bir Uyku Optimizasyonu Akımının Ardındaki Bilim PDF Oku",
-            download: "⬇️ 4. Sleepmaxxing: Viral Bir Uyku Optimizasyonu Akımının Ardındaki Bilim PDF İndir",
-           file: "yazilar/Sleepmaxxing Viral Bir Uyku Optimizasyonu Akımının Ardındaki Bilim.pdf",
+            title: "📄 4. Dopaminin Ötesinde: Davranışsal Bağımlılıkların Ortak Nörobiyolojisi PDF Oku",
+            download: "⬇️ 4. Dopaminin Ötesinde: Davranışsal Bağımlılıkların Ortak Nörobiyolojisi PDF İndir",
+           file: "yazilar/Dopaminin Ötesinde: Davranışsal Bağımlılıkların Ortak Nörobiyolojisi.pdf",
             flag: "🇹🇷"
         }
-    },
-
-    
+    },    
 };
 
 function toggleLanguage(article){
