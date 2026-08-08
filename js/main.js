@@ -374,7 +374,27 @@ article3: {
            file: "yazilar/Sleepmaxxing Viral Bir Uyku Optimizasyonu Akımının Ardındaki Bilim.pdf",
             flag: "🇹🇷"
         }
-    }
+    },
+
+article4: {
+        current: "EN",
+
+        EN: {
+            title: "📄 4. Beyond Dopamine: Shared Neurobiology of Behavioral Addictions Read PDF",
+            download: "⬇️ 4. Beyond Dopamine: Shared Neurobiology of Behavioral Addictions Download PDF",
+            file: "yazilar/Beyond Dopamine: Shared Neurobiology of Behavioral Addictions.pdf",
+            flag: "🇬🇧"
+        },
+
+        TR: {
+            title: "📄 4. Sleepmaxxing: Viral Bir Uyku Optimizasyonu Akımının Ardındaki Bilim PDF Oku",
+            download: "⬇️ 4. Sleepmaxxing: Viral Bir Uyku Optimizasyonu Akımının Ardındaki Bilim PDF İndir",
+           file: "yazilar/Sleepmaxxing Viral Bir Uyku Optimizasyonu Akımının Ardındaki Bilim.pdf",
+            flag: "🇹🇷"
+        }
+    },
+
+    
 };
 
 function toggleLanguage(article){
