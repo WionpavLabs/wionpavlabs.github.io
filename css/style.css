@@ -5247,13 +5247,7 @@ footer{
    Çünkü hamburger/drawer desktop'ta kullanılmıyor.
 ========================================================= */
 
-@media (min-width: 769px) {
 
-    #navMenu .drawer-topbar {
-        display: none !important;
-    }
-
-}
 
 
 /* =========================================================
