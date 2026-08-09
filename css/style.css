@@ -6600,43 +6600,6 @@ body.light-theme .brand-card img {
 
 }
 
-/* =========================================================
-   BRAND CARD — WIONPAV LABS YAZISI
-   GRADIENT'İ TAMAMEN EZ
-========================================================= */
-
-body.light-theme .brand-card .brand-text h1 {
-
-    color:#087c9f !important;
-
-    background:none !important;
-    background-image:none !important;
-
-    -webkit-background-clip:initial !important;
-    background-clip:initial !important;
-
-    -webkit-text-fill-color:#087c9f !important;
-
-    text-shadow:none !important;
-}
-
-
-/* Alt yazı da koyu kalsın */
-
-body.light-theme .brand-card .brand-text p {
-
-    color:#26343c !important;
-
-    background:none !important;
-    background-image:none !important;
-
-    -webkit-background-clip:initial !important;
-    background-clip:initial !important;
-
-    -webkit-text-fill-color:#26343c !important;
-
-    text-shadow:none !important;
-}
 
 
 /* =========================================================
@@ -6677,3 +6640,40 @@ body.light-theme .brand-card .brand-text p {
 
 }
 
+/* =========================================================
+   BRAND CARD — WIONPAV LABS YAZISI
+   GRADIENT'İ TAMAMEN EZ
+========================================================= */
+
+body.light-theme .brand-card .brand-text h1 {
+
+    color:#087c9f !important;
+
+    background:none !important;
+    background-image:none !important;
+
+    -webkit-background-clip:initial !important;
+    background-clip:initial !important;
+
+    -webkit-text-fill-color:#087c9f !important;
+
+    text-shadow:none !important;
+}
+
+
+/* Alt yazı da koyu kalsın */
+
+body.light-theme .brand-card .brand-text p {
+
+    color:#26343c !important;
+
+    background:none !important;
+    background-image:none !important;
+
+    -webkit-background-clip:initial !important;
+    background-clip:initial !important;
+
+    -webkit-text-fill-color:#26343c !important;
+
+    text-shadow:none !important;
+}
