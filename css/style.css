@@ -5746,8 +5746,8 @@ body.light-theme footer {
 
 @media (max-width:768px){
 
-    #navMenu .mobile-menu{
-        padding-top:75px !important;
+    #navMenu > a:first-of-type{
+        margin-top:75px !important;
     }
 
 }
