@@ -6485,3 +6485,123 @@ body.light-theme .vision-box h2 {
 /* =========================================================
    LIGHT THEME — END
 ========================================================= */
+
+
+/* =========================================================
+   BRAND CARD — LIGHT THEME
+========================================================= */
+
+body.light-theme .brand-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #edf5f7,
+            #dfecef
+        ) !important;
+
+    color:#111820 !important;
+
+    border:1px solid #26343c !important;
+
+    border-color:#26343c !important;
+
+    box-shadow:
+        0 12px 32px rgba(15,23,30,.09),
+        inset 0 1px rgba(255,255,255,.72) !important;
+
+}
+
+
+/* Brand card'ın mavi kenar efektini
+   antrasit yap */
+
+body.light-theme .brand-card::before,
+body.light-theme .brand-card::after {
+
+    border-color:transparent !important;
+
+    box-shadow:none !important;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent,
+            #26343c,
+            transparent
+        ) !important;
+
+}
+
+
+/* Hover */
+
+body.light-theme .brand-card:hover {
+
+    background:
+        linear-gradient(
+            145deg,
+            #f3f8fa,
+            #e2eef2
+        ) !important;
+
+    border-color:#18252d !important;
+
+    box-shadow:
+        0 18px 42px rgba(15,23,30,.13),
+        0 0 24px rgba(15,23,30,.08) !important;
+
+}
+
+
+/* =========================================================
+   BRAND CARD — WIONPAV LABS YAZISI
+========================================================= */
+
+body.light-theme .brand-card .brand-name,
+body.light-theme .brand-card .brand-title,
+body.light-theme .brand-card .brand-text,
+body.light-theme .brand-card h1,
+body.light-theme .brand-card h2,
+body.light-theme .brand-card h3,
+body.light-theme .brand-card strong {
+
+    color:#111820 !important;
+
+    text-shadow:none !important;
+
+}
+
+
+/* Eğer Wionpav Labs doğrudan bir span/div içindeyse */
+
+body.light-theme .brand-card span {
+
+    color:#111820 !important;
+
+    text-shadow:none !important;
+
+}
+
+
+/* Brand card içindeki açıklama/metin */
+
+body.light-theme .brand-card p {
+
+    color:#526a76 !important;
+
+    text-shadow:none !important;
+
+}
+
+
+/* Logo */
+
+body.light-theme .brand-card img {
+
+    filter:
+        drop-shadow(
+            0 0 7px rgba(38,52,60,.12)
+        ) !important;
+
+}
