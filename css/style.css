@@ -6591,4 +6591,306 @@ body.light-theme [style*="background: #1f2937"] {
 
 /* =========================================================
    LIGHT THEME — END
+  ========================================================= */
+
+
+/* =========================================================
+   LIGHT THEME — DARKER / PREMIUM BLUE-GRAY FINAL
+   ========================================================= */
+
+body.light-theme {
+
+    background:
+        radial-gradient(
+            circle at 12% 8%,
+            rgba(56,189,248,.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 88% 18%,
+            rgba(14,165,233,.055),
+            transparent 28%
+        ),
+        linear-gradient(
+            180deg,
+            #dce9ee 0%,
+            #d5e3e8 50%,
+            #cedde3 100%
+        ) !important;
+
+    color:#1d3442 !important;
+}
+
+
+/* Ana kartlar */
+body.light-theme section {
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(242,248,250,.94),
+            rgba(224,236,241,.92)
+        ) !important;
+
+    border-color:
+        rgba(103,137,151,.30) !important;
+
+    box-shadow:
+        0 14px 38px rgba(22,55,70,.11),
+        inset 0 1px rgba(255,255,255,.75) !important;
+}
+
+
+/* Yayın / içerik kartları */
+body.light-theme .paper-item,
+body.light-theme .founder-card,
+body.light-theme .super-box {
+
+    background:
+        linear-gradient(
+            145deg,
+            #edf5f7,
+            #dfecef
+        ) !important;
+
+    border-color:
+        #c4d5dc !important;
+
+    box-shadow:
+        0 10px 28px rgba(22,55,70,.09),
+        inset 0 1px rgba(255,255,255,.70) !important;
+}
+
+
+/* Kart hover */
+body.light-theme .paper-item:hover,
+body.light-theme .founder-card:hover,
+body.light-theme .super-box:hover {
+
+    background:
+        linear-gradient(
+            145deg,
+            #f3f8fa,
+            #e3eff3
+        ) !important;
+
+    border-color:
+        rgba(14,165,233,.38) !important;
+
+    box-shadow:
+        0 16px 38px rgba(22,55,70,.12),
+        0 0 24px rgba(14,165,233,.065) !important;
+}
+
+
+/* Yorumlar */
+body.light-theme .comment {
+
+    background:
+        linear-gradient(
+            145deg,
+            #e8f2f5,
+            #dce9ee
+        ) !important;
+
+    border-color:
+        #c3d4db !important;
+
+    color:#304957 !important;
+
+    box-shadow:
+        0 7px 20px rgba(22,55,70,.075) !important;
+}
+
+
+/* Yorum input */
+body.light-theme .comment-box input,
+body.light-theme .comment-box textarea {
+
+    background:
+        rgba(241,248,250,.92) !important;
+
+    border-color:
+        #bdcfd7 !important;
+
+    color:#253e4c !important;
+}
+
+
+/* Input genel */
+body.light-theme input,
+body.light-theme textarea,
+body.light-theme select {
+
+    background:
+        #e9f3f6 !important;
+
+    color:#253e4c !important;
+
+    border-color:
+        #bfd1d8 !important;
+}
+
+
+/* Drawer */
+body.light-theme #navMenu {
+
+    background:
+        linear-gradient(
+            180deg,
+            #dcebf0,
+            #d1e1e6
+        ) !important;
+
+    border-right:
+        1px solid #b9ccd4 !important;
+
+    box-shadow:
+        18px 0 50px rgba(22,55,70,.17),
+        0 0 30px rgba(14,165,233,.045) !important;
+}
+
+
+/* Drawer linkleri */
+body.light-theme #navMenu a {
+
+    color:#263f4d !important;
+}
+
+body.light-theme #navMenu a:hover {
+
+    background:
+        rgba(14,165,233,.10) !important;
+
+    color:#067b9f !important;
+}
+
+
+/* Tema butonu */
+body.light-theme .theme-toggle {
+
+    background:
+        rgba(226,239,243,.82) !important;
+
+    color:#294452 !important;
+
+    border-color:
+        rgba(8,126,164,.25) !important;
+}
+
+
+/* X */
+body.light-theme .menu-close {
+
+    background:
+        rgba(226,239,243,.82) !important;
+
+    color:#294452 !important;
+
+    border-color:
+        #bdcfd7 !important;
+}
+
+
+/* Footer */
+body.light-theme footer {
+
+    background:
+        linear-gradient(
+            180deg,
+            #cbdde3,
+            #c3d6dd
+        ) !important;
+
+    color:#506875 !important;
+
+    border-top:
+        1px solid #afc5ce !important;
+}
+
+
+/* Normal metin */
+body.light-theme p {
+
+    color:#526976 !important;
+}
+
+
+/* Başlık */
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4,
+body.light-theme h5,
+body.light-theme h6 {
+
+    color:#183444 !important;
+}
+
+
+/* Cyan vurgu */
+body.light-theme .works-title,
+body.light-theme h2 {
+
+    color:#087c9f !important;
+}
+
+
+/* Tablo */
+body.light-theme th {
+
+    background:#d6e6eb !important;
+
+    color:#1d3b4a !important;
+}
+
+body.light-theme td {
+
+    background:
+        rgba(235,244,247,.75) !important;
+
+    color:#405865 !important;
+
+    border-color:#c6d6dd !important;
+}
+
+
+/* Kod alanları */
+body.light-theme pre,
+body.light-theme code {
+
+    background:#d5e4e9 !important;
+
+    color:#284a5a !important;
+
+    border-color:#bfcfd6 !important;
+}
+
+
+/* Scrollbar */
+body.light-theme {
+
+    scrollbar-color:#88a7b3 #d5e3e8;
+}
+
+body.light-theme::-webkit-scrollbar-track {
+
+    background:#d5e3e8;
+}
+
+body.light-theme::-webkit-scrollbar-thumb {
+
+    background:#88a7b3;
+
+    border-color:#d5e3e8;
+}
+
+body.light-theme::-webkit-scrollbar-thumb:hover {
+
+    background:#668d9b;
+}
+
+
+/* =========================================================
+   END
    ========================================================= */
