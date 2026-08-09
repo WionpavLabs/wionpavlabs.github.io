@@ -5283,3 +5283,466 @@ footer{
     }
 
 }
+
+/* =========================================================
+   MEDVORTEX — LIGHT THEME
+   Dark tema varsayılan olarak tamamen korunur.
+========================================================= */
+
+body.light-theme {
+
+    background:
+        linear-gradient(
+            180deg,
+            #F8FAFC 0%,
+            #F1F5F9 50%,
+            #E2E8F0 100%
+        ) !important;
+
+    color: #1E293B !important;
+
+}
+
+
+/* =========================================================
+   LIGHT — ANA SECTIONS
+========================================================= */
+
+body.light-theme section {
+
+    background:
+        rgba(255,255,255,.92) !important;
+
+    border-color:
+        #E2E8F0 !important;
+
+    color:
+        #1E293B !important;
+
+    box-shadow:
+        0 12px 35px rgba(15,23,42,.07) !important;
+
+    backdrop-filter:
+        blur(18px) !important;
+
+    -webkit-backdrop-filter:
+        blur(18px) !important;
+
+}
+
+
+/* Section hover */
+
+body.light-theme section:hover {
+
+    border-color:
+        rgba(14,165,233,.35) !important;
+
+    box-shadow:
+        0 15px 40px rgba(15,23,42,.09),
+        0 0 25px rgba(14,165,233,.08) !important;
+
+}
+
+
+/* =========================================================
+   LIGHT — METİNLER
+========================================================= */
+
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4,
+body.light-theme h5,
+body.light-theme h6 {
+
+    color:
+        #0F172A !important;
+
+}
+
+
+body.light-theme p {
+
+    color:
+        #64748B !important;
+
+}
+
+
+body.light-theme h2 {
+
+    color:
+        #0EA5E9 !important;
+
+}
+
+
+/* =========================================================
+   LIGHT — PAPER / YAYIN KARTLARI
+========================================================= */
+
+body.light-theme .paper-item {
+
+    background:
+        #FFFFFF !important;
+
+    color:
+        #1E293B !important;
+
+    border:
+        1px solid #E2E8F0 !important;
+
+    box-shadow:
+        0 8px 25px rgba(15,23,42,.055) !important;
+
+}
+
+
+body.light-theme .paper-item:hover {
+
+    background:
+        #FFFFFF !important;
+
+    border-color:
+        rgba(14,165,233,.38) !important;
+
+    box-shadow:
+        0 12px 35px rgba(15,23,42,.09),
+        0 0 20px rgba(14,165,233,.07) !important;
+
+}
+
+
+/* =========================================================
+   LIGHT — FOUNDER CARD
+========================================================= */
+
+body.light-theme .founder-card {
+
+    background:
+        #FFFFFF !important;
+
+    border-color:
+        #E2E8F0 !important;
+
+    box-shadow:
+        0 10px 30px rgba(15,23,42,.06) !important;
+
+}
+
+
+/* =========================================================
+   LIGHT — SUPER BOX
+========================================================= */
+
+body.light-theme .super-box {
+
+    background:
+        linear-gradient(
+            145deg,
+            #FFFFFF,
+            #F8FAFC
+        ) !important;
+
+    border-color:
+        #E2E8F0 !important;
+
+    box-shadow:
+        0 12px 35px rgba(15,23,42,.07) !important;
+
+}
+
+
+body.light-theme .super-box:hover {
+
+    border-color:
+        rgba(14,165,233,.4) !important;
+
+    box-shadow:
+        0 15px 40px rgba(15,23,42,.09),
+        0 0 25px rgba(14,165,233,.08) !important;
+
+}
+
+
+/* =========================================================
+   LIGHT — HIGHLIGHTS
+========================================================= */
+
+body.light-theme .works-section {
+
+    background:
+        rgba(255,255,255,.95) !important;
+
+    border-color:
+        #E2E8F0 !important;
+
+}
+
+
+body.light-theme .works-section:hover {
+
+    border-color:
+        rgba(14,165,233,.45) !important;
+
+    box-shadow:
+        0 15px 40px rgba(15,23,42,.08),
+        0 0 28px rgba(14,165,233,.10) !important;
+
+}
+
+
+/* Görselin üzerine gelince güçlü glow YOK */
+
+body.light-theme .wion-slider:hover {
+
+    box-shadow:
+        0 10px 30px rgba(15,23,42,.08) !important;
+
+}
+
+
+/* =========================================================
+   LIGHT — HIGHLIGHTS BAŞLIĞI
+========================================================= */
+
+body.light-theme .works-title {
+
+    color:
+        #0EA5E9 !important;
+
+    text-shadow:
+        none !important;
+
+}
+
+
+/* =========================================================
+   LIGHT — SLIDER DOTS
+========================================================= */
+
+body.light-theme .wion-dot {
+
+    background:
+        #CBD5E1 !important;
+
+}
+
+
+body.light-theme .wion-dot.active {
+
+    background:
+        #0EA5E9 !important;
+
+    box-shadow:
+        0 0 10px rgba(14,165,233,.20) !important;
+
+}
+
+
+/* =========================================================
+   LIGHT — BUTONLAR
+========================================================= */
+
+body.light-theme .download-btn,
+body.light-theme .admin-link {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0EA5E9,
+            #0284C7
+        ) !important;
+
+    color:
+        #FFFFFF !important;
+
+}
+
+
+body.light-theme .download-btn:hover,
+body.light-theme .admin-link:hover {
+
+    background:
+        #0284C7 !important;
+
+}
+
+
+/* =========================================================
+   LIGHT — DİL BUTONU
+========================================================= */
+
+body.light-theme .lang-switch {
+
+    background:
+        #FFFFFF !important;
+
+    color:
+        #1E293B !important;
+
+    border:
+        1px solid #E2E8F0 !important;
+
+}
+
+
+body.light-theme .lang-switch:hover {
+
+    background:
+        #0EA5E9 !important;
+
+    color:
+        #FFFFFF !important;
+
+}
+
+
+/* =========================================================
+   LIGHT — DRAWER
+========================================================= */
+
+body.light-theme #navMenu {
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.97),
+            rgba(248,250,252,.98)
+        ) !important;
+
+    border-right:
+        1px solid #E2E8F0 !important;
+
+    box-shadow:
+        18px 0 45px rgba(15,23,42,.12),
+        0 0 35px rgba(14,165,233,.06) !important;
+
+}
+
+
+/* Drawer linkleri */
+
+body.light-theme #navMenu a {
+
+    color:
+        #1E293B !important;
+
+}
+
+
+body.light-theme #navMenu a:hover {
+
+    background:
+        rgba(14,165,233,.07) !important;
+
+    color:
+        #0284C7 !important;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(14,165,233,.12) !important;
+
+}
+
+
+/* Aktif sayfa */
+
+body.light-theme #navMenu a.active-menu {
+
+    color:
+        #0284C7 !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(14,165,233,.13),
+            transparent 75%
+        ) !important;
+
+    box-shadow:
+        inset 3px 0 #0EA5E9,
+        0 0 18px rgba(14,165,233,.08) !important;
+
+}
+
+
+/* =========================================================
+   LIGHT — X BUTONU
+========================================================= */
+
+body.light-theme .menu-close {
+
+    background:
+        rgba(15,23,42,.045) !important;
+
+    color:
+        #1E293B !important;
+
+    border-color:
+        #E2E8F0 !important;
+
+}
+
+
+body.light-theme .menu-close:hover {
+
+    background:
+        #0EA5E9 !important;
+
+    color:
+        #FFFFFF !important;
+
+}
+
+
+/* =========================================================
+   LIGHT — THEME BUTTON
+========================================================= */
+
+body.light-theme .theme-toggle {
+
+    background:
+        rgba(14,165,233,.07) !important;
+
+    border-color:
+        rgba(14,165,233,.22) !important;
+
+    color:
+        #1E293B !important;
+
+}
+
+
+body.light-theme .theme-toggle-icon {
+
+    color:
+        #0EA5E9 !important;
+
+}
+
+
+body.light-theme .theme-toggle:hover {
+
+    background:
+        rgba(14,165,233,.12) !important;
+
+    border-color:
+        rgba(14,165,233,.40) !important;
+
+}
+
+
+/* =========================================================
+   LIGHT — FOOTER
+========================================================= */
+
+body.light-theme footer {
+
+    background:
+        #0F172A !important;
+
+    color:
+        #CBD5E1 !important;
+
+}
