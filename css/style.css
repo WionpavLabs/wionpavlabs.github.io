@@ -6722,3 +6722,25 @@ body:not(.light-theme) .brand-card .brand-text h1 {
 
     text-shadow:none !important;
 }
+
+
+/* =====================================
+FINAL FIX - WIONPAV LABS COLOR CONTROL
+===================================== */
+
+body:not(.light-theme) .brand-card .brand-text h1 {
+
+    background:none !important;
+    background-image:none !important;
+
+    -webkit-background-clip:border-box !important;
+    background-clip:border-box !important;
+
+    -webkit-text-fill-color:#38bdf8 !important;
+
+    color:#38bdf8 !important;
+
+    text-shadow:
+    0 0 12px rgba(56,189,248,.35);
+
+}
