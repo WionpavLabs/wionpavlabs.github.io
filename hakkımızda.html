@@ -343,58 +343,6 @@ document.getElementById("navMenu").classList.toggle("active");
     }
 
 
-    /* -----------------------------------------
-       Temayı uygula
-    ----------------------------------------- */
 
-    function applyTheme(theme) {
-
-        if (theme === "light") {
-
-            body.classList.add("light-theme");
-
-        } else {
-
-            body.classList.remove("light-theme");
-
-        }
-
-        updateThemeButton(theme);
-
-        localStorage.setItem(THEME_KEY, theme);
-
-    }
-
-
-    /* -----------------------------------------
-       Kayıtlı temayı al
-    ----------------------------------------- */
-
-    const savedTheme =
-        localStorage.getItem(THEME_KEY) || "dark";
-
-
-    /* -----------------------------------------
-       İlk açılış
-    ----------------------------------------- */
-
-    applyTheme(savedTheme);
-
-
-    /* -----------------------------------------
-       Tema değiştirme
-    ----------------------------------------- */
-
-    toggle.addEventListener("click", function () {
-
-        const isLight =
-            body.classList.contains("light-theme");
-
-        applyTheme(isLight ? "dark" : "light");
-
-    });
-
-})();
-</script>
 </body>
 </html>
