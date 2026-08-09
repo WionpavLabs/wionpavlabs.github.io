@@ -7065,3 +7065,490 @@ body.light-theme .super-box::after {
 
     box-shadow:none !important;
 }
+
+
+
+/* =========================================================
+   MEDVORTEX — LIGHT THEME MASTER
+   ========================================================= */
+
+body.light-theme {
+
+    background:
+        radial-gradient(
+            circle at 12% 8%,
+            rgba(56,189,248,.055),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 88% 18%,
+            rgba(14,165,233,.035),
+            transparent 28%
+        ),
+        linear-gradient(
+            180deg,
+            #dce9ee 0%,
+            #d5e3e8 50%,
+            #cedde3 100%
+        ) !important;
+
+    color:#1d3442 !important;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4,
+body.light-theme h5,
+body.light-theme h6 {
+
+    color:#172c39 !important;
+
+    text-shadow:none !important;
+}
+
+body.light-theme p,
+body.light-theme li,
+body.light-theme span {
+
+    color:#4d6572 !important;
+}
+
+body.light-theme h2 {
+
+    color:#087c9f !important;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+body.light-theme .brand-text h1,
+body.light-theme .brand-text p {
+
+    color:#111820 !important;
+}
+
+
+/* =========================================================
+   MASTER CARD SYSTEM
+   ========================================================= */
+
+body.light-theme section,
+body.light-theme .paper-item,
+body.light-theme .founder-card,
+body.light-theme .super-box,
+body.light-theme .works-section {
+
+    background:
+        linear-gradient(
+            145deg,
+            #edf5f7,
+            #dfecef
+        ) !important;
+
+    color:#263b48 !important;
+
+    border:1px solid #26343c !important;
+
+    outline:none !important;
+
+    box-shadow:
+        0 12px 30px rgba(15,23,30,.10) !important;
+
+    text-shadow:none !important;
+}
+
+
+/* =========================================================
+   CARD HOVER
+   ÖNEMLİ:
+   CYAN BORDER + CYAN GLOW TAMAMEN KAPALI
+   ========================================================= */
+
+body.light-theme section:hover,
+body.light-theme .paper-item:hover,
+body.light-theme .founder-card:hover,
+body.light-theme .super-box:hover,
+body.light-theme .works-section:hover {
+
+    background:
+        linear-gradient(
+            145deg,
+            #f1f7f9,
+            #e2eef2
+        ) !important;
+
+    border:1px solid #18252d !important;
+
+    outline:none !important;
+
+    box-shadow:
+        0 16px 36px rgba(15,23,30,.13) !important;
+}
+
+
+/* =========================================================
+   PSEUDO ELEMENTLER
+   ========================================================= */
+
+body.light-theme section::before,
+body.light-theme section::after,
+body.light-theme .paper-item::before,
+body.light-theme .paper-item::after,
+body.light-theme .founder-card::before,
+body.light-theme .founder-card::after,
+body.light-theme .super-box::before,
+body.light-theme .super-box::after,
+body.light-theme .works-section::before,
+body.light-theme .works-section::after {
+
+    border-color:transparent !important;
+
+    outline:none !important;
+
+    box-shadow:none !important;
+
+    text-shadow:none !important;
+}
+
+
+/* =========================================================
+   PAPER CONTENT
+   ========================================================= */
+
+body.light-theme .paper-item a {
+
+    color:#203b4a !important;
+}
+
+body.light-theme .paper-item a:hover {
+
+    color:#087c9f !important;
+}
+
+
+/* =========================================================
+   FOUNDER
+   ========================================================= */
+
+body.light-theme .founder-card {
+
+    color:#263b48 !important;
+}
+
+
+/* =========================================================
+   COMMENTS
+   ========================================================= */
+
+body.light-theme .comment {
+
+    background:
+        linear-gradient(
+            145deg,
+            #e8f2f5,
+            #dce9ee
+        ) !important;
+
+    color:#304957 !important;
+
+    border:1px solid #26343c !important;
+
+    outline:none !important;
+
+    box-shadow:
+        0 7px 18px rgba(15,23,30,.08) !important;
+}
+
+body.light-theme .comment b {
+
+    color:#087c9f !important;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+body.light-theme .comment-box input,
+body.light-theme .comment-box textarea,
+body.light-theme input,
+body.light-theme textarea,
+body.light-theme select {
+
+    background:#e9f3f6 !important;
+
+    color:#263b48 !important;
+
+    border:1px solid #26343c !important;
+
+    outline:none !important;
+
+    box-shadow:
+        inset 0 1px 3px rgba(15,23,30,.04) !important;
+}
+
+body.light-theme input::placeholder,
+body.light-theme textarea::placeholder {
+
+    color:#788d98 !important;
+}
+
+body.light-theme input:focus,
+body.light-theme textarea:focus,
+body.light-theme select:focus {
+
+    border:1px solid #18252d !important;
+
+    outline:none !important;
+
+    box-shadow:
+        0 0 0 2px rgba(38,52,60,.08) !important;
+}
+
+
+/* =========================================================
+   COMMENT BUTTON
+   ========================================================= */
+
+body.light-theme .comment-box button {
+
+    background:
+        linear-gradient(
+            135deg,
+            #10a9d5,
+            #087ea4
+        ) !important;
+
+    color:#fff !important;
+
+    border:none !important;
+
+    box-shadow:
+        0 8px 20px rgba(8,126,164,.18) !important;
+}
+
+
+/* =========================================================
+   NAV DRAWER
+   ========================================================= */
+
+body.light-theme #navMenu {
+
+    background:
+        linear-gradient(
+            180deg,
+            #dcebf0,
+            #d1e1e6
+        ) !important;
+
+    border-right:1px solid #26343c !important;
+
+    box-shadow:
+        18px 0 50px rgba(15,23,30,.15) !important;
+}
+
+body.light-theme #navMenu a {
+
+    color:#263f4d !important;
+}
+
+body.light-theme #navMenu a:hover {
+
+    background:
+        rgba(14,165,233,.07) !important;
+
+    color:#087c9f !important;
+
+    box-shadow:none !important;
+}
+
+body.light-theme #navMenu a.active-menu {
+
+    color:#087c9f !important;
+
+    background:
+        rgba(14,165,233,.08) !important;
+
+    box-shadow:
+        inset 3px 0 #087c9f !important;
+}
+
+
+/* =========================================================
+   MENU CONTROLS
+   ========================================================= */
+
+body.light-theme .theme-toggle,
+body.light-theme .menu-close {
+
+    background:
+        rgba(226,239,243,.88) !important;
+
+    color:#26343c !important;
+
+    border:1px solid #26343c !important;
+
+    box-shadow:
+        0 5px 15px rgba(15,23,30,.07) !important;
+}
+
+body.light-theme .theme-toggle:hover,
+body.light-theme .menu-close:hover {
+
+    background:#d8e8ed !important;
+
+    color:#111820 !important;
+
+    border-color:#18252d !important;
+
+    box-shadow:
+        0 7px 18px rgba(15,23,30,.10) !important;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+body.light-theme .download-btn,
+body.light-theme .admin-link {
+
+    background:
+        linear-gradient(
+            135deg,
+            #10a9d5,
+            #087ea4
+        ) !important;
+
+    color:#fff !important;
+
+    border:none !important;
+
+    box-shadow:
+        0 9px 22px rgba(8,126,164,.18) !important;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+body.light-theme th {
+
+    background:#d6e6eb !important;
+
+    color:#1d3b4a !important;
+}
+
+body.light-theme td {
+
+    background:#eaf3f6 !important;
+
+    color:#405865 !important;
+
+    border-color:#26343c !important;
+}
+
+
+/* =========================================================
+   CODE
+   ========================================================= */
+
+body.light-theme pre,
+body.light-theme code {
+
+    background:#d5e4e9 !important;
+
+    color:#284a5a !important;
+
+    border-color:#26343c !important;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+body.light-theme footer {
+
+    background:
+        linear-gradient(
+            180deg,
+            #cbdde3,
+            #c3d6dd
+        ) !important;
+
+    color:#506875 !important;
+
+    border-top:1px solid #26343c !important;
+
+    box-shadow:
+        0 -10px 30px rgba(15,23,30,.06) !important;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+body.light-theme {
+
+    scrollbar-color:#7896a2 #d5e3e8;
+}
+
+body.light-theme::-webkit-scrollbar-track {
+
+    background:#d5e3e8;
+}
+
+body.light-theme::-webkit-scrollbar-thumb {
+
+    background:#7896a2;
+
+    border:2px solid #d5e3e8;
+}
+
+body.light-theme::-webkit-scrollbar-thumb:hover {
+
+    background:#5f7f8c;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+body.light-theme a {
+
+    color:#087c9f;
+}
+
+body.light-theme a:hover {
+
+    color:#055e78;
+}
+
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+body.light-theme ::selection {
+
+    background:rgba(14,165,233,.18) !important;
+
+    color:#172c39 !important;
+}
+
+
+/* =========================================================
+   LIGHT THEME — END
+   ========================================================= */
