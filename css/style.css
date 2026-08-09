@@ -6677,3 +6677,28 @@ body.light-theme .brand-card .brand-text p {
 
     text-shadow:none !important;
 }
+
+
+body.light-theme {
+
+    background:
+        radial-gradient(
+            circle at 12% 8%,
+            rgba(255,255,255,.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 88% 18%,
+            rgba(255,255,255,.10),
+            transparent 28%
+        ),
+        linear-gradient(
+            180deg,
+            #b8d0d9 0%,
+            #abc5cf 48%,
+            #9fbcc7 100%
+        ) !important;
+
+    color:#1c2d36 !important;
+
+}
