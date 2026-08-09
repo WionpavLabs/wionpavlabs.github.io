@@ -6894,3 +6894,124 @@ body.light-theme::-webkit-scrollbar-thumb:hover {
 /* =========================================================
    END
    ========================================================= */
+
+
+/* =========================================================
+   LIGHT THEME — FINAL POLISH
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1. LOGO / MARKA YAZILARI
+--------------------------------------------------------- */
+
+body.light-theme .brand-text h1 {
+    color:#111827 !important;
+}
+
+body.light-theme .brand-text p {
+    color:#111827 !important;
+}
+
+
+/* ---------------------------------------------------------
+   2. LIGHT THEME KUTU ÇERÇEVELERİ
+   Mavi yerine koyu/antrasit
+--------------------------------------------------------- */
+
+body.light-theme section,
+body.light-theme .paper-item,
+body.light-theme .founder-card,
+body.light-theme .super-box,
+body.light-theme .works-section,
+body.light-theme .comment,
+body.light-theme .comment-box input,
+body.light-theme .comment-box textarea {
+
+    border-color:#26343c !important;
+}
+
+
+/* ---------------------------------------------------------
+   3. Hover durumunda da mavi çerçeve olmasın
+--------------------------------------------------------- */
+
+body.light-theme section:hover,
+body.light-theme .paper-item:hover,
+body.light-theme .founder-card:hover,
+body.light-theme .super-box:hover,
+body.light-theme .works-section:hover {
+
+    border-color:#18252d !important;
+}
+
+
+/* ---------------------------------------------------------
+   4. Hafif siyah gölge — çerçeveyi desteklesin
+--------------------------------------------------------- */
+
+body.light-theme section,
+body.light-theme .paper-item,
+body.light-theme .founder-card,
+body.light-theme .super-box,
+body.light-theme .works-section {
+
+    box-shadow:
+        0 12px 30px rgba(15,23,30,.10),
+        inset 0 1px rgba(255,255,255,.65) !important;
+}
+
+
+/* ---------------------------------------------------------
+   5. Yorum kutuları
+--------------------------------------------------------- */
+
+body.light-theme .comment {
+
+    border-color:#26343c !important;
+
+    box-shadow:
+        0 7px 18px rgba(15,23,30,.08) !important;
+}
+
+
+/* ---------------------------------------------------------
+   6. Input çerçeveleri
+--------------------------------------------------------- */
+
+body.light-theme .comment-box input:focus,
+body.light-theme .comment-box textarea:focus,
+body.light-theme input:focus,
+body.light-theme textarea:focus,
+body.light-theme select:focus {
+
+    border-color:#26343c !important;
+
+    box-shadow:
+        0 0 0 2px rgba(38,52,60,.10) !important;
+}
+
+
+/* ---------------------------------------------------------
+   7. Drawer çerçevesi
+--------------------------------------------------------- */
+
+body.light-theme #navMenu {
+
+    border-right-color:#26343c !important;
+}
+
+
+/* ---------------------------------------------------------
+   8. Tema butonu / X
+--------------------------------------------------------- */
+
+body.light-theme .theme-toggle,
+body.light-theme .menu-close {
+
+    border-color:#26343c !important;
+}
+
+
+/* ---------------------------------------------------------
+   FINAL
+--------------------------------------------------------- */
