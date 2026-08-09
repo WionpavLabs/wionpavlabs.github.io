@@ -1,3 +1,59 @@
+/* =========================================================
+   MEDVORTEX — KALICI TEMA SİSTEMİ
+   Tema seçimi tüm sayfalarda korunur.
+========================================================= */
+
+(function () {
+
+    const savedTheme = localStorage.getItem("medvortex-theme");
+
+    if (savedTheme === "light") {
+        document.documentElement.classList.add("light-theme");
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.body.classList.add("light-theme");
+        });
+
+    } else {
+        document.documentElement.classList.remove("light-theme");
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.body.classList.remove("light-theme");
+        });
+    }
+
+})();
+
+
+/* =========================================================
+   TEMA DEĞİŞTİR
+========================================================= */
+
+function toggleTheme() {
+
+    const body = document.body;
+
+    if (!body) return;
+
+    const isLight = body.classList.toggle("light-theme");
+
+    if (isLight) {
+
+        localStorage.setItem(
+            "medvortex-theme",
+            "light"
+        );
+
+    } else {
+
+        localStorage.setItem(
+            "medvortex-theme",
+            "dark"
+        );
+
+    }
+
+}
 // ORTAK COMPONENT YÜKLEYİCİ
 
 async function loadComponent(id, file){
