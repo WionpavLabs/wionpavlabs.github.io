@@ -5752,3 +5752,843 @@ body.light-theme footer {
 
 }
 
+
+
+
+/* =========================================================
+   MEDVORTEX — PROFESSIONAL LIGHT THEME
+   FINAL OVERRIDE
+   ========================================================= */
+
+body.light-theme {
+
+    /* Ana yüzey */
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(56,189,248,.10),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(14,165,233,.07),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            #eef6fa 0%,
+            #e8f1f5 48%,
+            #e3edf2 100%
+        ) !important;
+
+    color:#172b3a !important;
+}
+
+
+/* =========================================================
+   GENEL METİNLER
+   ========================================================= */
+
+body.light-theme,
+body.light-theme span,
+body.light-theme li,
+body.light-theme label {
+    color:#263b4a;
+}
+
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4,
+body.light-theme h5,
+body.light-theme h6 {
+    color:#102534 !important;
+}
+
+body.light-theme h2,
+body.light-theme .works-title {
+    color:#087ea4 !important;
+    text-shadow:none !important;
+}
+
+body.light-theme p {
+    color:#526977 !important;
+}
+
+
+/* =========================================================
+   ANA SECTIONS
+   ========================================================= */
+
+body.light-theme section {
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.82),
+            rgba(241,248,251,.76)
+        ) !important;
+
+    color:#263b4a !important;
+
+    border:1px solid rgba(126,163,179,.28) !important;
+
+    box-shadow:
+        0 14px 40px rgba(24,58,74,.08),
+        inset 0 1px rgba(255,255,255,.75) !important;
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+}
+
+body.light-theme section:hover {
+
+    border-color:
+        rgba(14,165,233,.30) !important;
+
+    box-shadow:
+        0 18px 45px rgba(24,58,74,.10),
+        0 0 28px rgba(14,165,233,.07) !important;
+}
+
+
+/* =========================================================
+   PAPER / YAYIN KARTLARI
+   ========================================================= */
+
+body.light-theme .paper-item {
+
+    background:
+        linear-gradient(
+            145deg,
+            #fdfefe,
+            #f2f8fa
+        ) !important;
+
+    color:#243947 !important;
+
+    border:1px solid #d5e3e9 !important;
+
+    box-shadow:
+        0 10px 28px rgba(24,58,74,.075),
+        inset 0 1px rgba(255,255,255,.85) !important;
+}
+
+body.light-theme .paper-item:hover {
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f1f9fc
+        ) !important;
+
+    border-color:
+        rgba(14,165,233,.38) !important;
+
+    box-shadow:
+        0 16px 38px rgba(24,58,74,.11),
+        0 0 24px rgba(14,165,233,.08) !important;
+}
+
+body.light-theme .paper-item a {
+
+    color:#17384b !important;
+}
+
+body.light-theme .paper-item a:hover {
+
+    color:#087ea4 !important;
+}
+
+
+/* =========================================================
+   FOUNDER CARD
+   ========================================================= */
+
+body.light-theme .founder-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.92),
+            rgba(239,247,250,.88)
+        ) !important;
+
+    color:#243947 !important;
+
+    border:1px solid #d5e3e9 !important;
+
+    box-shadow:
+        0 12px 32px rgba(24,58,74,.075) !important;
+}
+
+
+/* =========================================================
+   SUPER BOX
+   ========================================================= */
+
+body.light-theme .super-box {
+
+    background:
+        linear-gradient(
+            145deg,
+            #fbfdfe,
+            #edf5f8
+        ) !important;
+
+    color:#263b4a !important;
+
+    border-color:#d4e2e8 !important;
+
+    box-shadow:
+        0 12px 34px rgba(24,58,74,.075) !important;
+}
+
+body.light-theme .super-box:hover {
+
+    border-color:
+        rgba(14,165,233,.38) !important;
+
+    box-shadow:
+        0 18px 42px rgba(24,58,74,.10),
+        0 0 25px rgba(14,165,233,.07) !important;
+}
+
+
+/* =========================================================
+   HIGHLIGHTS
+   ========================================================= */
+
+body.light-theme .works-section {
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.88),
+            rgba(239,247,250,.82)
+        ) !important;
+
+    border-color:#d5e3e9 !important;
+
+    box-shadow:
+        0 14px 38px rgba(24,58,74,.075) !important;
+}
+
+body.light-theme .works-section:hover {
+
+    border-color:
+        rgba(14,165,233,.35) !important;
+
+    box-shadow:
+        0 18px 44px rgba(24,58,74,.10),
+        0 0 24px rgba(14,165,233,.07) !important;
+}
+
+body.light-theme .works-section > p {
+
+    color:#5b707d !important;
+}
+
+body.light-theme .wion-slider {
+
+    box-shadow:
+        0 10px 28px rgba(24,58,74,.08) !important;
+}
+
+body.light-theme .wion-slider:hover {
+
+    box-shadow:
+        0 14px 34px rgba(24,58,74,.10) !important;
+}
+
+
+/* =========================================================
+   YORUM SİSTEMİ
+   ========================================================= */
+
+body.light-theme .comment-box input,
+body.light-theme .comment-box textarea {
+
+    background:
+        rgba(255,255,255,.88) !important;
+
+    color:#243947 !important;
+
+    border:1px solid #cfdee5 !important;
+
+    box-shadow:
+        inset 0 1px 3px rgba(24,58,74,.035) !important;
+}
+
+body.light-theme .comment-box input::placeholder,
+body.light-theme .comment-box textarea::placeholder {
+
+    color:#8295a0 !important;
+}
+
+body.light-theme .comment-box input:focus,
+body.light-theme .comment-box textarea:focus {
+
+    border-color:
+        rgba(14,165,233,.55) !important;
+
+    box-shadow:
+        0 0 0 3px rgba(14,165,233,.09) !important;
+
+    outline:none !important;
+}
+
+
+/* Yorum kartı */
+
+body.light-theme .comment {
+
+    background:
+        linear-gradient(
+            145deg,
+            #f9fcfd,
+            #edf5f8
+        ) !important;
+
+    color:#344b59 !important;
+
+    border:1px solid #d5e3e9 !important;
+
+    box-shadow:
+        0 6px 18px rgba(24,58,74,.055) !important;
+}
+
+body.light-theme .comment b {
+
+    color:#087ea4 !important;
+}
+
+
+/* Yorum gönder butonu */
+
+body.light-theme .comment-box button {
+
+    background:
+        linear-gradient(
+            135deg,
+            #10a9d5,
+            #087ea4
+        ) !important;
+
+    color:#ffffff !important;
+
+    border:0 !important;
+
+    box-shadow:
+        0 8px 22px rgba(8,126,164,.20) !important;
+}
+
+body.light-theme .comment-box button:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0aa0ca,
+            #066f91
+        ) !important;
+
+    transform:translateY(-1px);
+}
+
+
+/* =========================================================
+   NORMAL BUTONLAR
+   ========================================================= */
+
+body.light-theme .download-btn,
+body.light-theme .admin-link {
+
+    background:
+        linear-gradient(
+            135deg,
+            #11afd9,
+            #087ea4
+        ) !important;
+
+    color:#ffffff !important;
+
+    box-shadow:
+        0 10px 26px rgba(8,126,164,.20) !important;
+}
+
+body.light-theme .download-btn:hover,
+body.light-theme .admin-link:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0ba3ca,
+            #066f91
+        ) !important;
+}
+
+
+/* =========================================================
+   DİL BUTONU
+   ========================================================= */
+
+body.light-theme .lang-switch {
+
+    background:
+        rgba(255,255,255,.72) !important;
+
+    color:#27404f !important;
+
+    border:1px solid #d2e0e6 !important;
+
+    box-shadow:
+        0 5px 15px rgba(24,58,74,.045) !important;
+}
+
+body.light-theme .lang-switch:hover {
+
+    background:#0b8daf !important;
+
+    color:#ffffff !important;
+
+    border-color:#0b8daf !important;
+}
+
+
+/* =========================================================
+   NAV DRAWER
+   ========================================================= */
+
+body.light-theme #navMenu {
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(239,248,251,.98),
+            rgba(229,240,245,.98)
+        ) !important;
+
+    border-right:
+        1px solid #cfdee5 !important;
+
+    box-shadow:
+        18px 0 50px rgba(24,58,74,.14),
+        0 0 30px rgba(14,165,233,.045) !important;
+}
+
+
+/* Menü linkleri */
+
+body.light-theme #navMenu a {
+
+    color:#263f4e !important;
+}
+
+body.light-theme #navMenu a:hover {
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(14,165,233,.10),
+            rgba(14,165,233,.025)
+        ) !important;
+
+    color:#087ea4 !important;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(14,165,233,.12) !important;
+}
+
+
+/* Aktif sayfa */
+
+body.light-theme #navMenu a.active-menu {
+
+    color:#067899 !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(14,165,233,.15),
+            rgba(14,165,233,.025)
+        ) !important;
+
+    box-shadow:
+        inset 3px 0 #0b9bc1,
+        0 0 18px rgba(14,165,233,.06) !important;
+}
+
+
+/* =========================================================
+   X BUTONU
+   ========================================================= */
+
+body.light-theme .menu-close {
+
+    background:
+        rgba(255,255,255,.70) !important;
+
+    color:#294452 !important;
+
+    border:1px solid #d2e0e6 !important;
+
+    box-shadow:
+        0 5px 15px rgba(24,58,74,.06) !important;
+}
+
+body.light-theme .menu-close:hover {
+
+    background:#0b8daf !important;
+
+    color:#ffffff !important;
+
+    border-color:#0b8daf !important;
+}
+
+
+/* =========================================================
+   TEMA BUTONU
+   ========================================================= */
+
+body.light-theme .theme-toggle {
+
+    background:
+        rgba(255,255,255,.62) !important;
+
+    border-color:
+        rgba(8,126,164,.22) !important;
+
+    color:#24404f !important;
+
+    box-shadow:
+        0 6px 18px rgba(24,58,74,.06),
+        inset 0 1px rgba(255,255,255,.8) !important;
+}
+
+body.light-theme .theme-toggle-icon {
+
+    color:#0788ad !important;
+}
+
+body.light-theme .theme-toggle:hover {
+
+    background:
+        rgba(255,255,255,.88) !important;
+
+    border-color:
+        rgba(8,126,164,.42) !important;
+
+    box-shadow:
+        0 8px 22px rgba(24,58,74,.08),
+        0 0 18px rgba(14,165,233,.07) !important;
+}
+
+
+/* =========================================================
+   SCROLL ARROW
+   ========================================================= */
+
+body.light-theme .scroll-arrow {
+
+    color:#0788ad !important;
+
+    text-shadow:
+        0 0 12px rgba(14,165,233,.20),
+        0 0 28px rgba(14,165,233,.10) !important;
+}
+
+body.light-theme .scroll-arrow:hover {
+
+    color:#056c89 !important;
+}
+
+
+/* =========================================================
+   SLIDER DOTS
+   ========================================================= */
+
+body.light-theme .wion-dot {
+
+    background:#b9cbd3 !important;
+}
+
+body.light-theme .wion-dot.active {
+
+    background:#0b9bc1 !important;
+
+    box-shadow:
+        0 0 9px rgba(14,165,233,.22) !important;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+body.light-theme footer {
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(224,237,242,.92),
+            rgba(214,230,236,.96)
+        ) !important;
+
+    color:#526a77 !important;
+
+    border-top:
+        1px solid rgba(93,133,149,.20) !important;
+
+    box-shadow:
+        0 -10px 35px rgba(24,58,74,.045) !important;
+}
+
+
+/* =========================================================
+   TOP HEADER
+   ========================================================= */
+
+body.light-theme .top-header {
+
+    background:
+        rgba(239,248,251,.78) !important;
+
+    border-bottom:
+        1px solid rgba(93,133,149,.16) !important;
+
+    box-shadow:
+        0 8px 30px rgba(24,58,74,.055) !important;
+}
+
+
+/* Logo / marka */
+
+body.light-theme .brand-text h1 {
+
+    color:#102d3c !important;
+}
+
+body.light-theme .brand-text p {
+
+    color:#4f8ca2 !important;
+}
+
+body.light-theme .brand-logo {
+
+    filter:
+        drop-shadow(
+            0 0 9px rgba(14,165,233,.20)
+        ) !important;
+}
+
+
+/* =========================================================
+   FORM ELEMENTLERİ
+   ========================================================= */
+
+body.light-theme input,
+body.light-theme textarea,
+body.light-theme select {
+
+    background:#fafdfe !important;
+
+    color:#263b4a !important;
+
+    border-color:#cfdee5 !important;
+}
+
+body.light-theme input::placeholder,
+body.light-theme textarea::placeholder {
+
+    color:#8799a3 !important;
+}
+
+body.light-theme input:focus,
+body.light-theme textarea:focus,
+body.light-theme select:focus {
+
+    border-color:
+        rgba(14,165,233,.55) !important;
+
+    box-shadow:
+        0 0 0 3px rgba(14,165,233,.08) !important;
+}
+
+
+/* =========================================================
+   TABLO / DATA
+   ========================================================= */
+
+body.light-theme table {
+
+    color:#263b4a !important;
+}
+
+body.light-theme th {
+
+    background:#e4f0f4 !important;
+
+    color:#173849 !important;
+}
+
+body.light-theme td {
+
+    background:
+        rgba(255,255,255,.55) !important;
+
+    color:#405866 !important;
+
+    border-color:#d7e4e9 !important;
+}
+
+body.light-theme tr:hover td {
+
+    background:
+        rgba(14,165,233,.045) !important;
+}
+
+
+/* =========================================================
+   CODE / PRE
+   ========================================================= */
+
+body.light-theme pre,
+body.light-theme code {
+
+    background:
+        #e8f1f4 !important;
+
+    color:#23495a !important;
+
+    border-color:#d1e0e6 !important;
+}
+
+
+/* =========================================================
+   LINKLER
+   ========================================================= */
+
+body.light-theme a {
+
+    color:#087ea4;
+}
+
+body.light-theme a:hover {
+
+    color:#055f7c;
+}
+
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+body.light-theme ::selection {
+
+    background:
+        rgba(14,165,233,.22) !important;
+
+    color:#102d3c !important;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+body.light-theme {
+
+    scrollbar-color:#9bb8c4 #e4eef2;
+}
+
+body.light-theme::-webkit-scrollbar {
+
+    width:10px;
+}
+
+body.light-theme::-webkit-scrollbar-track {
+
+    background:#e4eef2;
+}
+
+body.light-theme::-webkit-scrollbar-thumb {
+
+    background:#9bb8c4;
+
+    border-radius:10px;
+
+    border:2px solid #e4eef2;
+}
+
+body.light-theme::-webkit-scrollbar-thumb:hover {
+
+    background:#6f9aaa;
+}
+
+
+/* =========================================================
+   MAINTENANCE
+   ========================================================= */
+
+body.light-theme #maintenance {
+
+    background:
+        linear-gradient(
+            145deg,
+            #e8f2f5,
+            #dcebf0
+        ) !important;
+
+    color:#173849 !important;
+}
+
+
+/* =========================================================
+   GENEL DARK RENK KAÇAKLARINI EZ
+   ========================================================= */
+
+body.light-theme .text-white,
+body.light-theme .white-text {
+
+    color:#243947 !important;
+}
+
+body.light-theme [style*="color:white"],
+body.light-theme [style*="color: white"] {
+
+    color:#243947 !important;
+}
+
+body.light-theme [style*="background:#1f2937"],
+body.light-theme [style*="background: #1f2937"] {
+
+    background:#edf5f8 !important;
+}
+
+
+/* =========================================================
+   MOBİL
+   ========================================================= */
+
+@media (max-width:768px) {
+
+    body.light-theme section {
+
+        box-shadow:
+            0 10px 28px rgba(24,58,74,.07),
+            inset 0 1px rgba(255,255,255,.72) !important;
+    }
+
+    body.light-theme .paper-item {
+
+        box-shadow:
+            0 8px 22px rgba(24,58,74,.065) !important;
+    }
+
+}
+
+
+/* =========================================================
+   LIGHT THEME — END
+   ========================================================= */
