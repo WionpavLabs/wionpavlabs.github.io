@@ -6637,3 +6637,47 @@ body.light-theme .brand-card .brand-text p {
 
     text-shadow:none !important;
 }
+
+
+```css
+/* =========================================================
+   THEME BUTTON — DESKTOP
+   Bilgisayarda sağ üstte görünür
+========================================================= */
+
+@media (min-width: 769px) {
+
+    #navMenu .drawer-topbar {
+
+        display: flex !important;
+
+        position: fixed !important;
+
+        top: 20px !important;
+        right: 24px !important;
+        left: auto !important;
+
+        z-index: 10000 !important;
+
+        width: auto !important;
+        height: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+    }
+
+
+    #navMenu .theme-toggle {
+
+        display: inline-flex !important;
+
+        position: relative !important;
+
+        visibility: visible !important;
+        opacity: 1 !important;
+
+    }
+
+}
+```
