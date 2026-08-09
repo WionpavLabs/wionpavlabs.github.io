@@ -5240,9 +5240,7 @@ footer{
    Linklerin mevcut düzenini bozmadan biraz aşağıdan başlatır
 ========================================================= */
 
-#navMenu .mobile-menu {
-    margin-top: 92px !important;
-}
+
 
 /* =========================================================
    DESKTOP'TA GÖSTERME
@@ -5744,4 +5742,30 @@ body.light-theme footer {
     color:
         #CBD5E1 !important;
 
+}
+
+
+/* =========================================================
+   THEME BUTTON - MENÜ AKIŞINDAN ÇIKAR
+========================================================= */
+
+#navMenu {
+    position: relative !important;
+}
+
+#navMenu .theme-toggle {
+    position: absolute !important;
+
+    top: 18px !important;
+    left: 16px !important;
+
+    z-index: 999 !important;
+}
+
+
+/* Menü kendi eski başlangıç noktasından başlasın */
+
+#navMenu .mobile-menu {
+    margin-top: 25px !important;
+    padding-top: 20px !important;
 }
