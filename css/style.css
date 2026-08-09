@@ -6641,7 +6641,7 @@ body.light-theme .brand-card .brand-text p {
 
 /* =========================================================
    DESKTOP THEME BUTTON
-   Menü linklerinin üzerine binmez.
+   Ana Sayfa'nın solunda
 ========================================================= */
 
 @media (min-width: 769px) {
@@ -6651,8 +6651,8 @@ body.light-theme .brand-card .brand-text p {
         position: absolute !important;
 
         top: 8px !important;
-        left: auto !important;
-        right: 10px !important;
+        left: 10px !important;
+        right: auto !important;
 
         z-index: 100 !important;
 
