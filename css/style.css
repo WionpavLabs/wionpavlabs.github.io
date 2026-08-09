@@ -7015,3 +7015,53 @@ body.light-theme .menu-close {
 /* ---------------------------------------------------------
    FINAL
 --------------------------------------------------------- */
+
+/* =========================================================
+   LIGHT THEME — REMOVE BLUE BORDERS / GLOW
+   ========================================================= */
+
+body.light-theme section,
+body.light-theme .paper-item,
+body.light-theme .founder-card,
+body.light-theme .super-box,
+body.light-theme .works-section,
+body.light-theme .comment {
+
+    border:1px solid #26343c !important;
+
+    outline:none !important;
+
+    box-shadow:
+        0 12px 30px rgba(15,23,30,.10) !important;
+}
+
+
+/* Hover'da cyan glow'u tamamen kapat */
+body.light-theme section:hover,
+body.light-theme .paper-item:hover,
+body.light-theme .founder-card:hover,
+body.light-theme .super-box:hover,
+body.light-theme .works-section:hover,
+body.light-theme .comment:hover {
+
+    border-color:#18252d !important;
+
+    outline:none !important;
+
+    box-shadow:
+        0 14px 34px rgba(15,23,30,.12) !important;
+}
+
+
+/* İç elemanlardan gelebilecek cyan outline/glow */
+body.light-theme .paper-item::before,
+body.light-theme .paper-item::after,
+body.light-theme .founder-card::before,
+body.light-theme .founder-card::after,
+body.light-theme .super-box::before,
+body.light-theme .super-box::after {
+
+    border-color:transparent !important;
+
+    box-shadow:none !important;
+}
