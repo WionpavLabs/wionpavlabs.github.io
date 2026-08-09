@@ -619,55 +619,7 @@ function toggleMenu(){
 
 <script src="js/main.js"></script>
 
-/* =========================================================
-   MEDVORTEX THEME SYSTEM
-========================================================= */
 
-(function () {
-
-    const THEME_KEY = "medvortex-theme";
-
-    const body = document.body;
-
-    const toggle = document.getElementById("themeToggle");
-
-    if (!toggle) return;
-
-
-    /* -----------------------------------------
-       Tema görünümünü güncelle
-    ----------------------------------------- */
-
-    function updateThemeButton(theme) {
-
-        const icon = toggle.querySelector(".theme-toggle-icon");
-        const text = toggle.querySelector(".theme-toggle-text");
-
-        if (!icon || !text) return;
-
-
-        if (theme === "light") {
-
-            icon.textContent = "☾";
-            text.textContent = "Dark Theme";
-
-            toggle.setAttribute("aria-label", "Dark temaya geç");
-            toggle.setAttribute("aria-pressed", "true");
-
-        } else {
-
-            icon.textContent = "☀";
-            text.textContent = "Light Theme";
-
-            toggle.setAttribute("aria-label", "Light temaya geç");
-            toggle.setAttribute("aria-pressed", "false");
-
-        }
-
-    }
-
-
-   
 </body>
 
 </html>
