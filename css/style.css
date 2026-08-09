@@ -5744,5 +5744,11 @@ body.light-theme footer {
 
 }
 
+@media (max-width:768px){
 
+    #navMenu .mobile-menu{
+        padding-top:75px !important;
+    }
+
+}
 
