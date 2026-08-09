@@ -6676,3 +6676,24 @@ body.light-theme .brand-card .brand-text p {
     }
 
 }
+
+/* =========================================================
+   BRAND TITLE — LIGHT THEME
+   Highlights / Güncellemeler mavisi
+========================================================= */
+
+body.light-theme .brand-card .brand-text h1 {
+
+    color: #38bdf8 !important;
+
+    background: none !important;
+    background-image: none !important;
+
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+
+    -webkit-text-fill-color: #38bdf8 !important;
+
+    text-shadow:
+        0 0 12px rgba(56, 189, 248, .18) !important;
+}
