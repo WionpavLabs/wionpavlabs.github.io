@@ -5093,3 +5093,8 @@ footer{
 .brand-card::after{
     display:none !important;
 }
+
+/* Görsel üzerine gelince ekstra güçlü glow olmasın */
+.wion-slider:hover {
+    box-shadow: none !important;
+}
