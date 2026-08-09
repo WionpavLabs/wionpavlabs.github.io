@@ -5,55 +5,168 @@
 
 (function () {
 
-    const savedTheme = localStorage.getItem("medvortex-theme");
+    const THEME_KEY = "medvortex-theme";
 
-    if (savedTheme === "light") {
-        document.documentElement.classList.add("light-theme");
 
-        document.addEventListener("DOMContentLoaded", () => {
-            document.body.classList.add("light-theme");
-        });
+    /* -----------------------------------------------------
+       KAYITLI TEMAYI SAYFA AÇILIR AÇILMAZ AL
+    ----------------------------------------------------- */
 
-    } else {
-        document.documentElement.classList.remove("light-theme");
+    function getSavedTheme() {
 
-        document.addEventListener("DOMContentLoaded", () => {
-            document.body.classList.remove("light-theme");
-        });
+        return localStorage.getItem(THEME_KEY) || "dark";
+
     }
+
+
+    /* -----------------------------------------------------
+       TEMAYI UYGULA
+    ----------------------------------------------------- */
+
+    function applyTheme(theme) {
+
+        const body = document.body;
+
+        if (!body) return;
+
+
+        if (theme === "light") {
+
+            body.classList.add("light-theme");
+
+        } else {
+
+            body.classList.remove("light-theme");
+
+        }
+
+
+        updateThemeButton(theme);
+
+    }
+
+
+    /* -----------------------------------------------------
+       TEMA BUTONUNU GÜNCELLE
+    ----------------------------------------------------- */
+
+    function updateThemeButton(theme) {
+
+        const button = document.getElementById("themeToggle");
+
+        if (!button) return;
+
+
+        const icon = button.querySelector(".theme-toggle-icon");
+
+        const text = button.querySelector(".theme-toggle-text");
+
+
+        if (theme === "light") {
+
+            button.setAttribute(
+                "aria-label",
+                "Koyu temaya geç"
+            );
+
+            button.setAttribute(
+                "aria-pressed",
+                "true"
+            );
+
+
+            if (icon) {
+                icon.textContent = "☾";
+            }
+
+
+            if (text) {
+                text.textContent = "Dark Theme";
+            }
+
+
+        } else {
+
+            button.setAttribute(
+                "aria-label",
+                "Açık temaya geç"
+            );
+
+            button.setAttribute(
+                "aria-pressed",
+                "false"
+            );
+
+
+            if (icon) {
+                icon.textContent = "☀";
+            }
+
+
+            if (text) {
+                text.textContent = "Light Theme";
+            }
+
+        }
+
+    }
+
+
+    /* -----------------------------------------------------
+       SAYFA YÜKLENDİĞİNDE KAYITLI TEMAYI UYGULA
+    ----------------------------------------------------- */
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+
+            const savedTheme = getSavedTheme();
+
+            applyTheme(savedTheme);
+
+        }
+    );
+
+
+    /* -----------------------------------------------------
+       TEMA BUTONU
+       Buton component olarak sonradan yüklense bile çalışır.
+    ----------------------------------------------------- */
+
+    document.addEventListener(
+        "click",
+        function (event) {
+
+            const button =
+                event.target.closest("#themeToggle");
+
+
+            if (!button) return;
+
+
+            const currentTheme =
+                getSavedTheme();
+
+
+            const newTheme =
+                currentTheme === "light"
+                    ? "dark"
+                    : "light";
+
+
+            localStorage.setItem(
+                THEME_KEY,
+                newTheme
+            );
+
+
+            applyTheme(newTheme);
+
+        }
+    );
+
 
 })();
-
-
-/* =========================================================
-   TEMA DEĞİŞTİR
-========================================================= */
-
-function toggleTheme() {
-
-    const body = document.body;
-
-    if (!body) return;
-
-    const isLight = body.classList.toggle("light-theme");
-
-    if (isLight) {
-
-        localStorage.setItem(
-            "medvortex-theme",
-            "light"
-        );
-
-    } else {
-
-        localStorage.setItem(
-            "medvortex-theme",
-            "dark"
-        );
-
-    }
-
-}
 // ORTAK COMPONENT YÜKLEYİCİ
 
 async function loadComponent(id, file){
