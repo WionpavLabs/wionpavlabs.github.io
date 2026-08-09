@@ -6702,3 +6702,23 @@ body.light-theme {
     color:#1c2d36 !important;
 
 }
+
+/* =========================================================
+   DARK THEME — WIONPAV LABS
+   Saf beyaz yerine kirli beyaz
+========================================================= */
+
+body:not(.light-theme) .brand-card .brand-text h1 {
+
+    color:#d8e0e3 !important;
+
+    background:none !important;
+    background-image:none !important;
+
+    -webkit-background-clip:initial !important;
+    background-clip:initial !important;
+
+    -webkit-text-fill-color:#d8e0e3 !important;
+
+    text-shadow:none !important;
+}
