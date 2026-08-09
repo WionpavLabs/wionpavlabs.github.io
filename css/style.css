@@ -5098,3 +5098,400 @@ footer{
 .wion-slider:hover {
     box-shadow: none !important;
 }
+
+
+
+/* ==========================================
+   MEDVORTEX — LIGHT MEDICAL THEME
+   ========================================== */
+
+:root {
+    --navy: #0F172A;
+    --primary: #0EA5E9;
+    --background: #F8FAFC;
+    --card: #FFFFFF;
+    --text: #1E293B;
+    --muted: #64748B;
+    --border: #E2E8F0;
+    --primary-light: #E0F2FE;
+}
+
+
+/* =========================
+   BODY
+   ========================= */
+
+html,
+body {
+    background: #F8FAFC !important;
+    color: #1E293B !important;
+}
+
+
+/* Eski arka plan glow'larını kaldır */
+body::before,
+body::after {
+    display: none !important;
+}
+
+
+/* =========================
+   GENEL METİNLER
+   ========================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #0F172A !important;
+}
+
+p {
+    color: #64748B !important;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+    background: #0F172A !important;
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+    background:
+        linear-gradient(
+            135deg,
+            #0F172A 0%,
+            #172554 55%,
+            #0F172A 100%
+        ) !important;
+}
+
+
+/* Hero alt geçiş */
+.hero::after {
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            #F8FAFC 100%
+        ) !important;
+}
+
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+nav {
+    background: rgba(255,255,255,.94) !important;
+    border: 1px solid #E2E8F0 !important;
+
+    box-shadow:
+        0 8px 30px rgba(15,23,42,.08) !important;
+
+    backdrop-filter: blur(20px);
+}
+
+nav a {
+    color: #1E293B !important;
+}
+
+nav a:hover {
+    color: #0EA5E9 !important;
+}
+
+nav a::after {
+    background: #0EA5E9 !important;
+    box-shadow: none !important;
+}
+
+nav a.active {
+    color: #0EA5E9 !important;
+    border-color: #0EA5E9 !important;
+}
+
+
+/* =========================
+   ADMIN / BUTONLAR
+   ========================= */
+
+.admin-link,
+.download-btn {
+    background: #0EA5E9 !important;
+    color: #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+.admin-link:hover,
+.download-btn:hover {
+    background: #0284C7 !important;
+}
+
+
+/* =========================
+   ANA KARTLAR / SECTIONS
+   ========================= */
+
+section {
+    background: #FFFFFF !important;
+
+    border: 1px solid #E2E8F0 !important;
+
+    box-shadow:
+        0 8px 30px rgba(15,23,42,.06) !important;
+
+    backdrop-filter: none !important;
+}
+
+
+/* Hafif medical hover */
+section:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(14,165,233,.45) !important;
+
+    box-shadow:
+        0 12px 35px rgba(15,23,42,.08),
+        0 0 20px rgba(14,165,233,.08) !important;
+}
+
+
+/* Eski gradient border efektini kaldır */
+section::before {
+    background: none !important;
+}
+
+
+/* =========================
+   BAŞLIKLAR
+   ========================= */
+
+h2 {
+    color: #0EA5E9 !important;
+}
+
+
+/* =========================
+   FOUNDER / KARTLAR
+   ========================= */
+
+.founder-card,
+.paper-item {
+    background: #FFFFFF !important;
+    border-color: #E2E8F0 !important;
+    color: #1E293B !important;
+}
+
+.paper-item:hover {
+    border-color: rgba(14,165,233,.35) !important;
+
+    box-shadow:
+        0 12px 35px rgba(15,23,42,.08) !important;
+}
+
+
+/* =========================
+   BRAND CARD
+   ========================= */
+
+.brand-card {
+    background: #FFFFFF !important;
+    border-color: #E2E8F0 !important;
+}
+
+.brand-card:hover {
+    border-color: #0EA5E9 !important;
+
+    box-shadow:
+        0 10px 30px rgba(15,23,42,.08),
+        0 0 20px rgba(14,165,233,.10) !important;
+}
+
+
+/* =========================
+   MARKA YAZISI
+   ========================= */
+
+.brand-text h1 {
+    color: #0F172A !important;
+    -webkit-text-fill-color: #0F172A !important;
+    background: none !important;
+}
+
+.brand-text p {
+    color: #64748B !important;
+}
+
+
+/* =========================
+   HIGHLIGHTS
+   ========================= */
+
+.works-section {
+    background: #FFFFFF !important;
+    border-color: #E2E8F0 !important;
+}
+
+
+/* KUTUNUN MAVİ GLOW'U KALSIN */
+.works-section:hover {
+    border-color: rgba(14,165,233,.55) !important;
+
+    box-shadow:
+        0 12px 35px rgba(15,23,42,.08),
+        0 0 25px rgba(14,165,233,.12) !important;
+}
+
+
+/* Görsel hoverındaki aşırı parlama KALKSIN */
+.wion-slider:hover {
+    box-shadow:
+        0 10px 30px rgba(15,23,42,.08) !important;
+}
+
+
+/* Highlights başlığı */
+.works-title {
+    color: #0EA5E9 !important;
+
+    text-shadow:
+        0 0 12px rgba(14,165,233,.12) !important;
+}
+
+
+/* Açıklama */
+.works-section > p {
+    color: #64748B !important;
+}
+
+
+/* =========================
+   SLIDER DOTS
+   ========================= */
+
+.wion-dot {
+    background: #CBD5E1 !important;
+}
+
+.wion-dot.active {
+    background: #0EA5E9 !important;
+
+    box-shadow:
+        0 0 10px rgba(14,165,233,.25) !important;
+}
+
+
+/* =========================
+   RATING
+   ========================= */
+
+.rating span {
+    color: #94A3B8;
+}
+
+.rating span:hover,
+.rating span.selected {
+    color: #F59E0B;
+}
+
+
+/* =========================
+   TOP HEADER
+   ========================= */
+
+.top-header {
+    background: rgba(255,255,255,.95) !important;
+
+    border-bottom:
+        1px solid #E2E8F0 !important;
+
+    box-shadow:
+        0 4px 20px rgba(15,23,42,.06) !important;
+
+    backdrop-filter: blur(15px);
+}
+
+
+/* =========================
+   MOBİL MENÜ
+   ========================= */
+
+.menu-btn span {
+    background: #0EA5E9 !important;
+    box-shadow: none !important;
+}
+
+
+/* =========================
+   LANG SWITCH
+   ========================= */
+
+.lang-switch {
+    background: #F1F5F9 !important;
+    color: #1E293B !important;
+}
+
+.lang-switch:hover {
+    background: #0EA5E9 !important;
+    color: #FFFFFF !important;
+}
+
+
+/* =========================
+   IMAGE VIEWER
+   ========================= */
+
+.image-viewer {
+    background: rgba(15,23,42,.92) !important;
+}
+
+.image-viewer img {
+    border-color: rgba(14,165,233,.25) !important;
+
+    box-shadow:
+        0 0 30px rgba(14,165,233,.15),
+        0 25px 90px rgba(15,23,42,.45) !important;
+}
+
+.viewer-close:hover {
+    background: #0EA5E9 !important;
+    color: #FFFFFF !important;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    background: #0F172A !important;
+    color: #94A3B8 !important;
+}
+
+
+/* =========================
+   BİLİMSEL ARKA PLAN
+   ========================= */
+
+/* Neon parçacıkları daha soft yap */
+.dna-line {
+    opacity: .035 !important;
+    border-color: #0EA5E9 !important;
+}
+
+.particle {
+    background: #0EA5E9 !important;
+    box-shadow:
+        0 0 10px rgba(14,165,233,.25) !important;
+    opacity: .12 !important;
+}
