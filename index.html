@@ -1492,7 +1492,7 @@ checkMaintenance();
 setInterval(checkMaintenance,30000);
 
 
-const FIREBASE_URL = "https://yorum-sistemimm-default-rtdb.europe-west1.firebasedatabase.app//comments.json";
+const FIREBASE_URL = "https://yorum-sistemimm-default-rtdb.europe-west1.firebasedatabase.app/comments.json";
 const RATING_URL = "https://yorum-sistemimm-default-rtdb.europe-west1.firebasedatabase.app/ratings";
     
 // Her ziyaretçiye tek seferlik kimlik oluştur
@@ -1551,6 +1551,9 @@ async function loadComments(){
         box.prepend(div);
     }
 }
+document.addEventListener("DOMContentLoaded", () => {
+    loadComments();
+});
 
 // silme (SADECE SENİN LINKLE)
 function deleteComment(key){
