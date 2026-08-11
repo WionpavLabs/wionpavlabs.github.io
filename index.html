@@ -1558,73 +1558,70 @@ async function sendComment() {
 // YORUMLARI YÜKLE
 let commentsLoading = false;
 
-async function loadComments(force = false) {
+let commentsLoading = false;
+
+async function loadComments(force = false, attempt = 0) {
 
     const box = document.getElementById("comments");
 
     if (!box) return;
 
-    // Aynı anda iki Firebase isteği yapılmasını engelle
-    if (commentsLoading) return;
+    if (commentsLoading && !force) return;
 
     commentsLoading = true;
 
     try {
 
-        const url =
-            FIREBASE_URL +
-            "?cacheBust=" +
-            Date.now();
-
-        const response = await fetch(url, {
+        const response = await fetch(FIREBASE_URL, {
             method: "GET",
-            cache: "no-store"
+            cache: "no-store",
+            headers: {
+                "Accept": "application/json"
+            }
         });
 
         if (!response.ok) {
-            throw new Error(
-                "Firebase bağlantısı başarısız: " +
-                response.status
-            );
+            throw new Error("Firebase HTTP " + response.status);
         }
 
         const data = await response.json();
 
-        console.log("Firebase'den gelen yorumlar:", data);
+        console.log("Firebase yorum verisi:", data);
 
-        // Firebase null döndürürse mevcut yorumları silme
-        if (
-            data === null ||
-            typeof data !== "object"
-        ) {
-            console.warn("Firebase boş veya geçersiz veri döndürdü.");
+        if (data === null) {
+
+            if (attempt < 5) {
+                setTimeout(() => {
+                    loadComments(true, attempt + 1);
+                }, 500 * (attempt + 1));
+            }
+
             return;
+        }
+
+        if (typeof data !== "object") {
+            throw new Error("Firebase geçersiz veri döndürdü.");
         }
 
         const comments = Object.entries(data)
             .filter(([key, c]) => {
-
                 return (
                     c &&
                     typeof c === "object" &&
-                    c.name &&
-                    c.comment
+                    typeof c.name === "string" &&
+                    typeof c.comment === "string"
                 );
-
             })
             .sort((a, b) => {
-
-                return (b[1].time || 0) - (a[1].time || 0);
-
+                return Number(b[1].time || 0) -
+                       Number(a[1].time || 0);
             });
 
-        // Gerçekten hiç yorum yoksa temizle
         if (comments.length === 0) {
             box.innerHTML = "";
             return;
         }
 
-        // Önce yorumları oluştur
         const fragment = document.createDocumentFragment();
 
         comments.forEach(([key, c]) => {
@@ -1643,18 +1640,21 @@ async function loadComments(force = false) {
             div.appendChild(textElement);
 
             fragment.appendChild(div);
-
         });
 
-        // Her şey hazır olduktan sonra ekrana aktar
-        box.innerHTML = "";
-        box.appendChild(fragment);
+        box.replaceChildren(fragment);
 
     } catch (error) {
 
         console.error("Yorumlar yüklenemedi:", error);
 
-        // HATA DURUMUNDA YORUMLARI SİLMİYORUZ
+        if (attempt < 5) {
+
+            setTimeout(() => {
+                loadComments(true, attempt + 1);
+            }, 500 * (attempt + 1));
+
+        }
 
     } finally {
 
