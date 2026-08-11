@@ -1558,17 +1558,12 @@ async function sendComment() {
 
 let commentsLoading = false;
 
-async function loadComments(force = false) {
+async function loadComments() {
 
-    if (commentsLoading && !force) return;
-
-    commentsLoading = true;
-
-    const commentsContainer =
-        document.getElementById("comments");
+    const commentsContainer = document.getElementById("comments");
 
     if (!commentsContainer) {
-        commentsLoading = false;
+        console.error("comments elementi bulunamadı!");
         return;
     }
 
@@ -1579,58 +1574,60 @@ async function loadComments(force = false) {
         );
 
         if (!response.ok) {
-            throw new Error(
-                "Firebase yorumları alma hatası: " +
-                response.status
-            );
+            throw new Error("Firebase HTTP Hatası: " + response.status);
         }
 
         const data = await response.json();
 
+        console.log("Firebase yorumları:", data);
+
         commentsContainer.innerHTML = "";
 
-        if (!data) {
+        if (!data || typeof data !== "object") {
             commentsContainer.innerHTML =
                 "<p>Henüz yorum yapılmamış.</p>";
             return;
         }
 
-        Object.entries(data)
-            .sort((a, b) => b[1].time - a[1].time)
-            .forEach(([key, item]) => {
+        const comments = Object.values(data)
+            .filter(item => item && item.time)
+            .sort((a, b) => b.time - a.time);
 
-                const comment = document.createElement("div");
-                comment.className = "comment";
+        if (comments.length === 0) {
+            commentsContainer.innerHTML =
+                "<p>Henüz yorum yapılmamış.</p>";
+            return;
+        }
 
-                const name = document.createElement("b");
-                name.textContent = item.name || "Anonim";
+        comments.forEach(item => {
 
-                const text = document.createElement("p");
-                text.textContent = item.comment || "";
+            const comment = document.createElement("div");
+            comment.className = "comment";
 
-                comment.appendChild(name);
-                comment.appendChild(text);
+            const name = document.createElement("b");
+            name.textContent = item.name || "Anonim";
 
-                commentsContainer.appendChild(comment);
+            const text = document.createElement("p");
+            text.textContent = item.comment || "";
 
-            });
+            comment.appendChild(name);
+            comment.appendChild(text);
+
+            commentsContainer.appendChild(comment);
+
+        });
 
     } catch (error) {
 
-        console.error(
-            "Yorumlar yüklenirken hata:",
-            error
-        );
+        console.error("Yorumlar yüklenemedi:", error);
 
         commentsContainer.innerHTML =
-            "<p>Yorumlar şu anda yüklenemiyor.</p>";
-
-    } finally {
-
-        commentsLoading = false;
-
+            "<p>Yorumlar yüklenirken bir hata oluştu.</p>";
     }
 }
+    document.addEventListener("DOMContentLoaded", () => {
+    loadComments();
+});
 
     if(!element) return;
 
