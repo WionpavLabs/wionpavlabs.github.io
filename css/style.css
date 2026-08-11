@@ -6745,3 +6745,66 @@ body:not(.light-theme) .brand-card .brand-text h1 {
 
 }
 
+/* =========================================================
+   DİL DEĞİŞTİRME BUTONU
+   YAYINLAR + INSIGHTS
+   Her kartın sağ üst köşesine sabitlenir.
+========================================================= */
+
+/* Her PDF kartı kendi butonunun referans noktası */
+.paper-item {
+    position: relative !important;
+}
+
+/* Başlık alanının normal akışını koru */
+.paper-header {
+    position: static !important;
+}
+
+/* DİL BUTONU */
+.paper-item .lang-switch {
+    position: absolute !important;
+
+    top: 28px !important;
+    right: 28px !important;
+
+    width: 54px !important;
+    height: 54px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border: none !important;
+    border-radius: 16px !important;
+
+    background: rgba(255,255,255,0.08) !important;
+
+    color: #e2e8f0 !important;
+
+    font-size: 22px !important;
+    line-height: 1 !important;
+
+    cursor: pointer !important;
+
+    z-index: 50 !important;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease !important;
+}
+
+/* Hover */
+.paper-item .lang-switch:hover {
+    background: rgba(56,189,248,0.18) !important;
+    transform: scale(1.08) !important;
+}
+
+/* Başlığın butonun altına girmesini engelle */
+.paper-item .paper-header > a:first-child {
+    display: block !important;
+    padding-right: 80px !important;
+}
