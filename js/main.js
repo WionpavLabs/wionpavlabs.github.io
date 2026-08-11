@@ -562,6 +562,24 @@ article4: {
             flag: "🇹🇷"
         }
     },    
+   
+   insights1: {
+        current: "EN",
+
+        EN: {
+            title: "📄 1. Bipolar Disorder Read PDF",
+            download: "⬇️ 1. Bipolar Disorder Download PDF",
+            file: "insights/Bipolar Disorder.pdf",
+            flag: "🇬🇧"
+        },
+
+        TR: {
+            title: "📄 1. Bipolar Bozukluk PDF Oku",
+            download: "⬇️ 1. Bipolar Bozukluk PDF İndir",
+            file: "insights/Bipolar Bozukluk.pdf",
+            flag: "🇹🇷"
+        }
+    }
 };
 
 function toggleLanguage(article){
@@ -585,24 +603,3 @@ function toggleLanguage(article){
 document.getElementById(article + "-lang").textContent = lang.flag;
 }
 
-
-
-const languages = {
-    insights1: {
-        current: "EN",
-
-        EN: {
-            title: "📄 1. Bipolar Disorder Read PDF",
-            download: "⬇️ 1. Bipolar Disorder Download PDF",
-            file: "insights/Bipolar Disorder.pdf",
-            flag: "🇬🇧"
-        },
-
-        TR: {
-            title: "📄 1. Bipolar Bozukluk PDF Oku",
-            download: "⬇️ 1. Bipolar Bozukluk PDF İndir",
-            file: "insights/Bipolar Bozukluk.pdf",
-            flag: "🇹🇷"
-        }
-    }
- }
