@@ -1589,9 +1589,9 @@ async function loadComments() {
             return;
         }
 
-        const comments = Object.values(data)
-            .filter(item => item && item.time)
-            .sort((a, b) => b.time - a.time);
+       const comments = Object.values(data)
+    .filter(item => item && (item.name || item.comment))
+    .sort((a, b) => (b.time || 0) - (a.time || 0));
 
         if (comments.length === 0) {
             commentsContainer.innerHTML =
