@@ -1421,7 +1421,7 @@ Yeni içerikler için takipte kalın.👇
 </div>
 </section>
     -->
-<section>
+<section id="commentsSection">
     <h2>Yorumlar</h2>
 
     <div class="comment-box">
@@ -1763,8 +1763,9 @@ async function loadRatings(){
 
 }
 loadRatings();
-const revealSections = document.querySelectorAll("section");
-
+const revealSections = document.querySelectorAll(
+    "section:not(#commentsSection)"
+);
 const observer = new IntersectionObserver((entries)=>{
 
     entries.forEach(entry=>{
