@@ -6745,34 +6745,3 @@ body:not(.light-theme) .brand-card .brand-text h1 {
 
 }
 
-#comments {
-    margin-top: 25px;
-}
-
-.comment {
-    background: rgba(31, 41, 55, 0.75);
-    border: 1px solid rgba(56, 189, 248, 0.15);
-    border-radius: 14px;
-    padding: 16px 18px;
-    margin-bottom: 12px;
-}
-
-.comment b {
-    display: block;
-    color: #38bdf8;
-    margin-bottom: 6px;
-}
-
-.comment p {
-    margin: 0;
-    color: #e2e8f0;
-    white-space: pre-wrap;
-}
-
-
-/* TEST: yorumlar section animasyondan çıkar */
-section:has(#comments) {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-}
