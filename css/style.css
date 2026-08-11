@@ -6745,3 +6745,46 @@ body:not(.light-theme) .brand-card .brand-text h1 {
 
 }
 
+.paper-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.paper-header > a:first-child {
+    flex: 1;
+}
+
+.lang-switch {
+    flex-shrink: 0;
+
+    width: 54px;
+    height: 54px;
+
+    border: none;
+    border-radius: 16px;
+
+    background: rgba(255,255,255,0.08);
+    color: #e2e8f0;
+
+    font-size: 22px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.25s ease;
+}
+
+.lang-switch:hover {
+    background: rgba(56,189,248,0.18);
+    transform: scale(1.08);
+}
+
+.paper-item .download-btn {
+    display: inline-flex;
+    margin-top: 18px;
+}
