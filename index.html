@@ -1544,17 +1544,18 @@ async function sendComment(){
 
 
 // yorumları yükle
-async function loadComments(){
+// YORUMLARI YÜKLE
+async function loadComments() {
 
     const box = document.getElementById("comments");
 
-    if(!box) return;
+    if (!box) return;
 
     try {
 
         const response = await fetch(FIREBASE_URL);
 
-        if(!response.ok){
+        if (!response.ok) {
             throw new Error("Firebase bağlantısı başarısız");
         }
 
@@ -1562,39 +1563,41 @@ async function loadComments(){
 
         console.log("Firebase yorumları:", data);
 
-        const fragment = document.createDocumentFragment();
+        box.innerHTML = "";
 
-        if(data && typeof data === "object"){
-
-            Object.entries(data)
-                .reverse()
-                .forEach(([key, c]) => {
-
-                    if(!c || !c.name || !c.comment) return;
-
-                    const div = document.createElement("div");
-
-                    div.className = "comment";
-
-                    const name = document.createElement("b");
-                    name.textContent = c.name;
-
-                    const text = document.createElement("span");
-                    text.textContent = c.comment;
-
-                    div.appendChild(name);
-                    div.appendChild(document.createElement("br"));
-                    div.appendChild(text);
-
-                    fragment.appendChild(div);
-
-                });
-
+        if (!data || typeof data !== "object") {
+            return;
         }
 
-        box.replaceChildren(fragment);
+        const comments = Object.entries(data);
 
-    } catch(error) {
+        comments.reverse().forEach(([key, c]) => {
+
+            if (!c || typeof c !== "object") return;
+
+            const name = c.name ?? "";
+            const comment = c.comment ?? "";
+
+            if (!name || !comment) return;
+
+            const div = document.createElement("div");
+            div.className = "comment";
+
+            const nameElement = document.createElement("b");
+            nameElement.textContent = name;
+
+            const textElement = document.createElement("span");
+            textElement.textContent = comment;
+
+            div.appendChild(nameElement);
+            div.appendChild(document.createElement("br"));
+            div.appendChild(textElement);
+
+            box.appendChild(div);
+
+        });
+
+    } catch (error) {
 
         console.error("Yorumlar yüklenemedi:", error);
 
@@ -1735,7 +1738,6 @@ async function loadRatings(){
     });
 
 }
-loadComments();
 loadRatings();
 const revealSections = document.querySelectorAll("section");
 
