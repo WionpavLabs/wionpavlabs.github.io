@@ -6768,3 +6768,11 @@ body:not(.light-theme) .brand-card .brand-text h1 {
     color: #e2e8f0;
     white-space: pre-wrap;
 }
+
+
+/* TEST: yorumlar section animasyondan çıkar */
+section:has(#comments) {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
