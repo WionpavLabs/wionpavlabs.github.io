@@ -1491,8 +1491,8 @@ async function checkMaintenance() {
 checkMaintenance();
 setInterval(checkMaintenance,30000);
 
-
-const FIREBASE_URL = "https://yorum-sistemimm-default-rtdb.europe-west1.firebasedatabase.app/comments.json";
+const FIREBASE_URL =
+    "https://yorum-sistemimm-default-rtdb.europe-west1.firebasedatabase.app/comments.json";
 const RATING_URL = "https://yorum-sistemimm-default-rtdb.europe-west1.firebasedatabase.app/ratings";
     
 // Her ziyaretçiye tek seferlik kimlik oluştur
@@ -1505,107 +1505,166 @@ if (!userId) {
 
 
 // yorum gönder
-async function sendComment(){
+async function sendComment() {
 
-    const name = document.getElementById("name").value.trim();
-    const comment = document.getElementById("comment").value.trim();
+    const nameInput = document.getElementById("name");
+    const commentInput = document.getElementById("comment");
 
-    if(!name || !comment) return;
+    const name = nameInput.value.trim();
+    const comment = commentInput.value.trim();
+
+    if (!name || !comment) {
+        alert("Lütfen adınızı ve yorumunuzu yazın.");
+        return;
+    }
 
     try {
 
-        const response = await fetch(FIREBASE_URL, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                name: name,
-                comment: comment,
-                time: Date.now()
-            })
-        });
+        const response = await fetch(
+            FIREBASE_URL + "?cacheBust=" + Date.now(),
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name: name,
+                    comment: comment,
+                    time: Date.now()
+                })
+            }
+        );
 
-        if(!response.ok){
-            throw new Error("Yorum gönderilemedi");
+        if (!response.ok) {
+            throw new Error("Firebase yorum gönderme hatası: " + response.status);
         }
 
-        document.getElementById("name").value = "";
-        document.getElementById("comment").value = "";
+        // Önce inputları temizle
+        nameInput.value = "";
+        commentInput.value = "";
 
-        await loadComments();
+        // Sonra yorumları yeniden yükle
+        await loadComments(true);
 
-    } catch(error) {
+    } catch (error) {
 
         console.error("Yorum gönderme hatası:", error);
 
+        alert("Yorum gönderilemedi. Lütfen tekrar deneyin.");
     }
 }
 
-
 // yorumları yükle
 // YORUMLARI YÜKLE
+let commentsLoading = false;
+
 async function loadComments() {
 
     const box = document.getElementById("comments");
 
     if (!box) return;
 
+    // Aynı anda iki Firebase isteği yapılmasını engelle
+    if (commentsLoading) return;
+
+    commentsLoading = true;
+
     try {
 
-        const response = await fetch(FIREBASE_URL);
+        const url =
+            FIREBASE_URL +
+            "?cacheBust=" +
+            Date.now();
+
+        const response = await fetch(url, {
+            method: "GET",
+            cache: "no-store"
+        });
 
         if (!response.ok) {
-            throw new Error("Firebase bağlantısı başarısız");
+            throw new Error(
+                "Firebase bağlantısı başarısız: " +
+                response.status
+            );
         }
 
         const data = await response.json();
 
-        console.log("Firebase yorumları:", data);
+        console.log("Firebase'den gelen yorumlar:", data);
 
-        box.innerHTML = "";
-
-        if (!data || typeof data !== "object") {
+        // Firebase null döndürürse mevcut yorumları silme
+        if (
+            data === null ||
+            typeof data !== "object"
+        ) {
+            console.warn("Firebase boş veya geçersiz veri döndürdü.");
             return;
         }
 
-        const comments = Object.entries(data);
+        const comments = Object.entries(data)
+            .filter(([key, c]) => {
 
-        comments.reverse().forEach(([key, c]) => {
+                return (
+                    c &&
+                    typeof c === "object" &&
+                    c.name &&
+                    c.comment
+                );
 
-            if (!c || typeof c !== "object") return;
+            })
+            .sort((a, b) => {
 
-            const name = c.name ?? "";
-            const comment = c.comment ?? "";
+                return (b[1].time || 0) - (a[1].time || 0);
 
-            if (!name || !comment) return;
+            });
+
+        // Gerçekten hiç yorum yoksa temizle
+        if (comments.length === 0) {
+            box.innerHTML = "";
+            return;
+        }
+
+        // Önce yorumları oluştur
+        const fragment = document.createDocumentFragment();
+
+        comments.forEach(([key, c]) => {
 
             const div = document.createElement("div");
             div.className = "comment";
 
             const nameElement = document.createElement("b");
-            nameElement.textContent = name;
+            nameElement.textContent = c.name;
 
             const textElement = document.createElement("span");
-            textElement.textContent = comment;
+            textElement.textContent = c.comment;
 
             div.appendChild(nameElement);
             div.appendChild(document.createElement("br"));
             div.appendChild(textElement);
 
-            box.appendChild(div);
+            fragment.appendChild(div);
 
         });
+
+        // Her şey hazır olduktan sonra ekrana aktar
+        box.innerHTML = "";
+        box.appendChild(fragment);
 
     } catch (error) {
 
         console.error("Yorumlar yüklenemedi:", error);
 
+        // HATA DURUMUNDA YORUMLARI SİLMİYORUZ
+
+    } finally {
+
+        commentsLoading = false;
+
     }
 }
 
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
     loadComments();
 });
 
