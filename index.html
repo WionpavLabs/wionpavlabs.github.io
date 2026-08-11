@@ -1560,107 +1560,81 @@ let commentsLoading = false;
 
 let commentsLoading = false;
 
-async function loadComments(force = false, attempt = 0) {
+async function loadComponent(id, file){
 
-    const box = document.getElementById("comments");
+    const element = document.getElementById(id);
 
-    if (!box) return;
-
-    if (commentsLoading && !force) return;
-
-    commentsLoading = true;
+    if(!element) return;
 
     try {
 
-        const response = await fetch(FIREBASE_URL, {
-            method: "GET",
-            cache: "no-store",
-            headers: {
-                "Accept": "application/json"
+        const response = await fetch(file);
+
+        if(!response.ok){
+            throw new Error(`Component yüklenemedi: ${file}`);
+        }
+
+        const html = await response.text();
+
+        element.innerHTML = html;
+
+
+        /* ==========================
+           COMPONENT SONRASI İŞLEMLER
+        ========================== */
+
+        if(id === "menu-container"){
+
+            const menu = document.getElementById("navMenu");
+            const toggle = document.getElementById("menuToggle");
+
+            if(menu){
+
+                const state = sessionStorage.getItem("menuState");
+                const navigating = sessionStorage.getItem("navigating");
+
+                if(navigating === "true"){
+
+                    menu.classList.remove("active");
+                    toggle?.classList.remove("active");
+
+                    sessionStorage.removeItem("navigating");
+
+                }
+                else if(state === "open"){
+
+                    menu.classList.add("active");
+                    toggle?.classList.add("active");
+
+                }
+                else{
+
+                    menu.classList.remove("active");
+                    toggle?.classList.remove("active");
+
+                }
+
             }
-        });
 
-        if (!response.ok) {
-            throw new Error("Firebase HTTP " + response.status);
         }
 
-        const data = await response.json();
 
-        console.log("Firebase yorum verisi:", data);
+        /* YORUM COMPONENT'İ BURADA BAŞLATILACAK */
+        if(id === "comments-container"){
 
-        if (data === null) {
-
-            if (attempt < 5) {
-                setTimeout(() => {
-                    loadComments(true, attempt + 1);
-                }, 500 * (attempt + 1));
+            if(typeof initComments === "function"){
+                initComments();
             }
 
-            return;
         }
 
-        if (typeof data !== "object") {
-            throw new Error("Firebase geçersiz veri döndürdü.");
-        }
 
-        const comments = Object.entries(data)
-            .filter(([key, c]) => {
-                return (
-                    c &&
-                    typeof c === "object" &&
-                    typeof c.name === "string" &&
-                    typeof c.comment === "string"
-                );
-            })
-            .sort((a, b) => {
-                return Number(b[1].time || 0) -
-                       Number(a[1].time || 0);
-            });
+    } catch(error){
 
-        if (comments.length === 0) {
-            box.innerHTML = "";
-            return;
-        }
-
-        const fragment = document.createDocumentFragment();
-
-        comments.forEach(([key, c]) => {
-
-            const div = document.createElement("div");
-            div.className = "comment";
-
-            const nameElement = document.createElement("b");
-            nameElement.textContent = c.name;
-
-            const textElement = document.createElement("span");
-            textElement.textContent = c.comment;
-
-            div.appendChild(nameElement);
-            div.appendChild(document.createElement("br"));
-            div.appendChild(textElement);
-
-            fragment.appendChild(div);
-        });
-
-        box.replaceChildren(fragment);
-
-    } catch (error) {
-
-        console.error("Yorumlar yüklenemedi:", error);
-
-        if (attempt < 5) {
-
-            setTimeout(() => {
-                loadComments(true, attempt + 1);
-            }, 500 * (attempt + 1));
-
-        }
-
-    } finally {
-
-        commentsLoading = false;
+        console.error(error);
 
     }
+
 }
 
 
