@@ -1579,7 +1579,7 @@ async function loadComments() {
 
         const data = await response.json();
 
-        console.log("Firebase yorumları:", data);
+        console.log("FIREBASE'DEN GELEN VERİ:", data);
 
         commentsContainer.innerHTML = "";
 
@@ -1589,9 +1589,11 @@ async function loadComments() {
             return;
         }
 
-       const comments = Object.values(data)
-    .filter(item => item && (item.name || item.comment))
-    .sort((a, b) => (b.time || 0) - (a.time || 0));
+        const comments = Object.values(data)
+            .filter(item => item && (item.name || item.comment))
+            .sort((a, b) => (b.time || 0) - (a.time || 0));
+
+        console.log("GÖSTERİLECEK YORUMLAR:", comments);
 
         if (comments.length === 0) {
             commentsContainer.innerHTML =
@@ -1619,7 +1621,7 @@ async function loadComments() {
 
     } catch (error) {
 
-        console.error("Yorumlar yüklenemedi:", error);
+        console.error("YORUMLAR YÜKLENEMEDİ:", error);
 
         commentsContainer.innerHTML =
             "<p>Yorumlar yüklenirken bir hata oluştu.</p>";
