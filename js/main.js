@@ -584,3 +584,24 @@ function toggleLanguage(article){
     // Dil butonu
 document.getElementById(article + "-lang").textContent = lang.flag;
 }
+
+
+
+const languages = {
+    insights1: {
+        current: "EN",
+
+        EN: {
+            title: "📄 1. The Relationship Between Short Video-Based Social Media Use, Dopamine Signaling, and Depressive Symptoms Read PDF",
+            download: "⬇️ 1. The Relationship Between Short Video-Based Social Media Use, Dopamine Signaling, and Depressive Symptoms Download PDF",
+            file: "yazilar/The Relationship Between Short Video-Based Social Media Use, Dopamine Signaling, and Depressive Symptoms.pdf",
+            flag: "🇬🇧"
+        },
+
+        TR: {
+            title: "📄 1. Kısa Video Tabanlı Sosyal Medya Kullanımı, Dopamin Sinyallemesi ve Depresif Belirtiler Arasındaki İlişki PDF Oku",
+            download: "⬇️ 1. Kısa Video Tabanlı Sosyal Medya Kullanımı, Dopamin Sinyallemesi ve Depresif Belirtiler Arasındaki İlişki PDF İndir",
+            file: "yazilar/Kısa Video Tabanlı Sosyal Medya Kullanımı, Dopamin Sinyallemesi ve Depresif Belirtiler Arasındaki İlişki.pdf",
+            flag: "🇹🇷"
+        }
+    }
