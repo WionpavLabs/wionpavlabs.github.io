@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="tr">
@@ -197,7 +196,7 @@ color:#94a3b8;
 
 </head>
 
-<body>
+<body class="no-interaction-global">
 <div class="science-background">
     <div class="dna-line dna-right"></div>
     <div class="dna-line dna-left"></div>
@@ -214,26 +213,41 @@ color:#94a3b8;
 </div>
 
 <!-- 🔥 PREMIUM MENU BUTONU -->
-<div class="menu-toggle" onclick="toggleMenu()">
-
-    <span class="hamburger-icon">
-        <i></i>
-        <i></i>
-        <i></i>
-    </span>
-
-</div>
+  <button id="menuToggle" class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
 
 <nav id="navMenu">
+    <!-- THEME SWITCHER -->
+<div class="drawer-topbar">
+
+    <button
+        id="themeToggle"
+        class="theme-toggle"
+        type="button"
+        aria-label="Tema değiştir"
+        aria-pressed="false"
+    >
+        <span class="theme-toggle-icon">☀</span>
+
+        <span class="theme-toggle-text">
+            Light Theme
+        </span>
+    </button>
+
+</div>
     <button class="menu-close" onclick="closeMenu()">✕</button>
-   <a href="index.html">Ana Sayfa</a>
+  <a href="index.html">Ana Sayfa</a>
 <a href="hakkımızda.html">Hakkımızda</a>
 <a href="kurucu.html">Kurucu</a>
 <a href="insights.html">Insights</a>
 <a href="projeler.html">Projeler</a>
 <a href="yayinlar.html">Yayınlar</a>
-<a href="#iletisim">İletişim</a>
+<a href="katil.html" class="active">Araştırma Ekibine Katıl</a>
+<a href="index.html#iletisim">İletişim</a>
     <a href="login.html" class="admin-link">🔐 Yönetici Girişi</a>
 </nav>
     <div id="menuOverlay" class="menu-overlay" onclick="closeMenu()"></div>
@@ -242,41 +256,69 @@ color:#94a3b8;
 
 <section>
 
-<h2>
-Insights
-</h2>
-
 <!-- 1. Insights (BİREBİR) -->
+
+
 
 <div class="paper-item">
 
+
+
     <div class="paper-header">
 
+
+
         <a id="insights1-title"
+
            href="insights/Bipolar Disorder.pdf"
+
            target="_blank">
+
+
 
             📄 1. Bipolar Disorder Read PDF
 
+
+
         </a>
 
+
+
        <button id="insights1-lang"
+
         class="lang-switch"
+
         onclick="toggleLanguage('insights1')">
 
+
+
 🇬🇧
+
+
 
 </button>
 
 
+
+
+
     <a id="insights1-download"
+
        class="download-btn"
+
        href="insights/Bipolar Disorder.pdf"
+
        download>
+
+
 
         ⬇️ 1. Bipolar Disorder Download PDF
 
+
+
     </a>
+
+
 
 </div>
 </section>
@@ -284,8 +326,10 @@ Insights
 </main>
 
 <footer>
-© 2026 Wionpav Labs Founded by Ali Bocakkıtay
+© 2026 Wionpav Labs | Medical Research & Knowledge Platform | Content licensed under CC BY-NC 4.0
 </footer>
+
+
 
 <script src="js/main.js"></script>
 
