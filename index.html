@@ -1504,17 +1504,13 @@ if (!userId) {
 }
 
 ```js
-// ========================================
-// YORUM GÖNDER
-// ========================================
 
+```js
+// yorum gönder
 async function sendComment(){
 
-    const nameInput = document.getElementById("name");
-    const commentInput = document.getElementById("comment");
-
-    const name = nameInput.value.trim();
-    const comment = commentInput.value.trim();
+    const name = document.getElementById("name").value.trim();
+    const comment = document.getElementById("comment").value.trim();
 
     if(!name || !comment) return;
 
@@ -1533,11 +1529,11 @@ async function sendComment(){
         });
 
         if(!response.ok){
-            throw new Error("Yorum gönderilemedi.");
+            throw new Error("Yorum gönderilemedi");
         }
 
-        nameInput.value = "";
-        commentInput.value = "";
+        document.getElementById("name").value = "";
+        document.getElementById("comment").value = "";
 
         await loadComments();
 
@@ -1549,13 +1545,8 @@ async function sendComment(){
 }
 
 
-// ========================================
-// YORUMLARI YÜKLE
-// ========================================
-
+// yorumları yükle
 async function loadComments(){
-
-    const ADMIN = false;
 
     const box = document.getElementById("comments");
 
@@ -1563,127 +1554,61 @@ async function loadComments(){
 
     try {
 
-        const res = await fetch(
-            FIREBASE_URL + "?cache=" + Date.now()
-        );
+        const response = await fetch(FIREBASE_URL);
 
-        if(!res.ok){
-            throw new Error("Yorumlar alınamadı.");
+        if(!response.ok){
+            throw new Error("Firebase bağlantısı başarısız");
         }
 
-        const data = await res.json();
+        const data = await response.json();
 
+        console.log("Firebase yorumları:", data);
 
-        // Firebase'de hiç yorum yoksa
-        if(!data || typeof data !== "object"){
-            box.innerHTML = "";
-            return;
-        }
-
-
-        // Önce yorumları hazırlıyoruz
         const fragment = document.createDocumentFragment();
 
-        const entries = Object.entries(data);
+        if(data && typeof data === "object"){
 
-        // En yeni yorum üstte
-        entries.reverse();
+            Object.entries(data)
+                .reverse()
+                .forEach(([key, c]) => {
 
+                    if(!c || !c.name || !c.comment) return;
 
-        for(const [key, c] of entries){
+                    const div = document.createElement("div");
 
-            // Bozuk kayıt varsa atla
-            if(!c || typeof c !== "object"){
-                console.warn("Bozuk yorum kaydı:", key);
-                continue;
-            }
+                    div.className = "comment";
 
-            const name = String(c.name ?? "").trim();
-            const commentText = String(c.comment ?? "").trim();
+                    const name = document.createElement("b");
+                    name.textContent = c.name;
 
+                    const text = document.createElement("span");
+                    text.textContent = c.comment;
 
-            // İsim veya yorum boşsa atla
-            if(!name || !commentText){
-                console.warn("Eksik yorum kaydı:", key);
-                continue;
-            }
+                    div.appendChild(name);
+                    div.appendChild(document.createElement("br"));
+                    div.appendChild(text);
 
+                    fragment.appendChild(div);
 
-            const div = document.createElement("div");
-
-            div.className = "comment";
-
-
-            const nameElement = document.createElement("b");
-
-            nameElement.textContent = name;
-
-
-            const textElement = document.createElement("span");
-
-            textElement.textContent = commentText;
-
-
-            div.appendChild(nameElement);
-
-            div.appendChild(
-                document.createElement("br")
-            );
-
-            div.appendChild(textElement);
-
-
-            if(ADMIN){
-
-                const deleteButton = document.createElement("button");
-
-                deleteButton.textContent = "Sil";
-
-                deleteButton.onclick = () => {
-                    deleteComment(key);
-                };
-
-                div.appendChild(
-                    document.createElement("br")
-                );
-
-                div.appendChild(deleteButton);
-
-            }
-
-
-            fragment.appendChild(div);
+                });
 
         }
 
-
-        /*
-         * Bütün yorumlar hazır olduktan sonra
-         * tek seferde ekrana aktarılıyor.
-         */
         box.replaceChildren(fragment);
-
 
     } catch(error) {
 
-        console.error(
-            "Yorum yükleme hatası:",
-            error
-        );
-
-        /*
-         * Hata olursa mevcut yorumları
-         * silmiyoruz.
-         */
+        console.error("Yorumlar yüklenemedi:", error);
 
     }
-
 }
-```
 
-document.addEventListener("DOMContentLoaded", () => {
+
+document.addEventListener("DOMContentLoaded", function(){
     loadComments();
 });
+```
+
 
 // silme (SADECE SENİN LINKLE)
 function deleteComment(key){
