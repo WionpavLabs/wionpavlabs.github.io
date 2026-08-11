@@ -1558,7 +1558,7 @@ async function sendComment() {
 // YORUMLARI YÜKLE
 let commentsLoading = false;
 
-async function loadComments() {
+async function loadComments(force = false) {
 
     const box = document.getElementById("comments");
 
