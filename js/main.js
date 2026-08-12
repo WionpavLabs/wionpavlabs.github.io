@@ -597,6 +597,24 @@ article4: {
             file: "insights/Şizofreni.pdf",
             flag: "🇹🇷"
         }
+    },
+
+   insights3: {
+        current: "EN",
+
+        EN: {
+            title: "📄 3. Capgras Syndrome Read PDF",
+            download: "⬇️ 3. Capgras Syndrome Download PDF",
+            file: "insights/Capgras Syndrome.pdf",
+            flag: "🇬🇧"
+        },
+
+        TR: {
+            title: "📄 3. Capgras Sendromu PDF Oku",
+            download: "⬇️ 3. Capgras Sendromu PDF İndir",
+            file: "insights/Capgras Sendromu.pdf",
+            flag: "🇹🇷"
+        }
     }
 };
 
