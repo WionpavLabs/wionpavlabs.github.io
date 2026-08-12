@@ -579,6 +579,24 @@ article4: {
             file: "insights/Bipolar Bozukluk.pdf",
             flag: "🇹🇷"
         }
+    },
+
+      insights2: {
+        current: "EN",
+
+        EN: {
+            title: "📄 2. Schizophrenia Read PDF",
+            download: "⬇️ 2. Schizophrenia Download PDF",
+            file: "insights/Schizophrenia.pdf",
+            flag: "🇬🇧"
+        },
+
+        TR: {
+            title: "📄 2. Şizofreni PDF Oku",
+            download: "⬇️ 2. Şizofreni PDF İndir",
+            file: "insights/Şizofreni.pdf",
+            flag: "🇹🇷"
+        }
     }
 };
 
