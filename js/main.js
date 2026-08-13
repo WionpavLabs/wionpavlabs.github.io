@@ -615,6 +615,25 @@ article4: {
             file: "insights/Capgras Sendromu.pdf",
             flag: "🇹🇷"
         }
+    },
+
+
+    insights4: {
+        current: "EN",
+
+        EN: {
+            title: "📄 4. Cotard Syndrome Read PDF",
+            download: "⬇️ 4. Cotard Syndrome Download PDF",
+            file: "insights/Cotard Syndrome.pdf",
+            flag: "🇬🇧"
+        },
+
+        TR: {
+            title: "📄 4. Cotard Sendromu PDF Oku",
+            download: "⬇️ 4. Cotard Sendromu PDF İndir",
+            file: "insights/Cotard Sendromu.pdf",
+            flag: "🇹🇷"
+        }
     }
 };
 
