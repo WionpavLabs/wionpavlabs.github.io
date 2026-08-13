@@ -634,6 +634,25 @@ article4: {
             file: "insights/Cotard Sendromu.pdf",
             flag: "🇹🇷"
         }
+    },
+
+
+      insights5: {
+        current: "EN",
+
+        EN: {
+            title: "📄 5. Anxiety Disorders Read PDF",
+            download: "⬇️ 5. Anxiety Disorders Download PDF",
+            file: "insights/Anxiety Disorders.pdf",
+            flag: "🇬🇧"
+        },
+
+        TR: {
+            title: "📄 5. Kaygı Bozuklukları PDF Oku",
+            download: "⬇️ 5. Kaygı Bozuklukları PDF İndir",
+            file: "insights/Kaygı Bozuklukları.pdf",
+            flag: "🇹🇷"
+        }
     }
 };
 
