@@ -653,6 +653,26 @@ article4: {
             file: "insights/Kaygı Bozuklukları.pdf",
             flag: "🇹🇷"
         }
+    },
+
+
+
+     insights6: {
+        current: "EN",
+
+        EN: {
+            title: "📄 6. Dissociative Disorders Read PDF",
+            download: "⬇️ 6. Dissociative Disorders Download PDF",
+            file: "insights/Dissociative Disorders.pdf",
+            flag: "🇬🇧"
+        },
+
+        TR: {
+            title: "📄 6. Dissosiyatif Bozukluklar PDF Oku",
+            download: "⬇️ 6. Dissosiyatif Bozukluklar PDF İndir",
+            file: "insights/Dissosiyatif Bozukluklar.pdf",
+            flag: "🇹🇷"
+        }
     }
 };
 
