@@ -673,7 +673,26 @@ article4: {
             file: "insights/Dissosiyatif Bozukluklar.pdf",
             flag: "🇹🇷"
         }
+    },
+
+insights7: {
+        current: "EN",
+
+        EN: {
+            title: "📄 7. Depression (Depressive Disorder) Read PDF",
+            download: "⬇️ 7. Depression (Depressive Disorder) Download PDF",
+            file: "insights/Depression (Depressive Disorder).pdf",
+            flag: "🇬🇧"
+        },
+
+        TR: {
+            title: "📄 7. Depresyon (Depresif Bozukluk) PDF Oku",
+            download: "⬇️ 7. Depresyon (Depresif Bozukluk) PDF İndir",
+            file: "insights/Depresyon (Depresif Bozukluk).pdf",
+            flag: "🇹🇷"
+        }
     }
+   
 };
 
 function toggleLanguage(article){
