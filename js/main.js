@@ -691,6 +691,25 @@ insights7: {
             file: "insights/Depresyon (Depresif Bozukluk).pdf",
             flag: "🇹🇷"
         }
+    },
+
+
+   insights8: {
+        current: "EN",
+
+        EN: {
+            title: "📄 8. Fregoli Syndrome Read PDF",
+            download: "⬇️ 8. Fregoli Syndrome Download PDF",
+            file: "insights/Fregoli Syndrome.pdf",
+            flag: "🇬🇧"
+        },
+
+        TR: {
+            title: "📄 8. Fregoli Sendromu PDF Oku",
+            download: "⬇️ 8. Fregoli Sendromu PDF İndir",
+            file: "insights/Fregoli Sendromu.pdf",
+            flag: "🇹🇷"
+        }
     }
    
 };
