@@ -710,6 +710,25 @@ insights7: {
             file: "insights/Fregoli Sendromu.pdf",
             flag: "🇹🇷"
         }
+    },
+
+
+    insights9: {
+        current: "EN",
+
+        EN: {
+            title: "📄 9. Obsessive-Compulsive Disorder (OCD) Read PDF",
+            download: "⬇️ 9. Obsessive-Compulsive Disorder (OCD) Download PDF",
+            file: "insights/Obsessive-Compulsive Disorder (OCD).pdf",
+            flag: "🇬🇧"
+        },
+
+        TR: {
+            title: "📄 9. Obsesif-Kompulsif Bozukluk (OKB) PDF Oku",
+            download: "⬇️ 9. Obsesif-Kompulsif Bozukluk (OKB) PDF İndir",
+            file: "insights/Obsesif-Kompulsif Bozukluk (OKB).pdf",
+            flag: "🇹🇷"
+        }
     }
    
 };
@@ -734,4 +753,3 @@ function toggleLanguage(article){
     // Dil butonu
 document.getElementById(article + "-lang").textContent = lang.flag;
 }
-
