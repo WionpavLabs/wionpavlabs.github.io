@@ -760,14 +760,55 @@ document.getElementById(article + "-lang").textContent = lang.flag;
 
 const siteTranslations = {
 
+   /* =========================================================
+   WIONPAV LABS — GLOBAL SITE TRANSLATIONS
+========================================================= */
+
+const siteTranslations = {
+
     EN: {
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        "nav.home":
+            "Home",
+
+        "nav.about":
+            "About",
+
+        "nav.founder":
+            "Founder",
+
+        "nav.research":
+            "Research",
+
+        "nav.projects":
+            "Projects",
+
+        "nav.publications":
+            "Publications",
+
+        "nav.join":
+            "Join the Research Team",
+
+        "nav.contact":
+            "Contact",
+
+        "nav.admin":
+            "🔐 Admin Login",
+
+
+        /* =========================
+           RESEARCH
+        ========================= */
 
         "research.heading":
             "Wionpav Labs",
 
         "research.subtitle":
             "Explore our research areas and scientific studies",
-
 
         "lab.mental.title":
             "Mental Health & Psychiatry Lab",
@@ -783,12 +824,47 @@ const siteTranslations = {
 
     TR: {
 
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        "nav.home":
+            "Ana Sayfa",
+
+        "nav.about":
+            "Hakkımızda",
+
+        "nav.founder":
+            "Kurucu",
+
+        "nav.research":
+            "Research",
+
+        "nav.projects":
+            "Projeler",
+
+        "nav.publications":
+            "Yayınlar",
+
+        "nav.join":
+            "Araştırma Ekibine Katıl",
+
+        "nav.contact":
+            "İletişim",
+
+        "nav.admin":
+            "🔐 Yönetici Girişi",
+
+
+        /* =========================
+           RESEARCH
+        ========================= */
+
         "research.heading":
             "Wionpav Labs",
 
         "research.subtitle":
             "Araştırma alanlarımızı ve bilimsel çalışmalarımızı keşfedin",
-
 
         "lab.mental.title":
             "Ruh Sağlığı ve Psikiyatri Laboratuvarı",
