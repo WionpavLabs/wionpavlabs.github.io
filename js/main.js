@@ -809,154 +809,143 @@ const siteTranslations = {
    Türkçe / English
 ========================================================= */
 
-(function () {
-
-    const LANGUAGE_KEY = "wionpav-language";
+const LANGUAGE_KEY = "wionpav-language";
 
 
-    /* -----------------------------------------------------
-       KAYITLI DİLİ AL
-    ----------------------------------------------------- */
+/* ---------------------------------------------------------
+   KAYITLI DİLİ AL
+--------------------------------------------------------- */
 
-    function getSavedLanguage() {
+function getSavedLanguage() {
 
-        return localStorage.getItem(LANGUAGE_KEY) || "EN";
+    return localStorage.getItem(LANGUAGE_KEY) || "EN";
+
+}
+
+
+/* ---------------------------------------------------------
+   DİL BUTONUNU GÜNCELLE
+--------------------------------------------------------- */
+
+function updateLanguageButton(language) {
+
+    const button =
+        document.getElementById("languageToggle");
+
+    if (!button) return;
+
+
+    const text =
+        button.querySelector(".language-toggle-text");
+
+
+    if (text) {
+
+        text.textContent =
+            language === "TR"
+                ? "EN"
+                : "TR";
 
     }
 
 
-    /* -----------------------------------------------------
-       DİL BUTONUNU GÜNCELLE
-    ----------------------------------------------------- */
+    button.setAttribute(
+        "aria-label",
+        language === "TR"
+            ? "Switch to English"
+            : "Türkçeye geç"
+    );
 
-    function updateLanguageButton(language) {
+}
+
+
+/* ---------------------------------------------------------
+   DİLİ UYGULA
+--------------------------------------------------------- */
+
+function applyLanguage(language) {
+
+    document.documentElement.lang =
+        language === "TR"
+            ? "tr"
+            : "en";
+
+
+    updateLanguageButton(language);
+
+
+    document.querySelectorAll("[data-i18n]").forEach(
+        function (element) {
+
+            const key =
+                element.getAttribute("data-i18n");
+
+
+            if (
+                typeof siteTranslations !== "undefined" &&
+                siteTranslations[language] &&
+                siteTranslations[language][key]
+            ) {
+
+                element.textContent =
+                    siteTranslations[language][key];
+
+            }
+
+        }
+    );
+
+}
+
+
+/* ---------------------------------------------------------
+   SAYFA AÇILDIĞINDA DİLİ UYGULA
+--------------------------------------------------------- */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        applyLanguage(
+            getSavedLanguage()
+        );
+
+    }
+);
+
+
+/* ---------------------------------------------------------
+   DİL BUTONU
+--------------------------------------------------------- */
+
+document.addEventListener(
+    "click",
+    function (event) {
 
         const button =
-            document.getElementById("languageToggle");
+            event.target.closest("#languageToggle");
+
 
         if (!button) return;
 
 
-        const text =
-            button.querySelector(".language-toggle-text");
+        const currentLanguage =
+            getSavedLanguage();
 
 
-        if (text) {
-
-            text.textContent =
-                language === "TR" ? "EN" : "TR";
-
-        }
+        const newLanguage =
+            currentLanguage === "TR"
+                ? "EN"
+                : "TR";
 
 
-        button.setAttribute(
-            "aria-label",
-            language === "TR"
-                ? "Switch to English"
-                : "Türkçeye geç"
+        localStorage.setItem(
+            LANGUAGE_KEY,
+            newLanguage
         );
 
-    }
 
-
-    /* -----------------------------------------------------
-       DİLİ UYGULA
-    ----------------------------------------------------- */
-
-    function applyLanguage(language) {
-
-        document.documentElement.lang =
-            language === "TR" ? "tr" : "en";
-
-
-        updateLanguageButton(language);
-
-
-        /*
-         * data-i18n sistemi daha sonra burada çalışacak.
-         *
-         * Örneğin:
-         *
-         * <h1 data-i18n="research.title"></h1>
-         *
-         * Böylece bütün siteyi buradan çevireceğiz.
-         */
-
-
-        document.querySelectorAll("[data-i18n]").forEach(
-            function (element) {
-
-                const key =
-                    element.getAttribute("data-i18n");
-
-                if (
-                    typeof siteTranslations !== "undefined" &&
-                    siteTranslations[language] &&
-                    siteTranslations[language][key]
-                ) {
-
-                    element.textContent =
-                        siteTranslations[language][key];
-
-                }
-
-            }
-        );
+        applyLanguage(newLanguage);
 
     }
-
-
-    /* -----------------------------------------------------
-       SAYFA AÇILDIĞINDA KAYITLI DİLİ UYGULA
-    ----------------------------------------------------- */
-
-    document.addEventListener(
-        "DOMContentLoaded",
-        function () {
-
-            const savedLanguage =
-                getSavedLanguage();
-
-            applyLanguage(savedLanguage);
-
-        }
-    );
-
-
-    /* -----------------------------------------------------
-       DİL BUTONU
-    ----------------------------------------------------- */
-
-    document.addEventListener(
-        "click",
-        function (event) {
-
-            const button =
-                event.target.closest("#languageToggle");
-
-            if (!button) return;
-
-
-            const currentLanguage =
-                getSavedLanguage();
-
-
-            const newLanguage =
-                currentLanguage === "TR"
-                    ? "EN"
-                    : "TR";
-
-
-            localStorage.setItem(
-                LANGUAGE_KEY,
-                newLanguage
-            );
-
-
-            applyLanguage(newLanguage);
-
-        }
-    );
-
-
-})();
+);
