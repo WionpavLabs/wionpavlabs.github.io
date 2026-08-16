@@ -119,14 +119,16 @@
 
         <section class="join-section">
 
-            <h2>Araştırma Ekibine Katıl</h2>
+           <h2 data-i18n="join.title">
+    Araştırma Ekibine Katıl
+</h2>
 
-            <p>
-                Wionpav Labs, tıp ve sağlık bilimleri alanında
-                bilimsel araştırma ve bilgi üretimini desteklemektedir.
-                Araştırmalarımıza katkı sağlamak veya kendi çalışma
-                fikrinizle başvurmak için aşağıdaki formu doldurabilirsiniz.
-            </p>
+<p data-i18n="join.description">
+    Wionpav Labs, tıp ve sağlık bilimleri alanında
+    bilimsel araştırma ve bilgi üretimini desteklemektedir.
+    Araştırmalarımıza katkı sağlamak veya kendi çalışma
+    fikrinizle başvurmak için aşağıdaki formu doldurabilirsiniz.
+</p>
 
 
             <form id="researchForm">
@@ -136,18 +138,18 @@
 
                 <div class="form-group">
 
-                    <label for="fullName">
-                        Ad Soyad
-                    </label>
+                   <label for="fullName" data-i18n="join.fullName">
+    Ad Soyad
+</label>
 
-                    <input
-                        type="text"
-                        id="fullName"
-                        name="fullName"
-                        placeholder="Ad Soyad"
-                        required
-                    >
-
+<input
+    type="text"
+    id="fullName"
+    name="fullName"
+    data-i18n-placeholder="join.fullNamePlaceholder"
+    placeholder="Ad Soyad"
+    required
+>
                 </div>
 
 
@@ -155,17 +157,18 @@
 
                 <div class="form-group">
 
-                    <label for="field">
-                        Bölüm / Alan
-                    </label>
+                 <label for="field" data-i18n="join.field">
+    Bölüm / Alan
+</label>
 
-                    <input
-                        type="text"
-                        id="field"
-                        name="field"
-                        placeholder="Örn. Tıp, Diş Hekimliği, Eczacılık..."
-                        required
-                    >
+<input
+    type="text"
+    id="field"
+    name="field"
+    data-i18n-placeholder="join.fieldPlaceholder"
+    placeholder="Örn. Tıp, Diş Hekimliği, Eczacılık..."
+    required
+>
 
                 </div>
 
@@ -174,51 +177,53 @@
 
                 <div class="form-group">
 
-                    <label>
-                        İlgi Duyduğunuz Araştırma Alanları
-                    </label>
+                    <label data-i18n="join.researchAreas">
+    İlgi Duyduğunuz Araştırma Alanları
+</label>
 
 
                     <div class="checkbox-grid">
 
                         <label class="checkbox-item">
                             <input type="checkbox" name="researchArea" value="Nörobilim">
-                            <span>Nörobilim</span>
+                            <span data-i18n="join.neuroscience">Nörobilim</span>
                         </label>
 
                         <label class="checkbox-item">
                             <input type="checkbox" name="researchArea" value="Uyku ve Uyku Sağlığı">
-                            <span>Uyku ve Uyku Sağlığı</span>
+                          <span data-i18n="join.sleep">Uyku ve Uyku Sağlığı</span>
                         </label>
 
                         <label class="checkbox-item">
                             <input type="checkbox" name="researchArea" value="Klinik Araştırmalar">
-                            <span>Klinik Araştırmalar</span>
+                           <span data-i18n="join.clinical">Klinik Araştırmalar</span>
                         </label>
 
                         <label class="checkbox-item">
                             <input type="checkbox" name="researchArea" value="Biyomedikal Araştırmalar">
-                            <span>Biyomedikal Araştırmalar</span>
+                           <span data-i18n="join.biomedical">Biyomedikal Araştırmalar</span>
                         </label>
 
                         <label class="checkbox-item">
                             <input type="checkbox" name="researchArea" value="Yapay Zekâ ve Tıp">
-                            <span>Yapay Zekâ ve Tıp</span>
+                            <span data-i18n="join.aiMedicine">Yapay Zekâ ve Tıp</span>
                         </label>
 
                         <label class="checkbox-item">
                             <input type="checkbox" name="researchArea" value="Epidemiyoloji ve Halk Sağlığı">
-                            <span>Epidemiyoloji ve Halk Sağlığı</span>
+                            <span data-i18n="join.epidemiology">Epidemiyoloji ve Halk Sağlığı</span>
                         </label>
 
                         <label class="checkbox-item">
                             <input type="checkbox" name="researchArea" value="Sistematik Derleme / Literatür Araştırmaları">
-                            <span>Sistematik Derleme / Literatür Araştırmaları</span>
+                          <span data-i18n="join.systematicReview">
+    Sistematik Derleme / Literatür Araştırmaları
+</span>
                         </label>
 
                         <label class="checkbox-item">
                             <input type="checkbox" name="researchArea" value="Diğer">
-                            <span>Diğer</span>
+                           <span data-i18n="join.other">Diğer</span>
                         </label>
 
                     </div>
@@ -230,9 +235,9 @@
 
                 <div class="form-group">
 
-                    <label>
-                        Nasıl Katılmak İstiyorsunuz?
-                    </label>
+                   <label data-i18n="join.applicationType">
+    Nasıl Katılmak İstiyorsunuz?
+</label>
 
 
                     <div class="radio-group">
@@ -246,9 +251,9 @@
                                 required
                             >
 
-                            <span>
-                                Wionpav Labs araştırmalarına katkı sağlamak istiyorum
-                            </span>
+                            <span data-i18n="join.contribute">
+    Wionpav Labs araştırmalarına katkı sağlamak istiyorum
+</span>
 
                         </label>
 
@@ -261,9 +266,9 @@
                                 value="Kendi araştırma / çalışma fikrimle başvuruyorum"
                             >
 
-                            <span>
-                                Kendi araştırma / çalışma fikrimle başvuruyorum
-                            </span>
+                            <span data-i18n="join.ownResearch">
+    Kendi araştırma / çalışma fikrimle başvuruyorum
+</span>
 
                         </label>
 
@@ -276,9 +281,9 @@
                                 value="Her ikisiyle de ilgileniyorum"
                             >
 
-                            <span>
-                                Her ikisiyle de ilgileniyorum
-                            </span>
+                            <span data-i18n="join.both">
+    Her ikisiyle de ilgileniyorum
+</span>
 
                         </label>
 
@@ -291,18 +296,18 @@
 
                 <div class="form-group">
 
-                    <label for="researchIdea">
-                        Çalışma / Araştırma Öneriniz
-                    </label>
+                    <label for="researchIdea" data-i18n="join.researchIdea">
+    Çalışma / Araştırma Öneriniz
+</label>
 
-                    <textarea
-                        id="researchIdea"
-                        name="researchIdea"
-                        rows="7"
-                        placeholder="Gerçekleştirmek istediğiniz araştırma veya çalışma fikrinizi kısaca açıklayınız..."
-                        required
-                    ></textarea>
-
+<textarea
+    id="researchIdea"
+    name="researchIdea"
+    rows="7"
+    data-i18n-placeholder="join.researchIdeaPlaceholder"
+    placeholder="Gerçekleştirmek istediğiniz araştırma veya çalışma fikrinizi kısaca açıklayınız..."
+    required
+></textarea>
                 </div>
 
 
@@ -310,14 +315,15 @@
 
                 <div class="form-group">
 
-                    <label for="email">
-                        E-posta
-                    </label>
+                   <label for="email" data-i18n="join.email">
+    E-posta
+</label>
 
-                   <input
+<input
     type="email"
     id="email"
     name="email"
+    data-i18n-placeholder="join.emailPlaceholder"
     placeholder="ornek@email.com"
     required
 >
@@ -327,18 +333,17 @@
 
                 <div class="form-group">
 
-                    <label for="phone">
-                        Telefon
-                        <span>(İsteğe bağlı)</span>
-                    </label>
+                   <label for="phone">
+    <span data-i18n="join.phone">Telefon</span>
+    <span data-i18n="join.optional">(İsteğe bağlı)</span>
+</label>
 
-                    <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        placeholder="+90 5XX XXX XX XX"
-                    >
-
+<input
+    type="tel"
+    id="phone"
+    name="phone"
+    placeholder="+90 5XX XXX XX XX"
+>
                 </div>
 
 
@@ -354,10 +359,10 @@
                             required
                         >
 
-                        <span>
-                            Başvurumun değerlendirilmesini ve uygun bulunması
-                            halinde benimle iletişime geçilmesini kabul ediyorum.
-                        </span>
+                       <span data-i18n="join.consent">
+    Başvurumun değerlendirilmesini ve uygun bulunması
+    halinde benimle iletişime geçilmesini kabul ediyorum.
+</span>
 
                     </label>
 
