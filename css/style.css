@@ -7957,3 +7957,53 @@ body.light-theme .research-section .download-btn {
     color: #18252d !important;
     font-weight: 600 !important;
 }
+
+
+/* =========================================================
+   WIONPAV LAB ICONS — CUSTOM SVG
+   ========================================================= */
+
+.lab-icon-svg {
+    color: #67d3ff;
+}
+
+.lab-icon-svg svg {
+    width: 34px;
+    height: 34px;
+
+    display: block;
+
+    fill: none;
+    stroke: currentColor;
+
+    stroke-width: 2.3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    transition:
+        transform .28s ease,
+        filter .28s ease;
+}
+
+.lab-card:hover .lab-icon-svg svg {
+    transform: scale(1.06);
+
+    filter:
+        drop-shadow(
+            0 0 5px rgba(56,189,248,.28)
+        );
+}
+
+
+/* Light Theme */
+
+body.light-theme .lab-icon-svg {
+    color: #087c9f;
+}
+
+body.light-theme .lab-card:hover .lab-icon-svg svg {
+    filter:
+        drop-shadow(
+            0 0 4px rgba(38,52,60,.16)
+        );
+}
