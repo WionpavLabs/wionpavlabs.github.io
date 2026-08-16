@@ -945,6 +945,10 @@ const siteTranslations = {
 
 "projects.description":
     "Our projects will be published soon. Stay tuned.",
+   
+    "publications.title":
+    "Publications",
+    
     },
 
 
@@ -1137,6 +1141,10 @@ const siteTranslations = {
 
 "projects.description":
     "Projelerimiz yakında yayımlanacaktır. Takipte kalın.", 
+    
+    
+   "publications.title":
+    "Yayınlar", 
     }
 
 };
