@@ -7967,3 +7967,14 @@ body.light-theme .research-section .paper-item .paper-header a:hover {
 body.light-theme .research-section .download-btn {
     color: #18252d !important;
 }
+
+
+
+/* =========================================================
+   LIGHT THEME — PDF TITLE / DOWNLOAD TEXT CONSISTENCY
+   ========================================================= */
+
+body.light-theme .research-section .paper-item .paper-header > a:first-child {
+    color: #18252d !important;
+    font-weight: 700 !important;
+}
