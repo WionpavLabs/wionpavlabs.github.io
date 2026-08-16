@@ -450,25 +450,33 @@ window.addEventListener("hashchange", setActiveMenu);
 // sadece sayfa yüklendiğinde çalışır
 
 
-document.addEventListener("click", (e)=>{
+document.addEventListener("click", (e) => {
 
     const link = e.target.closest("#navMenu a");
 
-  if(link){
+    if (link) {
 
-    const menu = document.getElementById("navMenu");
+        const menu = document.getElementById("navMenu");
 
-    if(menu){
-        menu.classList.remove("active");
+        if (menu) {
+            menu.classList.remove("active");
+        }
+
+        sessionStorage.setItem("navigating", "true");
+
+        /* İLETİŞİM LİNKİ */
+        if (link.getAttribute("href") === "index.html#iletisim") {
+
+            sessionStorage.setItem("scrollToContact", "true");
+
+        }
+
     }
 
-    sessionStorage.setItem("navigating","true");
-
-}
 
     const img = e.target.closest(".wion-slide img");
 
-    if(img){
+    if (img) {
 
         const viewer = document.getElementById("imageViewer");
         const viewerImg = document.getElementById("viewerImg");
@@ -479,7 +487,7 @@ document.addEventListener("click", (e)=>{
     }
 
 
-    if(e.target.closest(".viewer-close")){
+    if (e.target.closest(".viewer-close")) {
 
         const viewer = document.getElementById("imageViewer");
         const viewerImg = document.getElementById("viewerImg");
@@ -1528,3 +1536,32 @@ document.addEventListener(
 
     }
 );
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    if (
+        window.location.pathname.endsWith("index.html") &&
+        sessionStorage.getItem("scrollToContact") === "true"
+    ) {
+
+        sessionStorage.removeItem("scrollToContact");
+
+        setTimeout(() => {
+
+            const contact = document.getElementById("iletisim");
+
+            if (contact) {
+
+                contact.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }
+
+        }, 300);
+
+    }
+
+});
