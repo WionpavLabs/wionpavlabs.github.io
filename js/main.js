@@ -949,6 +949,35 @@ const siteTranslations = {
     "publications.title":
     "Publications",
     
+    join: {
+    title: "Join the Research Team",
+    description: "Wionpav Labs supports scientific research and knowledge production in medicine and the health sciences. You can use the form below to contribute to our research or apply with your own research idea.",
+    fullName: "Full Name",
+    fullNamePlaceholder: "Full Name",
+    field: "Field / Department",
+    fieldPlaceholder: "e.g. Medicine, Dentistry, Pharmacy...",
+    researchAreas: "Research Areas of Interest",
+    neuroscience: "Neuroscience",
+    sleep: "Sleep and Sleep Health",
+    clinical: "Clinical Research",
+    biomedical: "Biomedical Research",
+    aiMedicine: "Artificial Intelligence and Medicine",
+    epidemiology: "Epidemiology and Public Health",
+    systematicReview: "Systematic Reviews / Literature Research",
+    other: "Other",
+    applicationType: "How Would You Like to Join?",
+    contribute: "I would like to contribute to Wionpav Labs research",
+    ownResearch: "I am applying with my own research idea",
+    both: "I am interested in both",
+    researchIdea: "Research / Study Proposal",
+    researchIdeaPlaceholder: "Briefly describe your proposed research or study...",
+    email: "Email",
+    emailPlaceholder: "example@email.com",
+    phone: "Phone",
+    optional: "(Optional)",
+    consent: "I agree to have my application evaluated and to be contacted if my application is considered suitable.",
+    submit: "Submit Application"
+},
     },
 
 
@@ -1145,6 +1174,38 @@ const siteTranslations = {
     
    "publications.title":
     "Yayınlar", 
+    
+ join: {
+    title: "Araştırma Ekibine Katıl",
+    description: "Wionpav Labs, tıp ve sağlık bilimleri alanında bilimsel araştırma ve bilgi üretimini desteklemektedir. Araştırmalarımıza katkı sağlamak veya kendi çalışma fikrinizle başvurmak için aşağıdaki formu doldurabilirsiniz.",
+    fullName: "Ad Soyad",
+    fullNamePlaceholder: "Ad Soyad",
+    field: "Bölüm / Alan",
+    fieldPlaceholder: "Örn. Tıp, Diş Hekimliği, Eczacılık...",
+    researchAreas: "İlgi Duyduğunuz Araştırma Alanları",
+    neuroscience: "Nörobilim",
+    sleep: "Uyku ve Uyku Sağlığı",
+    clinical: "Klinik Araştırmalar",
+    biomedical: "Biyomedikal Araştırmalar",
+    aiMedicine: "Yapay Zekâ ve Tıp",
+    epidemiology: "Epidemiyoloji ve Halk Sağlığı",
+    systematicReview: "Sistematik Derleme / Literatür Araştırmaları",
+    other: "Diğer",
+    applicationType: "Nasıl Katılmak İstiyorsunuz?",
+    contribute: "Wionpav Labs araştırmalarına katkı sağlamak istiyorum",
+    ownResearch: "Kendi araştırma / çalışma fikrimle başvuruyorum",
+    both: "Her ikisiyle de ilgileniyorum",
+    researchIdea: "Çalışma / Araştırma Öneriniz",
+    researchIdeaPlaceholder: "Gerçekleştirmek istediğiniz araştırma veya çalışma fikrinizi kısaca açıklayınız...",
+    email: "E-posta",
+    emailPlaceholder: "ornek@email.com",
+    phone: "Telefon",
+    optional: "(İsteğe bağlı)",
+    consent: "Başvurumun değerlendirilmesini ve uygun bulunması halinde benimle iletişime geçilmesini kabul ediyorum.",
+    submit: "Başvuruyu Gönder"
+},   
+    
+    
     }
 
 };
