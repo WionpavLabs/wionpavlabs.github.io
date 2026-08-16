@@ -902,7 +902,16 @@ const siteTranslations = {
     "Your messages will be reviewed as soon as possible.",
 
        "footer.text":
-    "© 2026 Wionpav Labs | Medical Research & Knowledge Platform | Content licensed under CC BY-NC 4.0"
+    "© 2026 Wionpav Labs | Medical Research & Knowledge Platform | Content licensed under CC BY-NC 4.0",
+
+       "founder.heading":
+    "About the Founder",
+
+       "founder.description":
+    "Ali Bocakkıtay is a medical student at Selçuk University Faculty of Medicine and the founder of Wionpav Labs. He founded Wionpav Labs in 2026 to support scientific knowledge production and reliable scientific communication in medicine, health sciences, and research.",
+
+"founder.interests":
+    "His interests include literature reviews, scientific writing, and evidence-based medicine.",
     
     
     },
@@ -1054,7 +1063,16 @@ const siteTranslations = {
     "İletileriniz en kısa sürede değerlendirilecektir.",
 
        "footer.text":
-    "© 2026 Wionpav Labs | Tıbbi Araştırma ve Bilgi Platformu | İçerikler CC BY-NC 4.0 lisansı kapsamında sunulmaktadır."
+    "© 2026 Wionpav Labs | Tıbbi Araştırma ve Bilgi Platformu | İçerikler CC BY-NC 4.0 lisansı kapsamında sunulmaktadır.",
+
+       "founder.heading":
+    "Kurucu Hakkında",
+
+       "founder.description":
+    "Ali Bocakkıtay, Selçuk Üniversitesi Tıp Fakültesi öğrencisi ve Wionpav Labs'in kurucusudur. Wionpav Labs'i 2026 yılında; tıp, sağlık bilimleri ve bilimsel araştırmalar alanlarında bilimsel bilgi üretimini ve güvenilir bilimsel iletişimi desteklemek amacıyla kurmuştur.",
+
+"founder.interests":
+    "İlgi alanları arasında literatür değerlendirmeleri, bilimsel yazım ve kanıta dayalı tıp yer almaktadır.",
     
     }
 
