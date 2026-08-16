@@ -816,7 +816,11 @@ const siteTranslations = {
 
         "lab.mental.count":
             "9 Studies"
+"home.highlights.title":
+    "Highlights",
 
+"home.highlights.description":
+    "Selected publications, research insights and highlights from Wionpav Labs.",
     },
 
 
@@ -873,6 +877,11 @@ const siteTranslations = {
         "lab.mental.count":
             "9 Çalışma"
 
+       "home.highlights.title":
+    "Öne Çıkanlar",
+
+"home.highlights.description":
+    "Wionpav Labs tarafından seçilen yayınlar, araştırma içgörüleri ve öne çıkan çalışmalar.",
     }
 
 };
