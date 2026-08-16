@@ -7958,3 +7958,8 @@ body.light-theme .research-section .download-btn {
     font-weight: 600 !important;
 }
 
+/* DARK THEME — DOWNLOAD BUTTON TEXT */
+
+body:not(.light-theme) .research-section .download-btn {
+    color: #18252d !important;
+}
