@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /images/
 Disallow: /yazilar/
 Disallow: /assets/
-Disallow: /insights/
+Disallow: /research/
