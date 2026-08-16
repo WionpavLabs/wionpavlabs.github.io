@@ -760,7 +760,7 @@ document.getElementById(article + "-lang").textContent = lang.flag;
 
 const siteTranslations = {
 
-   /* =========================================================
+ /* =========================================================
    WIONPAV LABS — GLOBAL SITE TRANSLATIONS
 ========================================================= */
 
@@ -882,15 +882,14 @@ const siteTranslations = {
 
 /* =========================================================
    WIONPAV LABS — GLOBAL LANGUAGE SYSTEM
-   Türkçe / English
 ========================================================= */
 
 const LANGUAGE_KEY = "wionpav-language";
 
 
-/* ---------------------------------------------------------
+/* =========================================================
    KAYITLI DİLİ AL
---------------------------------------------------------- */
+========================================================= */
 
 function getSavedLanguage() {
 
@@ -899,9 +898,9 @@ function getSavedLanguage() {
 }
 
 
-/* ---------------------------------------------------------
+/* =========================================================
    DİL BUTONUNU GÜNCELLE
---------------------------------------------------------- */
+========================================================= */
 
 function updateLanguageButton(language) {
 
@@ -910,10 +909,8 @@ function updateLanguageButton(language) {
 
     if (!button) return;
 
-
     const text =
         button.querySelector(".language-toggle-text");
-
 
     if (text) {
 
@@ -923,7 +920,6 @@ function updateLanguageButton(language) {
                 : "TR";
 
     }
-
 
     button.setAttribute(
         "aria-label",
@@ -935,9 +931,9 @@ function updateLanguageButton(language) {
 }
 
 
-/* ---------------------------------------------------------
+/* =========================================================
    DİLİ UYGULA
---------------------------------------------------------- */
+========================================================= */
 
 function applyLanguage(language) {
 
@@ -958,7 +954,6 @@ function applyLanguage(language) {
 
 
             if (
-                typeof siteTranslations !== "undefined" &&
                 siteTranslations[language] &&
                 siteTranslations[language][key]
             ) {
@@ -974,9 +969,9 @@ function applyLanguage(language) {
 }
 
 
-/* ---------------------------------------------------------
-   SAYFA AÇILDIĞINDA DİLİ UYGULA
---------------------------------------------------------- */
+/* =========================================================
+   SAYFA AÇILDIĞINDA KAYITLI DİLİ UYGULA
+========================================================= */
 
 document.addEventListener(
     "DOMContentLoaded",
@@ -990,9 +985,9 @@ document.addEventListener(
 );
 
 
-/* ---------------------------------------------------------
+/* =========================================================
    DİL BUTONU
---------------------------------------------------------- */
+========================================================= */
 
 document.addEventListener(
     "click",
@@ -1000,7 +995,6 @@ document.addEventListener(
 
         const button =
             event.target.closest("#languageToggle");
-
 
         if (!button) return;
 
