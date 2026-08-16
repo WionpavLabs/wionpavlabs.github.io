@@ -840,6 +840,16 @@ const siteTranslations = {
 
         "lab.mental.count":
             "9 Studies",
+
+       "mental.title":
+    "🗣️ Mental Health & Psychiatry Lab",
+
+"mental.subtitle":
+    "Research studies in psychiatry and mental health",
+
+"mental.back":
+    "← Back to Labs",
+   
        "lab.brain.title":
     "Brain & Neurology Lab",
 
@@ -1126,6 +1136,16 @@ const siteTranslations = {
 
         "lab.mental.count":
             "9 Çalışma",
+
+       "mental.title":
+    "🗣️ Ruh Sağlığı ve Psikiyatri Laboratuvarı",
+
+"mental.subtitle":
+    "Psikiyatri ve ruh sağlığı alanındaki araştırma çalışmaları",
+
+"mental.back":
+    "← Laboratuvarlara Dön",
+       
 "lab.brain.title":
     "Beyin ve Nöroloji Laboratuvarı",
 
