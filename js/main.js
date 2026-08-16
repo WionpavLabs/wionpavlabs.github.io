@@ -949,7 +949,7 @@ const siteTranslations = {
     "publications.title":
     "Publications",
     
-    join: {
+    
     title: "Join the Research Team",
     description: "Wionpav Labs supports scientific research and knowledge production in medicine and the health sciences. You can use the form below to contribute to our research or apply with your own research idea.",
     fullName: "Full Name",
@@ -977,7 +977,7 @@ const siteTranslations = {
     optional: "(Optional)",
     consent: "I agree to have my application evaluated and to be contacted if my application is considered suitable.",
     submit: "Submit Application"
-},
+
     },
 
 
@@ -1175,7 +1175,7 @@ const siteTranslations = {
    "publications.title":
     "Yayınlar", 
     
- join: {
+ 
     title: "Araştırma Ekibine Katıl",
     description: "Wionpav Labs, tıp ve sağlık bilimleri alanında bilimsel araştırma ve bilgi üretimini desteklemektedir. Araştırmalarımıza katkı sağlamak veya kendi çalışma fikrinizle başvurmak için aşağıdaki formu doldurabilirsiniz.",
     fullName: "Ad Soyad",
@@ -1203,7 +1203,7 @@ const siteTranslations = {
     optional: "(İsteğe bağlı)",
     consent: "Başvurumun değerlendirilmesini ve uygun bulunması halinde benimle iletişime geçilmesini kabul ediyorum.",
     submit: "Başvuruyu Gönder"
-},   
+ 
     
     
     }
