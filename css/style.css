@@ -7948,3 +7948,16 @@ body.light-theme .research-section .paper-item .lang-switch:hover {
 body.light-theme .science-background {
     display: none !important;
 }
+
+
+/* =========================================================
+   LIGHT THEME — INSIGHTS PDF TITLES
+   ========================================================= */
+
+body.light-theme .research-section .paper-item .paper-header a {
+    color: #18252d !important;
+}
+
+body.light-theme .research-section .paper-item .paper-header a:hover {
+    color: #087c9f !important;
+}
