@@ -950,33 +950,90 @@ const siteTranslations = {
     "Publications",
     
     
-    title: "Join the Research Team",
-    description: "Wionpav Labs supports scientific research and knowledge production in medicine and the health sciences. You can use the form below to contribute to our research or apply with your own research idea.",
-    fullName: "Full Name",
-    fullNamePlaceholder: "Full Name",
-    field: "Field / Department",
-    fieldPlaceholder: "e.g. Medicine, Dentistry, Pharmacy...",
-    researchAreas: "Research Areas of Interest",
-    neuroscience: "Neuroscience",
-    sleep: "Sleep and Sleep Health",
-    clinical: "Clinical Research",
-    biomedical: "Biomedical Research",
-    aiMedicine: "Artificial Intelligence and Medicine",
-    epidemiology: "Epidemiology and Public Health",
-    systematicReview: "Systematic Reviews / Literature Research",
-    other: "Other",
-    applicationType: "How Would You Like to Join?",
-    contribute: "I would like to contribute to Wionpav Labs research",
-    ownResearch: "I am applying with my own research idea",
-    both: "I am interested in both",
-    researchIdea: "Research / Study Proposal",
-    researchIdeaPlaceholder: "Briefly describe your proposed research or study...",
-    email: "Email",
-    emailPlaceholder: "example@email.com",
-    phone: "Phone",
-    optional: "(Optional)",
-    consent: "I agree to have my application evaluated and to be contacted if my application is considered suitable.",
-    submit: "Submit Application"
+   /* =========================
+   JOIN RESEARCH TEAM
+========================= */
+
+"join.title":
+    "Join the Research Team",
+
+"join.description":
+    "Wionpav Labs supports scientific research and knowledge production in medicine and the health sciences. You can use the form below to contribute to our research or apply with your own research idea.",
+
+"join.fullName":
+    "Full Name",
+
+"join.fullNamePlaceholder":
+    "Full Name",
+
+"join.field":
+    "Field / Department",
+
+"join.fieldPlaceholder":
+    "e.g. Medicine, Dentistry, Pharmacy...",
+
+"join.researchAreas":
+    "Research Areas of Interest",
+
+"join.neuroscience":
+    "Neuroscience",
+
+"join.sleep":
+    "Sleep and Sleep Health",
+
+"join.clinical":
+    "Clinical Research",
+
+"join.biomedical":
+    "Biomedical Research",
+
+"join.aiMedicine":
+    "Artificial Intelligence and Medicine",
+
+"join.epidemiology":
+    "Epidemiology and Public Health",
+
+"join.systematicReview":
+    "Systematic Reviews / Literature Research",
+
+"join.other":
+    "Other",
+
+"join.applicationType":
+    "How Would You Like to Join?",
+
+"join.contribute":
+    "I would like to contribute to Wionpav Labs research",
+
+"join.ownResearch":
+    "I am applying with my own research idea",
+
+"join.both":
+    "I am interested in both",
+
+"join.researchIdea":
+    "Research / Study Proposal",
+
+"join.researchIdeaPlaceholder":
+    "Briefly describe your proposed research or study...",
+
+"join.email":
+    "Email",
+
+"join.emailPlaceholder":
+    "example@email.com",
+
+"join.phone":
+    "Phone",
+
+"join.optional":
+    "(Optional)",
+
+"join.consent":
+    "I agree to have my application evaluated and to be contacted if my application is considered suitable.",
+
+"join.submit":
+    "Submit Application",
 
     },
 
@@ -1176,36 +1233,92 @@ const siteTranslations = {
     "Yayınlar", 
     
  
-    title: "Araştırma Ekibine Katıl",
-    description: "Wionpav Labs, tıp ve sağlık bilimleri alanında bilimsel araştırma ve bilgi üretimini desteklemektedir. Araştırmalarımıza katkı sağlamak veya kendi çalışma fikrinizle başvurmak için aşağıdaki formu doldurabilirsiniz.",
-    fullName: "Ad Soyad",
-    fullNamePlaceholder: "Ad Soyad",
-    field: "Bölüm / Alan",
-    fieldPlaceholder: "Örn. Tıp, Diş Hekimliği, Eczacılık...",
-    researchAreas: "İlgi Duyduğunuz Araştırma Alanları",
-    neuroscience: "Nörobilim",
-    sleep: "Uyku ve Uyku Sağlığı",
-    clinical: "Klinik Araştırmalar",
-    biomedical: "Biyomedikal Araştırmalar",
-    aiMedicine: "Yapay Zekâ ve Tıp",
-    epidemiology: "Epidemiyoloji ve Halk Sağlığı",
-    systematicReview: "Sistematik Derleme / Literatür Araştırmaları",
-    other: "Diğer",
-    applicationType: "Nasıl Katılmak İstiyorsunuz?",
-    contribute: "Wionpav Labs araştırmalarına katkı sağlamak istiyorum",
-    ownResearch: "Kendi araştırma / çalışma fikrimle başvuruyorum",
-    both: "Her ikisiyle de ilgileniyorum",
-    researchIdea: "Çalışma / Araştırma Öneriniz",
-    researchIdeaPlaceholder: "Gerçekleştirmek istediğiniz araştırma veya çalışma fikrinizi kısaca açıklayınız...",
-    email: "E-posta",
-    emailPlaceholder: "ornek@email.com",
-    phone: "Telefon",
-    optional: "(İsteğe bağlı)",
-    consent: "Başvurumun değerlendirilmesini ve uygun bulunması halinde benimle iletişime geçilmesini kabul ediyorum.",
-    submit: "Başvuruyu Gönder"
+    /* =========================
+   ARAŞTIRMA EKİBİNE KATIL
+========================= */
+
+"join.title":
+    "Araştırma Ekibine Katıl",
+
+"join.description":
+    "Wionpav Labs, tıp ve sağlık bilimleri alanında bilimsel araştırma ve bilgi üretimini desteklemektedir. Araştırmalarımıza katkı sağlamak veya kendi çalışma fikrinizle başvurmak için aşağıdaki formu doldurabilirsiniz.",
+
+"join.fullName":
+    "Ad Soyad",
+
+"join.fullNamePlaceholder":
+    "Ad Soyad",
+
+"join.field":
+    "Bölüm / Alan",
+
+"join.fieldPlaceholder":
+    "Örn. Tıp, Diş Hekimliği, Eczacılık...",
+
+"join.researchAreas":
+    "İlgi Duyduğunuz Araştırma Alanları",
+
+"join.neuroscience":
+    "Nörobilim",
+
+"join.sleep":
+    "Uyku ve Uyku Sağlığı",
+
+"join.clinical":
+    "Klinik Araştırmalar",
+
+"join.biomedical":
+    "Biyomedikal Araştırmalar",
+
+"join.aiMedicine":
+    "Yapay Zekâ ve Tıp",
+
+"join.epidemiology":
+    "Epidemiyoloji ve Halk Sağlığı",
+
+"join.systematicReview":
+    "Sistematik Derleme / Literatür Araştırmaları",
+
+"join.other":
+    "Diğer",
+
+"join.applicationType":
+    "Nasıl Katılmak İstiyorsunuz?",
+
+"join.contribute":
+    "Wionpav Labs araştırmalarına katkı sağlamak istiyorum",
+
+"join.ownResearch":
+    "Kendi araştırma / çalışma fikrimle başvuruyorum",
+
+"join.both":
+    "Her ikisiyle de ilgileniyorum",
+
+"join.researchIdea":
+    "Çalışma / Araştırma Öneriniz",
+
+"join.researchIdeaPlaceholder":
+    "Gerçekleştirmek istediğiniz araştırma veya çalışma fikrinizi kısaca açıklayınız...",
+
+"join.email":
+    "E-posta",
+
+"join.emailPlaceholder":
+    "ornek@email.com",
+
+"join.phone":
+    "Telefon",
+
+"join.optional":
+    "(İsteğe bağlı)",
+
+"join.consent":
+    "Başvurumun değerlendirilmesini ve uygun bulunması halinde benimle iletişime geçilmesini kabul ediyorum.",
+
+"join.submit":
+    "Başvuruyu Gönder",
  
-    
-    
+     
     }
 
 };
