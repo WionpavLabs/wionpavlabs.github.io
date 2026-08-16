@@ -816,6 +816,50 @@ const siteTranslations = {
 
         "lab.mental.count":
             "9 Studies",
+       "lab.brain.title":
+    "Brain & Neurology Lab",
+
+"lab.brain.description":
+    "Research focused on the brain, nervous system and neurological disorders.",
+
+"lab.brain.count":
+    "0 Studies",
+
+"lab.orthopedics.title":
+    "Orthopedics & Musculoskeletal Lab",
+
+"lab.orthopedics.description":
+    "Research on bones, joints, muscles, ligaments and movement disorders.",
+
+"lab.orthopedics.count":
+    "0 Studies",
+
+"lab.cardiovascular.title":
+    "Cardiovascular Lab",
+
+"lab.cardiovascular.description":
+    "Research on cardiovascular diseases, heart health and vascular disorders.",
+
+"lab.cardiovascular.count":
+    "0 Studies",
+
+"lab.genetics.title":
+    "Genetics & Molecular Medicine Lab",
+
+"lab.genetics.description":
+    "Research involving genetics, molecular biology and biomarkers.",
+
+"lab.genetics.count":
+    "0 Studies",
+
+"lab.infectious.title":
+    "Infectious Diseases & Immunology Lab",
+
+"lab.infectious.description":
+    "Research on infectious diseases, immunity and immune system disorders.",
+
+"lab.infectious.count":
+    "0 Studies",
 
        "home.highlights.title":
     "Highlights",
@@ -916,6 +960,50 @@ const siteTranslations = {
 
         "lab.mental.count":
             "9 Çalışma",
+"lab.brain.title":
+    "Beyin ve Nöroloji Laboratuvarı",
+
+"lab.brain.description":
+    "Beyin, sinir sistemi ve nörolojik hastalıklar üzerine araştırmalar.",
+
+"lab.brain.count":
+    "0 Çalışma",
+
+"lab.orthopedics.title":
+    "Ortopedi ve Kas-İskelet Sistemi Laboratuvarı",
+
+"lab.orthopedics.description":
+    "Kemikler, eklemler, kaslar, bağlar ve hareket bozuklukları üzerine araştırmalar.",
+
+"lab.orthopedics.count":
+    "0 Çalışma",
+
+"lab.cardiovascular.title":
+    "Kardiyovasküler Laboratuvar",
+
+"lab.cardiovascular.description":
+    "Kardiyovasküler hastalıklar, kalp sağlığı ve damar hastalıkları üzerine araştırmalar.",
+
+"lab.cardiovascular.count":
+    "0 Çalışma",
+
+"lab.genetics.title":
+    "Genetik ve Moleküler Tıp Laboratuvarı",
+
+"lab.genetics.description":
+    "Genetik, moleküler biyoloji ve biyobelirteçler üzerine araştırmalar.",
+
+"lab.genetics.count":
+    "0 Çalışma",
+
+"lab.infectious.title":
+    "Enfeksiyon Hastalıkları ve İmmünoloji Laboratuvarı",
+
+"lab.infectious.description":
+    "Enfeksiyon hastalıkları, bağışıklık ve bağışıklık sistemi bozuklukları üzerine araştırmalar.",
+
+"lab.infectious.count":
+    "0 Çalışma",
 
        "home.highlights.title":
     "Öne Çıkanlar",
