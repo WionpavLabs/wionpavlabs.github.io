@@ -7940,3 +7940,11 @@ body.light-theme .research-section .paper-item .lang-switch:hover {
     }
 
 }
+
+/* =========================================================
+   LIGHT THEME — HIDE SCIENCE / DNA BACKGROUND
+   ========================================================= */
+
+body.light-theme .science-background {
+    display: none !important;
+}
