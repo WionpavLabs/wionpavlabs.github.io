@@ -7996,3 +7996,11 @@ body:not(.light-theme) .research-section .download-btn {
     }
 
 }
+/* MOBİL — DARK THEME MENÜ BAŞLANGICI */
+@media (max-width: 768px) {
+
+    body:not(.light-theme) #navMenu > a:first-of-type {
+        margin-top: 100px !important;
+    }
+
+}
