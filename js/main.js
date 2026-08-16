@@ -754,11 +754,9 @@ function toggleLanguage(article){
 document.getElementById(article + "-lang").textContent = lang.flag;
 }
 
-/* =========================================================
-   WIONPAV LABS — RESEARCH PAGE TRANSLATIONS
-========================================================= */
 
-const siteTranslations = {
+
+
 
  /* =========================================================
    WIONPAV LABS — GLOBAL SITE TRANSLATIONS
