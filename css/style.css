@@ -8219,3 +8219,10 @@ body.light-theme .research-section:hover {
 #iletisim {
     scroll-margin-top: 120px;
 }
+
+
+
+
+h1[data-i18n="publications.title"] {
+    color: #38bdf8;
+}
