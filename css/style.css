@@ -6469,7 +6469,7 @@ body.light-theme .vision-box h2 {
 
     body.light-theme #navMenu > a:first-of-type {
 
-        margin-top:100px !important;
+        margin-top:110px !important;
 
     }
 
@@ -7974,7 +7974,7 @@ body:not(.light-theme) .research-section .download-btn {
 @media (max-width: 768px) {
 
     #navMenu > a:first-of-type {
-        margin-top: 75px !important;
+        margin-top: 110px !important;
     }
 
     #navMenu > a {
@@ -8000,7 +8000,7 @@ body:not(.light-theme) .research-section .download-btn {
 @media (max-width: 768px) {
 
     body:not(.light-theme) #navMenu > a:first-of-type {
-        margin-top: 100px !important;
+        margin-top: 110px !important;
     }
 
 }
