@@ -815,8 +815,9 @@ const siteTranslations = {
             "Research on psychiatric disorders, psychopathology and mental health.",
 
         "lab.mental.count":
-            "9 Studies"
-"home.highlights.title":
+            "9 Studies",
+
+       "home.highlights.title":
     "Highlights",
 
 "home.highlights.description":
@@ -875,7 +876,7 @@ const siteTranslations = {
             "Psikiyatrik bozukluklar, psikopatoloji ve ruh sağlığı üzerine araştırmalar.",
 
         "lab.mental.count":
-            "9 Çalışma"
+            "9 Çalışma",
 
        "home.highlights.title":
     "Öne Çıkanlar",
