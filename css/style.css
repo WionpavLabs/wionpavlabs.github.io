@@ -8008,3 +8008,68 @@ body:not(.light-theme) .research-section .download-btn {
 .research-section .download-btn {
     font-weight: 600 !important;
 }
+
+
+/* =========================================================
+   LAB KARTLARI — DIŞ ÇERÇEVE IŞIK EFEKTİ
+   ========================================================= */
+
+/* DARK THEME */
+body:not(.light-theme) .lab-card,
+body:not(.light-theme) .research-card,
+body:not(.light-theme) .lab-box {
+    border: 1px solid #38bdf8 !important;
+
+    box-shadow:
+        0 0 4px rgba(56, 189, 248, 0.45),
+        0 0 10px rgba(56, 189, 248, 0.25),
+        inset 0 0 4px rgba(56, 189, 248, 0.08);
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* HOVER — hafif daha belirgin ışıldama */
+body:not(.light-theme) .lab-card:hover,
+body:not(.light-theme) .research-card:hover,
+body:not(.light-theme) .lab-box:hover {
+    border-color: #5ac8fa !important;
+
+    box-shadow:
+        0 0 6px rgba(56, 189, 248, 0.65),
+        0 0 16px rgba(56, 189, 248, 0.35),
+        inset 0 0 6px rgba(56, 189, 248, 0.10);
+}
+
+
+/* =========================================================
+   LIGHT THEME — DIŞ ÇERÇEVE SİYAH
+   ========================================================= */
+
+body.light-theme .lab-card,
+body.light-theme .research-card,
+body.light-theme .lab-box {
+    border: 1px solid #000000 !important;
+
+    box-shadow:
+        0 0 4px rgba(0, 0, 0, 0.18),
+        inset 0 0 3px rgba(0, 0, 0, 0.04);
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* LIGHT THEME — hover */
+body.light-theme .lab-card:hover,
+body.light-theme .research-card:hover,
+body.light-theme .lab-box:hover {
+    border-color: #000000 !important;
+
+    box-shadow:
+        0 0 7px rgba(0, 0, 0, 0.25),
+        inset 0 0 4px rgba(0, 0, 0, 0.06);
+}
