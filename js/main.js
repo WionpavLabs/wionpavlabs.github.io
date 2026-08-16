@@ -1035,6 +1035,21 @@ const siteTranslations = {
 "join.submit":
     "Submit Application",
 
+    "join.phonePlaceholder":
+    "+90 5XX XXX XX XX",
+
+"join.submitting":
+    "Submitting Application...",
+
+"join.success":
+    "Your application has been submitted successfully.\n\nThe Wionpav Labs research team will review your application.",
+
+"join.selectArea":
+    "Please select at least one research area.",
+
+"join.error":
+    "An error occurred while submitting your application.\nPlease try again later.",
+    
     },
 
 
@@ -1317,6 +1332,21 @@ const siteTranslations = {
 
 "join.submit":
     "Başvuruyu Gönder",
+
+       "join.phonePlaceholder":
+    "+90 5XX XXX XX XX",
+
+"join.submitting":
+    "Başvuru Gönderiliyor...",
+
+"join.success":
+    "Başvurunuz başarıyla gönderildi.\n\nWionpav Labs araştırma ekibi başvurunuzu değerlendirecektir.",
+
+"join.selectArea":
+    "Lütfen en az bir araştırma alanı seçiniz.",
+
+"join.error":
+    "Başvuru gönderilirken bir hata oluştu.\nLütfen daha sonra tekrar deneyiniz.",
  
      
     }
