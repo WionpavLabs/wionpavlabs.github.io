@@ -7963,3 +7963,13 @@ body.light-theme .research-section .download-btn {
 body:not(.light-theme) .research-section .download-btn {
     color: #18252d !important;
 }
+
+
+
+
+/* MOBİL — TÜM TEMALAR */
+@media (max-width: 768px) {
+    #navMenu > a:first-of-type {
+        margin-top: 80px !important;
+    }
+}
