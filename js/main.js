@@ -754,7 +754,54 @@ function toggleLanguage(article){
 document.getElementById(article + "-lang").textContent = lang.flag;
 }
 
+/* =========================================================
+   WIONPAV LABS — RESEARCH PAGE TRANSLATIONS
+========================================================= */
 
+const siteTranslations = {
+
+    EN: {
+
+        "research.heading":
+            "Wionpav Labs",
+
+        "research.subtitle":
+            "Explore our research areas and scientific studies",
+
+
+        "lab.mental.title":
+            "Mental Health & Psychiatry Lab",
+
+        "lab.mental.description":
+            "Research on psychiatric disorders, psychopathology and mental health.",
+
+        "lab.mental.count":
+            "9 Studies"
+
+    },
+
+
+    TR: {
+
+        "research.heading":
+            "Wionpav Labs",
+
+        "research.subtitle":
+            "Araştırma alanlarımızı ve bilimsel çalışmalarımızı keşfedin",
+
+
+        "lab.mental.title":
+            "Ruh Sağlığı ve Psikiyatri Laboratuvarı",
+
+        "lab.mental.description":
+            "Psikiyatrik bozukluklar, psikopatoloji ve ruh sağlığı üzerine araştırmalar.",
+
+        "lab.mental.count":
+            "9 Çalışma"
+
+    }
+
+};
 
 
 /* =========================================================
