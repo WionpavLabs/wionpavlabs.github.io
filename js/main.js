@@ -846,7 +846,16 @@ const siteTranslations = {
     "Your comment",
 
 "home.comments.send":
-    "Send"
+    "Send",
+
+       "home.contact.title":
+    "Contact",
+
+"home.contact.description":
+    "For questions about Wionpav Labs, academic collaborations, content suggestions, or other inquiries, you can contact us via the email address below.",
+
+"home.contact.response":
+    "Your messages will be reviewed as soon as possible."
     
     
     },
@@ -942,7 +951,16 @@ const siteTranslations = {
     "Yorumun",
 
 "home.comments.send":
-    "Gönder"
+    "Gönder",
+
+       "home.contact.title":
+    "İletişim",
+
+"home.contact.description":
+    "Wionpav Labs ile ilgili sorularınız, akademik iş birlikleri, içerik önerileri veya diğer iletişim talepleriniz için aşağıdaki e-posta adresi üzerinden bizimle iletişime geçebilirsiniz.",
+
+"home.contact.response":
+    "İletileriniz en kısa sürede değerlendirilecektir."
     
     }
 
