@@ -1264,7 +1264,6 @@ color:#94a3b8;
 
 
 <script>
-
 function openLab(lab) {
 
     if (lab === "mental-health") {
@@ -1279,13 +1278,14 @@ function openLab(lab) {
 
         mentalHealth.classList.add("active");
 
+        // Açık olan labı URL'de hatırla
+        history.replaceState(null, "", "#mental-health");
+
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         });
-
     }
-
 }
 
 
@@ -1301,13 +1301,33 @@ function closeLab() {
 
     labsSelection.style.display = "grid";
 
+    // Labdan çıkınca hash'i temizle
+    history.replaceState(
+        null,
+        "",
+        window.location.pathname
+    );
+
     window.scrollTo({
         top: 0,
         behavior: "smooth"
     });
-
 }
 
+
+/* =========================================================
+   SAYFA YENİLENDİĞİNDE AÇIK LABI GERİ YÜKLE
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const hash = window.location.hash;
+
+    if (hash === "#mental-health") {
+        openLab("mental-health");
+    }
+
+});
 </script>
 
 <script src="js/main.js"></script>
