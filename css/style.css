@@ -8073,3 +8073,80 @@ body.light-theme .lab-box:hover {
         0 0 7px rgba(0, 0, 0, 0.25),
         inset 0 0 4px rgba(0, 0, 0, 0.06);
 }
+
+
+
+
+
+/* =========================================================
+   LAB DETAIL / RESEARCH CONTENT CARD
+   DIŞ ÇERÇEVE — DARK / LIGHT THEME
+   ========================================================= */
+
+/* DARK THEME */
+body:not(.light-theme) .lab-detail-card,
+body:not(.light-theme) .lab-detail,
+body:not(.light-theme) .research-detail-card,
+body:not(.light-theme) .research-detail,
+body:not(.light-theme) .lab-content-card {
+    border: 1px solid #38bdf8 !important;
+
+    box-shadow:
+        0 0 4px rgba(56, 189, 248, 0.45),
+        0 0 10px rgba(56, 189, 248, 0.22),
+        inset 0 0 4px rgba(56, 189, 248, 0.06);
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* DARK THEME — HOVER */
+body:not(.light-theme) .lab-detail-card:hover,
+body:not(.light-theme) .lab-detail:hover,
+body:not(.light-theme) .research-detail-card:hover,
+body:not(.light-theme) .research-detail:hover,
+body:not(.light-theme) .lab-content-card:hover {
+    border-color: #5ac8fa !important;
+
+    box-shadow:
+        0 0 6px rgba(56, 189, 248, 0.65),
+        0 0 16px rgba(56, 189, 248, 0.30),
+        inset 0 0 6px rgba(56, 189, 248, 0.08);
+}
+
+
+/* =========================================================
+   LIGHT THEME
+   ========================================================= */
+
+body.light-theme .lab-detail-card,
+body.light-theme .lab-detail,
+body.light-theme .research-detail-card,
+body.light-theme .research-detail,
+body.light-theme .lab-content-card {
+    border: 1px solid #000 !important;
+
+    box-shadow:
+        0 0 4px rgba(0, 0, 0, 0.15),
+        inset 0 0 3px rgba(0, 0, 0, 0.03);
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* LIGHT THEME — HOVER */
+body.light-theme .lab-detail-card:hover,
+body.light-theme .lab-detail:hover,
+body.light-theme .research-detail-card:hover,
+body.light-theme .research-detail:hover,
+body.light-theme .lab-content-card:hover {
+    border-color: #000 !important;
+
+    box-shadow:
+        0 0 7px rgba(0, 0, 0, 0.23),
+        inset 0 0 4px rgba(0, 0, 0, 0.04);
+}
