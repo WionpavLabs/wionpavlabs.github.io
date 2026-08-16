@@ -1285,122 +1285,91 @@ color:#94a3b8;
    WIONPAV LABS — LAB AÇMA / KAPATMA SİSTEMİ
 ========================================================= */
 
+<script>
 function openLab(lab) {
 
     if (lab !== "mental-health") return;
 
-    const labsSelection =
-        document.getElementById("labsSelection");
-
-    const mentalHealth =
-        document.getElementById("mental-health");
+    const labsSelection = document.getElementById("labsSelection");
+    const mentalHealth = document.getElementById("mental-health");
 
     if (!labsSelection || !mentalHealth) return;
-
 
     /* LAB KARTLARINI GİZLE */
     labsSelection.style.display = "none";
 
-
-    /* PSİKİYATRİ LABINI AÇ */
+    /* LABI AÇ */
     mentalHealth.classList.add("active");
 
-
-    /* URL'Yİ GÜNCELLE */
+    /* URL */
     history.replaceState(
         null,
         "",
         window.location.pathname + "#mental-health"
     );
 
+    /* AÇILAN LABIN BAŞINA GİT */
+    setTimeout(function () {
 
-    /* SAYFAYI LAB BAŞLANGICINA GETİR */
-    requestAnimationFrame(() => {
+        const top =
+            mentalHealth.getBoundingClientRect().top +
+            window.scrollY -
+            20;
 
-        const labsWrapper =
-            document.querySelector(".labs-wrapper");
+        window.scrollTo({
+            top: top,
+            behavior: "smooth"
+        });
 
-        if (labsWrapper) {
-
-            labsWrapper.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
-        }
-
-    });
-
+    }, 50);
 }
 
 
-/* =========================================================
-   LAB KAPAT
-========================================================= */
-
 function closeLab() {
 
-    const labsSelection =
-        document.getElementById("labsSelection");
-
-    const mentalHealth =
-        document.getElementById("mental-health");
+    const labsSelection = document.getElementById("labsSelection");
+    const mentalHealth = document.getElementById("mental-health");
 
     if (!labsSelection || !mentalHealth) return;
-
 
     /* LABI KAPAT */
     mentalHealth.classList.remove("active");
 
-
     /* LAB KARTLARINI GERİ GETİR */
     labsSelection.style.display = "grid";
 
-
-    /* URL'DEKİ HASH'İ TEMİZLE */
+    /* HASH TEMİZLE */
     history.replaceState(
         null,
         "",
         window.location.pathname
     );
 
+    /* KARTLARIN BAŞINA DÖN */
+    setTimeout(function () {
 
-    /* SAYFAYI LAB KARTLARININ BAŞINA GETİR */
-    requestAnimationFrame(() => {
+        const top =
+            labsSelection.getBoundingClientRect().top +
+            window.scrollY -
+            20;
 
-        const labsWrapper =
-            document.querySelector(".labs-wrapper");
+        window.scrollTo({
+            top: top,
+            behavior: "smooth"
+        });
 
-        if (labsWrapper) {
-
-            labsWrapper.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
-        }
-
-    });
-
+    }, 50);
 }
 
 
-/* =========================================================
-   SAYFA HASH İLE AÇILDIYSA LABI GERİ YÜKLE
-========================================================= */
+/* SAYFA #mental-health İLE AÇILDIYSA */
+document.addEventListener("DOMContentLoaded", function () {
 
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
-        if (window.location.hash === "#mental-health") {
-
-            openLab("mental-health");
-
-        }
-
+    if (window.location.hash === "#mental-health") {
+        openLab("mental-health");
     }
-);
+
+});
 </script>
 
 <script src="js/main.js"></script>
