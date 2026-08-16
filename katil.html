@@ -372,11 +372,12 @@
                 <!-- GÖNDER -->
 
                 <button
-                    type="submit"
-                    class="research-submit"
-                >
-                    Başvuruyu Gönder
-                </button>
+    type="submit"
+    class="research-submit"
+    data-i18n="join.submit"
+>
+    Başvuruyu Gönder
+</button>
 
 
             </form>
@@ -444,9 +445,13 @@ researchForm.addEventListener("submit", async function(e) {
     };
 
 
+    
     // Gönderiliyor durumu
-    submitButton.disabled = true;
-    submitButton.textContent = "Başvuru Gönderiliyor...";
+submitButton.disabled = true;
+submitButton.textContent =
+    localStorage.getItem("language") === "EN"
+        ? "Submitting Application..."
+        : "Başvuru Gönderiliyor...";
 
 
     try {
@@ -490,10 +495,15 @@ researchForm.addEventListener("submit", async function(e) {
 
     } finally {
 
-        submitButton.disabled = false;
-        submitButton.textContent = "Başvuruyu Gönder";
+    submitButton.disabled = false;
 
-    }
+    const currentLanguage =
+        localStorage.getItem("language") || "TR";
+
+    submitButton.textContent =
+        siteTranslations[currentLanguage]["join.submit"];
+
+}
 
 });
 
