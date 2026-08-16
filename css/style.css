@@ -8206,3 +8206,11 @@ body.light-theme .research-section:hover {
 
     text-align: center;
 }
+
+/* LANGUAGE BUTTON — THEME BUTTON'IN ALTINDA */
+
+.drawer-topbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
