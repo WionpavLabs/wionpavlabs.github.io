@@ -404,31 +404,47 @@ document.addEventListener("DOMContentLoaded", () => {
 function setActiveMenu(){
 
     const links = document.querySelectorAll("#navMenu a");
-    const currentPage = window.location.pathname.split("/").pop();
+
+    let currentPage = window.location.pathname
+        .split("/")
+        .pop();
+
+    // Türkçe karakterli dosya adlarını düzelt
+    try {
+        currentPage = decodeURIComponent(currentPage);
+    } catch(e) {}
+
     const hash = window.location.hash;
 
-    links.forEach(link=>{
+    links.forEach(link => {
 
         const href = link.getAttribute("href");
 
         link.classList.remove("active-menu");
 
-        // 🔥 Eğer hash varsa SADECE hash bazlı çalış
+        // Hash varsa hash bazlı aktif menü
         if(hash){
+
             if(href === hash){
                 link.classList.add("active-menu");
             }
+
         } else {
-            // hash yoksa page bazlı
+
+            // Sayfa bazlı aktif menü
             if(
                 href === currentPage ||
                 (currentPage === "" && href === "index.html")
             ){
+
                 link.classList.add("active-menu");
+
             }
+
         }
 
     });
+
 }
 window.addEventListener("hashchange", setActiveMenu);
 // sadece sayfa yüklendiğinde çalışır
