@@ -940,7 +940,11 @@ const siteTranslations = {
 "mission.description2":
     "WionPav Labs aims to present scientific information in a clear and accessible manner, support research and literature-based work, and strengthen knowledge sharing across different disciplines within the health sciences. We seek to encourage scientific thinking and critical evaluation while contributing to the development of a research-oriented culture of knowledge.",
     
-    
+    "projects.title":
+    "Projects",
+
+"projects.description":
+    "Our projects will be published soon. Stay tuned.",
     },
 
 
@@ -1128,7 +1132,11 @@ const siteTranslations = {
 "mission.description2":
     "WionPav Labs, bilimsel bilgiyi açık ve erişilebilir bir biçimde sunmayı, araştırma ve literatür çalışmalarını desteklemeyi ve farklı sağlık bilimleri disiplinleri arasında bilgi paylaşımını güçlendirmeyi amaçlamaktadır. Bilimsel düşünme ve eleştirel değerlendirme yaklaşımını teşvik ederek araştırmaya dayalı bir bilgi kültürünün gelişmesine katkıda bulunmak temel amaçlarımız arasındadır.",
     
-    
+   "projects.title":
+    "Projeler",
+
+"projects.description":
+    "Projelerimiz yakında yayımlanacaktır. Takipte kalın.", 
     }
 
 };
