@@ -753,3 +753,163 @@ function toggleLanguage(article){
     // Dil butonu
 document.getElementById(article + "-lang").textContent = lang.flag;
 }
+
+
+
+
+/* =========================================================
+   WIONPAV LABS — GLOBAL LANGUAGE SYSTEM
+   Türkçe / English
+========================================================= */
+
+(function () {
+
+    const LANGUAGE_KEY = "wionpav-language";
+
+
+    /* -----------------------------------------------------
+       KAYITLI DİLİ AL
+    ----------------------------------------------------- */
+
+    function getSavedLanguage() {
+
+        return localStorage.getItem(LANGUAGE_KEY) || "EN";
+
+    }
+
+
+    /* -----------------------------------------------------
+       DİL BUTONUNU GÜNCELLE
+    ----------------------------------------------------- */
+
+    function updateLanguageButton(language) {
+
+        const button =
+            document.getElementById("languageToggle");
+
+        if (!button) return;
+
+
+        const text =
+            button.querySelector(".language-toggle-text");
+
+
+        if (text) {
+
+            text.textContent =
+                language === "TR" ? "EN" : "TR";
+
+        }
+
+
+        button.setAttribute(
+            "aria-label",
+            language === "TR"
+                ? "Switch to English"
+                : "Türkçeye geç"
+        );
+
+    }
+
+
+    /* -----------------------------------------------------
+       DİLİ UYGULA
+    ----------------------------------------------------- */
+
+    function applyLanguage(language) {
+
+        document.documentElement.lang =
+            language === "TR" ? "tr" : "en";
+
+
+        updateLanguageButton(language);
+
+
+        /*
+         * data-i18n sistemi daha sonra burada çalışacak.
+         *
+         * Örneğin:
+         *
+         * <h1 data-i18n="research.title"></h1>
+         *
+         * Böylece bütün siteyi buradan çevireceğiz.
+         */
+
+
+        document.querySelectorAll("[data-i18n]").forEach(
+            function (element) {
+
+                const key =
+                    element.getAttribute("data-i18n");
+
+                if (
+                    typeof siteTranslations !== "undefined" &&
+                    siteTranslations[language] &&
+                    siteTranslations[language][key]
+                ) {
+
+                    element.textContent =
+                        siteTranslations[language][key];
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* -----------------------------------------------------
+       SAYFA AÇILDIĞINDA KAYITLI DİLİ UYGULA
+    ----------------------------------------------------- */
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+
+            const savedLanguage =
+                getSavedLanguage();
+
+            applyLanguage(savedLanguage);
+
+        }
+    );
+
+
+    /* -----------------------------------------------------
+       DİL BUTONU
+    ----------------------------------------------------- */
+
+    document.addEventListener(
+        "click",
+        function (event) {
+
+            const button =
+                event.target.closest("#languageToggle");
+
+            if (!button) return;
+
+
+            const currentLanguage =
+                getSavedLanguage();
+
+
+            const newLanguage =
+                currentLanguage === "TR"
+                    ? "EN"
+                    : "TR";
+
+
+            localStorage.setItem(
+                LANGUAGE_KEY,
+                newLanguage
+            );
+
+
+            applyLanguage(newLanguage);
+
+        }
+    );
+
+
+})();
