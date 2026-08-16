@@ -7950,31 +7950,10 @@ body.light-theme .science-background {
 }
 
 
-/* =========================================================
-   LIGHT THEME — INSIGHTS PDF TITLES
-   ========================================================= */
 
-body.light-theme .research-section .paper-item .paper-header a {
-    color: #18252d !important;
-}
-
-body.light-theme .research-section .paper-item .paper-header a:hover {
-    color: #087c9f !important;
-}
-
-/* LIGHT THEME — DOWNLOAD BUTTON TEXT */
+/* LIGHT THEME — DOWNLOAD TEXT PDF TITLE İLE AYNI OLSUN */
 
 body.light-theme .research-section .download-btn {
     color: #18252d !important;
-}
-
-
-
-/* =========================================================
-   LIGHT THEME — PDF TITLE / DOWNLOAD TEXT CONSISTENCY
-   ========================================================= */
-
-body.light-theme .research-section .paper-item .paper-header > a:first-child {
-    color: #18252d !important;
-    font-weight: 700 !important;
+    font-weight: 600 !important;
 }
