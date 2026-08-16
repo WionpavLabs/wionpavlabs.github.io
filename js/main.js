@@ -855,7 +855,10 @@ const siteTranslations = {
     "For questions about Wionpav Labs, academic collaborations, content suggestions, or other inquiries, you can contact us via the email address below.",
 
 "home.contact.response":
-    "Your messages will be reviewed as soon as possible."
+    "Your messages will be reviewed as soon as possible.",
+
+       "footer.text":
+    "© 2026 Wionpav Labs | Medical Research & Knowledge Platform | Content licensed under CC BY-NC 4.0"
     
     
     },
@@ -960,7 +963,10 @@ const siteTranslations = {
     "Wionpav Labs ile ilgili sorularınız, akademik iş birlikleri, içerik önerileri veya diğer iletişim talepleriniz için aşağıdaki e-posta adresi üzerinden bizimle iletişime geçebilirsiniz.",
 
 "home.contact.response":
-    "İletileriniz en kısa sürede değerlendirilecektir."
+    "İletileriniz en kısa sürede değerlendirilecektir.",
+
+       "footer.text":
+    "© 2026 Wionpav Labs | Tıbbi Araştırma ve Bilgi Platformu | İçerikler CC BY-NC 4.0 lisansı kapsamında sunulmaktadır."
     
     }
 
