@@ -822,6 +822,19 @@ const siteTranslations = {
 
 "home.highlights.description":
     "Selected publications, research insights and highlights from Wionpav Labs.",
+   
+    "home.updates.title":
+    "Updates",
+
+"home.updates.description":
+    "You can access our latest published work below. Stay tuned for new content.",
+
+"home.updates.read":
+    "Read PDF",
+
+"home.updates.download":
+    "Download PDF"
+   
     },
 
 
@@ -883,6 +896,26 @@ const siteTranslations = {
 
 "home.highlights.description":
     "Wionpav Labs tarafından seçilen yayınlar, araştırma içgörüleri ve öne çıkan çalışmalar.",
+  
+    
+    "home.highlights.title":
+    "Öne Çıkanlar",
+
+"home.highlights.description":
+    "Wionpav Labs tarafından seçilen yayınlar, araştırma içgörüleri ve öne çıkan çalışmalar.",
+
+"home.updates.title":
+    "Güncellemeler",
+
+"home.updates.description":
+    "En son yayımlanan çalışmamıza aşağıdan ulaşabilirsiniz. Yeni içerikler için takipte kalın.",
+
+"home.updates.read":
+    "PDF Oku",
+
+"home.updates.download":
+    "PDF İndir"
+    
     }
 
 };
