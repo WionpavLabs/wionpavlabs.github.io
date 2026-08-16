@@ -925,9 +925,6 @@ const siteTranslations = {
 "home.contact.response":
     "Your messages will be reviewed as soon as possible.",
 
-       "footer.text":
-    "© 2026 Wionpav Labs | Medical Research & Knowledge Platform | Content licensed under CC BY-NC 4.0",
-
        "founder.heading":
     "About the Founder",
 
@@ -1221,9 +1218,6 @@ const siteTranslations = {
 
 "home.contact.response":
     "İletileriniz en kısa sürede değerlendirilecektir.",
-
-       "footer.text":
-    "© 2026 Wionpav Labs | Tıbbi Araştırma ve Bilgi Platformu | İçerikler CC BY-NC 4.0 lisansı kapsamında sunulmaktadır.",
 
        "founder.heading":
     "Kurucu Hakkında",
