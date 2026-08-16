@@ -563,170 +563,170 @@ article4: {
         }
     },    
    
-   insights1: {
+   research1: {
         current: "EN",
 
         EN: {
             title: "📄 1. Bipolar Disorder Read PDF",
             download: "⬇️ 1. Bipolar Disorder Download PDF",
-            file: "insights/Bipolar Disorder.pdf",
+            file: "research/Bipolar Disorder.pdf",
             flag: "🇬🇧"
         },
 
         TR: {
             title: "📄 1. Bipolar Bozukluk PDF Oku",
             download: "⬇️ 1. Bipolar Bozukluk PDF İndir",
-            file: "insights/Bipolar Bozukluk.pdf",
+            file: "research/Bipolar Bozukluk.pdf",
             flag: "🇹🇷"
         }
     },
 
-      insights2: {
+      research2: {
         current: "EN",
 
         EN: {
             title: "📄 2. Schizophrenia Read PDF",
             download: "⬇️ 2. Schizophrenia Download PDF",
-            file: "insights/Schizophrenia.pdf",
+            file: "research/Schizophrenia.pdf",
             flag: "🇬🇧"
         },
 
         TR: {
             title: "📄 2. Şizofreni PDF Oku",
             download: "⬇️ 2. Şizofreni PDF İndir",
-            file: "insights/Şizofreni.pdf",
+            file: "research/Şizofreni.pdf",
             flag: "🇹🇷"
         }
     },
 
-   insights3: {
+   research3: {
         current: "EN",
 
         EN: {
             title: "📄 3. Capgras Syndrome Read PDF",
             download: "⬇️ 3. Capgras Syndrome Download PDF",
-            file: "insights/Capgras Syndrome.pdf",
+            file: "research/Capgras Syndrome.pdf",
             flag: "🇬🇧"
         },
 
         TR: {
             title: "📄 3. Capgras Sendromu PDF Oku",
             download: "⬇️ 3. Capgras Sendromu PDF İndir",
-            file: "insights/Capgras Sendromu.pdf",
+            file: "research/Capgras Sendromu.pdf",
             flag: "🇹🇷"
         }
     },
 
 
-    insights4: {
+    research4: {
         current: "EN",
 
         EN: {
             title: "📄 4. Cotard Syndrome Read PDF",
             download: "⬇️ 4. Cotard Syndrome Download PDF",
-            file: "insights/Cotard Syndrome.pdf",
+            file: "research/Cotard Syndrome.pdf",
             flag: "🇬🇧"
         },
 
         TR: {
             title: "📄 4. Cotard Sendromu PDF Oku",
             download: "⬇️ 4. Cotard Sendromu PDF İndir",
-            file: "insights/Cotard Sendromu.pdf",
+            file: "research/Cotard Sendromu.pdf",
             flag: "🇹🇷"
         }
     },
 
 
-      insights5: {
+      research5: {
         current: "EN",
 
         EN: {
             title: "📄 5. Anxiety Disorders Read PDF",
             download: "⬇️ 5. Anxiety Disorders Download PDF",
-            file: "insights/Anxiety Disorders.pdf",
+            file: "research/Anxiety Disorders.pdf",
             flag: "🇬🇧"
         },
 
         TR: {
             title: "📄 5. Kaygı Bozuklukları PDF Oku",
             download: "⬇️ 5. Kaygı Bozuklukları PDF İndir",
-            file: "insights/Kaygı Bozuklukları.pdf",
+            file: "research/Kaygı Bozuklukları.pdf",
             flag: "🇹🇷"
         }
     },
 
 
 
-     insights6: {
+     research6: {
         current: "EN",
 
         EN: {
             title: "📄 6. Dissociative Disorders Read PDF",
             download: "⬇️ 6. Dissociative Disorders Download PDF",
-            file: "insights/Dissociative Disorders.pdf",
+            file: "research/Dissociative Disorders.pdf",
             flag: "🇬🇧"
         },
 
         TR: {
             title: "📄 6. Dissosiyatif Bozukluklar PDF Oku",
             download: "⬇️ 6. Dissosiyatif Bozukluklar PDF İndir",
-            file: "insights/Dissosiyatif Bozukluklar.pdf",
+            file: "research/Dissosiyatif Bozukluklar.pdf",
             flag: "🇹🇷"
         }
     },
 
-insights7: {
+research7: {
         current: "EN",
 
         EN: {
             title: "📄 7. Depression (Depressive Disorder) Read PDF",
             download: "⬇️ 7. Depression (Depressive Disorder) Download PDF",
-            file: "insights/Depression (Depressive Disorder).pdf",
+            file: "research/Depression (Depressive Disorder).pdf",
             flag: "🇬🇧"
         },
 
         TR: {
             title: "📄 7. Depresyon (Depresif Bozukluk) PDF Oku",
             download: "⬇️ 7. Depresyon (Depresif Bozukluk) PDF İndir",
-            file: "insights/Depresyon (Depresif Bozukluk).pdf",
+            file: "research/Depresyon (Depresif Bozukluk).pdf",
             flag: "🇹🇷"
         }
     },
 
 
-   insights8: {
+   research8: {
         current: "EN",
 
         EN: {
             title: "📄 8. Fregoli Syndrome Read PDF",
             download: "⬇️ 8. Fregoli Syndrome Download PDF",
-            file: "insights/Fregoli Syndrome.pdf",
+            file: "research/Fregoli Syndrome.pdf",
             flag: "🇬🇧"
         },
 
         TR: {
             title: "📄 8. Fregoli Sendromu PDF Oku",
             download: "⬇️ 8. Fregoli Sendromu PDF İndir",
-            file: "insights/Fregoli Sendromu.pdf",
+            file: "research/Fregoli Sendromu.pdf",
             flag: "🇹🇷"
         }
     },
 
 
-    insights9: {
+    research9: {
         current: "EN",
 
         EN: {
             title: "📄 9. Obsessive-Compulsive Disorder (OCD) Read PDF",
             download: "⬇️ 9. Obsessive-Compulsive Disorder (OCD) Download PDF",
-            file: "insights/Obsessive-Compulsive Disorder (OCD).pdf",
+            file: "research/Obsessive-Compulsive Disorder (OCD).pdf",
             flag: "🇬🇧"
         },
 
         TR: {
             title: "📄 9. Obsesif-Kompulsif Bozukluk (OKB) PDF Oku",
             download: "⬇️ 9. Obsesif-Kompulsif Bozukluk (OKB) PDF İndir",
-            file: "insights/Obsesif-Kompulsif Bozukluk (OKB).pdf",
+            file: "research/Obsesif-Kompulsif Bozukluk (OKB).pdf",
             flag: "🇹🇷"
         }
     }
