@@ -833,8 +833,22 @@ const siteTranslations = {
     "Read PDF",
 
 "home.updates.download":
-    "Download PDF"
+    "Download PDF",
    
+    
+    "home.comments.title":
+    "Comments",
+
+"home.comments.name":
+    "Your name",
+
+"home.comments.comment":
+    "Your comment",
+
+"home.comments.send":
+    "Send"
+    
+    
     },
 
 
@@ -914,7 +928,21 @@ const siteTranslations = {
     "PDF Oku",
 
 "home.updates.download":
-    "PDF İndir"
+    "PDF İndir",
+
+
+
+       "home.comments.title":
+    "Yorumlar",
+
+"home.comments.name":
+    "Adın",
+
+"home.comments.comment":
+    "Yorumun",
+
+"home.comments.send":
+    "Gönder"
     
     }
 
