@@ -912,6 +912,15 @@ const siteTranslations = {
 
 "founder.interests":
     "His interests include literature reviews, scientific writing, and evidence-based medicine.",
+
+       "founder.name":
+    "Ali Bocakkıtay",
+
+"founder.role":
+    "Founder of Wionpav Labs",
+
+"founder.title":
+    "Medical Student & Research Enthusiast",
     
     
     },
@@ -1073,7 +1082,16 @@ const siteTranslations = {
 
 "founder.interests":
     "İlgi alanları arasında literatür değerlendirmeleri, bilimsel yazım ve kanıta dayalı tıp yer almaktadır.",
-    
+
+"founder.name":
+    "Ali Bocakkıtay",
+
+"founder.role":
+    "Wionpav Labs Kurucusu",
+
+"founder.title":
+    "Tıp Öğrencisi ve Araştırma Meraklısı",
+       
     }
 
 };
