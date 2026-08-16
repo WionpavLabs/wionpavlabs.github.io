@@ -7961,3 +7961,9 @@ body.light-theme .research-section .paper-item .paper-header a {
 body.light-theme .research-section .paper-item .paper-header a:hover {
     color: #087c9f !important;
 }
+
+/* LIGHT THEME — DOWNLOAD BUTTON TEXT */
+
+body.light-theme .research-section .download-btn {
+    color: #18252d !important;
+}
