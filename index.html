@@ -1473,15 +1473,36 @@ html, body{
 </section>
     -->
 <section id="commentsSection">
-    <h2>Yorumlar</h2>
+
+    <h2 data-i18n="home.comments.title">
+        Yorumlar
+    </h2>
 
     <div class="comment-box">
-        <input id="name" placeholder="Adın">
-        <textarea id="comment" placeholder="Yorumun"></textarea>
-        <button onclick="sendComment()">Gönder</button>
+
+        <input
+            id="name"
+            placeholder="Adın"
+            data-i18n-placeholder="home.comments.name"
+        >
+
+        <textarea
+            id="comment"
+            placeholder="Yorumun"
+            data-i18n-placeholder="home.comments.comment"
+        ></textarea>
+
+        <button
+            onclick="sendComment()"
+            data-i18n="home.comments.send"
+        >
+            Gönder
+        </button>
+
     </div>
 
     <div id="comments"></div>
+
 </section>
 
 <section id="iletisim">
