@@ -8079,16 +8079,12 @@ body.light-theme .lab-box:hover {
 
 
 /* =========================================================
-   LAB DETAIL / RESEARCH CONTENT CARD
-   DIŞ ÇERÇEVE — DARK / LIGHT THEME
+   MENTAL HEALTH LAB — ANA KUTU ÇERÇEVESİ
    ========================================================= */
 
 /* DARK THEME */
-body:not(.light-theme) .lab-detail-card,
-body:not(.light-theme) .lab-detail,
-body:not(.light-theme) .research-detail-card,
-body:not(.light-theme) .research-detail,
-body:not(.light-theme) .lab-content-card {
+body:not(.light-theme) .research-section {
+
     border: 1px solid #38bdf8 !important;
 
     box-shadow:
@@ -8102,17 +8098,14 @@ body:not(.light-theme) .lab-content-card {
 }
 
 
-/* DARK THEME — HOVER */
-body:not(.light-theme) .lab-detail-card:hover,
-body:not(.light-theme) .lab-detail:hover,
-body:not(.light-theme) .research-detail-card:hover,
-body:not(.light-theme) .research-detail:hover,
-body:not(.light-theme) .lab-content-card:hover {
+/* DARK THEME — ÜZERİNE GELİNCE */
+body:not(.light-theme) .research-section:hover {
+
     border-color: #5ac8fa !important;
 
     box-shadow:
-        0 0 6px rgba(56, 189, 248, 0.65),
-        0 0 16px rgba(56, 189, 248, 0.30),
+        0 0 6px rgba(56, 189, 248, 0.60),
+        0 0 16px rgba(56, 189, 248, 0.25),
         inset 0 0 6px rgba(56, 189, 248, 0.08);
 }
 
@@ -8121,11 +8114,8 @@ body:not(.light-theme) .lab-content-card:hover {
    LIGHT THEME
    ========================================================= */
 
-body.light-theme .lab-detail-card,
-body.light-theme .lab-detail,
-body.light-theme .research-detail-card,
-body.light-theme .research-detail,
-body.light-theme .lab-content-card {
+body.light-theme .research-section {
+
     border: 1px solid #000 !important;
 
     box-shadow:
@@ -8138,12 +8128,9 @@ body.light-theme .lab-content-card {
 }
 
 
-/* LIGHT THEME — HOVER */
-body.light-theme .lab-detail-card:hover,
-body.light-theme .lab-detail:hover,
-body.light-theme .research-detail-card:hover,
-body.light-theme .research-detail:hover,
-body.light-theme .lab-content-card:hover {
+/* LIGHT THEME — ÜZERİNE GELİNCE */
+body.light-theme .research-section:hover {
+
     border-color: #000 !important;
 
     box-shadow:
