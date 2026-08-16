@@ -7967,9 +7967,32 @@ body:not(.light-theme) .research-section .download-btn {
 
 
 
-/* MOBİL — TÜM TEMALAR */
+/* =========================================
+   MOBİL MENÜ — TÜM TEMALARDA EŞİT DÜZEN
+   ========================================= */
+
 @media (max-width: 768px) {
+
     #navMenu > a:first-of-type {
-        margin-top: 80px !important;
+        margin-top: 75px !important;
     }
+
+    #navMenu > a {
+        height: 54px !important;
+        margin-top: 4px !important;
+        margin-bottom: 4px !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    #navMenu > a.active-menu {
+        height: 54px !important;
+    }
+
+    #navMenu .admin-link {
+        margin-top: 28px !important;
+        height: 54px !important;
+    }
+
 }
