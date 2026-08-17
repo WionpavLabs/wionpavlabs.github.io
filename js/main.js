@@ -760,15 +760,15 @@ research7: {
         current: "EN",
 
         EN: {
-            title: "📄 10. Parkinson's Disease Read PDF",
-            download: "⬇️ 10. Parkinson's Disease Download PDF",
+            title: "📄 1. Parkinson's Disease Read PDF",
+            download: "⬇️ 1. Parkinson's Disease Download PDF",
             file: "research/Parkinson's Disease.pdf",
             flag: "🇬🇧"
         },
 
         TR: {
-            title: "📄 10. Parkinson Hastalığı PDF Oku",
-            download: "⬇️ 10. Parkinson Hastalığı PDF İndir",
+            title: "📄 1. Parkinson Hastalığı PDF Oku",
+            download: "⬇️ 1. Parkinson Hastalığı PDF İndir",
             file: "research/Parkinson Hastalığı.pdf",
             flag: "🇹🇷"
         }
