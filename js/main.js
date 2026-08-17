@@ -794,7 +794,7 @@ research7: {
         }
    
 };
-
+}
 function toggleLanguage(article){
 
     const item = languages[article];
