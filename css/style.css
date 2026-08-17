@@ -8226,3 +8226,12 @@ body.light-theme .research-section:hover {
 h1[data-i18n="publications.title"] {
     color: #38bdf8;
 }
+
+.download-btn span,
+.read-btn span {
+    display: inline !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: static !important;
+}
