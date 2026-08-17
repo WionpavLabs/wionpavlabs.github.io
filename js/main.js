@@ -1100,6 +1100,9 @@ const siteTranslations = {
 
 "join.error":
     "An error occurred while submitting your application.\nPlease try again later.",
+
+       "lab.brain.title": "Brain & Neurology Lab",
+"lab.brain.description": "Research focused on the brain, nervous system and neurological disorders.",
     
     },
 
@@ -1406,7 +1409,8 @@ const siteTranslations = {
 "join.error":
     "Başvuru gönderilirken bir hata oluştu.\nLütfen daha sonra tekrar deneyiniz.",
  
-     
+"lab.brain.title": "Beyin ve Nöroloji Laboratuvarı",
+"lab.brain.description": "Beyin, sinir sistemi ve nörolojik hastalıklara odaklanan araştırmalar.",     
     }
 
 };
