@@ -8247,11 +8247,35 @@ h1[data-i18n="publications.title"] {
     white-space: nowrap !important;
 }
 
+.download-btn {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
 .download-btn span {
     display: inline !important;
     width: auto !important;
     margin: 0 !important;
     padding: 0 !important;
     position: static !important;
-    flex: 0 0 auto !important;
+    flex: 0 1 auto !important;
+}
+
+/* TELEFON */
+@media (max-width: 600px) {
+    .download-btn {
+        white-space: normal !important;
+        flex-wrap: wrap !important;
+        overflow-wrap: anywhere !important;
+        word-break: break-word !important;
+    }
+
+    .download-btn span {
+        white-space: nowrap !important;
+    }
 }
