@@ -976,11 +976,9 @@ const siteTranslations = {
        "founder.heading":
     "About the Founder",
 
-       "founder.description":
-    "Ali Bocakkıtay is a medical student at Selçuk University Faculty of Medicine and the founder of Wionpav Labs. He founded Wionpav Labs in 2026 to support scientific knowledge production and reliable scientific communication in medicine, health sciences, and research.",
+       "founder.description": "Ali Bocakkıtay is a medical student at Selçuk University Faculty of Medicine and the founder of the Wionpav Labs platform. He established the platform in 2026 to support the production of reliable knowledge and scientific communication in medicine, health sciences, and scientific research.",
 
-"founder.interests":
-    "His interests include literature reviews, scientific writing, and evidence-based medicine.",
+    "founder.interests": "His areas of interest include literature evaluation, scientific writing, evidence-based medicine, and research in the health sciences. Through Wionpav Labs, he aims to contribute to the clear, accessible, and high-quality dissemination of scientific knowledge.",
 
        "founder.name":
     "Ali Bocakkıtay",
@@ -1284,11 +1282,9 @@ const siteTranslations = {
        "founder.heading":
     "Kurucu Hakkında",
 
-       "founder.description":
-    "Ali Bocakkıtay, Selçuk Üniversitesi Tıp Fakültesi öğrencisi ve Wionpav Labs'in kurucusudur. Wionpav Labs'i 2026 yılında; tıp, sağlık bilimleri ve bilimsel araştırmalar alanlarında bilimsel bilgi üretimini ve güvenilir bilimsel iletişimi desteklemek amacıyla kurmuştur.",
+      "founder.description": "Ali Bocakkıtay, Selçuk Üniversitesi Tıp Fakültesi öğrencisi ve Wionpav Labs platformunun kurucusudur. Platformu 2026 yılında; tıp, sağlık bilimleri ve bilimsel araştırmalar alanlarında güvenilir bilgi üretimini ve bilimsel iletişimi desteklemek amacıyla kurmuştur.",
 
-"founder.interests":
-    "İlgi alanları arasında literatür değerlendirmeleri, bilimsel yazım ve kanıta dayalı tıp yer almaktadır.",
+    "founder.interests": "İlgi alanları arasında literatür değerlendirmeleri, bilimsel yazım, kanıta dayalı tıp ve sağlık bilimlerinde araştırma yer almaktadır. Wionpav Labs aracılığıyla bilimsel bilginin anlaşılır, erişilebilir ve nitelikli bir biçimde paylaşılmasına katkı sağlamayı amaçlamaktadır.",
 
 "founder.name":
     "Ali Bocakkıtay",
