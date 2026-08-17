@@ -8296,3 +8296,36 @@ h1[data-i18n="publications.title"] {
         padding: 0 !important;
     }
 }
+
+
+/* PDF LINKLERİ — METİN AKIŞI */
+.paper-item > a {
+    line-height: 1.55;
+}
+
+.paper-item > a span {
+    display: inline !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    position: static !important;
+    white-space: normal !important;
+}
+
+/* MOBİL */
+@media (max-width: 600px) {
+
+    .paper-item > a {
+        display: block !important;
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
+        word-break: normal !important;
+        line-height: 1.55 !important;
+    }
+
+    .paper-item > a span {
+        display: inline !important;
+        white-space: normal !important;
+    }
+
+}
