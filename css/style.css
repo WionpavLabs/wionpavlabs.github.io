@@ -8329,3 +8329,52 @@ h1[data-i18n="publications.title"] {
     }
 
 }
+
+
+
+/* PDF BUTONLARI — BAŞLIK VE PDF İNDİR AYNI METİN AKIŞINDA */
+
+.download-btn {
+    display: block !important;
+    width: 100%;
+    box-sizing: border-box;
+
+    white-space: normal !important;
+    overflow-wrap: break-word;
+    word-break: normal;
+
+    line-height: 1.5 !important;
+}
+
+.download-btn span {
+    display: inline !important;
+
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    white-space: normal !important;
+}
+
+/* PDF İndir metnini sağa iten flex davranışını kaldır */
+.download-btn {
+    justify-content: initial !important;
+    align-items: initial !important;
+    gap: 0 !important;
+}
+
+/* MOBİL */
+@media (max-width: 600px) {
+    .download-btn {
+        display: block !important;
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
+        word-break: normal !important;
+        line-height: 1.55 !important;
+    }
+
+    .download-btn span {
+        display: inline !important;
+        white-space: normal !important;
+    }
+}
