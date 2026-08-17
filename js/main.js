@@ -1104,6 +1104,11 @@ const siteTranslations = {
        "lab.brain.title": "Brain & Neurology Lab",
 "lab.brain.description": "Research focused on the brain, nervous system and neurological disorders.",
     
+   "brain.title": "🧠 Brain & Neurology Lab",
+"brain.subtitle": "Research studies in neurology and neuroscience",
+"brain.back": "← Back to Labs",
+    
+    
     },
 
 
@@ -1411,6 +1416,12 @@ const siteTranslations = {
  
 "lab.brain.title": "Beyin ve Nöroloji Laboratuvarı",
 "lab.brain.description": "Beyin, sinir sistemi ve nörolojik hastalıklara odaklanan araştırmalar.",     
+   
+    
+    "brain.title": "🧠 Beyin ve Nöroloji Laboratuvarı",
+"brain.subtitle": "Nöroloji ve sinirbilim alanlarında araştırma çalışmaları",
+"brain.back": "← Laboratuvarlara Dön",
+    
     }
 
 };
