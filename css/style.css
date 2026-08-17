@@ -8237,3 +8237,21 @@ h1[data-i18n="publications.title"] {
     flex: none !important;
     white-space: nowrap !important;
 }
+
+.download-btn {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    white-space: nowrap !important;
+}
+
+.download-btn span {
+    display: inline !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: static !important;
+    flex: 0 0 auto !important;
+}
