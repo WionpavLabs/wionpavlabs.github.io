@@ -1446,8 +1446,71 @@ let labScrollPosition = 0;
 
 function openLab(lab) {
 
-    if (lab !== "mental-health") return;
+    const labsWrapper =
+        document.querySelector(".labs-wrapper");
 
+    const labsSelection =
+        document.getElementById("labsSelection");
+
+    if (!labsWrapper || !labsSelection) return;
+
+    const selectedLab =
+        document.getElementById(lab);
+
+    if (!selectedLab) return;
+
+
+    /* O ANKİ SCROLL KONUMUNU KAYDET */
+
+    labScrollPosition = window.scrollY;
+
+
+    /* TÜM LABLARI KAPAT */
+
+    document
+        .querySelectorAll(".research-section")
+        .forEach(section => {
+            section.classList.remove("active");
+        });
+
+
+    /* LAB SEÇİMİNİ GİZLE */
+
+    labsSelection.style.display = "none";
+
+
+    /* SEÇİLEN LABI AÇ */
+
+    selectedLab.classList.add("active");
+
+
+    /* WRAPPER'A LAB AÇILDI SINIFI EKLE */
+
+    labsWrapper.classList.add("lab-open");
+
+
+    /* URL */
+
+    history.replaceState(
+        null,
+        "",
+        window.location.pathname + "#" + lab
+    );
+
+
+    /* SCROLL KONUMUNU KORU */
+
+    requestAnimationFrame(function () {
+
+        window.scrollTo({
+            top: labScrollPosition,
+            left: 0,
+            behavior: "instant"
+        });
+
+    });
+
+}
     const labsWrapper = document.querySelector(".labs-wrapper");
     const labsSelection = document.getElementById("labsSelection");
     const mentalHealth = document.getElementById("mental-health");
@@ -1501,26 +1564,36 @@ function openLab(lab) {
 
 function closeLab() {
 
-    const labsWrapper = document.querySelector(".labs-wrapper");
-    const labsSelection = document.getElementById("labsSelection");
-    const mentalHealth = document.getElementById("mental-health");
+    const labsWrapper =
+        document.querySelector(".labs-wrapper");
 
-    if (!labsWrapper || !labsSelection || !mentalHealth) return;
+    const labsSelection =
+        document.getElementById("labsSelection");
 
-
-    /* PSİKİYATRİ LABINI KAPAT */
-    mentalHealth.classList.remove("active");
+    if (!labsWrapper || !labsSelection) return;
 
 
-    /* LAB SEÇİM EKRANINI GERİ GETİR */
+    /* TÜM LABLARI KAPAT */
+
+    document
+        .querySelectorAll(".research-section")
+        .forEach(section => {
+            section.classList.remove("active");
+        });
+
+
+    /* LAB SEÇİMİNİ GERİ GETİR */
+
     labsSelection.style.display = "grid";
 
 
     /* WRAPPER SINIFINI KALDIR */
+
     labsWrapper.classList.remove("lab-open");
 
 
     /* HASH'İ TEMİZLE */
+
     history.replaceState(
         null,
         "",
@@ -1528,10 +1601,8 @@ function closeLab() {
     );
 
 
-    /*
-       KULLANICIYI TAM OLARAK
-       ÖNCEKİ SCROLL KONUMUNA GERİ GETİR
-    */
+    /* ÖNCEKİ SCROLL KONUMUNA DÖN */
+
     requestAnimationFrame(function () {
 
         window.scrollTo({
