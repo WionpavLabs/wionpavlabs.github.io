@@ -8279,3 +8279,20 @@ h1[data-i18n="publications.title"] {
         white-space: nowrap !important;
     }
 }
+
+@media (max-width: 600px) {
+    .download-btn {
+        display: block !important;
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
+        word-break: normal !important;
+        line-height: 1.55 !important;
+    }
+
+    .download-btn span {
+        display: inline !important;
+        white-space: normal !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
