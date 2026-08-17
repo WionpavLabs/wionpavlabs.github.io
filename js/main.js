@@ -752,6 +752,7 @@ research7: {
             download: "⬇️ 9. Obsesif-Kompulsif Bozukluk (OKB) PDF İndir",
             file: "research/Obsesif-Kompulsif Bozukluk (OKB).pdf",
             flag: "🇹🇷"
+       }
         },
   
     
