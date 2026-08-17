@@ -768,37 +768,40 @@ color:#94a3b8;
 
         <!-- 2. BRAIN & NEUROLOGY -->
 
-        <div class="lab-card coming-soon">
+      <div
+    class="lab-card"
+    onclick="openLab('brain-neurology')"
+>
 
-            <span class="coming-badge">
-                COMING SOON
-            </span>
+    <div class="lab-icon">
+        🧠
+    </div>
 
-            <div class="lab-icon">
-                🧠
-            </div>
+    <h2 data-i18n="lab.brain.title">
+        Brain & Neurology Lab
+    </h2>
 
-            <h2 data-i18n="lab.brain.title">
-    Brain & Neurology Lab
-</h2>
+    <p data-i18n="lab.brain.description">
+        Research focused on the brain,
+        nervous system and neurological disorders.
+    </p>
 
-<p data-i18n="lab.brain.description">
-    Research focused on the brain,
-    nervous system and neurological disorders.
-</p>
+    <div class="lab-footer">
 
-<div class="lab-footer">
+        <span
+            class="lab-count"
+            data-i18n="lab.brain.count"
+        >
+            1 Study
+        </span>
 
-    <span
-        class="lab-count"
-        data-i18n="lab.brain.count"
-    >
-        0 Studies
-    </span>
+        <span class="lab-arrow">
+            →
+        </span>
+
+    </div>
 
 </div>
-
-        </div>
 
 
 
@@ -1334,6 +1337,89 @@ color:#94a3b8;
 
         </div>
 
+
+
+<!-- =========================================
+     BRAIN & NEUROLOGY LAB
+========================================== -->
+
+<div
+    id="brain-neurology"
+    class="research-section"
+>
+
+    <div class="research-header">
+
+        <div>
+
+            <h2
+                class="research-title"
+                data-i18n="brain.title"
+            >
+                🧠 Brain & Neurology Lab
+            </h2>
+
+            <p
+                class="research-subtitle"
+                data-i18n="brain.subtitle"
+            >
+                Research studies in neurology and neuroscience
+            </p>
+
+        </div>
+
+        <button
+            class="back-to-labs"
+            onclick="closeLab()"
+            data-i18n="brain.back"
+        >
+            ← Back to Labs
+        </button>
+
+    </div>
+
+
+    <!-- =================================
+         1. PARKINSON'S DISEASE
+    ================================== -->
+
+    <div class="paper-item">
+
+        <div class="paper-header">
+
+            <a
+                id="brain-research1-title"
+                href="research/Parkinson's Disease.pdf"
+                target="_blank"
+            >
+                📄 1. Parkinson's Disease Read PDF
+            </a>
+
+            <button
+                id="brain-research1-lang"
+                class="lang-switch"
+                onclick="toggleLanguage('brain-research1')"
+            >
+                🇬🇧
+            </button>
+
+        </div>
+
+        <a
+            id="brain-research1-download"
+            class="download-btn"
+            href="research/Parkinson's Disease.pdf"
+            download
+        >
+            ⬇️ 1. Parkinson's Disease Download PDF
+        </a>
+
+    </div>
+
+</div>
+
+       
+       
     </div>
 
 </div>
