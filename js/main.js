@@ -792,9 +792,9 @@ research7: {
             file: "research/Alzheimer Hastalığı.pdf",
             flag: "🇹🇷"
         }
-   
+ }  
 };
-}
+
 function toggleLanguage(article){
 
     const item = languages[article];
