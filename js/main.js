@@ -1193,7 +1193,7 @@ const siteTranslations = {
     "0 Çalışma",
 
 "lab.cardiovascular.title":
-    "Kardiyovasküler Laboratuvar",
+    "Kardiyovasküler Laboratuvarı",
 
 "lab.cardiovascular.description":
     "Kardiyovasküler hastalıklar, kalp sağlığı ve damar hastalıkları üzerine araştırmalar.",
