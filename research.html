@@ -1432,13 +1432,7 @@ color:#94a3b8;
 
 
 <script>
-/* =========================================================
-   WIONPAV LABS — LAB AÇMA / KAPATMA
-   SCROLL KONUMU DEĞİŞMEZ
-========================================================= */
-
 let labScrollPosition = 0;
-
 
 /* =========================================
    LAB AÇ
@@ -1446,61 +1440,42 @@ let labScrollPosition = 0;
 
 function openLab(lab) {
 
-    const labsWrapper =
-        document.querySelector(".labs-wrapper");
+    const labsWrapper = document.querySelector(".labs-wrapper");
+    const labsSelection = document.getElementById("labsSelection");
+    const selectedLab = document.getElementById(lab);
 
-    const labsSelection =
-        document.getElementById("labsSelection");
+    if (!labsWrapper || !labsSelection || !selectedLab) {
+        return;
+    }
 
-    if (!labsWrapper || !labsSelection) return;
-
-    const selectedLab =
-        document.getElementById(lab);
-
-    if (!selectedLab) return;
-
-
-    /* O ANKİ SCROLL KONUMUNU KAYDET */
-
+    /* Mevcut scroll konumunu kaydet */
     labScrollPosition = window.scrollY;
 
-
-    /* TÜM LABLARI KAPAT */
-
+    /* Tüm lab detaylarını kapat */
     document
         .querySelectorAll(".research-section")
         .forEach(section => {
             section.classList.remove("active");
         });
 
-
-    /* LAB SEÇİMİNİ GİZLE */
-
+    /* Lab kartlarını gizle */
     labsSelection.style.display = "none";
 
-
-    /* SEÇİLEN LABI AÇ */
-
+    /* Seçilen labı aç */
     selectedLab.classList.add("active");
 
-
-    /* WRAPPER'A LAB AÇILDI SINIFI EKLE */
-
+    /* Lab açık modu */
     labsWrapper.classList.add("lab-open");
 
-
-    /* URL */
-
+    /* URL hash */
     history.replaceState(
         null,
         "",
         window.location.pathname + "#" + lab
     );
 
-
-    /* SCROLL KONUMUNU KORU */
-
-    requestAnimationFrame(function () {
+    /* Scroll konumunu koru */
+    requestAnimationFrame(() => {
 
         window.scrollTo({
             top: labScrollPosition,
@@ -1509,52 +1484,6 @@ function openLab(lab) {
         });
 
     });
-
-}
-    const labsWrapper = document.querySelector(".labs-wrapper");
-    const labsSelection = document.getElementById("labsSelection");
-    const mentalHealth = document.getElementById("mental-health");
-
-    if (!labsWrapper || !labsSelection || !mentalHealth) return;
-
-
-    /* O ANKİ SCROLL KONUMUNU KAYDET */
-    labScrollPosition = window.scrollY;
-
-
-    /* LAB SEÇİM EKRANINI GİZLE */
-    labsSelection.style.display = "none";
-
-
-    /* PSİKİYATRİ LABINI GÖSTER */
-    mentalHealth.classList.add("active");
-
-
-    /* WRAPPER'A LAB AÇILDI SINIFI EKLE */
-    labsWrapper.classList.add("lab-open");
-
-
-    /* URL */
-    history.replaceState(
-        null,
-        "",
-        window.location.pathname + "#mental-health"
-    );
-
-
-    /*
-       TARAYICININ OTOMATİK SCROLL DEĞİŞTİRMESİNİ ENGELLE
-    */
-    requestAnimationFrame(function () {
-
-        window.scrollTo({
-            top: labScrollPosition,
-            left: 0,
-            behavior: "instant"
-        });
-
-    });
-
 }
 
 
@@ -1564,46 +1493,35 @@ function openLab(lab) {
 
 function closeLab() {
 
-    const labsWrapper =
-        document.querySelector(".labs-wrapper");
+    const labsWrapper = document.querySelector(".labs-wrapper");
+    const labsSelection = document.getElementById("labsSelection");
 
-    const labsSelection =
-        document.getElementById("labsSelection");
+    if (!labsWrapper || !labsSelection) {
+        return;
+    }
 
-    if (!labsWrapper || !labsSelection) return;
-
-
-    /* TÜM LABLARI KAPAT */
-
+    /* Tüm lab detaylarını kapat */
     document
         .querySelectorAll(".research-section")
         .forEach(section => {
             section.classList.remove("active");
         });
 
-
-    /* LAB SEÇİMİNİ GERİ GETİR */
-
+    /* Lab kartlarını geri getir */
     labsSelection.style.display = "grid";
 
-
-    /* WRAPPER SINIFINI KALDIR */
-
+    /* Lab açık modunu kaldır */
     labsWrapper.classList.remove("lab-open");
 
-
-    /* HASH'İ TEMİZLE */
-
+    /* Hash temizle */
     history.replaceState(
         null,
         "",
         window.location.pathname
     );
 
-
-    /* ÖNCEKİ SCROLL KONUMUNA DÖN */
-
-    requestAnimationFrame(function () {
+    /* Önceki scroll konumuna dön */
+    requestAnimationFrame(() => {
 
         window.scrollTo({
             top: labScrollPosition,
@@ -1612,46 +1530,48 @@ function closeLab() {
         });
 
     });
-
 }
 
 
 /* =========================================
-   SAYFA #mental-health İLE AÇILDIYSA
+   SAYFA HASH İLE AÇILIRSA
+   #mental-health
+   #brain-neurology
 ========================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    if (window.location.hash === "#mental-health") {
+    const hash = window.location.hash.substring(1);
 
-        /*
-           Doğrudan hash ile açılırsa
-           normal şekilde labı göster.
-        */
-
-        const labsSelection =
-            document.getElementById("labsSelection");
-
-        const mentalHealth =
-            document.getElementById("mental-health");
-
-        const labsWrapper =
-            document.querySelector(".labs-wrapper");
-
-        if (
-            labsSelection &&
-            mentalHealth &&
-            labsWrapper
-        ) {
-
-            labsSelection.style.display = "none";
-
-            mentalHealth.classList.add("active");
-
-            labsWrapper.classList.add("lab-open");
-        }
-
+    if (!hash) {
+        return;
     }
+
+    const labsSelection =
+        document.getElementById("labsSelection");
+
+    const selectedLab =
+        document.getElementById(hash);
+
+    const labsWrapper =
+        document.querySelector(".labs-wrapper");
+
+    if (
+        !labsSelection ||
+        !selectedLab ||
+        !labsWrapper
+    ) {
+        return;
+    }
+
+    /* Kartları gizle */
+    labsSelection.style.display = "none";
+
+    /* Labı aç */
+    selectedLab.classList.add("active");
+
+    /* Wrapper lab moduna geçsin */
+    labsWrapper.classList.add("lab-open");
 
 });
 </script>
