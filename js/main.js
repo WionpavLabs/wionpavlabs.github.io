@@ -773,7 +773,25 @@ research7: {
             flag: "🇹🇷"
         }
       
-    }
+    },
+
+
+     research11: {
+        current: "EN",
+
+        EN: {
+            title: "📄 2. Alzheimer's Disease Read PDF",
+            download: "⬇️ 2. Alzheimer's Disease Download PDF",
+            file: "research/Alzheimer's Disease.pdf",
+            flag: "🇬🇧"
+        },
+
+        TR: {
+            title: "📄 2. Alzheimer Hastalığı PDF Oku",
+            download: "⬇️ 2. Alzheimer Hastalığı PDF İndir",
+            file: "research/Alzheimer Hastalığı.pdf",
+            flag: "🇹🇷"
+        }
    
 };
 
@@ -877,7 +895,7 @@ const siteTranslations = {
     "Research focused on the brain, nervous system and neurological disorders.",
 
 "lab.brain.count":
-    "1 Studies",
+    "2 Studies",
 
 "lab.orthopedics.title":
     "Orthopedics & Musculoskeletal Lab",
@@ -1181,7 +1199,7 @@ const siteTranslations = {
     "Beyin, sinir sistemi ve nörolojik hastalıklar üzerine araştırmalar.",
 
 "lab.brain.count":
-    "1 Çalışma",
+    "2 Çalışma",
 
 "lab.orthopedics.title":
     "Ortopedi ve Kas-İskelet Sistemi Laboratuvarı",
