@@ -994,21 +994,17 @@ const siteTranslations = {
        "vision.title":
     "Vision",
 
-"vision.description1":
-    "To become a reliable and high-quality scientific platform in scientific content production, literature evaluation, and research activities. Our vision is to facilitate access to accurate and up-to-date information in the health sciences while contributing to scientific production, research culture, and academic knowledge sharing.",
-
-"vision.description2":
-    "WionPav Labs aims to evaluate, interpret, and make scientific literature more accessible while bringing together knowledge and research from different fields of the health sciences. We seek to support scientific thinking and the production of high-quality knowledge.",
-
+  "vision.description1": "To become a reliable and high-quality scientific platform in medicine, health sciences, and research, making scientific knowledge more accessible and creating value for the health sciences community.",
+    
+   "vision.description2": "To build a strong and accessible scientific network that supports scientific thinking, research culture, and the production of high-quality knowledge.",
+       
 "mission.title":
     "Mission",
 
-"mission.description1":
-    "To produce reliable, up-to-date, and scientifically grounded content in medicine, health sciences, and research; to make scientific literature easier to understand and evaluate; and to support knowledge sharing.",
+ "mission.description1": "To produce reliable, up-to-date, and scientifically grounded content in medicine, health sciences, and research, while making scientific literature easier to understand and supporting knowledge sharing.",
 
-"mission.description2":
-    "WionPav Labs aims to present scientific information in a clear and accessible manner, support research and literature-based work, and strengthen knowledge sharing across different disciplines within the health sciences. We seek to encourage scientific thinking and critical evaluation while contributing to the development of a research-oriented culture of knowledge.",
-    
+   "mission.description2": "To promote scientific research and critical thinking while strengthening knowledge sharing across different disciplines of the health sciences.",
+
     "projects.title":
     "Projects",
 
@@ -1306,21 +1302,16 @@ const siteTranslations = {
    "vision.title":
     "Vizyon",
 
-"vision.description1":
-    "Bilimsel içerik üretimi, literatür değerlendirmeleri ve araştırma çalışmaları alanlarında güvenilir ve nitelikli bir bilim platformu haline gelmek. Sağlık bilimleri alanında doğru ve güncel bilgiye erişimi kolaylaştırarak bilimsel üretime, araştırma kültürüne ve akademik bilgi paylaşımına katkı sağlamak.",
+ "vision.description1": "Tıp, sağlık bilimleri ve araştırma alanlarında güvenilir ve nitelikli bir bilim platformu olmak; bilimsel bilgiye erişimi kolaylaştırarak sağlık bilimleri topluluğuna değer katmak.",
 
-"vision.description2":
-    "WionPav Labs; bilimsel literatürü değerlendiren, anlamlandıran ve erişilebilir hale getiren bir yapı olarak farklı sağlık bilimleri alanlarından bilgi ve araştırmaları bir araya getirmeyi, bilimsel düşünceyi ve nitelikli bilgi üretimini desteklemeyi amaçlamaktadır.",
+"vision.description2": "Bilimsel düşünceyi, araştırma kültürünü ve nitelikli bilgi üretimini destekleyen güçlü ve erişilebilir bir bilim ağı oluşturmak.",
 
 "mission.title":
     "Misyon",
 
-"mission.description1":
-    "Tıp, sağlık bilimleri ve araştırma alanlarında güvenilir, güncel ve bilimsel temellere dayanan içerikler üretmek; bilimsel literatürün anlaşılmasını ve değerlendirilmesini kolaylaştırmak ve bilgi paylaşımını desteklemek.",
-
-"mission.description2":
-    "WionPav Labs, bilimsel bilgiyi açık ve erişilebilir bir biçimde sunmayı, araştırma ve literatür çalışmalarını desteklemeyi ve farklı sağlık bilimleri disiplinleri arasında bilgi paylaşımını güçlendirmeyi amaçlamaktadır. Bilimsel düşünme ve eleştirel değerlendirme yaklaşımını teşvik ederek araştırmaya dayalı bir bilgi kültürünün gelişmesine katkıda bulunmak temel amaçlarımız arasındadır.",
-    
+"mission.description1": "Tıp, sağlık bilimleri ve araştırma alanlarında güvenilir, güncel ve bilimsel temellere dayanan içerikler üretmek; literatürü anlaşılır hale getirerek bilgi paylaşımını desteklemek.",
+    "mission.description2": "Bilimsel araştırmaları ve eleştirel düşünmeyi teşvik ederek farklı sağlık bilimleri disiplinleri arasında bilgi paylaşımını güçlendirmek.",
+   
    "projects.title":
     "Projeler",
 
