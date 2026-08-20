@@ -9132,3 +9132,131 @@ h1[data-i18n="publications.title"] {
     background: rgba(56,189,248,.16);
     border-color: #38bdf8;
 }
+
+
+
+
+/* =========================================================
+   PUBLICATIONS LANGUAGE BUTTON
+   Başlık ile aynı hizada
+========================================================= */
+
+.publications-language-control {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: -42px;
+    margin-bottom: 28px;
+}
+
+
+.publications-language-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    min-width: 76px;
+    height: 40px;
+
+    padding: 0 14px;
+
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 12px;
+
+    background: rgba(15, 23, 42, 0.75);
+    color: #e2e8f0;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.publications-language-toggle:hover {
+
+    transform: translateY(-2px);
+
+    border-color: #38bdf8;
+
+    background: rgba(30, 41, 59, 0.9);
+
+    box-shadow:
+        0 8px 25px rgba(56, 189, 248, 0.18);
+}
+
+
+.publications-language-toggle:active {
+
+    transform: scale(0.96);
+
+}
+
+
+#publicationsLanguageIcon {
+
+    font-size: 18px;
+    line-height: 1;
+
+}
+
+
+#publicationsLanguageText {
+
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1;
+
+}
+
+
+/* =========================================================
+   TELEFON
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .publications-language-control {
+
+        margin-top: -38px;
+        margin-bottom: 24px;
+
+    }
+
+
+    .publications-language-toggle {
+
+        min-width: 72px;
+        height: 38px;
+
+        padding: 0 12px;
+
+        gap: 6px;
+
+        border-radius: 11px;
+
+    }
+
+
+    #publicationsLanguageIcon {
+
+        font-size: 17px;
+
+    }
+
+
+    #publicationsLanguageText {
+
+        font-size: 12px;
+
+    }
+
+}
