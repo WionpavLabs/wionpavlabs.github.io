@@ -1438,6 +1438,13 @@ const siteTranslations = {
 
 const LANGUAGE_KEY = "wionpav-language";
 
+const RESEARCH_LANGUAGE_KEY = "wionpav-research-language";
+function getResearchLanguage() {
+
+    return localStorage.getItem(RESEARCH_LANGUAGE_KEY) || "EN";
+
+}
+
 
 /* =========================================================
    KAYITLI DİLİ AL
@@ -1554,7 +1561,7 @@ function applyLanguage(language) {
        RESEARCH / LAB PDF'LERİ
     ========================================= */
 
-    applyResearchLanguage(language);
+    
 
 }
 
@@ -1564,7 +1571,6 @@ function applyResearchLanguage(language) {
         return;
     }
 
-
     Object.keys(languages).forEach(function (article) {
 
         const item = languages[article];
@@ -1573,62 +1579,37 @@ function applyResearchLanguage(language) {
             return;
         }
 
-
         const lang = item[language];
 
-
-        /* =====================================
-           BAŞLIK
-        ===================================== */
+        /* BAŞLIK */
 
         const title =
             document.getElementById(article + "-title");
 
         if (title) {
 
-            title.textContent =
-                lang.title;
-
-            title.href =
-                lang.file;
+            title.textContent = lang.title;
+            title.href = lang.file;
 
         }
 
 
-        /* =====================================
-           DOWNLOAD BUTONU
-        ===================================== */
+        /* DOWNLOAD */
 
         const download =
             document.getElementById(article + "-download");
 
         if (download) {
 
-            download.textContent =
-                lang.download;
-
-            download.href =
-                lang.file;
-
-        }
-
-
-        /* =====================================
-           ESKİ PER-ARTICLE DİL BUTONU VARSA
-           ONUN DA DİLİNİ GÜNCELLE
-        ===================================== */
-
-        const langButton =
-            document.getElementById(article + "-lang");
-
-        if (langButton) {
-
-            langButton.textContent =
-                lang.flag;
+            download.textContent = lang.download;
+            download.href = lang.file;
 
         }
 
     });
+
+
+    updateResearchLanguageButton(language);
 
 }
 
