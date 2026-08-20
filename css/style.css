@@ -9098,25 +9098,26 @@ h1[data-i18n="publications.title"] {
 }
 
 /* =========================================================
-   PUBLICATIONS — BAŞLIK + DİL BUTONU
+   PUBLICATIONS TITLE + LANGUAGE BUTTON
    ========================================================= */
 
-.publications-language-control {
-    position: absolute;
+.publications-title {
+    width: 100%;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
 
-    /* Publications başlığının tam seviyesine getir */
-    top: 40px;
-    right: 0;
+    box-sizing: border-box;
+    margin: 0 0 25px 0 !important;
+    padding: 0 !important;
 
-    margin: 0;
-    padding: 0;
-
-    display: flex;
-    align-items: center;
+    line-height: 1.2;
 }
 
 /* Research'teki butonla aynı boyut */
-.publications-language-toggle {
+.publications-title .publications-language-toggle {
+    flex: 0 0 auto;
+
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -9124,29 +9125,31 @@ h1[data-i18n="publications.title"] {
     height: 40px !important;
     min-height: 40px !important;
 
-    margin: 0 !important;
-    box-sizing: border-box !important;
+    margin: 0 0 0 15px !important;
+    padding: 0 12px !important;
 
+    box-sizing: border-box !important;
     white-space: nowrap !important;
+
+    font-size: 14px;
 }
 
-
-/* =========================================================
-   MOBİL
-   ========================================================= */
-
+/* TELEFON */
 @media (max-width: 600px) {
 
-    .publications-language-control {
-        top: 40px;
-        right: 0;
+    .publications-title {
+        width: 100%;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
     }
 
-    .publications-language-toggle {
+    .publications-title .publications-language-toggle {
         height: 40px !important;
         min-height: 40px !important;
+        margin-left: 10px !important;
+        flex-shrink: 0 !important;
     }
-
 }
 
 
