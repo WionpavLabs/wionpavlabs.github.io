@@ -8982,3 +8982,89 @@ h1[data-i18n="publications.title"] {
     }
 
 }
+
+
+
+
+@media (max-width: 600px) {
+
+    .labs-wrapper {
+        padding: 10px 16px 40px;
+    }
+
+    .labs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lab-card {
+        min-height: 190px;
+    }
+
+    .research-section {
+        padding: 20px;
+    }
+
+    /* LAB BAŞLIĞI */
+    .research-header {
+        display: grid !important;
+        grid-template-columns: 1fr auto !important;
+        grid-template-areas:
+            "title title"
+            "language back" !important;
+
+        align-items: center !important;
+        column-gap: 10px !important;
+        row-gap: 18px !important;
+
+        margin-bottom: 25px !important;
+    }
+
+    /* Başlık + açıklama */
+    .research-header > div:first-child {
+        grid-area: title !important;
+        min-width: 0;
+    }
+
+    /* Dil butonu */
+    .research-language-control {
+        grid-area: language !important;
+
+        display: flex !important;
+        align-items: center !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Back to Labs */
+    .research-header .back-to-labs {
+        grid-area: back !important;
+
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        height: 40px !important;
+        min-height: 40px !important;
+
+        margin: 0 !important;
+        padding: 0 12px !important;
+
+        white-space: nowrap !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Dil butonunun yüksekliği de aynı */
+    .research-language-toggle {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        height: 40px !important;
+        min-height: 40px !important;
+
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+}
