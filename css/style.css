@@ -8384,57 +8384,66 @@ h1[data-i18n="publications.title"] {
 
 
 /* =========================================
-   RESEARCH LANGUAGE TOGGLE
+   RESEARCH PDF LANGUAGE BUTTON
+   SITE LANGUAGE BUTTONUNDAN BAĞIMSIZ
 ========================================= */
 
-.research-actions {
+.research-language-control {
+    display: none;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.research-language-control.active {
     display: flex;
-    align-items: center;
-    gap: 10px;
 }
 
 .research-language-toggle {
-    border: 1px solid rgba(56,189,248,.28);
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(56,189,248,.10),
-            rgba(56,189,248,.04)
-        );
-
-    color: #67d3ff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 
     padding: 10px 15px;
 
+    border: 1px solid rgba(56,189,248,.30);
     border-radius: 12px;
 
-    cursor: pointer;
+    background: rgba(56,189,248,.08);
+
+    color: #67d3ff;
 
     font-family: inherit;
     font-size: 14px;
     font-weight: 700;
 
-    transition:
-        .25s ease;
+    cursor: pointer;
 
-    backdrop-filter: blur(10px);
+    transition: .25s ease;
 }
 
 .research-language-toggle:hover {
     background: rgba(56,189,248,.16);
-
     border-color: #38bdf8;
 
-    box-shadow:
-        0 0 18px rgba(56,189,248,.15);
-
     transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(56,189,248,.15);
 }
 
 .research-language-toggle:active {
     transform: scale(.96);
 }
 
+.research-language-icon {
+    font-size: 17px;
+}
+
+.research-language-text {
+    min-width: 25px;
+    text-align: center;
+}
 
 
