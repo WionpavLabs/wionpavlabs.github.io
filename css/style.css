@@ -8949,3 +8949,36 @@ h1[data-i18n="publications.title"] {
         font-size: 15px;
     }
 }
+
+
+
+
+/* =========================================================
+   LAB CONTROLS — GERİ + DİL BUTONU AYNI HİZADA
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .lab-controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        width: 100%;
+        margin: 20px 0 25px;
+    }
+
+    .lab-back,
+    .mental-back,
+    .brain-back {
+        flex: 0 1 auto;
+        margin: 0;
+    }
+
+    #mentalResearchLanguageToggle,
+    #brainResearchLanguageToggle {
+        flex: 0 0 auto;
+        margin: 0;
+    }
+
+}
