@@ -8384,18 +8384,16 @@ h1[data-i18n="publications.title"] {
 
 
 /* =========================================
-   RESEARCH PDF LANGUAGE BUTTON
-   SITE LANGUAGE BUTTONUNDAN BAĞIMSIZ
+   RESEARCH LANGUAGE BUTTON
 ========================================= */
 
 .research-language-control {
     display: none;
     justify-content: flex-end;
     width: 100%;
-    margin-bottom: 15px;
 }
 
-.research-language-control.active {
+.research-section.active .research-language-control {
     display: flex;
 }
 
@@ -8411,7 +8409,6 @@ h1[data-i18n="publications.title"] {
     border-radius: 12px;
 
     background: rgba(56,189,248,.08);
-
     color: #67d3ff;
 
     font-family: inherit;
@@ -8419,7 +8416,6 @@ h1[data-i18n="publications.title"] {
     font-weight: 700;
 
     cursor: pointer;
-
     transition: .25s ease;
 }
 
