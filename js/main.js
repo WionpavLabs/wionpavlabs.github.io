@@ -1648,16 +1648,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 /* =========================================================
-   WIONPAV LABS — RESEARCH PDF LANGUAGE SYSTEM
+   WIONPAV LABS — TOPLU PDF DİL SİSTEMİ
+   Research + Publications
    EN / TR
+========================================================= */
+
+
+/* =========================================================
+   RESEARCH DİLİ
 ========================================================= */
 
 const RESEARCH_LANGUAGE_KEY = "wionpav-research-language";
 
-
-/* ---------------------------------------------------------
-   KAYITLI ARAŞTIRMA DİLİNİ AL
---------------------------------------------------------- */
 
 function getResearchLanguage() {
 
@@ -1666,9 +1668,26 @@ function getResearchLanguage() {
 }
 
 
-/* ---------------------------------------------------------
-   RESEARCH DİL BUTONLARINI GÜNCELLE
---------------------------------------------------------- */
+/* =========================================================
+   YAYINLAR DİLİ
+========================================================= */
+
+const PUBLICATIONS_LANGUAGE_KEY =
+    "wionpav-publications-language";
+
+
+function getPublicationsLanguage() {
+
+    return localStorage.getItem(
+        PUBLICATIONS_LANGUAGE_KEY
+    ) || "EN";
+
+}
+
+
+/* =========================================================
+   RESEARCH BUTONLARINI GÜNCELLE
+========================================================= */
 
 function updateResearchLanguageButtons(language) {
 
@@ -1678,18 +1697,17 @@ function updateResearchLanguageButtons(language) {
 
     buttons.forEach(button => {
 
-        const text = button.querySelector(
-            ".research-language-text"
-        );
+        const text =
+            button.querySelector(".research-language-text");
 
-        const icon = button.querySelector(
-            ".research-language-icon"
-        );
+        const icon =
+            button.querySelector(".research-language-icon");
+
 
         if (language === "TR") {
 
             if (text) {
-                text.textContent = "TR";
+                text.textContent = "EN";
             }
 
             if (icon) {
@@ -1704,7 +1722,7 @@ function updateResearchLanguageButtons(language) {
         } else {
 
             if (text) {
-                text.textContent = "EN";
+                text.textContent = "TR";
             }
 
             if (icon) {
@@ -1723,18 +1741,26 @@ function updateResearchLanguageButtons(language) {
 }
 
 
-/* ---------------------------------------------------------
-   TÜM PDF'LERİN DİLİNİ DEĞİŞTİR
---------------------------------------------------------- */
+/* =========================================================
+   TÜM RESEARCH PDF'LERİNİ DEĞİŞTİR
+========================================================= */
 
 function applyResearchLanguage(language) {
 
     if (typeof languages === "undefined") {
-        console.error("languages objesi bulunamadı.");
         return;
     }
 
+
     Object.keys(languages).forEach(function(article) {
+
+        /*
+         * Sadece research PDF'leri
+         */
+        if (!article.startsWith("research")) {
+            return;
+        }
+
 
         const item = languages[article];
 
@@ -1742,14 +1768,16 @@ function applyResearchLanguage(language) {
             return;
         }
 
+
         const lang = item[language];
 
 
-        /* PDF OKUMA */
+        /* PDF OKU */
 
-        const title = document.getElementById(
-            article + "-title"
-        );
+        const title =
+            document.getElementById(
+                article + "-title"
+            );
 
         if (title) {
 
@@ -1759,29 +1787,35 @@ function applyResearchLanguage(language) {
         }
 
 
-        /* PDF İNDİRME */
+        /* PDF İNDİR */
 
-        const download = document.getElementById(
-            article + "-download"
-        );
+        const download =
+            document.getElementById(
+                article + "-download"
+            );
 
         if (download) {
 
-            download.textContent = lang.download;
-            download.href = lang.file;
+            download.textContent =
+                lang.download;
+
+            download.href =
+                lang.file;
 
         }
 
 
         /* Eski bireysel buton varsa */
 
-        const individualButton = document.getElementById(
-            article + "-lang"
-        );
+        const individualButton =
+            document.getElementById(
+                article + "-lang"
+            );
 
         if (individualButton) {
 
-            individualButton.textContent = lang.flag;
+            individualButton.textContent =
+                lang.flag;
 
         }
 
@@ -1793,33 +1827,211 @@ function applyResearchLanguage(language) {
 }
 
 
-/* ---------------------------------------------------------
-   SAYFA AÇILDIĞINDA
---------------------------------------------------------- */
+/* =========================================================
+   TÜM YAYINLARI TEK BUTONLA DEĞİŞTİR
+========================================================= */
+
+function applyPublicationsLanguage(language) {
+
+    if (typeof languages === "undefined") {
+        return;
+    }
+
+
+    Object.keys(languages).forEach(function(article) {
+
+        /*
+         * SADECE article1, article2, article3, article4
+         */
+        if (!article.startsWith("article")) {
+            return;
+        }
+
+
+        const item = languages[article];
+
+        if (!item || !item[language]) {
+            return;
+        }
+
+
+        const lang = item[language];
+
+
+        /* PDF OKU */
+
+        const title =
+            document.getElementById(
+                article + "-title"
+            );
+
+        if (title) {
+
+            title.textContent =
+                lang.title;
+
+            title.href =
+                lang.file;
+
+        }
+
+
+        /* PDF İNDİR */
+
+        const download =
+            document.getElementById(
+                article + "-download"
+            );
+
+        if (download) {
+
+            download.textContent =
+                lang.download;
+
+            download.href =
+                lang.file;
+
+        }
+
+
+        /*
+         * Eski tek tek dil butonları
+         * HTML'de kaldıysa güncellenir.
+         */
+
+        const individualButton =
+            document.getElementById(
+                article + "-lang"
+            );
+
+        if (individualButton) {
+
+            individualButton.textContent =
+                lang.flag;
+
+        }
+
+    });
+
+
+    updatePublicationsLanguageButton(language);
+
+}
+
+
+/* =========================================================
+   YAYINLAR ÜSTTEKİ TEK BUTON
+========================================================= */
+
+function updatePublicationsLanguageButton(language) {
+
+    const button =
+        document.getElementById(
+            "publicationsLanguageToggle"
+        );
+
+    if (!button) {
+        return;
+    }
+
+
+    const text =
+        button.querySelector(
+            ".publications-language-text"
+        );
+
+    const icon =
+        button.querySelector(
+            ".publications-language-icon"
+        );
+
+
+    if (language === "TR") {
+
+        /*
+         * Şu an içerik Türkçe.
+         * Buton EN'e geçmeyi gösterir.
+         */
+
+        if (text) {
+            text.textContent = "EN";
+        }
+
+        if (icon) {
+            icon.textContent = "🇹🇷";
+        }
+
+        button.setAttribute(
+            "aria-label",
+            "Çalışmaları İngilizceye geçir"
+        );
+
+    } else {
+
+        /*
+         * Şu an içerik İngilizce.
+         * Buton TR'ye geçmeyi gösterir.
+         */
+
+        if (text) {
+            text.textContent = "TR";
+        }
+
+        if (icon) {
+            icon.textContent = "🇬🇧";
+        }
+
+        button.setAttribute(
+            "aria-label",
+            "Çalışmaları Türkçeye geçir"
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   SAYFA AÇILDIĞINDA RESEARCH + PUBLICATIONS
+========================================================= */
 
 document.addEventListener(
     "DOMContentLoaded",
     function() {
 
-        const language = getResearchLanguage();
+        /*
+         * Research sayfası
+         */
 
-        applyResearchLanguage(language);
+        applyResearchLanguage(
+            getResearchLanguage()
+        );
+
+
+        /*
+         * Yayınlar sayfası
+         */
+
+        applyPublicationsLanguage(
+            getPublicationsLanguage()
+        );
 
     }
 );
 
 
-/* ---------------------------------------------------------
-   RESEARCH LANGUAGE BUTTON
---------------------------------------------------------- */
+/* =========================================================
+   RESEARCH TEK BUTON
+========================================================= */
 
 document.addEventListener(
     "click",
     function(event) {
 
-        const button = event.target.closest(
-            "#mentalResearchLanguageToggle, #brainResearchLanguageToggle"
-        );
+        const button =
+            event.target.closest(
+                "#mentalResearchLanguageToggle, #brainResearchLanguageToggle"
+            );
 
         if (!button) {
             return;
@@ -1843,6 +2055,48 @@ document.addEventListener(
 
 
         applyResearchLanguage(
+            newLanguage
+        );
+
+    }
+);
+
+
+/* =========================================================
+   PUBLICATIONS TEK BUTON
+========================================================= */
+
+document.addEventListener(
+    "click",
+    function(event) {
+
+        const button =
+            event.target.closest(
+                "#publicationsLanguageToggle"
+            );
+
+        if (!button) {
+            return;
+        }
+
+
+        const currentLanguage =
+            getPublicationsLanguage();
+
+
+        const newLanguage =
+            currentLanguage === "EN"
+                ? "TR"
+                : "EN";
+
+
+        localStorage.setItem(
+            PUBLICATIONS_LANGUAGE_KEY,
+            newLanguage
+        );
+
+
+        applyPublicationsLanguage(
             newLanguage
         );
 
