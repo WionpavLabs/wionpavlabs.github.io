@@ -8986,6 +8986,86 @@ h1[data-i18n="publications.title"] {
 
 
 
+/* =========================================
+   RESEARCH HEADER
+   BACK SOL — LANGUAGE RIGHT
+========================================= */
+
+.research-header {
+    display: grid !important;
+
+    grid-template-columns: 1fr auto !important;
+
+    grid-template-areas:
+        "title title"
+        "back language" !important;
+
+    align-items: center !important;
+
+    column-gap: 20px !important;
+    row-gap: 20px !important;
+
+    margin-bottom: 25px !important;
+}
+
+/* Başlık + açıklama */
+.research-header > div:first-child {
+    grid-area: title !important;
+    min-width: 0;
+}
+
+/* BACK TO LABS — SOL */
+.research-header .back-to-labs {
+    grid-area: back !important;
+
+    justify-self: start !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    height: 40px !important;
+    min-height: 40px !important;
+
+    margin: 0 !important;
+
+    box-sizing: border-box !important;
+
+    white-space: nowrap !important;
+}
+
+/* LANGUAGE — SAĞ */
+.research-language-control {
+    grid-area: language !important;
+
+    justify-self: end !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* LANGUAGE BUTTON */
+.research-language-toggle {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    height: 40px !important;
+    min-height: 40px !important;
+
+    margin: 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
 @media (max-width: 600px) {
 
     .labs-wrapper {
@@ -9005,73 +9085,14 @@ h1[data-i18n="publications.title"] {
     }
 
     .research-header {
-        display: grid !important;
-
         grid-template-columns: 1fr auto !important;
 
         grid-template-areas:
             "title title"
-            "language back" !important;
-
-        align-items: center !important;
+            "back language" !important;
 
         column-gap: 10px !important;
         row-gap: 18px !important;
-
-        margin-bottom: 25px !important;
     }
 
-    /* Başlık */
-    .research-header > div:first-child {
-        grid-area: title !important;
-        min-width: 0;
-    }
-
-    /* DİL BUTONU → SOL */
-    .research-language-control {
-        grid-area: language !important;
-
-        display: flex !important;
-        align-items: center !important;
-
-        justify-self: start !important;
-
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    /* BACK TO LABS → SAĞ */
-    .research-header .back-to-labs {
-        grid-area: back !important;
-
-        display: inline-flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-
-        justify-self: end !important;
-
-        height: 40px !important;
-        min-height: 40px !important;
-
-        margin: 0 !important;
-        padding: 0 12px !important;
-
-        white-space: nowrap !important;
-
-        box-sizing: border-box !important;
-    }
-
-    /* İkisinin yüksekliği aynı */
-    .research-language-toggle {
-        display: inline-flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-
-        height: 40px !important;
-        min-height: 40px !important;
-
-        margin: 0 !important;
-
-        box-sizing: border-box !important;
-    }
 }
