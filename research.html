@@ -982,7 +982,24 @@ color:#94a3b8;
 
         </div>
 
- <div class="research-actions">
+ <div id="researchLanguageControl" class="research-language-control">
+
+    <button
+        id="researchLanguageToggle"
+        class="research-language-toggle"
+        type="button"
+        aria-label="Çalışma dilini değiştir"
+    >
+
+        <span class="research-language-icon">🇬🇧</span>
+
+        <span class="research-language-text">
+            TR
+        </span>
+
+    </button>
+
+</div>
 
        
     
@@ -1321,7 +1338,24 @@ color:#94a3b8;
 
         </div>
 
-        <div class="research-actions">
+       <div id="researchLanguageControl" class="research-language-control">
+
+    <button
+        id="researchLanguageToggle"
+        class="research-language-toggle"
+        type="button"
+        aria-label="Çalışma dilini değiştir"
+    >
+
+        <span class="research-language-icon">🇬🇧</span>
+
+        <span class="research-language-text">
+            TR
+        </span>
+
+    </button>
+
+</div>
 
        
 
@@ -1423,6 +1457,8 @@ function openLab(lab) {
     const labsWrapper = document.querySelector(".labs-wrapper");
     const labsSelection = document.getElementById("labsSelection");
     const selectedLab = document.getElementById(lab);
+    const researchLanguageControl =
+    document.getElementById("researchLanguageControl");
 
     if (!labsWrapper || !labsSelection || !selectedLab) {
         return;
@@ -1440,6 +1476,11 @@ function openLab(lab) {
 
     /* Lab kartlarını gizle */
     labsSelection.style.display = "none";
+    if (researchLanguageControl) {
+
+    researchLanguageControl.classList.add("active");
+
+}
 
     /* Seçilen labı aç */
     selectedLab.classList.add("active");
@@ -1475,6 +1516,8 @@ function closeLab() {
 
     const labsWrapper = document.querySelector(".labs-wrapper");
     const labsSelection = document.getElementById("labsSelection");
+    const researchLanguageControl =
+    document.getElementById("researchLanguageControl");
 
     if (!labsWrapper || !labsSelection) {
         return;
@@ -1489,6 +1532,11 @@ function closeLab() {
 
     /* Lab kartlarını geri getir */
     labsSelection.style.display = "grid";
+    if (researchLanguageControl) {
+
+    researchLanguageControl.classList.remove("active");
+
+}
 
     /* Lab açık modunu kaldır */
     labsWrapper.classList.remove("lab-open");
