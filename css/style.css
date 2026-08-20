@@ -9097,29 +9097,54 @@ h1[data-i18n="publications.title"] {
 
 }
 
-/* YAYINLAR DİL BUTONU */
+/* =========================================================
+   PUBLICATIONS — BAŞLIK + DİL BUTONU
+   ========================================================= */
 
 .publications-language-control {
     position: absolute;
-    top: 0;
+
+    /* Publications başlığının tam seviyesine getir */
+    top: 40px;
     right: 0;
+
     margin: 0;
     padding: 0;
+
+    display: flex;
+    align-items: center;
 }
 
+/* Research'teki butonla aynı boyut */
 .publications-language-toggle {
-    margin: 0;
-    white-space: nowrap;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    height: 40px !important;
+    min-height: 40px !important;
+
+    margin: 0 !important;
+    box-sizing: border-box !important;
+
+    white-space: nowrap !important;
 }
 
 
-/* TELEFON */
+/* =========================================================
+   MOBİL
+   ========================================================= */
 
 @media (max-width: 600px) {
 
     .publications-language-control {
-        top: 0;
+        top: 40px;
         right: 0;
+    }
+
+    .publications-language-toggle {
+        height: 40px !important;
+        min-height: 40px !important;
     }
 
 }
