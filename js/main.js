@@ -1702,12 +1702,90 @@ document.addEventListener("DOMContentLoaded", () => {
    SITE LANGUAGE SYSTEMINDEN TAMAMEN BAĞIMSIZDIR
 ========================================================= */
 
+
+
+/* ---------------------------------------------------------
+   KAYITLI ARAŞTIRMA DİLİNİ AL
+--------------------------------------------------------- */
+
+function getResearchLanguage() {
+
+    return localStorage.getItem(RESEARCH_LANGUAGE_KEY) || "EN";
+
+}
+
+
+/* ---------------------------------------------------------
+   ARAŞTIRMA DİLİNİ UYGULA
+--------------------------------------------------------- */
+
+function applyResearchLanguage(language) {
+
+    if (typeof languages === "undefined") {
+        return;
+    }
+
+
+    Object.keys(languages).forEach(function(article) {
+
+        const item = languages[article];
+
+        if (!item || !item[language]) {
+            return;
+        }
+
+
+        const lang = item[language];
+
+
+        /* -----------------------------
+           PDF OKUMA LİNKİ
+        ----------------------------- */
+
+        const title =
+            document.getElementById(article + "-title");
+
+        if (title) {
+
+            title.textContent = lang.title;
+            title.href = lang.file;
+
+        }
+
+
+        /* -----------------------------
+           PDF İNDİRME LİNKİ
+        ----------------------------- */
+
+        const download =
+            document.getElementById(article + "-download");
+
+        if (download) {
+
+            download.textContent = lang.download;
+            download.href = lang.file;
+
+        }
+
+    });
+
+
+    updateResearchLanguageButton(language);
+
+}
+
+
+/* ---------------------------------------------------------
+   TOPLU PDF DİL BUTONUNU GÜNCELLE
+--------------------------------------------------------- */
+
 function updateResearchLanguageButton(language) {
 
     const button =
         document.getElementById("researchLanguageToggle");
 
     if (!button) return;
+
 
     const text =
         button.querySelector(".research-language-text");
@@ -1717,6 +1795,11 @@ function updateResearchLanguageButton(language) {
 
 
     if (language === "TR") {
+
+        /*
+         * Şu anda PDF'ler Türkçe.
+         * Buton EN gösteriyor çünkü basınca EN'e geçecek.
+         */
 
         if (text) {
             text.textContent = "EN";
@@ -1732,6 +1815,11 @@ function updateResearchLanguageButton(language) {
         );
 
     } else {
+
+        /*
+         * Şu anda PDF'ler İngilizce.
+         * Buton TR gösteriyor çünkü basınca Türkçeye geçecek.
+         */
 
         if (text) {
             text.textContent = "TR";
@@ -1751,24 +1839,29 @@ function updateResearchLanguageButton(language) {
 }
 
 
+/* ---------------------------------------------------------
+   SAYFA YÜKLENİNCE
+--------------------------------------------------------- */
+
 document.addEventListener(
     "DOMContentLoaded",
-    function () {
-
-        const savedResearchLanguage =
-            getResearchLanguage();
+    function() {
 
         applyResearchLanguage(
-            savedResearchLanguage
+            getResearchLanguage()
         );
 
     }
 );
 
 
+/* ---------------------------------------------------------
+   TOPLU PDF DİL DEĞİŞTİRME
+--------------------------------------------------------- */
+
 document.addEventListener(
     "click",
-    function (event) {
+    function(event) {
 
         const button =
             event.target.closest(
