@@ -9097,3 +9097,92 @@ h1[data-i18n="publications.title"] {
 
 }
 
+
+
+/* =========================================================
+   PUBLICATIONS HEADER
+   YAYINLAR SOL — DİL BUTONU SAĞ
+========================================================= */
+
+.publications-header {
+    display: grid !important;
+
+    grid-template-columns: 1fr auto !important;
+
+    grid-template-areas:
+        "title title"
+        "empty language" !important;
+
+    align-items: center !important;
+
+    column-gap: 20px !important;
+    row-gap: 20px !important;
+
+    margin-bottom: 25px !important;
+}
+
+
+/* YAYINLAR BAŞLIĞI */
+.publications-header h1 {
+    grid-area: title !important;
+
+    margin: 0 !important;
+}
+
+
+/* DİL BUTONU KONTROLÜ */
+.publications-language-control {
+    grid-area: language !important;
+
+    justify-self: end !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+/* DİL DEĞİŞTİRME BUTONU
+   RESEARCH BUTONU İLE BİREBİR AYNI BOYUT */
+.publications-language-toggle {
+    display: inline-flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    height: 40px !important;
+    min-height: 40px !important;
+
+    margin: 0 !important;
+
+    box-sizing: border-box !important;
+
+    white-space: nowrap !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .publications-header {
+        grid-template-columns: 1fr auto !important;
+
+        grid-template-areas:
+            "title title"
+            "empty language" !important;
+
+        column-gap: 10px !important;
+        row-gap: 18px !important;
+    }
+
+    .publications-language-toggle {
+        height: 40px !important;
+        min-height: 40px !important;
+    }
+}
+
