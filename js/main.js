@@ -1495,34 +1495,22 @@ function applyLanguage(language) {
             : "en";
 
 
+    /* =========================================
+       GLOBAL DİL BUTONU
+    ========================================= */
+
     updateLanguageButton(language);
 
+
+    /* =========================================
+       NORMAL SITE METİNLERİ
+    ========================================= */
 
     document.querySelectorAll("[data-i18n]").forEach(
         function (element) {
 
-           document.querySelectorAll("[data-i18n-placeholder]").forEach(
-    function (element) {
-
-        const key =
-            element.getAttribute("data-i18n-placeholder");
-
-        if (
-            siteTranslations[language] &&
-            siteTranslations[language][key]
-        ) {
-
-            element.placeholder =
-                siteTranslations[language][key];
-
-        }
-
-    }
-);
-
             const key =
                 element.getAttribute("data-i18n");
-
 
             if (
                 siteTranslations[language] &&
@@ -1536,6 +1524,111 @@ function applyLanguage(language) {
 
         }
     );
+
+
+    /* =========================================
+       PLACEHOLDER ÇEVİRİLERİ
+    ========================================= */
+
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(
+        function (element) {
+
+            const key =
+                element.getAttribute("data-i18n-placeholder");
+
+            if (
+                siteTranslations[language] &&
+                siteTranslations[language][key]
+            ) {
+
+                element.placeholder =
+                    siteTranslations[language][key];
+
+            }
+
+        }
+    );
+
+
+    /* =========================================
+       RESEARCH / LAB PDF'LERİ
+    ========================================= */
+
+    applyResearchLanguage(language);
+
+}
+
+function applyResearchLanguage(language) {
+
+    if (typeof languages === "undefined") {
+        return;
+    }
+
+
+    Object.keys(languages).forEach(function (article) {
+
+        const item = languages[article];
+
+        if (!item || !item[language]) {
+            return;
+        }
+
+
+        const lang = item[language];
+
+
+        /* =====================================
+           BAŞLIK
+        ===================================== */
+
+        const title =
+            document.getElementById(article + "-title");
+
+        if (title) {
+
+            title.textContent =
+                lang.title;
+
+            title.href =
+                lang.file;
+
+        }
+
+
+        /* =====================================
+           DOWNLOAD BUTONU
+        ===================================== */
+
+        const download =
+            document.getElementById(article + "-download");
+
+        if (download) {
+
+            download.textContent =
+                lang.download;
+
+            download.href =
+                lang.file;
+
+        }
+
+
+        /* =====================================
+           ESKİ PER-ARTICLE DİL BUTONU VARSA
+           ONUN DA DİLİNİ GÜNCELLE
+        ===================================== */
+
+        const langButton =
+            document.getElementById(article + "-lang");
+
+        if (langButton) {
+
+            langButton.textContent =
+                lang.flag;
+
+        }
+
+    });
 
 }
 
