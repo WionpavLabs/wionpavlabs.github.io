@@ -1930,10 +1930,7 @@ function updatePublicationsLanguageButton(language) {
             "publicationsLanguageToggle"
         );
 
-    if (!button) {
-        return;
-    }
-
+    if (!button) return;
 
     const text =
         button.querySelector(
@@ -1948,13 +1945,8 @@ function updatePublicationsLanguageButton(language) {
 
     if (language === "TR") {
 
-        /*
-         * Şu an içerik Türkçe.
-         * Buton EN'e geçmeyi gösterir.
-         */
-
         if (text) {
-            text.textContent = "EN";
+            text.textContent = "TR";
         }
 
         if (icon) {
@@ -1963,18 +1955,13 @@ function updatePublicationsLanguageButton(language) {
 
         button.setAttribute(
             "aria-label",
-            "Çalışmaları İngilizceye geçir"
+            "İngilizceye geç"
         );
 
     } else {
 
-        /*
-         * Şu an içerik İngilizce.
-         * Buton TR'ye geçmeyi gösterir.
-         */
-
         if (text) {
-            text.textContent = "TR";
+            text.textContent = "EN";
         }
 
         if (icon) {
@@ -1983,7 +1970,7 @@ function updatePublicationsLanguageButton(language) {
 
         button.setAttribute(
             "aria-label",
-            "Çalışmaları Türkçeye geçir"
+            "Türkçeye geç"
         );
 
     }
