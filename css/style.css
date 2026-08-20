@@ -9112,7 +9112,7 @@ h1[data-i18n="publications.title"] {
 
     width: 100% !important;
 
-    margin: 0 0 25px 0 !important;
+    margin: 0 0 40x 0 !important;
     padding: 0 !important;
 
     box-sizing: border-box !important;
@@ -9200,7 +9200,7 @@ h1[data-i18n="publications.title"] {
 
     width: 100% !important;
 
-    margin: 0 0 25px 0 !important;
+    margin: 0 0 40px 0 !important;
     padding: 0 !important;
 
     box-sizing: border-box !important;
@@ -9241,7 +9241,7 @@ h1[data-i18n="publications.title"] {
 
     gap: 8px !important;
 
-    padding: 10px 15px !important;
+    padding: 10px 11px !important;
 
     border: 1px solid rgba(56,189,248,.30) !important;
     border-radius: 12px !important;
@@ -9291,7 +9291,7 @@ h1[data-i18n="publications.title"] {
 
 /* TEXT */
 .publications-language-text {
-    min-width: 25px !important;
+    min-width: 20px !important;
     text-align: center !important;
 }
 
@@ -9334,7 +9334,7 @@ h1[data-i18n="publications.title"] {
 
     .publications-language-toggle {
 
-        padding: 10px 15px !important;
+        padding: 10px 11px !important;
 
         border-radius: 12px !important;
 
@@ -9350,7 +9350,7 @@ h1[data-i18n="publications.title"] {
 
 
     .publications-language-text {
-        min-width: 25px !important;
+        min-width: 20px !important;
     }
 
 }
