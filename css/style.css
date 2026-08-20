@@ -9138,125 +9138,85 @@ h1[data-i18n="publications.title"] {
 
 /* =========================================================
    PUBLICATIONS LANGUAGE BUTTON
-   Başlık ile aynı hizada
+   Başlık ile tam aynı hiza
 ========================================================= */
 
 .publications-language-control {
+    width: 100%;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: flex-end;
-    margin-top: -42px;
-    margin-bottom: 28px;
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
-
 
 .publications-language-toggle {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 7px;
+    gap: 6px;
 
-    min-width: 76px;
-    height: 40px;
+    padding: 8px 14px;
 
-    padding: 0 14px;
+    background: #ffffff !important;
+    color: #111827 !important;
 
-    border: 1px solid rgba(56, 189, 248, 0.25);
-    border-radius: 12px;
-
-    background: rgba(15, 23, 42, 0.75);
-    color: #e2e8f0;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
 
     font-family: 'Inter', sans-serif;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
 
     cursor: pointer;
 
-    transition:
-        transform 0.25s ease,
-        border-color 0.25s ease,
-        background 0.25s ease,
-        box-shadow 0.25s ease;
-}
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
 
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
 
 .publications-language-toggle:hover {
-
     transform: translateY(-2px);
-
-    border-color: #38bdf8;
-
-    background: rgba(30, 41, 59, 0.9);
-
-    box-shadow:
-        0 8px 25px rgba(56, 189, 248, 0.18);
+    box-shadow: 0 7px 18px rgba(0,0,0,0.15);
 }
 
-
-.publications-language-toggle:active {
-
-    transform: scale(0.96);
-
-}
-
-
-#publicationsLanguageIcon {
-
-    font-size: 18px;
+.publications-language-icon {
+    font-size: 17px;
     line-height: 1;
-
 }
 
-
-#publicationsLanguageText {
-
-    font-size: 13px;
-    font-weight: 800;
+.publications-language-text {
+    font-size: 14px;
     line-height: 1;
-
 }
 
 
 /* =========================================================
-   TELEFON
+   MOBİL
 ========================================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
     .publications-language-control {
-
-        margin-top: -38px;
-        margin-bottom: 24px;
-
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 12px;
+        margin-bottom: 18px;
     }
-
 
     .publications-language-toggle {
-
-        min-width: 72px;
-        height: 38px;
-
-        padding: 0 12px;
-
-        gap: 6px;
-
-        border-radius: 11px;
-
+        padding: 8px 13px;
+        font-size: 13px;
     }
 
-
-    #publicationsLanguageIcon {
-
-        font-size: 17px;
-
+    .publications-language-icon {
+        font-size: 16px;
     }
 
-
-    #publicationsLanguageText {
-
-        font-size: 12px;
-
+    .publications-language-text {
+        font-size: 13px;
     }
 
 }
