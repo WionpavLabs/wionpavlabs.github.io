@@ -1698,15 +1698,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 /* =========================================================
-   RESEARCH PDF LANGUAGE SWITCHER
-   SITE LANGUAGE SYSTEMINDEN TAMAMEN BAĞIMSIZDIR
+   MEDVORTEX — TOPLU ÇALIŞMA / PDF DİL SİSTEMİ
+   SITE DİLİNDEN TAMAMEN BAĞIMSIZDIR
 ========================================================= */
 
+const RESEARCH_LANGUAGE_KEY = "wionpav-research-language";
 
 
-/* ---------------------------------------------------------
-   KAYITLI ARAŞTIRMA DİLİNİ AL
---------------------------------------------------------- */
+/* =========================================================
+   KAYITLI ÇALIŞMA DİLİNİ AL
+========================================================= */
 
 function getResearchLanguage() {
 
@@ -1715,16 +1716,15 @@ function getResearchLanguage() {
 }
 
 
-/* ---------------------------------------------------------
-   ARAŞTIRMA DİLİNİ UYGULA
---------------------------------------------------------- */
+/* =========================================================
+   TOPLU ÇALIŞMA DİLİNİ UYGULA
+========================================================= */
 
 function applyResearchLanguage(language) {
 
     if (typeof languages === "undefined") {
         return;
     }
-
 
     Object.keys(languages).forEach(function(article) {
 
@@ -1734,13 +1734,12 @@ function applyResearchLanguage(language) {
             return;
         }
 
-
         const lang = item[language];
 
 
-        /* -----------------------------
-           PDF OKUMA LİNKİ
-        ----------------------------- */
+        /* ==============================
+           PDF OKUMA
+        ============================== */
 
         const title =
             document.getElementById(article + "-title");
@@ -1753,9 +1752,9 @@ function applyResearchLanguage(language) {
         }
 
 
-        /* -----------------------------
-           PDF İNDİRME LİNKİ
-        ----------------------------- */
+        /* ==============================
+           PDF İNDİRME
+        ============================== */
 
         const download =
             document.getElementById(article + "-download");
@@ -1767,6 +1766,21 @@ function applyResearchLanguage(language) {
 
         }
 
+
+        /* ==============================
+           ESKİ TEKİL DİL BUTONLARI VARSA
+           ONLARI DA SENKRONİZE ET
+        ============================== */
+
+        const individualButton =
+            document.getElementById(article + "-lang");
+
+        if (individualButton) {
+
+            individualButton.textContent = lang.flag;
+
+        }
+
     });
 
 
@@ -1775,16 +1789,18 @@ function applyResearchLanguage(language) {
 }
 
 
-/* ---------------------------------------------------------
-   TOPLU PDF DİL BUTONUNU GÜNCELLE
---------------------------------------------------------- */
+/* =========================================================
+   TOPLU DİL BUTONUNU GÜNCELLE
+========================================================= */
 
 function updateResearchLanguageButton(language) {
 
     const button =
         document.getElementById("researchLanguageToggle");
 
-    if (!button) return;
+    if (!button) {
+        return;
+    }
 
 
     const text =
@@ -1796,10 +1812,8 @@ function updateResearchLanguageButton(language) {
 
     if (language === "TR") {
 
-        /*
-         * Şu anda PDF'ler Türkçe.
-         * Buton EN gösteriyor çünkü basınca EN'e geçecek.
-         */
+        /* Şu anda Türkçe.
+           Buton EN gösterir. */
 
         if (text) {
             text.textContent = "EN";
@@ -1814,12 +1828,12 @@ function updateResearchLanguageButton(language) {
             "Çalışmaları İngilizceye geçir"
         );
 
-    } else {
+    }
 
-        /*
-         * Şu anda PDF'ler İngilizce.
-         * Buton TR gösteriyor çünkü basınca Türkçeye geçecek.
-         */
+    else {
+
+        /* Şu anda İngilizce.
+           Buton TR gösterir. */
 
         if (text) {
             text.textContent = "TR";
@@ -1839,25 +1853,26 @@ function updateResearchLanguageButton(language) {
 }
 
 
-/* ---------------------------------------------------------
-   SAYFA YÜKLENİNCE
---------------------------------------------------------- */
+/* =========================================================
+   SAYFA YÜKLENDİĞİNDE
+========================================================= */
 
 document.addEventListener(
     "DOMContentLoaded",
     function() {
 
-        applyResearchLanguage(
-            getResearchLanguage()
-        );
+        const language =
+            getResearchLanguage();
+
+        applyResearchLanguage(language);
 
     }
 );
 
 
-/* ---------------------------------------------------------
-   TOPLU PDF DİL DEĞİŞTİRME
---------------------------------------------------------- */
+/* =========================================================
+   TOPLU PDF DİL BUTONU
+========================================================= */
 
 document.addEventListener(
     "click",
@@ -1868,7 +1883,9 @@ document.addEventListener(
                 "#researchLanguageToggle"
             );
 
-        if (!button) return;
+        if (!button) {
+            return;
+        }
 
 
         const currentLanguage =
@@ -1876,9 +1893,9 @@ document.addEventListener(
 
 
         const newLanguage =
-            currentLanguage === "TR"
-                ? "EN"
-                : "TR";
+            currentLanguage === "EN"
+                ? "TR"
+                : "EN";
 
 
         localStorage.setItem(
@@ -1892,4 +1909,5 @@ document.addEventListener(
         );
 
     }
+);
 );
