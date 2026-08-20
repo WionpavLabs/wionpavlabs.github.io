@@ -1693,3 +1693,110 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+
+
+
+/* =========================================================
+   RESEARCH PDF LANGUAGE SWITCHER
+   SITE LANGUAGE SYSTEMINDEN TAMAMEN BAĞIMSIZDIR
+========================================================= */
+
+function updateResearchLanguageButton(language) {
+
+    const button =
+        document.getElementById("researchLanguageToggle");
+
+    if (!button) return;
+
+    const text =
+        button.querySelector(".research-language-text");
+
+    const icon =
+        button.querySelector(".research-language-icon");
+
+
+    if (language === "TR") {
+
+        if (text) {
+            text.textContent = "EN";
+        }
+
+        if (icon) {
+            icon.textContent = "🇹🇷";
+        }
+
+        button.setAttribute(
+            "aria-label",
+            "Çalışmaları İngilizceye geçir"
+        );
+
+    } else {
+
+        if (text) {
+            text.textContent = "TR";
+        }
+
+        if (icon) {
+            icon.textContent = "🇬🇧";
+        }
+
+        button.setAttribute(
+            "aria-label",
+            "Çalışmaları Türkçeye geçir"
+        );
+
+    }
+
+}
+
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const savedResearchLanguage =
+            getResearchLanguage();
+
+        applyResearchLanguage(
+            savedResearchLanguage
+        );
+
+    }
+);
+
+
+document.addEventListener(
+    "click",
+    function (event) {
+
+        const button =
+            event.target.closest(
+                "#researchLanguageToggle"
+            );
+
+        if (!button) return;
+
+
+        const currentLanguage =
+            getResearchLanguage();
+
+
+        const newLanguage =
+            currentLanguage === "TR"
+                ? "EN"
+                : "TR";
+
+
+        localStorage.setItem(
+            RESEARCH_LANGUAGE_KEY,
+            newLanguage
+        );
+
+
+        applyResearchLanguage(
+            newLanguage
+        );
+
+    }
+);
