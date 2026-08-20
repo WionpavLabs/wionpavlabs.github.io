@@ -1688,11 +1688,8 @@ function updateResearchLanguageButtons(language) {
 
         if (language === "TR") {
 
-            // Şu anda Türkçe.
-            // Buton İngilizceye geçişi gösterir.
-
             if (text) {
-                text.textContent = "EN";
+                text.textContent = "TR";
             }
 
             if (icon) {
@@ -1706,11 +1703,8 @@ function updateResearchLanguageButtons(language) {
 
         } else {
 
-            // Şu anda İngilizce.
-            // Buton Türkçeye geçişi gösterir.
-
             if (text) {
-                text.textContent = "TR";
+                text.textContent = "EN";
             }
 
             if (icon) {
