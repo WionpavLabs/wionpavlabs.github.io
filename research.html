@@ -982,10 +982,10 @@ color:#94a3b8;
 
         </div>
 
- <div id="researchLanguageControl" class="research-language-control">
+<div id="mentalResearchLanguageControl" class="research-language-control">
 
     <button
-        id="researchLanguageToggle"
+        id="mentalResearchLanguageToggle"
         class="research-language-toggle"
         type="button"
         aria-label="Çalışma dilini değiştir"
@@ -1012,7 +1012,7 @@ color:#94a3b8;
         </button>
 
     </div>
-</div>
+
 
     <!-- =================================
          1. BIPOLAR
@@ -1338,10 +1338,10 @@ color:#94a3b8;
 
         </div>
 
-       <div id="researchLanguageControl" class="research-language-control">
+      <div id="brainResearchLanguageControl" class="research-language-control">
 
     <button
-        id="researchLanguageToggle"
+        id="brainResearchLanguageToggle"
         class="research-language-toggle"
         type="button"
         aria-label="Çalışma dilini değiştir"
@@ -1368,7 +1368,7 @@ color:#94a3b8;
         </button>
 
     </div>
-</div>
+
 
     <!-- =================================
          1. PARKINSON'S DISEASE
@@ -1452,50 +1452,48 @@ let labScrollPosition = 0;
    LAB AÇ
 ========================================= */
 
+let labScrollPosition = 0;
+
 function openLab(lab) {
 
-    const labsWrapper = document.querySelector(".labs-wrapper");
-    const labsSelection = document.getElementById("labsSelection");
-    const selectedLab = document.getElementById(lab);
-    const researchLanguageControl =
-    document.getElementById("researchLanguageControl");
+    const labsWrapper =
+        document.querySelector(".labs-wrapper");
+
+    const labsSelection =
+        document.getElementById("labsSelection");
+
+    const selectedLab =
+        document.getElementById(lab);
 
     if (!labsWrapper || !labsSelection || !selectedLab) {
         return;
     }
 
-    /* Mevcut scroll konumunu kaydet */
     labScrollPosition = window.scrollY;
 
-    /* Tüm lab detaylarını kapat */
+    /* TÜM LABLARI KAPAT */
     document
         .querySelectorAll(".research-section")
         .forEach(section => {
             section.classList.remove("active");
         });
 
-    /* Lab kartlarını gizle */
+    /* LAB KARTLARINI GİZLE */
     labsSelection.style.display = "none";
-    if (researchLanguageControl) {
 
-    researchLanguageControl.classList.add("active");
-
-}
-
-    /* Seçilen labı aç */
+    /* SADECE SEÇİLEN LABI AÇ */
     selectedLab.classList.add("active");
 
-    /* Lab açık modu */
+    /* LAB AÇIK MODU */
     labsWrapper.classList.add("lab-open");
 
-    /* URL hash */
+    /* URL */
     history.replaceState(
         null,
         "",
         window.location.pathname + "#" + lab
     );
 
-    /* Scroll konumunu koru */
     requestAnimationFrame(() => {
 
         window.scrollTo({
@@ -1514,41 +1512,37 @@ function openLab(lab) {
 
 function closeLab() {
 
-    const labsWrapper = document.querySelector(".labs-wrapper");
-    const labsSelection = document.getElementById("labsSelection");
-    const researchLanguageControl =
-    document.getElementById("researchLanguageControl");
+    const labsWrapper =
+        document.querySelector(".labs-wrapper");
+
+    const labsSelection =
+        document.getElementById("labsSelection");
 
     if (!labsWrapper || !labsSelection) {
         return;
     }
 
-    /* Tüm lab detaylarını kapat */
+    /* TÜM LABLARI KAPAT */
     document
         .querySelectorAll(".research-section")
         .forEach(section => {
             section.classList.remove("active");
         });
 
-    /* Lab kartlarını geri getir */
+    /* LAB KARTLARINI GERİ GETİR */
     labsSelection.style.display = "grid";
-    if (researchLanguageControl) {
 
-    researchLanguageControl.classList.remove("active");
-
-}
-
-    /* Lab açık modunu kaldır */
+    /* LAB AÇIK MODUNU KALDIR */
     labsWrapper.classList.remove("lab-open");
 
-    /* Hash temizle */
+    /* HASH TEMİZLE */
     history.replaceState(
         null,
         "",
         window.location.pathname
     );
 
-    /* Önceki scroll konumuna dön */
+    /* ESKİ SCROLL KONUMUNA DÖN */
     requestAnimationFrame(() => {
 
         window.scrollTo({
