@@ -9105,47 +9105,43 @@ h1[data-i18n="publications.title"] {
 ========================================================= */
 
 .publications-header {
-    display: grid !important;
-
-    grid-template-columns: 1fr auto !important;
-
-    grid-template-areas:
-        "title title"
-        "empty language" !important;
+    display: flex !important;
 
     align-items: center !important;
+    justify-content: space-between !important;
 
-    column-gap: 20px !important;
-    row-gap: 20px !important;
+    width: 100% !important;
 
-    margin-bottom: 25px !important;
+    margin: 0 0 25px 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
 }
 
 
 /* YAYINLAR BAŞLIĞI */
 .publications-header h1 {
-    grid-area: title !important;
-
     margin: 0 !important;
+    padding: 0 !important;
+
+    line-height: 1.2 !important;
 }
 
 
-/* DİL BUTONU KONTROLÜ */
+/* BUTON ALANI */
 .publications-language-control {
-    grid-area: language !important;
-
-    justify-self: end !important;
-
     display: flex !important;
+
     align-items: center !important;
+    justify-content: flex-end !important;
 
     margin: 0 !important;
     padding: 0 !important;
 }
 
 
-/* DİL DEĞİŞTİRME BUTONU
-   RESEARCH BUTONU İLE BİREBİR AYNI BOYUT */
+/* DİL BUTONU
+   RESEARCH İLE AYNI BOYUT */
 .publications-language-toggle {
     display: inline-flex !important;
 
@@ -9170,14 +9166,19 @@ h1[data-i18n="publications.title"] {
 @media (max-width: 600px) {
 
     .publications-header {
-        grid-template-columns: 1fr auto !important;
+        display: flex !important;
 
-        grid-template-areas:
-            "title title"
-            "empty language" !important;
+        align-items: center !important;
+        justify-content: space-between !important;
 
-        column-gap: 10px !important;
-        row-gap: 18px !important;
+        width: 100% !important;
+
+        margin-bottom: 20px !important;
+    }
+
+    .publications-header h1 {
+        margin: 0 !important;
+        line-height: 1.2 !important;
     }
 
     .publications-language-toggle {
@@ -9185,4 +9186,5 @@ h1[data-i18n="publications.title"] {
         min-height: 40px !important;
     }
 }
+
 
