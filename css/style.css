@@ -9096,3 +9096,39 @@ h1[data-i18n="publications.title"] {
     }
 
 }
+
+
+
+
+
+.publications-language-control {
+    display: flex;
+    justify-content: flex-end;
+    margin: 15px 0 25px;
+}
+
+.publications-language-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    padding: 10px 14px;
+
+    border: 1px solid rgba(56,189,248,.25);
+    border-radius: 12px;
+
+    background: rgba(56,189,248,.08);
+    color: #67d3ff;
+
+    font-family: inherit;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.publications-language-toggle:hover {
+    background: rgba(56,189,248,.16);
+    border-color: #38bdf8;
+}
