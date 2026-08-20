@@ -1706,35 +1706,35 @@ function updateResearchLanguageButtons(language) {
 
         if (language === "TR") {
 
-            if (text) {
-                text.textContent = "EN";
-            }
+    if (text) {
+        text.textContent = "TR";
+    }
 
-            if (icon) {
-                icon.textContent = "🇹🇷";
-            }
+    if (icon) {
+        icon.textContent = "🇹🇷";
+    }
 
-            button.setAttribute(
-                "aria-label",
-                "Çalışmaları İngilizceye geçir"
-            );
+    button.setAttribute(
+        "aria-label",
+        "Çalışmaları İngilizceye geçir"
+    );
 
-        } else {
+} else {
 
-            if (text) {
-                text.textContent = "TR";
-            }
+    if (text) {
+        text.textContent = "EN";
+    }
 
-            if (icon) {
-                icon.textContent = "🇬🇧";
-            }
+    if (icon) {
+        icon.textContent = "🇬🇧";
+    }
 
-            button.setAttribute(
-                "aria-label",
-                "Çalışmaları Türkçeye geçir"
-            );
+    button.setAttribute(
+        "aria-label",
+        "Çalışmaları Türkçeye geçir"
+    );
 
-        }
+}
 
     });
 
