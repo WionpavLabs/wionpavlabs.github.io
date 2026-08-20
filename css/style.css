@@ -9188,3 +9188,169 @@ h1[data-i18n="publications.title"] {
 }
 
 
+/* =========================================================
+   PUBLICATIONS HEADER
+   YAYINLAR SOL — DİL BUTONU SAĞ
+========================================================= */
+
+.publications-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    width: 100% !important;
+
+    margin: 0 0 25px 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* YAYINLAR BAŞLIĞI */
+.publications-header h1 {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    line-height: 1.2 !important;
+}
+
+
+/* BUTON ALANI */
+.publications-language-control {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+/* =========================================================
+   PUBLICATIONS LANGUAGE BUTTON
+   RESEARCH LANGUAGE BUTTON İLE AYNI
+========================================================= */
+
+.publications-language-toggle {
+
+    display: inline-flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 8px !important;
+
+    padding: 10px 15px !important;
+
+    border: 1px solid rgba(56,189,248,.30) !important;
+    border-radius: 12px !important;
+
+    background: rgba(56,189,248,.08) !important;
+    color: #67d3ff !important;
+
+    font-family: inherit !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+
+    cursor: pointer !important;
+
+    transition: .25s ease !important;
+
+    box-sizing: border-box !important;
+
+    white-space: nowrap !important;
+}
+
+
+/* HOVER */
+.publications-language-toggle:hover {
+
+    background: rgba(56,189,248,.16) !important;
+
+    border-color: #38bdf8 !important;
+
+    transform: translateY(-2px) !important;
+
+    box-shadow:
+        0 8px 25px rgba(56,189,248,.15) !important;
+}
+
+
+/* ACTIVE */
+.publications-language-toggle:active {
+    transform: scale(.96) !important;
+}
+
+
+/* ICON */
+.publications-language-icon {
+    font-size: 17px !important;
+}
+
+
+/* TEXT */
+.publications-language-text {
+    min-width: 25px !important;
+    text-align: center !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .publications-header {
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        width: 100% !important;
+
+        margin-bottom: 20px !important;
+    }
+
+
+    .publications-header h1 {
+        margin: 0 !important;
+
+        line-height: 1.2 !important;
+    }
+
+
+    .publications-language-control {
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: flex-end !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    .publications-language-toggle {
+
+        padding: 10px 15px !important;
+
+        border-radius: 12px !important;
+
+        font-size: 14px !important;
+
+        transform: none;
+    }
+
+
+    .publications-language-icon {
+        font-size: 17px !important;
+    }
+
+
+    .publications-language-text {
+        min-width: 25px !important;
+    }
+
+}
