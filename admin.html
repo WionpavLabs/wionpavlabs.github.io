@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
+
 <meta charset="UTF-8">
-<title>Admin Panel</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wionpav Labs | Admin Panel</title>
 
 <style>
+
 body{
     margin:0;
-    font-family:Arial;
+    font-family:Arial,sans-serif;
     background:#0f172a;
     color:white;
     padding:20px;
@@ -20,118 +26,611 @@ body{
     border-radius:10px;
 }
 
-h2{color:#38bdf8;}
+h2{
+    color:#38bdf8;
+}
+
+#status{
+    margin-bottom:20px;
+    color:#94a3b8;
+}
+
+#logout{
+    background:#ef4444;
+    color:white;
+    border:none;
+    padding:10px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+#logout:hover{
+    opacity:.85;
+}
+
 </style>
+
 </head>
+
 
 <body>
 
+
 <h2>📊 OY ANALİZ PANELİ</h2>
+
+
+<div id="status">
+    Kimlik doğrulanıyor...
+</div>
+
+
+<button id="logout">
+    Çıkış Yap
+</button>
+
 
 <div id="articles"></div>
 
-<div class="card" id="ranking">Sıralama: Yükleniyor...</div>
-<div class="card" id="best">En İyi Makale: Yükleniyor...</div>
-    
+
+<div class="card" id="ranking">
+    Sıralama: Yükleniyor...
+</div>
+
+
+<div class="card" id="best">
+    En İyi Makale: Yükleniyor...
+</div>
+
+
+
 <script type="module">
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
+/* =========================================
+   FIREBASE
+========================================= */
+
+import {
+    initializeApp
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
+
+import {
+    getAuth,
+    onAuthStateChanged,
+    signOut
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+
+
+/* =========================================
+   FIREBASE CONFIG
+   LOGIN.HTML İLE AYNI PROJE
+========================================= */
 
 const firebaseConfig = {
-    apiKey: "XXX",
-    authDomain: "XXX",
-    projectId: "XXX",
-    storageBucket: "XXX",
-    messagingSenderId: "XXX",
-    appId: "XXX"
+
+    apiKey: "AIzaSyBXuNbsz3W26q1EueNLWhSIUKS4SIViw4k",
+
+    authDomain:
+        "yorum-sistemimm.firebaseapp.com",
+
+    databaseURL:
+        "https://yorum-sistemimm-default-rtdb.europe-west1.firebasedatabase.app",
+
+    projectId:
+        "yorum-sistemimm",
+
+    storageBucket:
+        "yorum-sistemimm.appspot.com",
+
+    messagingSenderId:
+        "1048692198462",
+
+    appId:
+        "1:1048692198462:web:59fcfb7f0a29723d68156f"
+
 };
 
-initializeApp(firebaseConfig);
 
-// 🔥 Realtime Database
-const RATING_URL = "https://yorum-sistemimm-default-rtdb.europe-west1.firebasedatabase.app/ratings.json";
+
+/* Firebase başlat */
+
+const app =
+    initializeApp(firebaseConfig);
+
+
+/* Authentication */
+
+const auth =
+    getAuth(app);
+
+
+
+/* =========================================
+   SADECE BU UID ADMIN
+========================================= */
+
+const ADMIN_UID =
+    "d2CZ53Tsf5UlIC2c7M48uKsplMn1";
+
+
+
+/* =========================================
+   RATING DATABASE
+========================================= */
+
+const RATING_URL =
+    "https://yorum-sistemimm-default-rtdb.europe-west1.firebasedatabase.app/ratings.json";
+
+
+
+/* =========================================
+   HTML ELEMENTLERİ
+========================================= */
+
+const statusEl =
+    document.getElementById("status");
+
+
+const articlesEl =
+    document.getElementById("articles");
+
+
+const rankingEl =
+    document.getElementById("ranking");
+
+
+const bestEl =
+    document.getElementById("best");
+
+
+const logoutBtn =
+    document.getElementById("logout");
+
+
+
+/* =========================================
+   AUTH GUARD
+========================================= */
+
+onAuthStateChanged(auth, async (user) => {
+
+
+    /*
+       Kullanıcı hiç giriş yapmamışsa
+    */
+
+    if (!user) {
+
+        window.location.replace(
+            "login.html"
+        );
+
+        return;
+    }
+
+
+
+    console.log(
+        "Giriş yapan UID:",
+        user.uid
+    );
+
+
+
+    /*
+       ADMIN UID KONTROLÜ
+    */
+
+    if (user.uid !== ADMIN_UID) {
+
+
+        statusEl.textContent =
+            "❌ Bu hesap admin yetkisine sahip değil.";
+
+
+        alert(
+            "Bu hesap admin paneline erişemez."
+        );
+
+
+        await signOut(auth);
+
+
+        window.location.replace(
+            "login.html"
+        );
+
+
+        return;
+    }
+
+
+
+    /*
+       BURAYA GELDİYSE:
+
+       kullanıcı giriş yapmış
+       VE
+       UID admin UID ile aynı
+    */
+
+    statusEl.textContent =
+        "✅ Admin doğrulandı: " +
+        user.email;
+
+
+
+    /*
+       ARTIK VERİLERİ ÇEK
+    */
+
+    try {
+
+        await loadData();
+
+    } catch (error) {
+
+        console.error(
+            "Admin verileri yüklenemedi:",
+            error
+        );
+
+
+        statusEl.textContent =
+            "❌ Veriler yüklenemedi.";
+
+    }
+
+});
+
+
+
+/* =========================================
+   RATING VERİLERİNİ YÜKLE
+========================================= */
 
 async function loadData(){
 
-    const res = await fetch(RATING_URL);
-    const data = await res.json();
+
+    const res =
+        await fetch(
+            RATING_URL +
+            "?cacheBust=" +
+            Date.now()
+        );
+
+
+
+    if (!res.ok) {
+
+        throw new Error(
+            "Firebase erişim hatası: " +
+            res.status
+        );
+
+    }
+
+
+
+    const data =
+        await res.json();
+
+
 
     let articleMap = {};
 
-    for(let articleId in data){
 
-        const users = data[articleId];
 
-        for(let userId in users){
+    /*
+       Henüz rating yok
+    */
 
-            const vote = users[userId];
+    if (
+        !data ||
+        typeof data !== "object"
+    ) {
 
-            const stars = vote.rating || 0;
+        articlesEl.innerHTML =
+            "<div class='card'>Henüz oy yok.</div>";
 
-            if(!articleMap[articleId]){
-                articleMap[articleId] = {total:0, count:0};
+
+        rankingEl.innerText =
+            "📊 Sıralama: Yok";
+
+
+        bestEl.innerText =
+            "🏆 En İyi Makale: Yok";
+
+
+        return;
+    }
+
+
+
+    /* =====================================
+       TÜM OYLARI HESAPLA
+    ===================================== */
+
+    for (
+        const articleId in data
+    ) {
+
+
+        const users =
+            data[articleId];
+
+
+
+        if (
+            !users ||
+            typeof users !== "object"
+        ) {
+
+            continue;
+        }
+
+
+
+        for (
+            const userId in users
+        ) {
+
+
+            const vote =
+                users[userId];
+
+
+
+            if (
+                !vote ||
+                typeof vote !== "object"
+            ) {
+
+                continue;
             }
 
-            articleMap[articleId].total += stars;
+
+
+            const stars =
+                Number(vote.rating) || 0;
+
+
+
+            if (
+                !articleMap[articleId]
+            ) {
+
+                articleMap[articleId] = {
+
+                    total: 0,
+
+                    count: 0
+
+                };
+
+            }
+
+
+
+            articleMap[articleId].total +=
+                stars;
+
+
             articleMap[articleId].count++;
+
         }
+
     }
 
-    // 🔥 array'e çevir
-    let sortedArticles = [];
 
-    for(let id in articleMap){
-        sortedArticles.push({
+
+    /* =====================================
+       ARRAY'E ÇEVİR
+    ===================================== */
+
+    const sortedArticles =
+        Object.entries(articleMap)
+        .map(([id, value]) => ({
+
             id,
-            total: articleMap[id].total,
-            count: articleMap[id].count
-        });
-    }
 
-    // 🔥 sırala (total'a göre)
-    sortedArticles.sort((a,b) => b.total - a.total);
-    const rankingText = sortedArticles
-    .map(a => `${a.id}(${a.total}⭐)`)
-    .join(" > ");
-    // 🔥 ekrana bas
-    const container = document.getElementById("articles");
-    container.innerHTML = "";
+            total: value.total,
 
-    sortedArticles.forEach((a, index) => {
+            count: value.count
 
-        const avg = a.count === 0 ? 0 : (a.total / a.count);
+        }));
 
-        const div = document.createElement("div");
-        div.className = "card";
 
-        div.innerHTML = `
-            <b>#${index+1} ${a.id}</b><br>
-            📥 Toplam Oy: ${a.count}<br>
-            ⭐ Toplam Yıldız: ${a.total}<br>
-            📊 Ortalama: ${avg.toFixed(2)}
-        `;
 
-        container.appendChild(div);
-    });
+    /* =====================================
+       SIRALA
+    ===================================== */
 
-    // 🏆 en iyi makale (total'a göre)
-    if(sortedArticles.length > 0){
-        const best = sortedArticles[0];
+    sortedArticles.sort(
+        (a, b) =>
+            b.total - a.total
+    );
 
-     
-        document.getElementById("best").innerText =
-            `🏆 En İyi Makale:\n\n${best.id} (${best.total} ⭐)`
-        document.getElementById("ranking").innerText =
-    "📊 Sıralama: " + rankingText;
+
+
+    /* =====================================
+       SIRALAMA METNİ
+    ===================================== */
+
+    const rankingText =
+        sortedArticles
+        .map(
+            article =>
+                `${article.id} (${article.total}⭐)`
+        )
+        .join(" > ");
+
+
+
+    /* Temizle */
+
+    articlesEl.innerHTML = "";
+
+
+
+    /* =====================================
+       MAKALELER
+    ===================================== */
+
+    sortedArticles.forEach(
+        (article, index) => {
+
+
+            const average =
+                article.count === 0
+                    ? 0
+                    : article.total /
+                      article.count;
+
+
+
+            const div =
+                document.createElement("div");
+
+
+            div.className =
+                "card";
+
+
+
+            const title =
+                document.createElement("b");
+
+
+            title.textContent =
+                `#${index + 1} ${article.id}`;
+
+
+
+            const votes =
+                document.createElement("div");
+
+
+            votes.textContent =
+                `📥 Toplam Oy: ${article.count}`;
+
+
+
+            const total =
+                document.createElement("div");
+
+
+            total.textContent =
+                `⭐ Toplam Yıldız: ${article.total}`;
+
+
+
+            const avg =
+                document.createElement("div");
+
+
+            avg.textContent =
+                `📊 Ortalama: ${average.toFixed(2)}`;
+
+
+
+            div.appendChild(title);
+
+            div.appendChild(votes);
+
+            div.appendChild(total);
+
+            div.appendChild(avg);
+
+
+            articlesEl.appendChild(div);
+
+        }
+    );
+
+
+
+    /* =====================================
+       EN İYİ MAKALE
+    ===================================== */
+
+    if (
+        sortedArticles.length > 0
+    ) {
+
+
+        const best =
+            sortedArticles[0];
+
+
+
+        bestEl.innerText =
+            `🏆 En İyi Makale:
+
+${best.id}
+(${best.total} ⭐)`;
+
+
+
+        rankingEl.innerText =
+            "📊 Sıralama: " +
+            rankingText;
+
+
     } else {
-        document.getElementById("best").innerText =
+
+
+        bestEl.innerText =
             "🏆 En İyi Makale: Yok";
+
+
+        rankingEl.innerText =
+            "📊 Sıralama: Yok";
+
     }
+
 }
 
-loadData();
+
+
+/* =========================================
+   ÇIKIŞ
+========================================= */
+
+logoutBtn.addEventListener(
+    "click",
+    async () => {
+
+
+        try {
+
+            await signOut(auth);
+
+
+            window.location.replace(
+                "login.html"
+            );
+
+
+        } catch (error) {
+
+            console.error(
+                "Çıkış hatası:",
+                error
+            );
+
+        }
+
+    }
+);
+
 
 </script>
 
+
 </body>
+
 </html>
