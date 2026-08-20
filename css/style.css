@@ -8383,3 +8383,58 @@ h1[data-i18n="publications.title"] {
 
 
 
+/* =========================================
+   RESEARCH LANGUAGE TOGGLE
+========================================= */
+
+.research-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.research-language-toggle {
+    border: 1px solid rgba(56,189,248,.28);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(56,189,248,.10),
+            rgba(56,189,248,.04)
+        );
+
+    color: #67d3ff;
+
+    padding: 10px 15px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+        .25s ease;
+
+    backdrop-filter: blur(10px);
+}
+
+.research-language-toggle:hover {
+    background: rgba(56,189,248,.16);
+
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 0 18px rgba(56,189,248,.15);
+
+    transform: translateY(-2px);
+}
+
+.research-language-toggle:active {
+    transform: scale(.96);
+}
+
+
+
