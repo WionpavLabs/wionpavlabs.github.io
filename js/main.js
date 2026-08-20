@@ -1438,12 +1438,8 @@ const siteTranslations = {
 
 const LANGUAGE_KEY = "wionpav-language";
 
-const RESEARCH_LANGUAGE_KEY = "wionpav-research-language";
-function getResearchLanguage() {
 
-    return localStorage.getItem(RESEARCH_LANGUAGE_KEY) || "EN";
 
-}
 
 
 /* =========================================================
@@ -1565,53 +1561,7 @@ function applyLanguage(language) {
 
 }
 
-function applyResearchLanguage(language) {
 
-    if (typeof languages === "undefined") {
-        return;
-    }
-
-    Object.keys(languages).forEach(function (article) {
-
-        const item = languages[article];
-
-        if (!item || !item[language]) {
-            return;
-        }
-
-        const lang = item[language];
-
-        /* BAŞLIK */
-
-        const title =
-            document.getElementById(article + "-title");
-
-        if (title) {
-
-            title.textContent = lang.title;
-            title.href = lang.file;
-
-        }
-
-
-        /* DOWNLOAD */
-
-        const download =
-            document.getElementById(article + "-download");
-
-        if (download) {
-
-            download.textContent = lang.download;
-            download.href = lang.file;
-
-        }
-
-    });
-
-
-    updateResearchLanguageButton(language);
-
-}
 
 
 /* =========================================================
