@@ -1121,7 +1121,7 @@ const siteTranslations = {
 "brain.back": "← Back to Labs",
 
        "home.brand.description":
-    "Advancing medical knowledge through evidence-based research, health sciences, and scientific discovery.",
+    "A trusted scientific platform for evidence-based research, scientific knowledge, and current developments in medicine and health sciences.",
 
 "home.brand.labs":
     "LABS",
@@ -1440,7 +1440,7 @@ const siteTranslations = {
 "brain.back": "← Laboratuvarlara Dön",
 
        "home.brand.description":
-    "Tıp ve sağlık bilimleri alanında güvenilir, bilimsel ve kanıta dayalı bilgi sunuyoruz.",
+    "Tıp ve sağlık bilimlerinde kanıta dayalı araştırma, bilimsel bilgi ve güncel gelişmeler için güvenilir bir bilimsel platform.",
 
 "home.brand.labs":
     "LAB",
