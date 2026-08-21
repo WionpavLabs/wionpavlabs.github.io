@@ -1121,7 +1121,7 @@ const siteTranslations = {
 "brain.back": "← Back to Labs",
 
        "home.brand.description":
-    "A trusted scientific platform for evidence-based research, scientific knowledge, and current developments in medicine and health sciences.",
+    "A trusted scientific platform for evidence-based research, scientific knowledge and current developments in medicine and health sciences.",
 
 "home.brand.labs":
     "LABS",
