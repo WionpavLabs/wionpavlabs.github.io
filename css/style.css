@@ -9774,3 +9774,100 @@ h1[data-i18n="publications.title"] {
     content: none !important;
 
 }
+
+
+
+
+/* =========================================
+   BRAND INTRO — LIGHT THEME
+========================================= */
+
+body.light-theme .brand-intro {
+
+    background: transparent !important;
+
+    border: none !important;
+
+    outline: none !important;
+
+    box-shadow: none !important;
+
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+
+}
+
+
+/* Hover'da da kutu oluşmasın */
+
+body.light-theme .brand-intro:hover {
+
+    background: transparent !important;
+
+    border: none !important;
+
+    box-shadow: none !important;
+
+    transform: none !important;
+
+}
+
+
+/* Section'ın ışıklı kenar efektini kaldır */
+
+body.light-theme .brand-intro::before,
+body.light-theme .brand-intro::after {
+
+    display: none !important;
+
+    content: none !important;
+
+}
+
+
+/* =========================================
+   BRAND TITLE
+========================================= */
+
+body.light-theme .brand-intro-title {
+
+    color: #111820 !important;
+
+    text-shadow: none !important;
+
+}
+
+
+/* =========================================
+   06 / 11 / 04
+========================================= */
+
+body.light-theme .brand-stat strong {
+
+    color: #111820 !important;
+
+    text-shadow: none !important;
+
+}
+
+
+/* =========================================
+   MEDICAL RESEARCH... ALTINDAKİ ÇİZGİ
+========================================= */
+
+body.light-theme .brand-intro-line {
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #26343c,
+            #111820,
+            #26343c,
+            transparent
+        ) !important;
+
+    box-shadow:
+        0 0 10px rgba(38,52,60,.18) !important;
+
+}
