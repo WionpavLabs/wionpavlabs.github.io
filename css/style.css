@@ -9354,3 +9354,366 @@ h1[data-i18n="publications.title"] {
     }
 
 }
+
+
+
+
+/* =========================================
+   WIONPAV LABS - PREMIUM BRAND INTRO
+========================================= */
+
+.brand-intro {
+
+    position: relative;
+
+    width: 100%;
+
+    padding:
+        42px 20px
+        34px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: transparent;
+
+    z-index: 10;
+
+}
+
+
+/* LOGO */
+
+.brand-intro-logo-wrap {
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 10px;
+
+}
+
+
+.brand-intro-logo {
+
+    width: 105px;
+    height: 105px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 0 18px rgba(56,189,248,.45))
+        drop-shadow(0 0 40px rgba(56,189,248,.18));
+
+    transition:
+        transform .5s ease,
+        filter .5s ease;
+
+}
+
+
+.brand-intro-logo:hover {
+
+    transform: scale(1.06);
+
+    filter:
+        drop-shadow(0 0 25px rgba(56,189,248,.65))
+        drop-shadow(0 0 55px rgba(56,189,248,.25));
+
+}
+
+
+/* MARKA ADI */
+
+.brand-intro-title {
+
+    margin: 2px 0 4px;
+
+    font-size: 46px;
+
+    font-weight: 800;
+
+    letter-spacing: 5px;
+
+    color: #ffffff;
+
+    line-height: 1.15;
+
+    text-shadow:
+        0 0 18px rgba(56,189,248,.30);
+
+}
+
+
+/* ALT BAŞLIK */
+
+.brand-intro-subtitle {
+
+    margin: 4px 0 15px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: #8fb0c9;
+
+}
+
+
+/* IŞIK ÇİZGİSİ */
+
+.brand-intro-line {
+
+    width: 280px;
+
+    height: 1px;
+
+    margin: 2px 0 16px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #38bdf8,
+            white,
+            #38bdf8,
+            transparent
+        );
+
+    box-shadow:
+        0 0 18px rgba(56,189,248,.55);
+
+}
+
+
+/* AÇIKLAMA */
+
+.brand-intro-description {
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    color: #91a6bf;
+
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.brand-stats {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 27px;
+
+    padding: 0;
+
+}
+
+
+.brand-stat {
+
+    min-width: 135px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+.brand-stat strong {
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    color: #38bdf8;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 15px rgba(56,189,248,.35);
+
+}
+
+
+.brand-stat span {
+
+    margin-top: 7px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #8196ad;
+
+}
+
+
+.brand-stat-divider {
+
+    width: 1px;
+
+    height: 38px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(56,189,248,.45),
+            transparent
+        );
+
+}
+
+
+/* =========================================
+   NAVBAR - BRAND INTRO SONRASI
+========================================= */
+
+.brand-intro + nav {
+
+    margin-top: 0;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width:768px) {
+
+    .brand-intro {
+
+        padding:
+            28px 15px
+            25px;
+
+    }
+
+
+    .brand-intro-logo {
+
+        width: 82px;
+        height: 82px;
+
+    }
+
+
+    .brand-intro-title {
+
+        font-size: 31px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    .brand-intro-subtitle {
+
+        font-size: 10px;
+
+        letter-spacing: 2px;
+
+        line-height: 1.6;
+
+        max-width: 320px;
+
+    }
+
+
+    .brand-intro-line {
+
+        width: 190px;
+
+        margin-top: 3px;
+
+        margin-bottom: 12px;
+
+    }
+
+
+    .brand-intro-description {
+
+        max-width: 330px;
+
+        font-size: 13px;
+
+        line-height: 1.6;
+
+    }
+
+
+    .brand-stats {
+
+        width: 100%;
+
+        margin-top: 22px;
+
+    }
+
+
+    .brand-stat {
+
+        min-width: 0;
+
+        width: 33.333%;
+
+    }
+
+
+    .brand-stat strong {
+
+        font-size: 23px;
+
+    }
+
+
+    .brand-stat span {
+
+        font-size: 8px;
+
+        letter-spacing: 1.2px;
+
+        margin-top: 6px;
+
+    }
+
+
+    .brand-stat-divider {
+
+        height: 32px;
+
+    }
+
+}
