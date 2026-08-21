@@ -1119,6 +1119,18 @@ const siteTranslations = {
    "brain.title": "🧠 Brain & Neurology Lab",
 "brain.subtitle": "Research studies in neurology and neuroscience",
 "brain.back": "← Back to Labs",
+
+       "home.brand.description":
+    "Advancing medical knowledge through evidence-based research, health sciences, and scientific discovery.",
+
+"home.brand.labs":
+    "LABS",
+
+"home.brand.studies":
+    "STUDIES",
+
+"home.brand.publications":
+    "PUBLICATIONS",
     
     
     },
@@ -1426,6 +1438,18 @@ const siteTranslations = {
     "brain.title": "🧠 Beyin ve Nöroloji Laboratuvarı",
 "brain.subtitle": "Nöroloji ve sinirbilim alanlarında araştırma çalışmaları",
 "brain.back": "← Laboratuvarlara Dön",
+
+       "home.brand.description":
+    "Tıp ve sağlık bilimleri alanında güvenilir, bilimsel ve kanıta dayalı bilgi sunuyoruz.",
+
+"home.brand.labs":
+    "LAB",
+
+"home.brand.studies":
+    "ÇALIŞMA",
+
+"home.brand.publications":
+    "YAYIN",
     
     }
 
