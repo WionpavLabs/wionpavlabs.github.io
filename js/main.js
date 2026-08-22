@@ -791,7 +791,24 @@ research7: {
             download: "⬇️ 2. Alzheimer Hastalığı PDF İndir",
             file: "research/Alzheimer Hastalığı.pdf",
             flag: "🇹🇷"
-        }
+        },
+
+research12: {
+        current: "EN",
+
+        EN: {
+            title: "📄 3. Multiple Sclerosis (MS) Read PDF",
+            download: "⬇️ 3. Multiple Sclerosis (MS) Download PDF",
+            file: "research/Multiple Sclerosis (MS).pdf",
+            flag: "🇬🇧"
+        },
+
+        TR: {
+            title: "📄 3. Multipl Skleroz (MS) PDF Oku",
+            download: "⬇️ 3. Multipl Skleroz (MS) PDF İndir",
+            file: "research/Multipl Skleroz (MS).pdf",
+            flag: "🇹🇷"
+        }       
  }  
 };
 
