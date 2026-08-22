@@ -913,7 +913,7 @@ const siteTranslations = {
     "Research focused on the brain, nervous system and neurological disorders.",
 
 "lab.brain.count":
-    "2 Studies",
+    "3 Studies",
 
 "lab.orthopedics.title":
     "Orthopedics & Musculoskeletal Lab",
@@ -1223,7 +1223,7 @@ const siteTranslations = {
     "Beyin, sinir sistemi ve nörolojik hastalıklar üzerine araştırmalar.",
 
 "lab.brain.count":
-    "2 Çalışma",
+    "3 Çalışma",
 
 "lab.orthopedics.title":
     "Ortopedi ve Kas-İskelet Sistemi Laboratuvarı",
