@@ -791,7 +791,8 @@ research7: {
             download: "⬇️ 2. Alzheimer Hastalığı PDF İndir",
             file: "research/Alzheimer Hastalığı.pdf",
             flag: "🇹🇷"
-        },
+        }
+           },
 
 research12: {
         current: "EN",
