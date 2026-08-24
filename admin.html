@@ -61,7 +61,9 @@ h2{
 <div class="card" id="activeUsers">
     👥 Aktif Ziyaretçi: Yükleniyor...
 </div>
-
+<div class="card" id="activePages">
+    📍 Sayfalar: Yükleniyor...
+</div>
 <div id="status">
     Kimlik doğrulanıyor...
 </div>
@@ -183,7 +185,8 @@ const statusEl =
 
     const activeUsersEl =
     document.getElementById("activeUsers");
-
+const activePagesEl =
+    document.getElementById("activePages");
 const articlesEl =
     document.getElementById("articles");
 
@@ -222,14 +225,55 @@ function watchActiveUsers() {
             activeUsersEl.textContent =
                 "👥 Aktif Ziyaretçi: 0";
 
+            activePagesEl.textContent =
+                "📍 Sayfalar: 0";
+
             return;
         }
 
-        const activeCount =
-            Object.keys(data).length;
+        const visitors =
+            Object.values(data);
+
+        const activeVisitors =
+            visitors.filter(visitor =>
+                visitor &&
+                visitor.online === true
+            );
+
+        /* TOPLAM AKTİF */
 
         activeUsersEl.textContent =
-            `👥 Aktif Ziyaretçi: ${activeCount}`;
+            `👥 Aktif Ziyaretçi: ${activeVisitors.length}`;
+
+
+        /* SAYFA DAĞILIMI */
+
+        const pageCounts = {};
+
+        activeVisitors.forEach(visitor => {
+
+            const page =
+                visitor.page || "Bilinmeyen";
+
+            pageCounts[page] =
+                (pageCounts[page] || 0) + 1;
+
+        });
+
+
+        const pageText =
+            Object.entries(pageCounts)
+            .map(([page, count]) =>
+                `${page}: ${count}`
+            )
+            .join(" | ");
+
+
+        activePagesEl.textContent =
+            pageText
+                ? `📍 Sayfalar: ${pageText}`
+                : "📍 Sayfalar: 0";
+
 
     }, (error) => {
 
@@ -240,6 +284,9 @@ function watchActiveUsers() {
 
         activeUsersEl.textContent =
             "❌ Aktif ziyaretçi verisi alınamadı.";
+
+        activePagesEl.textContent =
+            "❌ Sayfa verisi alınamadı.";
 
     });
 
