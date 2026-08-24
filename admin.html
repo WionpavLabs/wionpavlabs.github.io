@@ -58,7 +58,9 @@ h2{
 
 
 <h2>📊 OY ANALİZ PANELİ</h2>
-
+<div class="card" id="activeUsers">
+    👥 Aktif Ziyaretçi: Yükleniyor...
+</div>
 
 <div id="status">
     Kimlik doğrulanıyor...
@@ -102,7 +104,11 @@ import {
     signOut
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
-
+import {
+    getDatabase,
+    ref,
+    onValue
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
 /* =========================================
    FIREBASE CONFIG
@@ -146,6 +152,8 @@ const app =
 const auth =
     getAuth(app);
 
+    const db =
+    getDatabase(app);
 
 
 /* =========================================
@@ -173,6 +181,8 @@ const RATING_URL =
 const statusEl =
     document.getElementById("status");
 
+    const activeUsersEl =
+    document.getElementById("activeUsers");
 
 const articlesEl =
     document.getElementById("articles");
@@ -195,7 +205,47 @@ const logoutBtn =
    AUTH GUARD
 ========================================= */
 
-onAuthStateChanged(auth, async (user) => {
+/* =========================================
+   AKTİF ZİYARETÇİLERİ İZLE
+========================================= */
+
+function watchActiveUsers() {
+
+    const presenceRef = ref(db, "presence");
+
+    onValue(presenceRef, (snapshot) => {
+
+        const data = snapshot.val();
+
+        if (!data || typeof data !== "object") {
+
+            activeUsersEl.textContent =
+                "👥 Aktif Ziyaretçi: 0";
+
+            return;
+        }
+
+        const activeCount =
+            Object.keys(data).length;
+
+        activeUsersEl.textContent =
+            `👥 Aktif Ziyaretçi: ${activeCount}`;
+
+    }, (error) => {
+
+        console.error(
+            "Presence okunamadı:",
+            error
+        );
+
+        activeUsersEl.textContent =
+            "❌ Aktif ziyaretçi verisi alınamadı.";
+
+    });
+
+}
+    
+    onAuthStateChanged(auth, async (user) => {
 
 
     /*
@@ -261,7 +311,7 @@ onAuthStateChanged(auth, async (user) => {
         "✅ Admin doğrulandı: " +
         user.email;
 
-
+watchActiveUsers();
 
     /*
        ARTIK VERİLERİ ÇEK
