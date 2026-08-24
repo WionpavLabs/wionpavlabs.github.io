@@ -234,11 +234,15 @@ function watchActiveUsers() {
         const visitors =
             Object.values(data);
 
-        const activeVisitors =
-            visitors.filter(visitor =>
-                visitor &&
-                visitor.online === true
-            );
+       const now = Date.now();
+
+const activeVisitors =
+    visitors.filter(visitor =>
+        visitor &&
+        visitor.online === true &&
+        visitor.lastSeen &&
+        (now - visitor.lastSeen) < 30000
+    );
 
         /* TOPLAM AKTİF */
 
