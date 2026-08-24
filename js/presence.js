@@ -13,7 +13,8 @@ import {
     ref,
     set,
     onDisconnect,
-    remove
+    remove,
+    runTransaction
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
 
@@ -251,10 +252,111 @@ window.addEventListener(
 
     }
 );
+/* =========================================================
+   GÜNLÜK ZİYARETÇİ SAYISI
+========================================================= */
 
+async function recordDailyVisitor() {
+
+    try {
+
+        /* Türkiye tarihini al */
+        const today =
+            new Intl.DateTimeFormat(
+                "en-CA",
+                {
+                    timeZone: "Europe/Istanbul",
+                    year: "numeric",
+                    month: "2-digit",
+                    day: "2-digit"
+                }
+            ).format(new Date());
+
+
+        /* Bu tarayıcı için kalıcı ziyaretçi ID */
+        let dailyVisitorId =
+            localStorage.getItem(
+                "wionpav-daily-visitor-id"
+            );
+
+
+        if (!dailyVisitorId) {
+
+            dailyVisitorId =
+                crypto.randomUUID();
+
+            localStorage.setItem(
+                "wionpav-daily-visitor-id",
+                dailyVisitorId
+            );
+
+        }
+
+
+        /* Bugün zaten sayıldı mı? */
+        const countedKey =
+            "wionpav-counted-" + today;
+
+
+        if (
+            localStorage.getItem(countedKey)
+        ) {
+
+            return;
+
+        }
+
+
+        /* Firebase'deki bugünün sayacı */
+        const dailyCountRef =
+            ref(
+                db,
+                "dailyStats/" +
+                today +
+                "/count"
+            );
+
+
+        /* Eşzamanlı girişlerde güvenli artırma */
+        await runTransaction(
+            dailyCountRef,
+            (current) => {
+
+                return (
+                    (current || 0) + 1
+                );
+
+            }
+        );
+
+
+        /* Bu tarayıcı bugün sayıldı */
+        localStorage.setItem(
+            countedKey,
+            "true"
+        );
+
+
+        console.log(
+            "📊 Günlük ziyaretçi kaydedildi:",
+            today
+        );
+
+    }
+    catch (error) {
+
+        console.error(
+            "❌ Günlük ziyaretçi kaydedilemedi:",
+            error
+        );
+
+    }
+
+}
 
 /* =========================================================
    BAŞLAT
 ========================================================= */
 
 setPresence();
+recordDailyVisitor();
