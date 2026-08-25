@@ -827,6 +827,7 @@ research13: {
             file: "research/Epilepsi.pdf",
             flag: "🇹🇷"
  }  
+   } 
 };
 
 function toggleLanguage(article){
