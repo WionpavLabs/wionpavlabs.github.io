@@ -809,7 +809,23 @@ research12: {
             download: "⬇️ 3. Multipl Skleroz (MS) PDF İndir",
             file: "research/Multipl Skleroz (MS).pdf",
             flag: "🇹🇷"
-        }       
+        }
+   },
+research13: {
+        current: "EN",
+
+        EN: {
+            title: "📄 4. Epilepsy Read PDF",
+            download: "⬇️ 4. Epilepsy Download PDF",
+            file: "research/Epilepsy.pdf",
+            flag: "🇬🇧"
+        },
+
+        TR: {
+            title: "📄 4. Epilepsi PDF Oku",
+            download: "⬇️ 4. Epilepsi PDF İndir",
+            file: "research/Epilepsi.pdf",
+            flag: "🇹🇷"
  }  
 };
 
