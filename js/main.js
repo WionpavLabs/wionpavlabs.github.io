@@ -827,7 +827,27 @@ research13: {
             file: "research/Epilepsi.pdf",
             flag: "🇹🇷"
  }  
-   } 
+   },
+
+
+research14: {
+        current: "EN",
+
+        EN: {
+            title: "📄 5. Migraine Read PDF",
+            download: "⬇️ 5. Migraine Download PDF",
+            file: "research/Migraine.pdf",
+            flag: "🇬🇧"
+        },
+
+        TR: {
+            title: "📄 5. Migren PDF Oku",
+            download: "⬇️ 5. Migren PDF İndir",
+            file: "research/Migren.pdf",
+            flag: "🇹🇷"
+ }  
+   }
+   
 };
 
 function toggleLanguage(article){
@@ -930,7 +950,7 @@ const siteTranslations = {
     "Research focused on the brain, nervous system and neurological disorders.",
 
 "lab.brain.count":
-    "4 Studies",
+    "5 Studies",
 
 "lab.orthopedics.title":
     "Orthopedics & Musculoskeletal Lab",
@@ -1240,7 +1260,7 @@ const siteTranslations = {
     "Beyin, sinir sistemi ve nörolojik hastalıklar üzerine araştırmalar.",
 
 "lab.brain.count":
-    "4 Çalışma",
+    "5 Çalışma",
 
 "lab.orthopedics.title":
     "Ortopedi ve Kas-İskelet Sistemi Laboratuvarı",
