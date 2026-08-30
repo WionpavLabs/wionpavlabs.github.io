@@ -11060,3 +11060,61 @@ MOBILE
 ```
 
 }
+
+
+
+/* =========================================================
+FINAL SPACING & MOBILE SIZE TUNING
+========================================================= */
+
+/* DESKTOP — Stats ile menü arasında nefes alanı */
+.brand-intro {
+margin-bottom: 22px;
+}
+
+/* =========================================================
+MOBILE — LOGO & BRANDING BÜYÜT
+========================================================= */
+
+@media (max-width: 600px) {
+
+```
+.brand-intro {
+    margin-bottom: 18px;
+}
+
+/* Logo biraz daha büyük */
+.brand-intro-logo-wrap {
+    width: 68px;
+    height: 68px;
+}
+
+.brand-intro-logo {
+    width: 54px;
+    height: 54px;
+}
+
+.brand-intro-logo-glow {
+    width: 58px;
+    height: 58px;
+}
+
+/* Wionpav Labs yazısı büyüsün */
+.brand-intro-title {
+    font-size: 1.68rem;
+    letter-spacing: -0.6px;
+}
+
+/* Alt başlık da biraz daha okunaklı */
+.brand-intro-subtitle {
+    font-size: 0.58rem;
+    letter-spacing: 1.2px;
+}
+
+/* Logo ve yazı arasındaki mesafe */
+.brand-intro-header {
+    gap: 15px;
+}
+```
+
+}
