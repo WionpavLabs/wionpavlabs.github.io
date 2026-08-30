@@ -9871,3 +9871,1019 @@ body.light-theme .brand-intro-line {
         0 0 10px rgba(38,52,60,.18) !important;
 
 }
+
+
+
+/* =========================================================
+   WIONPAV LABS — PREMIUM SCIENTIFIC HERO
+   Paste this block at the VERY END of style.css
+========================================================= */
+
+
+/* =========================
+   MAIN HERO CONTAINER
+========================= */
+
+.brand-intro {
+    position: relative;
+
+    width: min(1180px, calc(100% - 40px));
+    min-height: 610px;
+
+    margin: 25px auto 45px;
+
+    padding: 65px 40px 55px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 25%,
+            rgba(56,189,248,.10),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(15,23,42,.94),
+            rgba(5,11,22,.97)
+        );
+
+    border: 1px solid rgba(56,189,248,.16);
+
+    border-radius: 32px;
+
+    box-shadow:
+        0 30px 90px rgba(0,0,0,.40),
+        0 0 80px rgba(56,189,248,.05);
+
+    backdrop-filter: blur(22px);
+
+    isolation: isolate;
+
+    z-index: 10;
+}
+
+
+/* =========================
+   DECORATIVE LIGHT
+========================= */
+
+.brand-intro::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    top: -280px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(56,189,248,.16),
+            rgba(56,189,248,.05) 38%,
+            transparent 70%
+        );
+
+    filter: blur(20px);
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+.brand-intro::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    width: 70%;
+    height: 1px;
+
+    transform: translateX(-50%);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(56,189,248,.65),
+            rgba(255,255,255,.35),
+            rgba(56,189,248,.65),
+            transparent
+        );
+
+    box-shadow:
+        0 0 18px rgba(56,189,248,.35);
+
+    opacity: .7;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   INNER CONTENT
+========================= */
+
+.brand-intro-inner {
+
+    width: 100%;
+    max-width: 950px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================
+   TOP LABEL
+========================= */
+
+.brand-intro-label {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    margin-bottom: 18px;
+
+    padding: 8px 16px;
+
+    border-radius: 999px;
+
+    background: rgba(56,189,248,.055);
+
+    border: 1px solid rgba(56,189,248,.15);
+
+    color: #8da9c2;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+
+    box-shadow:
+        0 0 25px rgba(56,189,248,.04);
+}
+
+
+.brand-intro-label-dot {
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #38bdf8;
+
+    box-shadow:
+        0 0 8px #38bdf8,
+        0 0 18px rgba(56,189,248,.65);
+
+    animation: wionpavStatusPulse 2s ease-in-out infinite;
+}
+
+
+@keyframes wionpavStatusPulse {
+
+    0%,100% {
+        opacity: .65;
+        transform: scale(.85);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.15);
+    }
+
+}
+
+
+/* =========================
+   LOGO AREA
+========================= */
+
+.brand-intro-logo-wrap {
+
+    position: relative;
+
+    width: 150px;
+    height: 150px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 10px;
+}
+
+
+.brand-intro-logo-glow {
+
+    position: absolute;
+
+    width: 145px;
+    height: 145px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(56,189,248,.18),
+            transparent 68%
+        );
+
+    filter: blur(10px);
+
+    opacity: .85;
+
+    animation: logoGlow 4s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+
+@keyframes logoGlow {
+
+    0%,100% {
+        transform: scale(.90);
+        opacity: .55;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: .95;
+    }
+
+}
+
+
+.brand-intro-logo {
+
+    position: relative;
+
+    width: 130px;
+    height: 130px;
+
+    object-fit: contain;
+
+    display: block;
+
+    filter:
+        drop-shadow(0 0 15px rgba(56,189,248,.38))
+        drop-shadow(0 0 38px rgba(56,189,248,.16));
+
+    transition:
+        transform .5s ease,
+        filter .5s ease;
+}
+
+
+.brand-intro-logo:hover {
+
+    transform: scale(1.06);
+
+    filter:
+        drop-shadow(0 0 20px rgba(56,189,248,.60))
+        drop-shadow(0 0 55px rgba(56,189,248,.25));
+}
+
+
+/* =========================
+   BRAND HEADING
+========================= */
+
+.brand-intro-heading {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+.brand-intro-title {
+
+    margin: 0;
+
+    font-size: clamp(48px, 6vw, 76px);
+
+    line-height: 1.05;
+
+    font-weight: 800;
+
+    letter-spacing: 5px;
+
+    color: #f8fafc;
+
+    text-shadow:
+        0 0 18px rgba(56,189,248,.22),
+        0 0 45px rgba(56,189,248,.08);
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #dbeafe 45%,
+            #7dd3fc 100%
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================
+   ACCENT LINE
+========================= */
+
+.brand-intro-accent {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    width: 260px;
+
+    margin: 14px 0 10px;
+}
+
+
+.brand-intro-accent span {
+
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(56,189,248,.65)
+        );
+}
+
+
+.brand-intro-accent span:last-child {
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(56,189,248,.65),
+            transparent
+        );
+}
+
+
+.brand-intro-accent i {
+
+    display: block;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #38bdf8;
+
+    box-shadow:
+        0 0 8px #38bdf8,
+        0 0 18px rgba(56,189,248,.5);
+}
+
+
+/* =========================
+   SUBTITLE
+========================= */
+
+.brand-intro-subtitle {
+
+    margin: 0;
+
+    color: #a8bdd0;
+
+    font-size: clamp(14px, 2vw, 19px);
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.brand-intro-description {
+
+    width: min(720px, 90%);
+
+    margin: 28px auto 0;
+
+    color: #8fa5ba;
+
+    font-size: 15px;
+
+    line-height: 1.85;
+
+    font-weight: 400;
+
+    letter-spacing: .2px;
+}
+
+
+/* =========================
+   SCIENTIFIC META
+========================= */
+
+.brand-intro-meta {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 13px;
+
+    margin-top: 23px;
+
+    color: #71879c;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+
+    text-transform: uppercase;
+}
+
+
+.brand-intro-meta span:not(.meta-separator) {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+.brand-intro-meta b {
+
+    color: #38bdf8;
+
+    font-weight: 800;
+}
+
+
+.meta-separator {
+
+    color: rgba(56,189,248,.35);
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.brand-stats {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 38px;
+
+    padding: 18px 32px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.035),
+            rgba(56,189,248,.025)
+        );
+
+    border: 1px solid rgba(255,255,255,.07);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.035),
+        0 15px 45px rgba(0,0,0,.18);
+}
+
+
+.brand-stat {
+
+    min-width: 125px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+.brand-stat strong {
+
+    display: block;
+
+    font-size: 32px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #38bdf8;
+
+    text-shadow:
+        0 0 15px rgba(56,189,248,.35);
+}
+
+
+.brand-stat span {
+
+    margin-top: 8px;
+
+    color: #8499ad;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.brand-stat-divider {
+
+    width: 1px;
+
+    height: 42px;
+
+    margin: 0 10px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(56,189,248,.35),
+            transparent
+        );
+}
+
+
+/* =========================
+   ONLINE STATUS
+========================= */
+
+.brand-intro-status {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 27px;
+
+    color: #5f778d;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2.2px;
+
+    text-transform: uppercase;
+}
+
+
+.status-pulse {
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #38bdf8;
+
+    box-shadow:
+        0 0 7px #38bdf8,
+        0 0 15px rgba(56,189,248,.45);
+
+    animation:
+        wionpavStatusPulse 2s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   NAVIGATION SPACING
+========================================================= */
+
+.brand-intro + nav {
+
+    margin-top: 0;
+
+}
+
+
+/* =========================================================
+   HIGHLIGHTS / WORKS SPACING
+========================================================= */
+
+nav + .menu-overlay + .works-section {
+
+    margin-top: 35px;
+
+}
+
+
+/* =========================================================
+   DESKTOP LARGE
+========================================================= */
+
+@media (min-width: 1200px) {
+
+    .brand-intro {
+
+        min-height: 640px;
+
+        padding-top: 70px;
+        padding-bottom: 60px;
+
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .brand-intro {
+
+        width: calc(100% - 30px);
+
+        min-height: 580px;
+
+        padding:
+            55px 25px
+            48px;
+
+        border-radius: 28px;
+
+    }
+
+    .brand-intro-title {
+
+        font-size: 52px;
+
+    }
+
+    .brand-intro-subtitle {
+
+        font-size: 15px;
+
+        letter-spacing: 3px;
+
+    }
+
+    .brand-intro-description {
+
+        font-size: 14px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .brand-intro {
+
+        width: calc(100% - 20px);
+
+        min-height: auto;
+
+        margin:
+            10px auto 25px;
+
+        padding:
+            38px 16px
+            35px;
+
+        border-radius: 24px;
+
+    }
+
+
+    .brand-intro-label {
+
+        margin-bottom: 13px;
+
+        padding: 7px 11px;
+
+        font-size: 8px;
+
+        letter-spacing: 1.5px;
+
+        max-width: 90%;
+
+    }
+
+
+    .brand-intro-logo-wrap {
+
+        width: 120px;
+        height: 120px;
+
+        margin-bottom: 5px;
+
+    }
+
+
+    .brand-intro-logo {
+
+        width: 105px;
+        height: 105px;
+
+    }
+
+
+    .brand-intro-logo-glow {
+
+        width: 120px;
+        height: 120px;
+
+    }
+
+
+    .brand-intro-title {
+
+        font-size: 38px;
+
+        letter-spacing: 2.5px;
+
+    }
+
+
+    .brand-intro-accent {
+
+        width: 190px;
+
+        margin:
+            11px 0 8px;
+
+    }
+
+
+    .brand-intro-subtitle {
+
+        font-size: 11px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .brand-intro-description {
+
+        width: 94%;
+
+        margin-top: 20px;
+
+        font-size: 12px;
+
+        line-height: 1.7;
+
+    }
+
+
+    .brand-intro-meta {
+
+        gap: 7px;
+
+        margin-top: 17px;
+
+        font-size: 7px;
+
+        letter-spacing: 1px;
+
+    }
+
+
+    .meta-separator {
+
+        font-size: 9px;
+
+    }
+
+
+    .brand-stats {
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+        margin-top: 27px;
+
+        padding:
+            15px 8px;
+
+        border-radius: 17px;
+
+    }
+
+
+    .brand-stat {
+
+        min-width: 0;
+
+        flex: 1;
+
+    }
+
+
+    .brand-stat strong {
+
+        font-size: 25px;
+
+    }
+
+
+    .brand-stat span {
+
+        font-size: 7px;
+
+        letter-spacing: 1.3px;
+
+        margin-top: 6px;
+
+    }
+
+
+    .brand-stat-divider {
+
+        height: 32px;
+
+        margin: 0 3px;
+
+    }
+
+
+    .brand-intro-status {
+
+        margin-top: 21px;
+
+        font-size: 7px;
+
+        letter-spacing: 1.5px;
+
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .brand-intro {
+
+        padding:
+            32px 12px
+            30px;
+
+    }
+
+
+    .brand-intro-title {
+
+        font-size: 32px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .brand-intro-subtitle {
+
+        font-size: 9px;
+
+        letter-spacing: 1.5px;
+
+    }
+
+
+    .brand-intro-description {
+
+        font-size: 11px;
+
+    }
+
+
+    .brand-intro-meta {
+
+        display: none;
+
+    }
+
+
+    .brand-stat strong {
+
+        font-size: 22px;
+
+    }
+
+
+    .brand-stat span {
+
+        font-size: 6px;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUCE MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .brand-intro-logo-glow,
+    .brand-intro-label-dot,
+    .status-pulse {
+
+        animation: none;
+
+    }
+
+    .brand-intro-logo {
+
+        transition: none;
+
+    }
+
+}
