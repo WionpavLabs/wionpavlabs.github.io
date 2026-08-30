@@ -10200,3 +10200,391 @@ MOBILE
 ```
 
 }
+
+
+
+
+/* =========================================================
+WIONPAV LABS — PREMIUM / APPLE-WEBFLOW BRAND CARD
+========================================================= */
+
+.brand-intro {
+width: min(920px, 92%);
+margin: 42px auto 0;
+padding: 30px 36px 0;
+
+```
+background: rgba(255, 255, 255, 0.018);
+
+border: 1px solid rgba(255, 255, 255, 0.075);
+border-radius: 22px;
+
+box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.16);
+
+backdrop-filter: blur(14px);
+-webkit-backdrop-filter: blur(14px);
+
+overflow: hidden;
+```
+
+}
+
+/* =========================================================
+BRAND HEADER
+========================================================= */
+
+.brand-intro-header {
+display: flex;
+align-items: center;
+justify-content: center;
+
+```
+gap: 20px;
+```
+
+}
+
+/* =========================================================
+MINIMAL LOGO CONTAINER
+========================================================= */
+
+.brand-intro-logo-wrap {
+width: 68px;
+height: 68px;
+
+```
+display: flex;
+align-items: center;
+justify-content: center;
+
+flex-shrink: 0;
+
+background: rgba(255, 255, 255, 0.025);
+
+border: 1px solid rgba(255, 255, 255, 0.09);
+
+border-radius: 15px;
+
+box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+```
+
+}
+
+.brand-intro-logo-wrap:hover {
+border-color: rgba(56, 189, 248, 0.28);
+
+```
+transform: translateY(-1px);
+```
+
+}
+
+.brand-intro-logo {
+width: 48px;
+height: 48px;
+
+```
+object-fit: contain;
+
+opacity: 0.94;
+
+display: block;
+```
+
+}
+
+/* =========================================================
+BRAND TYPOGRAPHY
+========================================================= */
+
+.brand-intro-branding {
+text-align: left;
+}
+
+.brand-intro-title {
+margin: 0;
+
+```
+font-size: 2.05rem;
+line-height: 1.1;
+
+font-weight: 650;
+
+letter-spacing: -0.7px;
+```
+
+}
+
+.brand-intro-subtitle {
+margin: 7px 0 0;
+
+```
+font-size: 0.72rem;
+
+line-height: 1.4;
+
+letter-spacing: 2px;
+
+text-transform: uppercase;
+
+opacity: 0.48;
+```
+
+}
+
+/* =========================================================
+SUBTLE DIVIDER
+========================================================= */
+
+.brand-intro-line {
+width: 100%;
+height: 1px;
+
+```
+margin: 27px auto 21px;
+
+background: rgba(255, 255, 255, 0.075);
+```
+
+}
+
+/* =========================================================
+DESCRIPTION
+========================================================= */
+
+.brand-intro-description {
+max-width: 720px;
+
+```
+margin: 0 auto 28px;
+
+text-align: center;
+
+font-size: 0.9rem;
+
+line-height: 1.75;
+
+letter-spacing: 0.05px;
+
+opacity: 0.58;
+```
+
+}
+
+/* =========================================================
+PREMIUM STATS
+========================================================= */
+
+.brand-stats {
+display: flex;
+align-items: stretch;
+justify-content: center;
+
+```
+margin: 0 -36px;
+
+border-top: 1px solid rgba(255, 255, 255, 0.055);
+
+background: rgba(255, 255, 255, 0.012);
+```
+
+}
+
+.brand-stat {
+flex: 1;
+
+```
+padding: 19px 15px 21px;
+
+text-align: center;
+```
+
+}
+
+.brand-stat strong {
+display: block;
+
+```
+font-size: 1.45rem;
+
+line-height: 1;
+
+font-weight: 600;
+
+letter-spacing: -0.3px;
+```
+
+}
+
+.brand-stat span {
+display: block;
+
+```
+margin-top: 7px;
+
+font-size: 0.6rem;
+
+line-height: 1;
+
+letter-spacing: 1.7px;
+
+text-transform: uppercase;
+
+opacity: 0.4;
+```
+
+}
+
+.brand-stat-divider {
+width: 1px;
+
+```
+margin: 18px 0;
+
+background: rgba(255, 255, 255, 0.065);
+```
+
+}
+
+/* =========================================================
+LIGHT THEME
+========================================================= */
+
+body.light-theme .brand-intro {
+background: rgba(255, 255, 255, 0.72);
+
+```
+border-color: rgba(0, 0, 0, 0.075);
+
+box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.07);
+```
+
+}
+
+body.light-theme .brand-intro-logo-wrap {
+background: rgba(0, 0, 0, 0.018);
+
+```
+border-color: rgba(0, 0, 0, 0.09);
+
+box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+```
+
+}
+
+body.light-theme .brand-intro-logo-wrap:hover {
+border-color: rgba(0, 0, 0, 0.2);
+}
+
+body.light-theme .brand-intro-line {
+background: rgba(0, 0, 0, 0.075);
+}
+
+body.light-theme .brand-stats {
+background: rgba(0, 0, 0, 0.012);
+
+```
+border-top-color: rgba(0, 0, 0, 0.055);
+```
+
+}
+
+body.light-theme .brand-stat-divider {
+background: rgba(0, 0, 0, 0.065);
+}
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+```
+.brand-intro {
+    width: 92%;
+
+    margin-top: 28px;
+
+    padding: 23px 18px 0;
+
+    border-radius: 18px;
+}
+
+.brand-intro-header {
+    justify-content: flex-start;
+
+    gap: 14px;
+}
+
+.brand-intro-logo-wrap {
+    width: 56px;
+    height: 56px;
+
+    border-radius: 13px;
+}
+
+.brand-intro-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.brand-intro-title {
+    font-size: 1.5rem;
+
+    letter-spacing: -0.4px;
+}
+
+.brand-intro-subtitle {
+    margin-top: 5px;
+
+    font-size: 0.56rem;
+
+    letter-spacing: 1.15px;
+}
+
+.brand-intro-line {
+    margin: 22px 0 17px;
+}
+
+.brand-intro-description {
+    font-size: 0.82rem;
+
+    line-height: 1.7;
+
+    margin-bottom: 21px;
+}
+
+.brand-stats {
+    margin: 0 -18px;
+}
+
+.brand-stat {
+    padding: 17px 6px 19px;
+}
+
+.brand-stat strong {
+    font-size: 1.22rem;
+}
+
+.brand-stat span {
+    margin-top: 6px;
+
+    font-size: 0.5rem;
+
+    letter-spacing: 0.9px;
+}
+
+.brand-stat-divider {
+    margin: 16px 0;
+}
+```
+
+}
