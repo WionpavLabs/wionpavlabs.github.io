@@ -10394,3 +10394,401 @@ body.light-theme .brand-intro-line {
         letter-spacing: 1px;
     }
 }
+
+
+
+
+
+/* =========================================================
+   FINAL BRAND INTRO FIX
+   WIONPAV LABS - DESKTOP + MOBILE CENTERING
+========================================================= */
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 769px) {
+
+    .brand-intro {
+        /*
+         * Logo + başlık grubunu gerçek anlamda ortala
+         */
+        width: 100%;
+        max-width: none;
+
+        padding-top: 55px;
+        padding-bottom: 45px;
+
+        grid-template-columns: 120px max-content;
+        grid-template-rows: auto auto auto;
+
+        column-gap: 22px;
+
+        justify-content: center;
+        align-items: center;
+
+        text-align: left;
+    }
+
+
+    /* LOGO */
+
+    .brand-intro-logo-wrap {
+        grid-column: 1;
+        grid-row: 1 / 3;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transform: none;
+    }
+
+    .brand-intro-logo {
+        width: 100px;
+        height: 100px;
+    }
+
+
+    /* BAŞLIK */
+
+    .brand-intro-title {
+        grid-column: 2;
+        grid-row: 1;
+
+        margin: 0;
+
+        font-size: 52px;
+        line-height: 1.05;
+
+        letter-spacing: 1px;
+
+        white-space: nowrap;
+    }
+
+
+    /* ALT BAŞLIK */
+
+    .brand-intro-subtitle {
+        grid-column: 2;
+        grid-row: 2;
+
+        margin: 9px 0 0;
+
+        font-size: 14px;
+        letter-spacing: 3.2px;
+
+        white-space: nowrap;
+    }
+
+
+    /* ÇİZGİ */
+
+    .brand-intro-line {
+        grid-column: 1 / -1;
+        grid-row: 3;
+
+        width: 360px;
+
+        margin: 38px auto 25px;
+    }
+}
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 521px) and (max-width: 768px) {
+
+    .brand-intro {
+
+        width: 100%;
+        max-width: none;
+
+        padding-top: 45px;
+        padding-bottom: 38px;
+
+        grid-template-columns: 95px max-content;
+        column-gap: 18px;
+
+        justify-content: center;
+
+        text-align: left;
+    }
+
+    .brand-intro-logo {
+        width: 82px;
+        height: 82px;
+    }
+
+    .brand-intro-title {
+        font-size: 44px;
+        white-space: nowrap;
+    }
+
+    .brand-intro-subtitle {
+        font-size: 11px;
+        letter-spacing: 2.5px;
+        white-space: nowrap;
+    }
+}
+
+
+
+/* =========================================================
+   TELEFON
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .brand-intro {
+
+        /*
+         * Eski padding-left:38px kuralını etkisizleştiriyoruz.
+         * Böylece grup gerçekten ekranın ortasına oturuyor.
+         */
+
+        width: 100%;
+        max-width: none;
+
+        padding: 48px 10px 30px;
+
+        display: grid;
+
+        /*
+         * Logo + yazı artık birlikte merkezleniyor
+         */
+        grid-template-columns: 70px max-content;
+        grid-template-rows: auto auto auto auto;
+
+        column-gap: 14px;
+
+        justify-content: center;
+        align-items: center;
+
+        text-align: left;
+    }
+
+
+    /* =====================================================
+       LOGO
+    ===================================================== */
+
+    .brand-intro-logo-wrap {
+
+        grid-column: 1;
+        grid-row: 1 / 3;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        margin: 0;
+
+        transform: none;
+
+        position: relative;
+        z-index: 2;
+    }
+
+    .brand-intro-logo {
+
+        width: 68px;
+        height: 68px;
+
+        object-fit: contain;
+    }
+
+
+    /* =====================================================
+       WIONPAV LABS
+    ===================================================== */
+
+    .brand-intro-title {
+
+        grid-column: 2;
+        grid-row: 1;
+
+        margin: 0;
+
+        font-size: 32px;
+
+        line-height: 1.05;
+
+        letter-spacing: 0.3px;
+
+        white-space: nowrap;
+
+        text-align: left;
+
+        position: relative;
+        z-index: 2;
+    }
+
+
+    /* =====================================================
+       MEDICAL RESEARCH...
+    ===================================================== */
+
+    .brand-intro-subtitle {
+
+        grid-column: 2;
+        grid-row: 2;
+
+        margin: 8px 0 0;
+
+        font-size: 8px;
+
+        line-height: 1.4;
+
+        letter-spacing: 1.35px;
+
+        white-space: nowrap;
+
+        text-align: left;
+
+        position: relative;
+        z-index: 2;
+    }
+
+
+    /* =====================================================
+       ÇİZGİ
+    ===================================================== */
+
+    .brand-intro-line {
+
+        grid-column: 1 / -1;
+        grid-row: 3;
+
+        width: 78%;
+
+        margin: 30px auto 20px;
+    }
+
+
+    /* =====================================================
+       AÇIKLAMA
+    ===================================================== */
+
+    .brand-intro-description {
+
+        grid-column: 1 / -1;
+        grid-row: 4;
+
+        width: 100%;
+
+        margin: 0;
+
+        padding: 0 8px;
+
+        font-size: 12px;
+
+        line-height: 1.6;
+
+        text-align: center;
+    }
+
+
+    /* =====================================================
+       STATS
+    ===================================================== */
+
+    .brand-stats {
+
+        grid-column: 1 / -1;
+
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 8px;
+
+        margin-top: 25px;
+    }
+
+
+    .brand-stat {
+
+        min-width: 0;
+
+        flex: 1;
+    }
+
+
+    .brand-stat strong {
+
+        font-size: 26px;
+    }
+
+
+    .brand-stat span {
+
+        margin-top: 6px;
+
+        font-size: 8px;
+
+        letter-spacing: 1.2px;
+    }
+
+
+    .brand-stat-divider {
+
+        height: 32px;
+    }
+}
+
+
+
+/* =========================================================
+   ÇOK KÜÇÜK TELEFON
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .brand-intro {
+
+        padding-top: 42px;
+
+        grid-template-columns: 62px max-content;
+
+        column-gap: 12px;
+    }
+
+
+    .brand-intro-logo {
+
+        width: 60px;
+        height: 60px;
+    }
+
+
+    .brand-intro-title {
+
+        font-size: 29px;
+    }
+
+
+    .brand-intro-subtitle {
+
+        font-size: 7px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .brand-intro-line {
+
+        width: 75%;
+
+        margin-top: 27px;
+    }
+}
