@@ -10999,3 +10999,40 @@ body.light-theme .brand-intro-line {
     }
 
 }
+
+
+
+/* =========================================================
+   MOBİL — LOGO + WIONPAV LABS HAFİF KÜÇÜLTME
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .brand-intro-logo {
+        width: 64px !important;
+        height: 64px !important;
+    }
+
+    .brand-intro-title {
+        font-size: 30px !important;
+    }
+
+}
+
+
+/* =========================================================
+   ÇOK KÜÇÜK TELEFON
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .brand-intro-logo {
+        width: 57px !important;
+        height: 57px !important;
+    }
+
+    .brand-intro-title {
+        font-size: 27px !important;
+    }
+
+}
