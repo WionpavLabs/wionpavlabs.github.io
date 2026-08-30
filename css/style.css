@@ -10865,3 +10865,47 @@ body.light-theme .brand-intro-line {
         line-height: 1.6;
     }
 }
+
+
+
+
+/* =========================================================
+   MOBİL — LOGO + WIONPAV LABS GRUBU SON KONUM
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .brand-intro-logo-wrap {
+        transform: translate(8px, 8px) !important;
+    }
+
+    .brand-intro-title {
+        transform: translate(8px, 8px) !important;
+    }
+
+    .brand-intro-subtitle {
+        transform: translate(8px, 8px) !important;
+    }
+
+}
+
+
+/* =========================================================
+   ÇOK KÜÇÜK TELEFON
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .brand-intro-logo-wrap {
+        transform: translate(5px, 7px) !important;
+    }
+
+    .brand-intro-title {
+        transform: translate(5px, 7px) !important;
+    }
+
+    .brand-intro-subtitle {
+        transform: translate(5px, 7px) !important;
+    }
+
+}
