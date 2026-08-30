@@ -10792,3 +10792,76 @@ body.light-theme .brand-intro-line {
         margin-top: 27px;
     }
 }
+
+
+
+
+
+/* =========================================================
+   FINAL MOBILE MICRO ADJUSTMENTS
+========================================================= */
+
+@media (max-width: 520px) {
+
+    /* LOGO + WIONPAV LABS GRUBUNU BİRAZ AŞAĞI VE SOLA AL */
+    .brand-intro-logo-wrap,
+    .brand-intro-title,
+    .brand-intro-subtitle {
+
+        transform: translate(-7px, 8px);
+    }
+
+
+    /* LOGO */
+    .brand-intro-logo-wrap {
+        transform: translate(-7px, 8px);
+    }
+
+
+    /* BAŞLIK */
+    .brand-intro-title {
+        transform: translate(-7px, 8px);
+    }
+
+
+    /* ALT BAŞLIK */
+    .brand-intro-subtitle {
+        transform: translate(-7px, 8px);
+    }
+
+
+    /* =====================================================
+       A TRUSTED... AÇIKLAMA
+    ===================================================== */
+
+    .brand-intro-description {
+
+        font-size: 13px;
+
+        line-height: 1.65;
+
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+
+/* =========================================================
+   ÇOK KÜÇÜK TELEFONLAR
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .brand-intro-logo-wrap,
+    .brand-intro-title,
+    .brand-intro-subtitle {
+
+        transform: translate(-5px, 7px);
+    }
+
+    .brand-intro-description {
+
+        font-size: 12.5px;
+        line-height: 1.6;
+    }
+}
