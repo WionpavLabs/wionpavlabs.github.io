@@ -10940,15 +10940,15 @@ body.light-theme .brand-intro-line {
 @media (max-width: 380px) {
 
     .brand-intro-logo-wrap {
-        transform: translate(13px, 11px) !important;
+        transform: translate(12px, 11px) !important;
     }
 
     .brand-intro-title {
-        transform: translate(13px, 11px) !important;
+        transform: translate(12px, 11px) !important;
     }
 
     .brand-intro-subtitle {
-        transform: translate(13px, 11px) !important;
+        transform: translate(12px, 11px) !important;
     }
 
 }
