@@ -10588,3 +10588,475 @@ MOBILE
 ```
 
 }
+
+
+
+
+/* =========================================================
+WIONPAV — PREMIUM IDENTITY
+Clean / Minimal / Editorial
+========================================================= */
+
+.brand-intro {
+width: min(860px, 92%);
+margin: 45px auto 0;
+
+```
+padding: 34px 42px 0;
+
+background:
+    radial-gradient(
+        circle at 50% 0%,
+        rgba(56, 189, 248, 0.035),
+        transparent 55%
+    ),
+    rgba(255, 255, 255, 0.012);
+
+border: 1px solid rgba(255, 255, 255, 0.055);
+
+border-radius: 24px;
+
+box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.14);
+
+overflow: hidden;
+```
+
+}
+
+/* =========================================================
+BRAND IDENTITY
+========================================================= */
+
+.brand-intro-header {
+position: relative;
+
+```
+display: flex;
+align-items: center;
+justify-content: center;
+
+gap: 19px;
+
+min-height: 82px;
+```
+
+}
+
+/* =========================================================
+LOGO — NO BOX
+========================================================= */
+
+.brand-intro-logo-wrap {
+position: relative;
+
+```
+width: 76px;
+height: 76px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+flex-shrink: 0;
+
+background: transparent;
+
+border: none;
+
+border-radius: 0;
+
+box-shadow: none;
+```
+
+}
+
+/* Soft light behind logo */
+
+.brand-intro-logo-glow {
+position: absolute;
+
+```
+width: 62px;
+height: 62px;
+
+border-radius: 50%;
+
+background:
+    radial-gradient(
+        circle,
+        rgba(56, 189, 248, 0.16) 0%,
+        rgba(56, 189, 248, 0.055) 35%,
+        transparent 72%
+    );
+
+filter: blur(8px);
+
+opacity: 0.7;
+
+pointer-events: none;
+```
+
+}
+
+/* Actual logo */
+
+.brand-intro-logo {
+position: relative;
+z-index: 2;
+
+```
+width: 58px;
+height: 58px;
+
+object-fit: contain;
+
+display: block;
+
+opacity: 0.98;
+
+filter:
+    drop-shadow(
+        0 8px 20px rgba(0, 0, 0, 0.18)
+    );
+
+transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+```
+
+}
+
+.brand-intro-logo-wrap:hover .brand-intro-logo {
+transform: scale(1.035);
+
+```
+filter:
+    drop-shadow(
+        0 10px 25px rgba(56, 189, 248, 0.14)
+    );
+```
+
+}
+
+/* =========================================================
+BRAND NAME
+========================================================= */
+
+.brand-intro-branding {
+text-align: left;
+}
+
+.brand-intro-title {
+margin: 0;
+
+```
+font-size: 2.15rem;
+
+line-height: 1;
+
+font-weight: 650;
+
+letter-spacing: -1px;
+```
+
+}
+
+.brand-intro-subtitle {
+margin: 8px 0 0;
+
+```
+font-size: 0.69rem;
+
+line-height: 1.4;
+
+font-weight: 450;
+
+letter-spacing: 2.1px;
+
+text-transform: uppercase;
+
+opacity: 0.42;
+```
+
+}
+
+/* =========================================================
+EDITORIAL DIVIDER
+========================================================= */
+
+.brand-intro-line {
+width: 100%;
+
+```
+height: 1px;
+
+margin: 28px auto 22px;
+
+background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.08),
+        transparent
+    );
+```
+
+}
+
+/* =========================================================
+DESCRIPTION
+========================================================= */
+
+.brand-intro-description {
+max-width: 650px;
+
+```
+margin: 0 auto 30px;
+
+text-align: center;
+
+font-size: 0.88rem;
+
+line-height: 1.8;
+
+letter-spacing: 0.01em;
+
+opacity: 0.53;
+```
+
+}
+
+/* =========================================================
+STATS — VERY CLEAN
+========================================================= */
+
+.brand-stats {
+display: flex;
+
+```
+align-items: stretch;
+
+justify-content: center;
+
+margin: 0 -42px;
+
+border-top: 1px solid rgba(255, 255, 255, 0.045);
+
+background: rgba(255, 255, 255, 0.008);
+```
+
+}
+
+.brand-stat {
+flex: 1;
+
+```
+padding: 20px 15px 22px;
+
+text-align: center;
+```
+
+}
+
+.brand-stat strong {
+display: block;
+
+```
+font-size: 1.35rem;
+
+line-height: 1;
+
+font-weight: 550;
+
+letter-spacing: -0.4px;
+```
+
+}
+
+.brand-stat span {
+display: block;
+
+```
+margin-top: 8px;
+
+font-size: 0.57rem;
+
+line-height: 1;
+
+font-weight: 500;
+
+letter-spacing: 1.8px;
+
+text-transform: uppercase;
+
+opacity: 0.34;
+```
+
+}
+
+.brand-stat-divider {
+width: 1px;
+
+```
+margin: 18px 0;
+
+background: rgba(255, 255, 255, 0.055);
+```
+
+}
+
+/* =========================================================
+LIGHT MODE
+========================================================= */
+
+body.light-theme .brand-intro {
+background:
+radial-gradient(
+circle at 50% 0%,
+rgba(0, 0, 0, 0.018),
+transparent 55%
+),
+rgba(255, 255, 255, 0.72);
+
+```
+border-color: rgba(0, 0, 0, 0.065);
+
+box-shadow:
+    0 25px 65px rgba(0, 0, 0, 0.055);
+```
+
+}
+
+body.light-theme .brand-intro-logo-glow {
+background:
+radial-gradient(
+circle,
+rgba(0, 0, 0, 0.055),
+transparent 70%
+);
+
+```
+opacity: 0.45;
+```
+
+}
+
+body.light-theme .brand-intro-logo {
+filter:
+drop-shadow(
+0 7px 15px rgba(0, 0, 0, 0.08)
+);
+}
+
+body.light-theme .brand-intro-line {
+background:
+linear-gradient(
+90deg,
+transparent,
+rgba(0, 0, 0, 0.09),
+transparent
+);
+}
+
+body.light-theme .brand-stats {
+background: rgba(0, 0, 0, 0.008);
+
+```
+border-top-color: rgba(0, 0, 0, 0.05);
+```
+
+}
+
+body.light-theme .brand-stat-divider {
+background: rgba(0, 0, 0, 0.055);
+}
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+```
+.brand-intro {
+    width: 92%;
+
+    margin-top: 28px;
+
+    padding: 25px 20px 0;
+
+    border-radius: 19px;
+}
+
+.brand-intro-header {
+    justify-content: center;
+
+    gap: 13px;
+
+    min-height: 65px;
+}
+
+.brand-intro-logo-wrap {
+    width: 58px;
+    height: 58px;
+}
+
+.brand-intro-logo {
+    width: 46px;
+    height: 46px;
+}
+
+.brand-intro-logo-glow {
+    width: 50px;
+    height: 50px;
+}
+
+.brand-intro-title {
+    font-size: 1.5rem;
+
+    letter-spacing: -0.6px;
+}
+
+.brand-intro-subtitle {
+    margin-top: 6px;
+
+    font-size: 0.53rem;
+
+    letter-spacing: 1.15px;
+}
+
+.brand-intro-line {
+    margin: 22px auto 18px;
+}
+
+.brand-intro-description {
+    font-size: 0.81rem;
+
+    line-height: 1.7;
+
+    margin-bottom: 22px;
+}
+
+.brand-stats {
+    margin: 0 -20px;
+}
+
+.brand-stat {
+    padding: 17px 5px 19px;
+}
+
+.brand-stat strong {
+    font-size: 1.15rem;
+}
+
+.brand-stat span {
+    margin-top: 7px;
+
+    font-size: 0.47rem;
+
+    letter-spacing: 0.8px;
+}
+```
+
+}
