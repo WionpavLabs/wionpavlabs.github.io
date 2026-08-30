@@ -10909,3 +10909,46 @@ body.light-theme .brand-intro-line {
     }
 
 }
+
+
+
+/* =========================================================
+   MOBİL — LOGO + WIONPAV LABS MİNİK KONUM AYARI
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .brand-intro-logo-wrap {
+        transform: translate(16px, 13px) !important;
+    }
+
+    .brand-intro-title {
+        transform: translate(16px, 13px) !important;
+    }
+
+    .brand-intro-subtitle {
+        transform: translate(16px, 13px) !important;
+    }
+
+}
+
+
+/* =========================================================
+   ÇOK KÜÇÜK TELEFON
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .brand-intro-logo-wrap {
+        transform: translate(13px, 11px) !important;
+    }
+
+    .brand-intro-title {
+        transform: translate(13px, 11px) !important;
+    }
+
+    .brand-intro-subtitle {
+        transform: translate(13px, 11px) !important;
+    }
+
+}
