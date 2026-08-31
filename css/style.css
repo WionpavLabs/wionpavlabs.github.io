@@ -11129,3 +11129,92 @@ body.light-theme .brand-intro-line {
 .super-box::before{
     pointer-events:none;
 }
+
+
+
+/* =========================================
+   GUIDELINES BOX - LANGUAGE SWITCHER
+   ========================================= */
+
+.guidelines-box {
+    position: relative;
+}
+
+.guidelines-box .inner-block {
+    position: relative;
+}
+
+/* Sağ üstteki küçük dil değiştirme alanı */
+.guidelines-box .guidelines-actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* PDF butonu normal şekilde aşağıda kalsın */
+.guidelines-box .guidelines-actions #guidelines-title {
+    position: relative;
+}
+
+/* Dil butonu */
+.guidelines-box #guidelinesLanguageToggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    min-width: auto;
+    width: auto;
+
+    padding: 6px 10px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+/* Dil ikonu */
+.guidelines-box .guidelines-language-icon {
+    font-size: 14px;
+}
+
+/* EN yazısı */
+.guidelines-box .guidelines-language-text {
+    font-size: 12px;
+    letter-spacing: .5px;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .guidelines-box .guidelines-actions {
+        top: 0;
+        right: 0;
+    }
+
+    .guidelines-box #guidelinesLanguageToggle {
+        padding: 5px 8px;
+    }
+
+    .guidelines-box .guidelines-language-icon {
+        font-size: 13px;
+    }
+
+    .guidelines-box .guidelines-language-text {
+        font-size: 11px;
+    }
+}
