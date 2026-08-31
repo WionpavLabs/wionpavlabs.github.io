@@ -1203,6 +1203,12 @@ const siteTranslations = {
 
 "home.brand.publications":
     "PUBLICATIONS",
+
+       "guidelines.title":
+    "Research, Publications & Editorial Guidelines",
+
+"guidelines.description":
+    "Please review our research, publication, and editorial guidelines before submitting or contributing content.",
     
     
     },
@@ -1522,8 +1528,13 @@ const siteTranslations = {
 
 "home.brand.publications":
     "YAYIN",
-    
-    }
+
+
+       "guidelines.title":
+    "Araştırma, Yayınlar ve Editöryal İlkeler",
+
+"guidelines.description":
+    "İçerik göndermeden veya katkıda bulunmadan önce araştırma, yayın ve editöryal ilkelerimizi inceleyiniz.",
 
 };
 
