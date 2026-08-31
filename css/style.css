@@ -11196,7 +11196,9 @@ body.light-theme .brand-intro-line {
 
 }
 
-
+.super-box::before{
+    pointer-events:none;
+}
 
 
 
