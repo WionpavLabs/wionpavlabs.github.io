@@ -514,7 +514,24 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", setActiveMenu);
 
 const languages = {
-    article1: {
+   guidelines: {
+
+    current: "EN",
+
+    EN: {
+        title: "Research, Publications & Editorial Guidelines",
+        file: "assets/guidelines/Research, Publications & Editorial Guidelines.pdf",
+        flag: "🇬🇧"
+    },
+
+    TR: {
+        title: "Araştırma, Yayınlar ve Editöryal İlkeler",
+        file: "assets/guidelines/Araştırma, Yayınlar ve Editöryal İlkeler.pdf",
+        flag: "🇹🇷"
+    }
+
+},
+   article1: {
         current: "EN",
 
         EN: {
@@ -2163,6 +2180,188 @@ document.addEventListener(
 
 
         applyPublicationsLanguage(
+            newLanguage
+        );
+
+    }
+);
+
+
+
+/* =========================================================
+   WIONPAV LABS — GUIDELINES PDF LANGUAGE SYSTEM
+   EN / TR
+========================================================= */
+
+const GUIDELINES_LANGUAGE_KEY =
+    "wionpav-guidelines-language";
+
+
+function getGuidelinesLanguage() {
+
+    return localStorage.getItem(
+        GUIDELINES_LANGUAGE_KEY
+    ) || "EN";
+
+}
+
+
+/* =========================================================
+   GUIDELINES PDF DİLİNİ UYGULA
+========================================================= */
+
+function applyGuidelinesLanguage(language) {
+
+    const item = languages.guidelines;
+
+    if (!item || !item[language]) {
+        return;
+    }
+
+    const lang = item[language];
+
+
+    /* PDF BAŞLIĞI / OKU */
+
+    const title =
+        document.getElementById(
+            "guidelines-title"
+        );
+
+    if (title) {
+
+        title.textContent =
+            lang.title;
+
+        title.href =
+            lang.file;
+
+    }
+
+
+    /* PDF İNDİR */
+
+    const download =
+        document.getElementById(
+            "guidelines-download"
+        );
+
+    if (download) {
+
+        download.href =
+            lang.file;
+
+    }
+
+
+    /* DİL BUTONU */
+
+    const button =
+        document.getElementById(
+            "guidelinesLanguageToggle"
+        );
+
+    if (button) {
+
+        const text =
+            button.querySelector(
+                ".guidelines-language-text"
+            );
+
+        const icon =
+            button.querySelector(
+                ".guidelines-language-icon"
+            );
+
+
+        if (language === "TR") {
+
+            if (text) {
+                text.textContent = "TR";
+            }
+
+            if (icon) {
+                icon.textContent = "🇹🇷";
+            }
+
+            button.setAttribute(
+                "aria-label",
+                "Switch to English"
+            );
+
+        } else {
+
+            if (text) {
+                text.textContent = "EN";
+            }
+
+            if (icon) {
+                icon.textContent = "🇬🇧";
+            }
+
+            button.setAttribute(
+                "aria-label",
+                "Türkçeye geç"
+            );
+
+        }
+
+    }
+
+}
+
+
+/* =========================================================
+   SAYFA AÇILDIĞINDA GUIDELINES DİLİNİ UYGULA
+========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        applyGuidelinesLanguage(
+            getGuidelinesLanguage()
+        );
+
+    }
+);
+
+
+/* =========================================================
+   GUIDELINES EN / TR BUTONU
+========================================================= */
+
+document.addEventListener(
+    "click",
+    function(event) {
+
+        const button =
+            event.target.closest(
+                "#guidelinesLanguageToggle"
+            );
+
+        if (!button) {
+            return;
+        }
+
+
+        const currentLanguage =
+            getGuidelinesLanguage();
+
+
+        const newLanguage =
+            currentLanguage === "EN"
+                ? "TR"
+                : "EN";
+
+
+        localStorage.setItem(
+            GUIDELINES_LANGUAGE_KEY,
+            newLanguage
+        );
+
+
+        applyGuidelinesLanguage(
             newLanguage
         );
 
