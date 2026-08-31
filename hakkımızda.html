@@ -336,7 +336,7 @@ padding:30px;
     <div class="inner-block">
 
         <h2 data-i18n="guidelines.title">
-            Araştırma, Yayınlar ve Editöryal Kılavuz
+            Araştırma, Yayınlar ve Editöryal İlkeler
         </h2>
 
         <p data-i18n="guidelines.description">
@@ -347,38 +347,53 @@ padding:30px;
 
         <div class="guidelines-actions">
 
+            <!-- PDF -->
+
             <a
-                href="guidelines/Araştırma, Yayınlar ve Editöryal İlkeler.pdf"
+                id="guidelines-title"
+                href="assets/guidelines/Research, Publications & Editorial Guidelines.pdf"
                 class="guideline-button"
                 target="_blank"
                 rel="noopener"
-                data-lang="tr"
             >
-                <span>TR</span>
-                <strong data-i18n="guidelines.tr">
-                    Türkçe Kılavuz
+                <span>📄</span>
+
+                <strong>
+                    Research, Publications & Editorial Guidelines
                 </strong>
             </a>
 
-            <a
-                href="guidelines/Research, Publications & Editorial Guidelines.pdf"
+
+            <!-- EN / TR -->
+
+            <button
+                id="guidelinesLanguageToggle"
                 class="guideline-button"
-                target="_blank"
-                rel="noopener"
-                data-lang="en"
+                type="button"
+                aria-label="Türkçeye geç"
             >
-                <span>EN</span>
-                <strong data-i18n="guidelines.en">
-                    English Guidelines
+
+                <span
+                    id="guidelines-language-icon"
+                    class="guidelines-language-icon"
+                >
+                    🇬🇧
+                </span>
+
+                <strong
+                    id="guidelines-language-text"
+                    class="guidelines-language-text"
+                >
+                    EN
                 </strong>
-            </a>
+
+            </button>
 
         </div>
 
     </div>
 
 </div>
-
 
   
 </div>
