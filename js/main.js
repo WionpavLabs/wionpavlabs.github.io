@@ -1535,7 +1535,7 @@ const siteTranslations = {
 
 "guidelines.description":
     "İçerik göndermeden veya katkıda bulunmadan önce araştırma, yayın ve editöryal ilkelerimizi inceleyiniz.",
-
+}
 };
 
 
