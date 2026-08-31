@@ -520,13 +520,13 @@ const languages = {
 
     EN: {
         title: "Research, Publications & Editorial Guidelines",
-        file: "assets/guidelines/Research, Publications & Editorial Guidelines.pdf",
+        file: "guidelines/Research, Publications & Editorial Guidelines.pdf",
         flag: "🇬🇧"
     },
 
     TR: {
         title: "Araştırma, Yayınlar ve Editöryal İlkeler",
-        file: "assets/guidelines/Araştırma, Yayınlar ve Editöryal İlkeler.pdf",
+        file: "guidelines/Araştırma, Yayınlar ve Editöryal İlkeler.pdf",
         flag: "🇹🇷"
     }
 
