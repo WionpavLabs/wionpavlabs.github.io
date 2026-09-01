@@ -863,6 +863,25 @@ research14: {
             file: "research/Migren.pdf",
             flag: "🇹🇷"
  }  
+   },
+
+
+   research15: {
+        current: "EN",
+
+        EN: {
+            title: "📄 6. Stroke Read PDF",
+            download: "⬇️ 6. Stroke Download PDF",
+            file: "research/Stroke.pdf",
+            flag: "🇬🇧"
+        },
+
+        TR: {
+            title: "📄 6. İnme Hastalığı PDF Oku",
+            download: "⬇️ 6. İnme Hastalığı PDF İndir",
+            file: "research/İnme Hastalığı.pdf",
+            flag: "🇹🇷"
+ }  
    }
    
 };
@@ -967,7 +986,7 @@ const siteTranslations = {
     "Research focused on the brain, nervous system and neurological disorders.",
 
 "lab.brain.count":
-    "5 Studies",
+    "6 Studies",
 
 "lab.orthopedics.title":
     "Orthopedics & Musculoskeletal Lab",
@@ -1283,7 +1302,7 @@ const siteTranslations = {
     "Beyin, sinir sistemi ve nörolojik hastalıklar üzerine araştırmalar.",
 
 "lab.brain.count":
-    "5 Çalışma",
+    "6 Çalışma",
 
 "lab.orthopedics.title":
     "Ortopedi ve Kas-İskelet Sistemi Laboratuvarı",
