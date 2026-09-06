@@ -882,6 +882,26 @@ research14: {
             file: "research/İnme Hastalığı.pdf",
             flag: "🇹🇷"
  }  
+   },
+
+
+
+   research16: {
+        current: "EN",
+
+        EN: {
+            title: "📄 7. ALS (Amyotrophic Lateral Sclerosis) Read PDF",
+            download: "⬇️ 7. ALS (Amyotrophic Lateral Sclerosis) Download PDF",
+            file: "research/ALS (Amyotrophic Lateral Sclerosis).pdf",
+            flag: "🇬🇧"
+        },
+
+        TR: {
+            title: "📄 7. ALS (Amyotrofik Lateral Skleroz) PDF Oku",
+            download: "⬇️ 7. ALS (Amyotrofik Lateral Skleroz) PDF İndir",
+            file: "research/ALS (Amyotrofik Lateral Skleroz).pdf",
+            flag: "🇹🇷"
+ }  
    }
    
 };
@@ -986,7 +1006,7 @@ const siteTranslations = {
     "Research focused on the brain, nervous system and neurological disorders.",
 
 "lab.brain.count":
-    "6 Studies",
+    "7 Studies",
 
 "lab.orthopedics.title":
     "Orthopedics & Musculoskeletal Lab",
@@ -1302,7 +1322,7 @@ const siteTranslations = {
     "Beyin, sinir sistemi ve nörolojik hastalıklar üzerine araştırmalar.",
 
 "lab.brain.count":
-    "6 Çalışma",
+    "7 Çalışma",
 
 "lab.orthopedics.title":
     "Ortopedi ve Kas-İskelet Sistemi Laboratuvarı",
