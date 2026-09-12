@@ -902,6 +902,25 @@ research14: {
             file: "research/ALS (Amyotrofik Lateral Skleroz).pdf",
             flag: "🇹🇷"
  }  
+   },
+
+
+   research17: {
+        current: "EN",
+
+        EN: {
+            title: "📄 8. Meningitis Read PDF",
+            download: "⬇️ 8. Meningitis Download PDF",
+            file: "research/Meningitis.pdf",
+            flag: "🇬🇧"
+        },
+
+        TR: {
+            title: "📄 8. Menenjit PDF Oku",
+            download: "⬇️ 8. Menenjit PDF İndir",
+            file: "research/Menenjit.pdf",
+            flag: "🇹🇷"
+ }  
    }
    
 };
@@ -1006,7 +1025,7 @@ const siteTranslations = {
     "Research focused on the brain, nervous system and neurological disorders.",
 
 "lab.brain.count":
-    "7 Studies",
+    "8 Studies",
 
 "lab.orthopedics.title":
     "Orthopedics & Musculoskeletal Lab",
@@ -1322,7 +1341,7 @@ const siteTranslations = {
     "Beyin, sinir sistemi ve nörolojik hastalıklar üzerine araştırmalar.",
 
 "lab.brain.count":
-    "7 Çalışma",
+    "8 Çalışma",
 
 "lab.orthopedics.title":
     "Ortopedi ve Kas-İskelet Sistemi Laboratuvarı",
