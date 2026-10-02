@@ -431,8 +431,10 @@ checkMaintenance();
 setInterval(checkMaintenance,30000);
 
 const FIREBASE_URL =
-    "https://yorum-sistemimm-default-rtdb.europe-west1.firebasedatabase.app/comments.json";
-const RATING_URL = "https://yorum-sistemimm-default-rtdb.europe-west1.firebasedatabase.app/ratings";
+    "https://wionpav-labs-default-rtdb.europe-west1.firebasedatabase.app/comments.json";
+
+const RATING_URL =
+    "https://wionpav-labs-default-rtdb.europe-west1.firebasedatabase.app/ratings";
     
 // Her ziyaretçiye tek seferlik kimlik oluştur
 let userId = localStorage.getItem("ratingUserId");
