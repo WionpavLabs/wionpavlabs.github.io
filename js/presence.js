@@ -17,7 +17,6 @@ import {
     runTransaction
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
-
 /* =========================================================
    FIREBASE CONFIG
 ========================================================= */
@@ -25,28 +24,27 @@ import {
 const firebaseConfig = {
 
     apiKey:
-        "AIzaSyBXuNbsz3W26q1EueNLWhSIUKS4SIViw4k",
+        "AIzaSyDr0zwDSAgW9AIosFvIdx6itn0HjhXklBY",
 
     authDomain:
-        "yorum-sistemimm.firebaseapp.com",
+        "wionpav-labs.firebaseapp.com",
 
     databaseURL:
-        "https://yorum-sistemimm-default-rtdb.europe-west1.firebasedatabase.app",
+        "https://wionpav-labs-default-rtdb.europe-west1.firebasedatabase.app",
 
     projectId:
-        "yorum-sistemimm",
+        "wionpav-labs",
 
     storageBucket:
-        "yorum-sistemimm.appspot.com",
+        "wionpav-labs.firebasestorage.app",
 
     messagingSenderId:
-        "1048692198462",
+        "940435445498",
 
     appId:
-        "1:1048692198462:web:59fcfb7f0a29723d68156f"
+        "1:940435445498:web:8da36beb862476c320db43"
 
 };
-
 
 /* =========================================================
    FIREBASE BAŞLAT
