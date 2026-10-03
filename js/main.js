@@ -1,5 +1,5 @@
 /* =========================================================
-   MEDVORTEX — KALICI TEMA SİSTEMİ
+ Wionpav Labs — KALICI TEMA SİSTEMİ
    Tema seçimi tüm sayfalarda korunur.
 ========================================================= */
 
