@@ -2436,3 +2436,100 @@ document.addEventListener(
 
     }
 );
+
+
+/* =========================================================
+   WIONPAV LABS — GLOBAL MAINTENANCE MODE
+========================================================= */
+
+async function checkMaintenance() {
+
+    try {
+
+        const res = await fetch(
+            "maintenance.json?cache=" + Date.now()
+        );
+
+        const data = await res.json();
+
+        let maintenance =
+            document.getElementById("maintenance");
+
+
+        if (data.maintenance) {
+
+            if (!maintenance) {
+
+                maintenance =
+                    document.createElement("div");
+
+                maintenance.id =
+                    "maintenance";
+
+                maintenance.innerHTML = `
+                    <h1>🔧 Site Bakımda</h1>
+                    <p>Şu anda güncelleme yapıyoruz. Lütfen sonra tekrar gel.</p>
+                `;
+
+                document.body.appendChild(
+                    maintenance
+                );
+
+            }
+
+
+            maintenance.style.display =
+                "flex";
+
+            document.body.classList.add(
+                "maintenance-active"
+            );
+
+            document.documentElement.style.overflow =
+                "hidden";
+
+
+        } else {
+
+            if (maintenance) {
+
+                maintenance.remove();
+
+            }
+
+            document.body.classList.remove(
+                "maintenance-active"
+            );
+
+            document.documentElement.style.overflow =
+                "";
+
+        }
+
+    } catch (e) {
+
+        console.error(
+            "Maintenance kontrolü başarısız:",
+            e
+        );
+
+    }
+
+}
+
+
+/* Sayfa tamamen hazır olduğunda başlat */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        checkMaintenance();
+
+        setInterval(
+            checkMaintenance,
+            30000
+        );
+
+    }
+);
